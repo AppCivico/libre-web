@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <%= partial 'partial/_metatags' %>
+    <title>Libre <%= current_page.data.title ? "- #{current_page.data.title}" : "Save" %></title>
+    <link rel=icon href="/favicon.ico" type="image/x-icon"/>
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+    <%= stylesheet_link_tag :application %>
+
+    <!-- the javascripts -->
+    <%= javascript_include_tag :vendor %>
+    <%= javascript_include_tag :application %>
+  </head>
+
+  <body class="<%= page_classes %>" data-controller="<%= current_page.data.controller %>" data-action="<%= current_page.data.action %>">
+    <%= partial 'partial/_noscript.erb' %>
+
+
+    <%= yield %>
+
+    <%= partial 'partial/_ga.erb' %>
+    <%= partial 'partial/_browser-update.erb' %>
+
+  </body>
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+  <head>
+    <%= partial 'partial/_metatags' %>
+    <title>Saveh <%= current_page.data.title ? "- #{current_page.data.title}" : "Save" %></title>
+    <link rel=icon href="/favicon.ico" type="image/x-icon"/>
+
+    <%= stylesheet_link_tag :application %>
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+    <!-- the javascripts -->
+    <%= javascript_include_tag :vendor %>
+    <%= javascript_include_tag :application %>
+
+  </head>
+
+  <body class="<%= page_classes %>" data-controller="<%= current_page.data.controller %>" data-action="<%= current_page.data.action %>">
+
+    <%= partial 'partial/_noscript.erb' %>
+    <%# partial 'partial/_loading.erb' %>
+
+    <!-- the header -->
+    <header id="internal-background">
+      <img class="headding-top--image" src="/images/internas-waves.svg">
+
+      <!-- navbar  -->
+      <div id="navigation" class="container">
+        <nav class="navbar navbar-default navbar--saveh">
+          <div class="container-fluid">
+
+            <!-- brand -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <img src="/images/logo-saveh-positivo.svg" alt="Saveh">
+              </a>
+            </div>
+
+            <!-- menu links -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <%= partial 'partial/_menu_links.erb', locals: { name: current_page.data.controller } %>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <%= yield %>
+
+    <!-- the footer -->
+    <% unless current_page.data.controller == 'ComoFunciona' %>
+      <div id="footer--divider">
+        <img src="/images/footer-waves.svg">
+      </div>
+    <% end %>
+
+    <footer id="footer">
+
+      <div class="container">
+
+        <div class="row">
+          <div class="col-md-2">
+            <img class="footer-brand" src="/images/logo-saveh-negativo.svg" alt="Saveh">
+          </div>
+        </div>
+
+
+        <div class="footer-link-list row">
+          <%= partial '/partial/_menu_footer.erb' %>
+        </div>
+
+        <div class="footer-social row">
+          <div class="col-md-offset-5 col-md-2">
+            <h3>Siga-nos</h3>
+            <div class="footer-social-buttons">
+              <a href="https://www.facebook.com/ambev" target="_blank" class="fa-stack fa-lg" title="Ambev - Pagina Facebook">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x"></i>
+              </a>
+              <a href="https://twitter.com/ambevbrasil" target="_blank" class="fa-stack fa-lg" title="Ambev - Pagina Twitter">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-twitter fa-stack-1x"></i>
+              </a>
+              <a href="#" class="fa-stack fa-lg hide" title="Pagina LinkedIn">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-linkedin fa-stack-1x"></i>
+              </a>
+            </div>
+
+            <p><span>Copyright &copy; 2016 - Ambev</span></p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <%= partial 'partial/_ga.erb' %>
+    <%= partial 'partial/_browser-update.erb' %>
+
+  </body>
+</html>

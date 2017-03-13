@@ -1,0 +1,15 @@
+
+# portals that use libre
+portals:
+  - image: /images/nexo.png
+    label: Nexo
+
+  - image: /images/publico.png
+    label: Público
+
+  - image: /images/the-intercept.png
+    label: The Intercept
+
+  - image: /images/el-pais.png
+    label: El País
+

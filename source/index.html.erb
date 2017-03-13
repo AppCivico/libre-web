@@ -1,0 +1,112 @@
+---
+title:      Pagina Inicial
+controller: Home
+action:     Index
+---
+
+
+    <!-- navbar -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="/images/logo.png" alt="" height="32px">
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <% data.links.list.each do |l| %>
+              <li><% link_to l.url, title: l.label do %><%= l.label %><% end %></li>
+            <% end %>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <header>
+      <div class="container">
+        <div class="intro-text hide">
+          <div class="intro-lead-in">Photo booth sriracha art party meggings VHS!</div>
+          <div class="intro-heading">Dreamcatcher hoodie echo park shoreditch chartreuse</div>
+          <a href="#services" class="page-scroll btn btn-xl">Veja mais</a>
+        </div>
+      </div>
+    </header>
+
+
+    <section id="main-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 section-content">
+            <%= data.home.content %>
+          </div>
+          <div class="col-md-offset-2 col-md-5">
+
+            <h3 class="section-citation">
+              <%= data.home.citation %>
+            </h3>
+            <br>
+            <br>
+            <span class="section-citation-name">
+              <%= data.home.citation_name %>
+            </span>
+
+
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="main-divider">
+    </section>
+
+    <section id="main-partners">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="section-title">Quem Faz Parte</h2>
+          </div>
+
+          <%# load who_using data %>
+          <% data.who_using.portals.each do |p| %>
+            <div class="col-md-3 text-center">
+              <p><%= image_tag p.image, title: p.label, alt: p.title %></p>
+            </div>
+          <% end %>
+
+        </div>
+      </div>
+    </section>
+
+    <footer id="main-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <% data.footer.places.each do |p| %>
+              <h4><strong><%= p.state%></strong></h4>
+              <p><%= p.address %></p>
+              <p><strong><%= p.phone %></strong></p>
+            <% end %>
+          </div>
+          <div class="col-md-8 text-right">
+            <form name="search_form" id="search_form" action="GET">
+              <input type="text" name="search_by" id="search_by">&nbsp;
+              <% data.footer.social.each do |s| %>
+                <a href="<%= s.link %>" class="__social-button" target="_blank">
+                  <%= image_tag s.image, title: s.label, alt: s.label %>
+                </a>
+              <% end %>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </footer>

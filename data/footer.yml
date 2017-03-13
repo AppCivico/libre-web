@@ -1,0 +1,18 @@
+
+# footer places
+places:
+  - state: SÃO PAULO
+    address: CORIFEU DE AZEVEDO MARQUES, 583<br> BUTANTA SÂO PAULO SP BRASIL
+    phone: T +55 11 3722 3691
+
+
+# social buttons
+social:
+  - label: Facebook
+    link: /#
+    image: /images/social/facebook.png
+
+  - label: Vimeo
+    link: /#
+    image: /images/social/vimeo.png
+

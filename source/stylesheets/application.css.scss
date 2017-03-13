@@ -1,0 +1,92 @@
+
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
+
+/* VARS */
+$dark_green: #1e5f2f;
+$green: #00a44f;
+$light_green: #3cb878;
+
+$gray: #999999;
+
+
+
+body {
+  margin-top: 80px;
+}
+
+nav {
+  padding: 15px 0px 20px 0px;
+}
+
+.section-citation-name {
+  color: $gray;
+  font-size: 20px;
+  text-transform: uppercase;
+  border-bottom: solid 2px $light_green;
+}
+
+/* home page */
+header {
+  background-image: url(/images/background-hearder.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  color: #fff;
+  min-height: 500px;
+}
+
+.section-title {
+  color: $dark_green;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 20px 0px 75px 0px;
+}
+
+section {
+  margin: 200px 0px;
+}
+
+section#main-divider {
+  background-image: url(/images/libre-background.png);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  text-align: center;
+  color: #fff;
+  min-height: 400px;
+}
+
+footer {
+  margin-top: 100px;
+  padding: 100px 0px;
+  background-color: $green;
+  min-height: 200px;
+
+  .social-button {
+    height: 40px;
+    width: 40px;
+    background-color: #000000;
+    display: inline-block;
+    line-height: 42px;
+    text-align: center;
+  }
+
+  input#search_by {
+    background-color: transparent;
+    border: solid 2px #333333;
+    padding: 5px 10px 5px 40px;
+    font-size: 18px;
+    background-image: url(/images/search-icon.png);
+    background-position: 10px center;
+    background-repeat: no-repeat;
+  }
+}

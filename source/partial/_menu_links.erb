@@ -1,0 +1,69 @@
+
+
+<li>
+  <a href="/" class="<%= current_link 'Home' %>">inicio</a>
+</li>
+<li>
+  <a href="/conheca" class="<%= current_link 'Conheca' %>">conheça a iniciativa</a>
+</li>
+<li>
+  <a href="/faca-parte" class="<%= current_link 'FacaParte' %>">faça parte</a>
+</li>
+<li>
+  <a href="/contato" class="<%= current_link 'Contato' %>">contato</a>
+</li>
+
+<%# ONLY DEVELOPMENT %>
+<%# if current_page.data.controller == 'Home' and current_page.data.action == 'index2' %>
+  <!-- login menu -->
+  <li id="signin-dropdown" class="dropdown dropdown--nohover" style="display:none">
+    <a href="#" class="dropdown-toggle <%= current_link 'Dashboard' %>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">login <span class="caret"></span></a>
+    <ul class="dropdown-menu login-menu">
+      <form name="signin_form" id="signin_form" novalidate>
+        <input type="hidden" name="location" value="">
+
+        <li><p>Entre e atualize o plano de ação de sua empresa.</p></li>
+        <li>
+          <p id="js-error_message" class="alert alert-danger" style="display:none"></p>
+        </li>
+        <li class="form-group error-inline">
+          <input type="text" id="email" name="email" class="form-control input-lg" placeholder="E-mail">
+        </li>
+        <li class="form-group error-inline">
+          <input type="password" id="password" name="password"class="form-control input-lg" placeholder="Senha">
+        </li>
+        <li><a href="/account/password/forgot"> <i class="fa fa-chevron-right text-lightblue"></i> esqueci a senha</a></li>
+        <li><a href="/cadastro-de-empresas"> <i class="fa fa-chevron-right text-lightblue"></i> cadastre uma empresa</a></li>
+        <li class="text-right">
+          <br>
+          <button type="submit" class="btn btn-submit">entrar</button>
+        </li>
+      </form>
+      <%= partial 'partial/microtemplates/_feedbackMessage' %>
+    </ul>
+  </li>
+
+  <!-- dashboard menu -->
+  <li id="user-dropdown" class="dropdown dropdown--nohover" style="display:none">
+    <a href="#" class="dropdown-toggle <%= current_link 'Dashboard' %>" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      olá, <span data-model="menu_helloname">olá, donizildo</span> <span class="caret"></span></a>
+    <ul class="dropdown-menu login-menu">
+      <li>
+        <div class="avatar-image pull-left">
+          <img class="js-company-logo" width="70" />
+        </div>
+        <p class="user-info">
+        <strong data-model="menu_greeting">Boa tarde!</strong><br>
+        <span data-model="last_signin">Último acesso em 12 de outubro de 2016, as 12:33h</span>
+        </p>
+      </li>
+      <li class="divider"></li>
+      <li><a href="/app"> <i class="fa fa-chevron-right text-lightblue"></i> meu painel</a></li>
+      <li class="divider"></li>
+      <li><a href="/app/notificacao"> <i class="fa fa-chevron-right text-lightblue"></i> notificações</a></li>
+      <li class="divider"></li>
+      <li><a href="/app/dados-da-empresa"> <i class="fa fa-chevron-right text-lightblue"></i> dados da empresa</a></li>
+      <li><a href="#" class="signout-button"> <i class="fa fa-chevron-right text-lightblue"></i> sair</a></li>
+    </ul>
+  </li>
+<%# end %>
