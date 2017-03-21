@@ -21,8 +21,17 @@ action:     Index
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
+            <!-- top navbar menu -->
             <% data.links.list.each do |l| %>
-              <li><% link_to l.url, title: l.label do %><%= l.label %><% end %></li>
+              <% if l.label == 'Login' %>
+                <li>
+                  <% link_to l.url, title: l.label do %>
+                    <div class="login-button"><%= l.label.upcase %>&nbsp;<img src="/images/login-arrow.png" height="16px"></div>
+                  <% end %>
+                </li>
+              <% else %>
+                <li><% link_to l.url, title: l.label do %><%= l.label %><% end %></li>
+              <% end %>
             <% end %>
           </ul>
         </div><!--/.nav-collapse -->
@@ -57,16 +66,14 @@ action:     Index
               <%= data.home.citation_name %>
             </span>
 
-
-
           </div>
         </div>
       </div>
     </section>
 
 
-    <section id="main-divider">
-    </section>
+    <section id="main-divider"></section>
+
 
     <section id="main-partners">
       <div class="container">
@@ -78,7 +85,7 @@ action:     Index
           <%# load who_using data %>
           <% data.who_using.portals.each do |p| %>
             <div class="col-md-3 text-center">
-              <p><%= image_tag p.image, title: p.label, alt: p.title %></p>
+              <p><%= image_tag p.image, title: p.label, alt: p.title, width: '90%' %></p>
             </div>
           <% end %>
 
