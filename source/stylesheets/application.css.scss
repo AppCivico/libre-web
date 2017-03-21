@@ -51,6 +51,12 @@ section {
   margin: 200px 0px;
 }
 
+.section-content {
+  p {
+    margin: 20px 0px;
+  }
+}
+
 section#main-divider {
   background-image: url(/images/libre-background.png);
   background-repeat: no-repeat;
@@ -96,4 +102,18 @@ footer {
   border: solid 2px #999999;
   padding: 0px 10px;
   line-height: 30px;
+}
+
+.internal-header {
+  min-height: 200px;
+}
+
+.btn-lbr--default {
+  background-color: #00a44f;
+  border-radius: 0px;
+  font-weight: bold;
+  color: #000000;
+  padding: 6px 80px;
+  font-size: 16px;
+  text-transform: uppercase;
 }
