@@ -1,0 +1,16 @@
+{
+  "name": "libre-web",
+  "version": "1.0.0",
+  "description": "Libre Web Application",
+  "main": "index.js",
+  "repository": "https://dvinciguerra@bitbucket.org/eokoe_it/libre_web.git",
+  "author": "Daniel Vinciguerra <daniel@eokoe.com>",
+  "license": "PERSONAL",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "moment": "^2.18.1",
+    "mustache": "^2.3.0",
+    "store": "^2.0.4",
+    "turbolinks": "^5.0.0"
+  }
+}

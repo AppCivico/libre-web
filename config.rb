@@ -1,3 +1,22 @@
+# Adding node directory for middleman
+#import_path File.expand_path('node_modules', app.root)
+
+###
+# Prepare assets for middleman application
+###
+Vendor = Struct.new(:name, :source, :destination)
+vendors = [
+  {name: "jquery", source: "./node_modules/jquery/dist/jquery.js", destination: "./source/javascripts/_vendor/jquery.js"},
+  {name: "moment", source: "./node_modules/moment/moment.js", destination: "./source/javascripts/_vendor/moment.js"},
+  {name: "mustache", source: "./node_modules/mustache/mustache.js", destination: "./source/javascripts/_vendor/mustache.js"},
+  {name: "store", source: "./node_modules/store/dist/store.modern.js", destination: "./source/javascripts/_vendor/store.js"},
+  {name: "turbolinks", source: "./node_modules/turbolinks/dist/turbolinks.js", destination: "./source/javascripts/_vendor/turbolinks.js"},
+]
+
+vendors.each do |v|
+  system "cp -f #{v[:source]} #{v[:destination]} &>/dev/null"
+end
+
 ###
 # Page options, layouts, aliases and proxies
 ###
