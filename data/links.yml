@@ -2,14 +2,14 @@
 # top header links
 list:
   - label: Conheça
-    url: /conheca
+    path: /conheca
 
   - label: Faça Parte
-    url: /faca-parte
+    path: /faca-parte
 
   - label: Contato
-    image: /contato
+    path: /contato
 
   - label: Login
-    image: /account/signin
+    path: /account/signin
 
