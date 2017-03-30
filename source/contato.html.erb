@@ -1,0 +1,50 @@
+---
+title:      Contato
+controller: Home
+action:     Contato
+---
+
+
+    <section id="main-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1><%= data.contact.title %></h1>
+          </div>
+
+          <div class="col-md-8 section-content">
+            <p><%= data.contact.description %></p>
+
+            <% form_tag '#', name: "cotact_form",  id: "contact_form" do %>
+              <% data.contact.fields.each do |f| %>
+
+                <div class="form-group">
+
+                  <% if ['string', 'text', 'select'].include? f[:type]  %>
+                    <% content_tag :label, for: f[:name], class: 'sr-only' do %><%= f[:label]%><% end %>
+                  <% end %>
+
+                  <% if f[:type] == 'string' %>
+                    <%= text_field_tag f[:name], id: f[:name], class: f[:classes] || '', required: f[:required], placeholder: f[:placeholder] || f[:label]  %>
+
+                  <% elsif f[:type] == 'text' %>
+                    <%= text_area_tag f[:name], id: f[:name], class: f[:classes], required: f[:required], placeholder: f[:placeholder] || f[:label] %>
+
+                  <% elsif f[:type] == 'select' %>
+                    <%= select_tag f[:name], id: f[:name], class: f[:classes], required: f[:required], options: f[:options].map {|o| [o[:label], o[:value]] }, selected: '0'  %>
+
+                  <% elsif f[:type] == 'submit' %>
+                    <%= submit_tag f[:label], name: f[:name], id: f[:name], class: f[:classes] %>
+
+                  <% end %>
+                </div>
+
+              <% end %>
+            <% end %>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
