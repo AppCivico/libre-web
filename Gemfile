@@ -13,6 +13,10 @@ gem 'middleman', '~> 4.2'
 gem 'middleman-livereload', '~> 3.4'
 gem 'middleman-sprockets', '~> 4.0'
 
-# js testing
-#gem 'jasmine', '~> 2.5', '>= 2.5.1'
+###
+# Development and Test
+###
+group :develipment, :test do
+end
+
 

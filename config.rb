@@ -37,11 +37,15 @@ page '/index.html', layout: 'default'
 # proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
+
 # General configuration
 activate :sprockets
 activate :directory_indexes
 
-# Reload the browser automatically whenever files change
+
+###
+# DEVELOPMENT
+###
 configure :development do
   activate :livereload
 
@@ -52,27 +56,24 @@ configure :development do
 
 end
 
-###
-# Helpers
-###
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
-
-# Build-specific configuration
+###
+# BUILD
+###
 configure :build do
   activate :asset_hash do |opts|
     # ignore email headers
     opts.ignore = [/images\/emails\//i, /\.pdf/i]
   end
 
-  # Minify CSS on build
+  # minify css on build
   activate :minify_css
 
-  # Minify Javascript on build
+  # minify javascript on build
   activate :minify_javascript
+end
+
+after_build do |builder|
+  # add event after build
+  #Ex.: exit 1 unless builder.run 'karma start karma.config.js --single-run'
 end
