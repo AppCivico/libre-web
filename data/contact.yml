@@ -65,7 +65,7 @@ fields:
     type: text
     classes: form-control
 
-  - label: Enviar
+  - label: Enviar Contato
     name: btn_enviar
     type: submit
     classes: btn btn-success

@@ -1,4 +1,21 @@
 
+
+
+# top header links
+menu:
+  - label: Conheça
+    path: /conheca
+
+  - label: Faça Parte
+    path: /faca-parte
+
+  - label: Contato
+    path: /contato
+
+  - label: Login
+    path: /account/signin
+
+
 # footer places
 places:
   - state: SÃO PAULO

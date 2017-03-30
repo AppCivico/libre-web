@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <%= partial 'partial/_metatags' %>
+    <%= partial 'partial/_metatags.erb' %>
     <title>Libre <%= current_page.data.title ? "- #{current_page.data.title}" : "Save" %></title>
     <link rel=icon href="/favicon.ico" type="image/x-icon"/>
 
@@ -28,25 +28,12 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="/">
             <img src="/images/logo.png" alt="" height="32px">
           </a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <!-- top navbar menu -->
-            <% data.links.list.each do |l| %>
-              <% if l.label == 'Login' %>
-                <li>
-                  <% link_to l.path, title: l.label do %>
-                    <div class="login-button"><%= l.label.upcase %>&nbsp;<img src="/images/login-arrow.png" height="16px"></div>
-                  <% end %>
-                </li>
-              <% else %>
-                <li><% link_to l.path, title: l.label do %><%= l.label %><% end %></li>
-              <% end %>
-            <% end %>
-          </ul>
+          <%= partial 'partial/_menu_links.erb' %>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
@@ -67,30 +54,8 @@
 
 
 
-    <footer id="main-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <% data.footer.places.each do |p| %>
-              <h4><strong><%= p.state%></strong></h4>
-              <p><%= p.address %></p>
-              <p><strong><%= p.phone %></strong></p>
-            <% end %>
-          </div>
-          <div class="col-md-8 text-right">
-            <form name="search_form" id="search_form" action="GET">
-              <input type="text" name="search_by" id="search_by">&nbsp;
-              <% data.footer.social.each do |s| %>
-                <a href="<%= s.link %>" class="__social-button" target="_blank">
-                  <%= image_tag s.image, title: s.label, alt: s.label %>
-                </a>
-              <% end %>
-            </form>
-
-          </div>
-        </div>
-      </div>
-    </footer>
+    <!-- footer section -->
+    <%= partial 'partial/footer.erb' %>
 
 
     <%= partial 'partial/_ga.erb' %>

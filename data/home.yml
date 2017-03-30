@@ -1,4 +1,6 @@
 
+title: Libre
+
 # home left content
 content: |
   <p>Photo booth sriracha art party meggings VHS. Dreamcatcher hoodie
@@ -22,3 +24,23 @@ citation: |
   an ass of yourself."
 
 citation_name: Oscar Wilde
+
+
+# portals that use libre
+who_using:
+  - label: Nexo
+    image: /images/nexo.png
+    path: http://google.com.br
+
+  - label: Público
+    image: /images/publico.png
+    path: http://google.com.br
+
+  - label: The Intercept
+    image: /images/the-intercept.png
+    path: http://google.com.br
+
+  - label: El País
+    image: /images/el-pais.png
+    path: http://google.com.br
+
