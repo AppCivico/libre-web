@@ -33,3 +33,7 @@ social:
     link: /#
     image: /images/social/vimeo.png
 
+
+zipcode_search:
+  label: Busca CEP - Sistema correios
+  path: http://www.buscacep.correios.com.br/sistemas/buscacep/

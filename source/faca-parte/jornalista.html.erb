@@ -137,7 +137,9 @@ action:     Jornalista
                 <%= text_field_tag :rg, class: 'form-control', placeholder: 'CEP* (12345-678)' %>
               </div>
               <div class="col-md-6 form-group">
-                <a href="#" target="_blank"><strong>Clique aqui</strong> para persquisar seu CEP caso não saiba.</a>
+                <% link_to data.shared.zipcode_search[:path], target: '_blank', title: data.shared.zipcode_search[:label] do %>
+                  <strong>Clique aqui</strong> para persquisar seu CEP caso não saiba.
+                <% end %>
               </div>
               <div class="col-md-12 form-group">
                 <label for="address_street" class="sr-only">Endereço</label>
