@@ -7,7 +7,7 @@ menu:
     path: /conheca
 
   - label: Faça Parte
-    path: /faca-parte
+    path: /faca-parte/jornalista
 
   - label: Contato
     path: /contato
