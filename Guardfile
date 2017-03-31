@@ -20,9 +20,11 @@
 # Application files
 ###
 coffeescript_options = {
-  input: './source/javascripts',
+  input: 'source/javascripts',
   output: 'spec/public',
-  patterns: [%r{^source/javascripts/.+/(.+\.(?:coffee|coffee\.md|litcoffee))$}]
+  all_on_start: true,
+  patterns: [%r{^source/javascripts/(.+\.js\.(?:coffee|coffee\.md|litcoffee|js))$}]
+  #patterns: [%r{^source/javascripts/.+/(.+\.(?:coffee|coffee\.md|litcoffee|js))$}]
 }
 
 guard 'coffeescript', coffeescript_options do
@@ -35,7 +37,9 @@ end
 coffeescript_options = {
   input: 'spec/coffeescripts',
   output: 'spec/javascripts',
-  patterns: [%r{^spec/coffeescripts/(.+\.js\.(?:coffee|coffee\.md|litcoffee))$}]
+  all_on_start: true,
+  patterns: [%r{^spec/coffeescripts/(.+\.(?:coffee|coffee\.md|litcoffee|js))$}]
+  #patterns: [%r{^spec/coffeescripts/(.+\.js\.(?:coffee|coffee\.md|litcoffee|js))$}]
 }
 
 guard 'coffeescript', coffeescript_options do
@@ -43,33 +47,10 @@ guard 'coffeescript', coffeescript_options do
 end
 
 
+###
+# Reload test page
+###
 guard 'livereload' do
-  extensions = {
-    js: :js,
-    coffee: :js,
-    html: :html,
-  }
-
-  rails_view_exts = %w(erb haml slim)
-
-  # file types LiveReload may optimize refresh for
-  compiled_exts = extensions.values.uniq
-  watch(%r{spec/public/.+\.(#{compiled_exts * '|'})})
-
-  extensions.each do |ext, type|
-    watch(%r{
-          (?:app|vendor)
-          (?:/assets/\w+/(?<path>[^.]+) # path+base without extension
-           (?<ext>\.#{ext})) # matching extension (must be first encountered)
-          (?:\.\w+|$) # other extensions
-          }x) do |m|
-      path = m[1]
-      "/source/javascripts/#{path}.#{type}"
-    end
-  end
-
-  # file needing a full reload of the page anyway
-  watch(%r{source/.+\.(#{rails_view_exts * '|'})$})
-  #watch(%r{app/helpers/.+\.rb})
-  #watch(%r{config/locales/.+\.yml})
+  watch %r{^spec/coffeescripts/(.+\.(?:coffee|coffee\.md|litcoffee|js))$}
+  watch %r{^source/javascripts/(.+\.js\.(?:coffee|coffee\.md|litcoffee|js))$}
 end

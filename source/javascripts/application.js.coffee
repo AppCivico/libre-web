@@ -22,7 +22,6 @@
 #=require_tree ./_app
 
 
-
 # App SPE (Single Point Entry)
 # -----------------------------
 # Init application by calling Saveh class and init

@@ -1,5 +1,20 @@
+
+/*
+  NAME
+    URI Helper
+
+  DESCRIPTION
+    This helpers to get uri query string key/value
+
+  SINOPSYS
+
+     params = URI.init().query()
+
+  AUTHOR
+    Daniel Vinciguerra @dvinciguerra
+ */
+
 (function() {
-  "NAME\n  URI Helper\n\nDESCRIPTION\n  This helpers to get uri query string key/value\n\nSINOPSYS\n\n   params = URI.init().query()\n\nAUTHOR\n  Daniel Vinciguerra @dvinciguerra";
   this.URI = {
     _location: document.location.href || "",
     init: function(location) {
