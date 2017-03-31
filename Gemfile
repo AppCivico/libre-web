@@ -17,6 +17,9 @@ gem 'middleman-sprockets', '~> 4.0'
 # Development and Test
 ###
 group :develipment, :test do
+  gem 'guard'
+  gem 'guard-coffeescript'
+  gem 'guard-livereload'
+  gem 'jasmine'
 end
-
 

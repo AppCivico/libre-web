@@ -1,4 +1,4 @@
-"""
+###
   NAME
     URI Helper
 
@@ -11,7 +11,7 @@
 
   AUTHOR
     Daniel Vinciguerra @dvinciguerra
-"""
+###
 
 # URI helper
 @URI =
