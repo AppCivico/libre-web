@@ -6,6 +6,7 @@ $dark_green: #1e5f2f;
 $green: #00a44f;
 $light_green: #3cb878;
 
+$white: #ffffff;
 $gray: #999999;
 
 
@@ -16,6 +17,41 @@ body {
 
 nav {
   padding: 15px 0px 20px 0px;
+}
+
+ul.clean-list {
+  padding: 5px 0px;
+  margin: 0px 0px 0px 15px;
+  li {
+    padding: 2px 0px;
+  }
+}
+
+.text-green {
+  color: $green;
+}
+
+.btn-green {
+  color: $white;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 25px;
+  border-radius: 0px;
+  box-shadow: none;
+  background-color: $green !important;
+  border: solid 2px $green;
+
+  &--bordered {
+    color: $green;
+    background-color: transparent !important;
+  }
+
+  &:hover {
+    color: $dark_green;
+    border-color: $dark_green;
+    box-shadow: 0px 0px 10px rgba(0, 164, 79, 0.8);
+  }
 }
 
 .section-citation-name {
@@ -48,7 +84,7 @@ header {
 }
 
 section {
-  margin: 200px 0px;
+  margin: 100px 0px;
 }
 
 .section-content {

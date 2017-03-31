@@ -1,0 +1,41 @@
+
+# title
+title: Faça Parte
+
+# register type (jornalist or portal)
+buttons:
+  - label: Cadastrar como Jornalista
+    classes: btn btn-green btn-green--bordered active
+    benefits:
+      - Meditation tumblr pinterest lyft salvia
+      - Schlitz actually activated charcoal messenger bag
+      - Flannel brooklyn air plant offal
+
+  - label: Cadastrar como Veiculo
+    classes: btn btn-green btn-green--bordered
+    benefits:
+      - Meditation tumblr pinterest lyft salvia
+      - Schlitz actually activated charcoal messenger bag
+      - Flannel brooklyn air plant offal
+
+# form subtitle
+subtitle:
+  access_data:  Dados de acesso
+  general_data: Dados gerais
+  banking_data: Dados bancários
+
+
+# help right content
+help: |
+  <p>Photo booth sriracha art party meggings VHS. Dreamcatcher hoodie
+  echo park shoreditch chartreuse. Kogi mlkshk bicycle rights pork
+  belly normcore jianbing chia literally, air plant bitters roof party
+  vape pickled. </p>
+
+  <p>Typewriter asymmetrical PBR&B beard pour-over
+  single-origin coffee. Etsy raw denim selfies next level squid,
+  gluten-free coloring book shoreditch hexagon cornhole aesthetic
+  tumeric wayfarers synth. Pour-over organic ramps fap, lumbersexual la
+  croix prism hot chicken quinoa unicorn williamsburg 3 wolf moon.</p>
+
+
