@@ -82,8 +82,8 @@ action:     Jornalista
                 <small class="help-block">Entre com um e-mail válido para criar sua conta e acessar a plataforma</small>
               </div>
               <div class="col-md-6 form-group">
-                <label for="email" class="sr-only">Senha</label>
-                <%= password_field_tag :email, class: 'form-control', placeholder: 'Senha*' %>
+                <label for="password" class="sr-only">Senha</label>
+                <%= password_field_tag :password, class: 'form-control', placeholder: 'Senha*' %>
                 <small class="help-block">Escolha uma senha de no mínimo 6 caractéres</small>
               </div>
             </div>
@@ -185,7 +185,7 @@ action:     Jornalista
               </div>
               <div class="col-md-6">
                 <label for="bank_account" class="sr-only">Conta</label>
-                <%= password_field_tag :bank_account, class: 'form-control', placeholder: 'Conta*' %>
+                <%= text_field_tag :bank_account, class: 'form-control', placeholder: 'Conta*' %>
                 <small class="help-block">Entre com o número separando o dígito com um ífem. Ex.: <code>12345-0</code></small>
               </div>
             </div>
