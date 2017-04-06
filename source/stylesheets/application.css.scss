@@ -75,8 +75,17 @@ header {
   text-align: center;
   color: #fff;
   min-height: 500px;
-  height:100%;
 }
+
+.header-index {
+  height: 100% !important;
+}
+.header-internal {
+  height: 300px !important;
+  max-height: 300px;
+}
+
+
 
 .section-title {
   color: $dark_green;
