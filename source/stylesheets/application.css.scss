@@ -11,8 +11,9 @@ $gray: #999999;
 
 
 
-body {
-  margin-top: 80px;
+body, html {
+  height: 100%;
+  width: 100%;
 }
 
 nav {
@@ -74,6 +75,7 @@ header {
   text-align: center;
   color: #fff;
   min-height: 500px;
+  height:100%;
 }
 
 .section-title {
