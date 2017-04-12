@@ -10,10 +10,26 @@ $white: #ffffff;
 $gray: #999999;
 
 
+/**
+* MEDIA QUERY USAGE:
+* @media ($phone) { ... }
+*/
+$phone: 'max-width: 640px';
+$tablet: 'min-width: 768px';
+$desktop: 'min-width: 1024px';
+$widescreen: 'min-width: 1024px';
+
+.debug {
+  border: solid 1px red;
+}
 
 body, html {
   height: 100%;
   width: 100%;
+}
+
+input.form-control {
+  border-radius: 0px;
 }
 
 nav {
@@ -164,3 +180,92 @@ footer {
   font-size: 16px;
   text-transform: uppercase;
 }
+
+section#collaborator-section {
+  background-color: #efefef;
+
+  .section-header {
+    background-image: url(/images/section-backgound.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+    color: #fff;
+    min-height: 150px;
+  }
+
+  .section-tabs {
+    background-color: #f9f9f9;
+
+    .nav > ul {
+      padding: 0px;
+      margin: 0px;
+      border: none !important;
+    }
+    .nav > li {
+      &.active{
+        color: green !important;
+      }
+      @media($desktop){
+        width: 33.3%;
+        max-height: 90px;
+      }
+      @media($phone){
+        width: 100%;
+      }
+
+      @media($desktop){
+        &.active::after {
+          content: '';
+          background-color: #ffffff;
+          width: 60px;
+          height: 60px;
+          display: inline-block;
+          position: relative;
+          left: 50px;
+          top: -55px;
+          transform: rotate(45deg);
+        }
+      }
+      &:not(:first-child) {
+        border-left: solid 1px #eaeaea;
+      }
+    }
+    .nav a {
+      color: gray !important;
+      font-size: 20px;
+      padding: 30px 20px;
+      border: none !important;
+      z-index: 2;
+
+    }
+  }
+  h2 {
+    margin-top:100px;
+    font-weight: 300;
+  }
+
+  .tab-content {
+    .tab-pane {
+      min-height: 300px;
+      padding: 50px 0px 100px;
+    }
+  }
+}
+
+.text-spaced {
+  margin: 40px 0px;
+}
+
+.text-green {
+  color: $light_green;
+}
+
+/* custom components */
+div.radio {
+  line-height: 28px;
+}
+
