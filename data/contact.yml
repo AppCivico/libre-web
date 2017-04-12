@@ -6,30 +6,35 @@ description: |
 
 # form field list
 fields:
+  # name field
   - label: Nome completo
     name: name
     type: string
     required: true
     classes: form-control
 
+  # company field
   - label: Nome da empresa
     name: company
     type: string
     required: true
     classes: form-control
 
+  # e-mail field
   - label: E-mail
     name: email
     type: string
     required: true
     classes: form-control
 
+  # phone field
   - label: Telefone
     name: phone
     type: string
     required: true
     classes: form-control
 
+  # subject field
   - label: Tipo de contato
     name: type
     type: select
@@ -37,34 +42,35 @@ fields:
     classes: form-control
     options:
       - label: Tipo de contato
-        value: 0
+        value:
+        selected: selected
 
-      - label: Foo
-        value: foo
+      - label: Dúvidas sobre o site
+        value: Dúvidas sobre o site
 
-      - label: Bar
-        value: bar
+      - label: Dúvidas sobre o projeto Libre
+        value: Dúvidas sobre o projeto Libre
 
+      - label: Suporte
+        value: Suporte
+
+      - label: Outros
+        value: Outros
+
+  # subject field
   - label: Assunto
     name: subject
-    type: select
+    type: string
     required: true
     classes: form-control
-    options:
-      - label: Assunto
-        value: 0
 
-      - label: Foo
-        value: foo
-
-      - label: Bar
-        value: bar
-
+  # message field
   - label: Mensagem
     name: message
     type: text
     classes: form-control
 
+  # submit button
   - label: Enviar Contato
     name: btn_enviar
     type: submit
