@@ -5,14 +5,14 @@ title: Faça Parte
 # register type (jornalist or portal)
 buttons:
   - label: Cadastrar como Jornalista
-    classes: btn btn-green btn-green--bordered active
+    classes: btn btn-green btn-bordered btn-block btn-lg active
     benefits:
       - Meditation tumblr pinterest lyft salvia
       - Schlitz actually activated charcoal messenger bag
       - Flannel brooklyn air plant offal
 
   - label: Cadastrar como Veiculo
-    classes: btn btn-green btn-green--bordered
+    classes: btn btn-green btn-bordered btn-block btn-lg disabled
     benefits:
       - Meditation tumblr pinterest lyft salvia
       - Schlitz actually activated charcoal messenger bag

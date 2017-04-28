@@ -1,6 +1,4 @@
 
-
-
 # top header links
 menu:
   - label: Conheça
@@ -13,7 +11,7 @@ menu:
     path: /contato
 
   - label: Login
-    path: /account/signin
+    path: /account/login
 
 
 # footer places
@@ -27,11 +25,11 @@ places:
 social:
   - label: Facebook
     link: /#
-    image: /images/social/facebook.png
+    image: /assets/images/social/facebook.png
 
   - label: Vimeo
     link: /#
-    image: /images/social/vimeo.png
+    image: /assets/images/social/vimeo.png
 
 
 zipcode_search:

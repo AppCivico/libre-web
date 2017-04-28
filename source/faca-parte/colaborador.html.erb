@@ -1,7 +1,6 @@
 ---
 title:      Faça Parte - Cadastro de Colaborador
-controller: Home
-action:     Colaborador
+controller: Colaborador
 ---
 
 
@@ -162,7 +161,7 @@ action:     Colaborador
                         <% if f[:type] == 'radio' %>
                           <div class="radio">
                             <label>
-                              <%= input_tag f[:type], name: f[:name], value: f[:value], class: f[:class], required: f[:required] %>&nbsp;<%= f[:label] %>
+                              <%= input_tag f[:type], name: f[:name], value: f[:value], class: f[:classes], required: f[:required] %>&nbsp;<%= f[:label] %>
                             </label>
                           </div>
                         <% end %>
@@ -203,13 +202,13 @@ action:     Colaborador
                     <% tabs.billing.section.card_data.fields.each do |f| %>
                       <% if f[:type] == 'link' %>
                         <% content_tag :div, class: f[:container_class] do %>
-                          <% content_tag :a, id: f[:id], class: f[:class] do %>
+                          <% content_tag :a, id: f[:id], class: f[:classes] do %>
                             <%= f[:value] %>
                           <% end %>
                         <% end %>
                       <% else %>
                         <% content_tag :div, class: f[:container_class] do %>
-                          <%= input_tag f[:type], id: f[:name], name: f[:name], class: f[:class], required: f[:required], placeholder: f[:label] %>
+                          <%= input_tag f[:type], id: f[:name], name: f[:name], class: f[:classes], required: f[:required], placeholder: f[:label] %>
                         <% end %>
                       <% end %>
                     <% end %>
@@ -225,13 +224,13 @@ action:     Colaborador
                     <% tabs.billing.section.address_data.fields.each do |f| %>
                       <% if f[:type] == 'link' %>
                         <% content_tag :div, class: f[:container_class] do %>
-                          <% link_to f[:path], id: f[:id] || '', class: f[:class] || '', target: f[:target] || '_self' do %>
+                          <% link_to f[:path], id: f[:id] || '', class: f[:classes] || '', target: f[:target] || '_self' do %>
                             <%= f[:label] %>
                           <% end %>
                         <% end %>
                       <% else %>
                         <% content_tag :div, class: f[:container_class] do %>
-                          <%= input_tag f[:type], id: f[:name], name: f[:name], class: f[:class], required: f[:required], placeholder: f[:label] %>
+                          <%= input_tag f[:type], id: f[:name], name: f[:name], class: f[:classes], required: f[:required], placeholder: f[:label] %>
                         <% end %>
                       <% end %>
                     <% end %>

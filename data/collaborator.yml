@@ -23,13 +23,13 @@ how_to_works:
   title: Como funciona
   features:
     - title: Leia o artigo na íntegra
-      image: /images/libre-file.png
+      image: /assets/images/libre-file.png
 
     - title: Dê um Libre, apoiando a imprensa independente
-      image: /images/libre-coin.png
+      image: /assets/images/libre-coin.png
 
     - title: Faça <a>cadastro</a> ou <a>login</a> para confirmar sua doação
-      image: /images/libre-field.png
+      image: /assets/images/libre-field.png
 
 
 # form section
@@ -139,22 +139,22 @@ form:
               name: card_number
               type: string
               required: true
-              class: form-control
-              container_class: form-group col-md-6 col-sm-12
+              classes: form-control
+              container_classes: form-group col-md-6 col-sm-12
 
             - label: Vencimento
               name: card_date
               type: string
               required: true
-              class: form-control
-              container_class: form-group col-md-3 col-sm-12
+              classes: form-control
+              container_classes: form-group col-md-3 col-sm-12
 
             - label: Cod. verif.
               name: card_cvv
               type: string
               required: true
-              class: form-control
-              container_class: form-group col-md-3 col-sm-12
+              classes: form-control
+              container_classes: form-group col-md-3 col-sm-12
 
         address_data:
           title: Endereço da fatura
@@ -163,52 +163,52 @@ form:
               name: address_cep
               type: string
               required: true
-              class: form-control
-              container_class: form-group col-md-6 col-sm-12
+              classes: form-control
+              container_classes: form-group col-md-6 col-sm-12
 
             - label: Clique aqui para persquisar seu CEP caso não saiba.
               path: http://www.buscacep.correios.com.br/sistemas/buscacep/
               target: _blank
               type: link
-              class: btn btn-link
-              container_class: form-group col-md-6 col-sm-12
+              classes: btn btn-link
+              container_classes: form-group col-md-6 col-sm-12
 
             - label: Endereço
               name: address_street
               type: string
               required: true
-              class: form-control
-              container_class: form-group col-md-6 col-sm-12
+              classes: form-control
+              container_classes: form-group col-md-6 col-sm-12
 
             - label: Número
               name: address_number
               type: string
               required: true
-              class: form-control
-              container_class: form-group col-md-3 col-sm-12
+              classes: form-control
+              container_classes: form-group col-md-3 col-sm-12
 
             - label: Complemento
               name: address_complement
               type: string
               required: true
-              class: form-control
-              container_class: form-group col-md-3 col-sm-12
+              classes: form-control
+              container_classes: form-group col-md-3 col-sm-12
 
             - label: Estado
               name: address_state
               type: string
               required: true
               disabled: true
-              class: form-control
-              container_class: form-group col-md-6 col-sm-12
+              classes: form-control
+              container_classes: form-group col-md-6 col-sm-12
 
             - label: Cidade
               name: address_city
               type: string
               required: true
               disabled: true
-              class: form-control
-              container_class: form-group col-md-6 col-sm-12
+              classes: form-control
+              container_classes: form-group col-md-6 col-sm-12
 
       # next button
       next_button:

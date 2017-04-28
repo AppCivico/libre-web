@@ -29,18 +29,18 @@ citation_name: Oscar Wilde
 # portals that use libre
 who_using:
   - label: Nexo
-    image: /images/nexo.png
+    image: /assets/images/nexo.png
     path: http://google.com.br
 
   - label: Público
-    image: /images/publico.png
+    image: /assets/images/publico.png
     path: http://google.com.br
 
   - label: The Intercept
-    image: /images/the-intercept.png
+    image: /assets/images/the-intercept.png
     path: http://google.com.br
 
   - label: El País
-    image: /images/el-pais.png
+    image: /assets/images/el-pais.png
     path: http://google.com.br
 
