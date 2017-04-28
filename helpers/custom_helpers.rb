@@ -21,4 +21,8 @@ module CustomHelpers
   def get_action
     current_page.data.action || ''
   end
+
+  def page_data
+    data.pages
+  end
 end
