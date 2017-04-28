@@ -1,9 +1,7 @@
 ---
 title:      Contato
-controller: Home
-action:     Contato
+controller: contact
 ---
-
 
     <section id="main-content">
       <div class="container">
@@ -15,7 +13,7 @@ action:     Contato
           <div class="col-md-8 section-content">
             <p><%= data.contact.description %></p>
 
-            <% form_tag '#', name: "cotact_form",  id: "contact_form" do %>
+            <% form_tag "#{data.config.routes['root']}/contact", name: "cotact_form",  id: "contact-form", class: "contact-form", novalidate: true, data: { remote: true, type: 'json' } do %>
               <% data.contact.fields.each do |f| %>
 
                 <div class="form-group">
@@ -34,7 +32,7 @@ action:     Contato
                     <%= select_tag f[:name], id: f[:name], class: f[:classes], required: f[:required], options: f[:options].map {|o| [o[:label], o[:value]] }, selected: '0'  %>
 
                   <% elsif f[:type] == 'submit' %>
-                    <%= submit_tag f[:label], name: f[:name], id: f[:name], class: f[:classes] %>
+                    <%= submit_tag f[:label], name: f[:name], id: f[:name], class: f[:classes], data: {'disable-with': 'Enviando...'} %>
 
                   <% end %>
                 </div>
@@ -48,3 +46,7 @@ action:     Contato
       </div>
     </section>
 
+
+    <!-- templates -->
+    <script id="message-template" type="lodash-template">
+    </script>

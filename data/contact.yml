@@ -35,29 +35,6 @@ fields:
     classes: form-control
 
   # subject field
-  - label: Tipo de contato
-    name: type
-    type: select
-    required: true
-    classes: form-control
-    options:
-      - label: Tipo de contato
-        value:
-        selected: selected
-
-      - label: Dúvidas sobre o site
-        value: Dúvidas sobre o site
-
-      - label: Dúvidas sobre o projeto Libre
-        value: Dúvidas sobre o projeto Libre
-
-      - label: Suporte
-        value: Suporte
-
-      - label: Outros
-        value: Outros
-
-  # subject field
   - label: Assunto
     name: subject
     type: string
