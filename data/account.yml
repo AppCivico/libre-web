@@ -1,0 +1,16 @@
+
+signin:
+  title: Login de usuário
+  subtitle: |
+    Preencha os campos abaixo para ter acesso á plataforma.
+
+  fields:
+    email:
+      label: E-mail
+
+    password:
+      label: Senha
+
+
+
+

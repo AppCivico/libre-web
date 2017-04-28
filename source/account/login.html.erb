@@ -1,0 +1,78 @@
+---
+title:      Login de Usuário
+controller: account/signin
+---
+
+
+    <section id="main-content">
+      <div class="container">
+        <div class="row">
+
+          <!-- page title -->
+          <div class="col-md-12">
+            <h1><%= page_data[:account].signin.title %></h1>
+          </div>
+
+          <!-- user register -->
+          <div class="col-md-6 section-content">
+            <h3>Efetue se cadastro para utilizar o Libre</h3>
+
+            <p>Colabore com canais de informação independentes efetuando doações:</p>
+            <p><a class="btn btn-success btn-lg btn-block" href="/faca-parte/colaborador">Cadastrar-se como Colaborador</a></p>
+
+            <br>
+
+            <p>Adicionar os botões de doação de libres em sua página e garanta que os colaboradores possam suportar o seu trabalho:</p>
+            <p><a class="btn btn-success btn-lg btn-block" href="/faca-parte/jornalista">Cadastrar-se como Jornalista/Veículo</a></p>
+          </div>
+
+          <!-- user signin -->
+          <div class="col-md-offset-1 col-md-5 section-content">
+            <h3><%= page_data[:account].signin.title %></h3>
+            <p><%= page_data[:account].signin.subtitle %></p>
+
+						<% form_tag "#{data.config.routes['root']}/login", name: "login_form",  id: "login-form", class: "login-form", novalidate: true, data: { remote: true, type: 'json' } do %>
+							<% page_data[:account].signin.form.fields.each do |name, f| %>
+
+								<div class="<%= f[:type] == 'radio' || f[:type] == 'checkbox' ? f[:type] : 'form-group' %>">
+
+                  <% if ['string', 'text', 'select'].include? f[:type]  %>
+                    <% content_tag :label, for: f[:name], class: 'sr-only' do %><%= f[:label]%><% end %>
+                  <% end %>
+
+                  <% if f[:type] == 'string' %>
+                    <%= text_field_tag f[:name], id: f[:name], class: f[:classes] || '', required: f[:required], placeholder: f[:placeholder] || f[:label]  %>
+
+                  <% elsif f[:type] == 'email' or f[:type] == 'password' %>
+                    <%= tag :input, type: f[:type], name: f[:name], id: f[:name], class: f[:classes] || '', required: f[:required], placeholder: f[:placeholder] || f[:label]  %>
+
+                  <% elsif f[:type] == 'text' %>
+                    <%= text_area_tag f[:name], id: f[:name], class: f[:classes], required: f[:required], placeholder: f[:placeholder] || f[:label] %>
+
+                  <% elsif f[:type] == 'select' %>
+                    <%= select_tag f[:name], id: f[:name], class: f[:classes], required: f[:required], options: f[:options].map {|o| [o[:label], o[:value]] }, selected: '0'  %>
+
+                  <% elsif f[:type] == 'checkbox' or f[:type] == 'radio' %>
+										<% content_tag :label do %>
+											<%= tag :input, type: f[:type], id: f[:name], class: f[:classes] || '', required: f[:required]  %> <%= f[:label]%>
+										<% end %>
+
+                  <% elsif f[:type] == 'submit' %>
+                    <%= submit_tag f[:label], id: f[:name], class: f[:classes], data: {'disable-with': 'Validando dados...'} %>
+
+									<% end %>
+
+									<% if f[:help] %>
+										<small class="help-block"><%= f[:help] %></small>
+									<% end %>
+
+                </div>
+
+							<% end %>
+						<% end %>
+          </div>
+
+        </div>
+    </section>
+
+
