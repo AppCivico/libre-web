@@ -1,0 +1,224 @@
+
+# title
+title: Faça Parte
+
+# 3 column content
+contents:
+  - title: Libero Nisi
+    content: |
+      Hashtag organic ennui mlkshk, sriracha tbh literally la croix vape meditation street art tousled irony deep v sustainable.
+
+  - title: Commodo
+    content: |
+      Hashtag organic ennui mlkshk, sriracha tbh literally la croix vape meditation street art tousled irony deep v sustainable.
+
+  - title: Sit amet
+    content: |
+      Hashtag organic ennui mlkshk, sriracha tbh literally la croix vape meditation street art tousled irony deep v sustainable.
+
+
+
+# how to works
+how_to_works:
+  title: Como funciona
+  features:
+    - title: Leia o artigo na íntegra
+      image: /assets/images/libre-file.png
+
+    - title: Dê um Libre, apoiando a imprensa independente
+      image: /assets/images/libre-coin.png
+
+    - title: Faça <a>cadastro</a> ou <a>login</a> para confirmar sua doação
+      image: /assets/images/libre-field.png
+
+
+# form section
+form:
+  title: Cadastre-se
+
+  tabs:
+    # default active tab
+    activated: billing
+
+    # personal data tab content
+    personal:
+      title: 1. Dados cadastrais
+      name: personal
+      subtitle: |
+        Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify
+        intelligentsia scenester cliche lomo la croix subway tile meditation.
+
+      section:
+        access_data:
+          title: Dados de acesso
+        general_data:
+          title: Dados gerais
+
+      next_button:
+        label: Continuar
+
+      help: |
+        Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify
+        intelligentsia scenester cliche lomo la croix subway tile meditation.
+
+
+    # plan tab content
+    plan:
+      title: 2. Escolha do plano
+      name: plan
+      subtitle: |
+        Escolha seu plano abaixo:
+
+      form:
+        fields:
+          - label: R$ 10 por mês
+            type: radio
+            value: 10
+            name: plan
+            required: true
+            classes: form-control
+
+          - label: R$ 20 por mês
+            type: radio
+            value: 20
+            name: plan
+            required: true
+            classes: form-control
+
+          - label: R$ 30 por mês
+            type: radio
+            value: 30
+            name: plan
+            required: true
+            classes: form-control
+
+          - label: R$ 40 por mês
+            type: radio
+            value: 40
+            name: plan
+            required: true
+            classes: form-control
+
+          - label: R$ 50 por mês
+            type: radio
+            value: 50
+            name: plan
+            required: true
+            classes: form-control
+
+          - label: Insira um valor
+            type: radio
+            value:
+            name: plan
+            required: false
+            classes: form-control
+
+      # next button
+      next_button:
+        id: js-step2-next
+        label: Continuar
+        type: button
+        classes: btn btn-green btn-block
+
+      help: |
+        Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify
+        intelligentsia scenester cliche lomo la croix subway tile meditation.
+
+
+    # billing tab content
+    billing:
+      title: 3. Pagamento
+      name: billing
+      subtitle: |
+        Finalize seu cadastro efetuando o pagamento conforme o plano escolhido
+      section:
+        card_data:
+          title: Dados do cartão
+          fields:
+            - label: Número do cartão
+              name: card_number
+              type: string
+              required: true
+              classes: form-control
+              container_classes: form-group col-md-6 col-sm-12
+
+            - label: Vencimento
+              name: card_date
+              type: string
+              required: true
+              classes: form-control
+              container_classes: form-group col-md-3 col-sm-12
+
+            - label: Cod. verif.
+              name: card_cvv
+              type: string
+              required: true
+              classes: form-control
+              container_classes: form-group col-md-3 col-sm-12
+
+        address_data:
+          title: Endereço da fatura
+          fields:
+            - label: CEP
+              name: address_cep
+              type: string
+              required: true
+              classes: form-control
+              container_classes: form-group col-md-6 col-sm-12
+
+            - label: Clique aqui para persquisar seu CEP caso não saiba.
+              path: http://www.buscacep.correios.com.br/sistemas/buscacep/
+              target: _blank
+              type: link
+              classes: btn btn-link
+              container_classes: form-group col-md-6 col-sm-12
+
+            - label: Endereço
+              name: address_street
+              type: string
+              required: true
+              classes: form-control
+              container_classes: form-group col-md-6 col-sm-12
+
+            - label: Número
+              name: address_number
+              type: string
+              required: true
+              classes: form-control
+              container_classes: form-group col-md-3 col-sm-12
+
+            - label: Complemento
+              name: address_complement
+              type: string
+              required: true
+              classes: form-control
+              container_classes: form-group col-md-3 col-sm-12
+
+            - label: Estado
+              name: address_state
+              type: string
+              required: true
+              disabled: true
+              classes: form-control
+              container_classes: form-group col-md-6 col-sm-12
+
+            - label: Cidade
+              name: address_city
+              type: string
+              required: true
+              disabled: true
+              classes: form-control
+              container_classes: form-group col-md-6 col-sm-12
+
+      # next button
+      next_button:
+        id: js-step3-next
+        label: Continuar
+        type: button
+        classes: btn btn-green btn-block
+
+      help: |
+        Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify
+        intelligentsia scenester cliche lomo la croix subway tile meditation.
+
+

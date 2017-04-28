@@ -1,0 +1,55 @@
+
+# page texts
+title: Contato
+description: |
+  Preencha o formulário para entrar em contato com a gente e tirar suas dúvidas.
+
+# form field list
+fields:
+  # name field
+  - label: Nome completo
+    name: name
+    type: string
+    required: true
+    classes: form-control
+
+  # company field
+  - label: Nome da empresa
+    name: company
+    type: string
+    required: true
+    classes: form-control
+
+  # e-mail field
+  - label: E-mail
+    name: email
+    type: string
+    required: true
+    classes: form-control
+
+  # phone field
+  - label: Telefone
+    name: phone
+    type: string
+    required: true
+    classes: form-control
+
+  # subject field
+  - label: Assunto
+    name: subject
+    type: string
+    required: true
+    classes: form-control
+
+  # message field
+  - label: Mensagem
+    name: message
+    type: text
+    classes: form-control
+
+  # submit button
+  - label: Enviar Contato
+    name: btn_enviar
+    type: submit
+    classes: btn btn-success
+
