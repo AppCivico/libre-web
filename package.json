@@ -1,16 +1,23 @@
 {
-  "name": "libre-web",
-  "version": "1.0.0",
-  "description": "Libre Web Application",
-  "main": "index.js",
-  "repository": "https://dvinciguerra@bitbucket.org/eokoe_it/libre_web.git",
-  "author": "Daniel Vinciguerra <daniel@eokoe.com>",
-  "license": "PERSONAL",
-  "dependencies": {
-    "jquery": "^3.2.1",
-    "moment": "^2.18.1",
-    "mustache": "^2.3.0",
-    "store": "^2.0.4",
-    "turbolinks": "^5.0.0"
-  }
+    "scripts": {
+        "build": "brunch build",
+        "start": "brunch watch --server",
+        "test": "brunch test"
+    },
+    "dependencies": {
+        "backbone": "^1.3.3",
+        "backbone.marionette": "^3.2.0",
+        "handlebars": "^4.0.6",
+        "jquery-ujs": "^1.2.2"
+    },
+    "devDependencies": {
+        "brunch": "^2.10.9",
+        "clean-css-brunch": "^1.7.1",
+        "coffee-script-brunch": "^2.10.1",
+        "css-brunch": "^1.7.0",
+        "eco-brunch": "^2.0.0",
+        "ejs-brunch": "^1.0.2",
+        "sass-brunch": "^2.10.4",
+        "uglify-js-brunch": "^1.7.7"
+    }
 }
