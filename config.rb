@@ -35,7 +35,7 @@ end
 activate :external_pipeline,
   name: :brunch,
   command: build? ?
-    "NODE_ENV=#{config[:environment]} ./node_modules/brunch/bin/brunch build --production --env #{config[:environment]}" :
+    "NODE_ENV=#{config[:environment]} ./node_modules/brunch/bin/brunch build --env #{config[:environment]}" :
     "NODE_ENV=#{config[:environment]} ./node_modules/brunch/bin/brunch watch --stdin --env #{config[:environment]}",
   source: ".tmp/dist",
 latency: 1
