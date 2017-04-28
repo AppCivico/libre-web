@@ -1,0 +1,9 @@
+<div id="message" class="message alert alert-<%= @type %>">
+	<strong>
+	<% if @type is 'danger': %>
+		Erro!
+	<% else: %>
+		Obrigado!
+	<% end %>
+	</strong> <%= @message %>
+</div>
