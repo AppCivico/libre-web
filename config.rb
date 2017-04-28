@@ -41,8 +41,8 @@ activate :external_pipeline,
 latency: 1
 
 
-after_build do |builder|
-  # add event after build
-  #Ex.: exit 1 unless builder.run 'karma start karma.config.js --single-run'
-end
+#after_build do |builder|
+#  # add event after build
+#  #Ex.: exit 1 unless builder.run 'karma start karma.config.js --single-run'
+#end
 
