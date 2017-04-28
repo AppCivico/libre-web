@@ -1,7 +1,11 @@
-activate :sprockets
 activate :directory_indexes
 
+# default asset directories
+set :js_dir,  'assets/js'
+set :css_dir, 'assets/css'
 
+
+# layouts and file-types
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
@@ -11,29 +15,30 @@ page '/index.html', layout: 'default'
 # development env
 configure :development do
   activate :livereload
-
-  activate :asset_hash do |opts|
-    # ignore email headers
-    opts.ignore = [/images\/emails\//i, /\.pdf/i]
-  end
-
-end
-
-
-# build env
-configure :build do
-  activate :asset_hash do |opts|
-    opts.ignore = [/images\/emails\//i, /\.pdf/i]
-  end
-
-  activate :minify_css
-  activate :minify_javascript
+  activate :asset_hash
 end
 
 # production env
 configure :production do
-  # ... make production tasks
+  activate :asset_hash
+  activate :minify_css
+  activate :minify_javascript
 end
+
+# build task
+configure :build do
+
+end
+
+
+# external asset pipeline
+activate :external_pipeline,
+  name: :brunch,
+  command: build? ?
+    "NODE_ENV=#{config[:environment]} ./node_modules/brunch/bin/brunch build --production --env #{config[:environment]}" :
+    "NODE_ENV=#{config[:environment]} ./node_modules/brunch/bin/brunch watch --stdin --env #{config[:environment]}",
+  source: ".tmp/dist",
+latency: 1
 
 
 after_build do |builder|
