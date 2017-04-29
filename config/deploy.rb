@@ -5,6 +5,8 @@ require 'mina/git'
 
 
 # basic settings:
+set :version, "v0.2.0"
+
 set :application_name,  'libre-web'
 set :domain,            ENV['MINA_DOMAIN'] || 'localhost'
 set :deploy_to,         ENV['MINA_DEPLOY_DIR'] || '~/'
