@@ -1,11 +1,22 @@
 
-#X.X 2017-XX-XX
-#- Next version specifications
 
+0.2 2017-04-28 (unreleased)
+	- Updated js webapp base to use marionettejs.
+	- Updated asset build tool to be brunch.io.
+	- Added user login page.
+	- Added contact api integration.
+	- Added user login api integration.
+	- Improved middleman config file.
+	- Updated middleman external pipeline for brunch.io.
 
-1.0  2017-03-XX
-- Code name "Snowball", this is a major release.
-- Index page created
-- About page created
-- Join us page created
-- Contact us page created
+0.1 2017-04-11 (unreleased)
+	- Added webapp project base.
+	- Added home page.
+	- Added about page.
+	- Added contact page.
+	- Added collaborator register page.
+	- Added journalist page.
+	- Added mina as fucture project deploy and build tool.
+	- Added webpack as asset build tool.
+
+# Changelog http://keepachangelog.com/en/0.3.0/
