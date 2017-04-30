@@ -13,12 +13,25 @@ module CustomHelpers
   end
 
   # shortcut that return controller name
-  def get_controller
-    current_page.data.controller || ''
+  def page_controller(type = nil)
+    if type == 'attr'
+      current_page.data.controller ?  "data-controller=\"#{current_page.data.controller}\"" : ""
+    else
+      current_page.data.controller
+    end
+  end
+
+  # shortcut that return module name
+  def page_module(type = nil)
+    if type == 'attr'
+      current_page.data.module ?  "data-module=\"#{current_page.data.module}\"" : ""
+    else
+      current_page.data.module
+    end
   end
 
   # shortcut that return action name
-  def get_action
+  def page_action
     current_page.data.action || ''
   end
 

@@ -9,7 +9,8 @@
     <%= stylesheet_link_tag "application.bundle" %>
   </head>
 
-  <body class="<%= page_classes %>" data-controller="<%= current_page.data.controller %>">
+	<body class="<%= page_classes %>" <%= page_controller 'attr' %> <%= page_module 'attr' %> >
+
     <%= partial 'partial/_noscript.erb' %>
 
 
