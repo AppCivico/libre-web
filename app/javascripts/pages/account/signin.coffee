@@ -1,10 +1,13 @@
 "use strict"
 
 # requires
-BaseController = require 'pages/base.coffee'
+PageBase = require 'pages/base.coffee'
 
-# application single point entry
-module.exports = class LoginController extends BaseController
+###
+#  Page class
+#  @author dvinciguerra
+###
+module.exports = class LoginController extends PageBase
   el: $('form#login-form')
 
 
@@ -20,22 +23,11 @@ module.exports = class LoginController extends BaseController
 
   ## Bindings
   bind: (@options) ->
-    @el.on 'ajax:error', (event, xhr, status, error) =>
-      @ajax_error(event, xhr, status, error)
-
-    @el.on 'ajax:success', (event, xhr, settings) =>
-      @ajax_success(event, xhr, settings)
+    @el.on 'ajax:error', @renderError(event, xhr, settings, error)
+    @el.on 'ajax:success', @renderSuccess(event, xhr, settings)
 
 
   ## Events
-  ajax_success: (event, xhr, settings) ->
-    @renderSuccess event, xhr
-
-  ajax_error: (event, xhr, status, error) ->
-    @renderError event, xhr.responseJSON || {}
-
-
-  ## Renderers
   renderSuccess: (event, xhr) ->
     @_reset_messages()
     @el.append @render(
@@ -43,6 +35,7 @@ module.exports = class LoginController extends BaseController
     )
 
   renderError: (event, response) ->
+    response = xhr.responseJSON || {}
     @_reset_messages()
 
     # input validation messages
@@ -52,7 +45,6 @@ module.exports = class LoginController extends BaseController
           el.parent().addClass 'has-error'
 
     # form error message
-    #if response? and response.error? and response.error is 'Bad email or password'
     @el.append @render('message', {
       type: 'danger', message: 'E-mail ou senha inválidos'
     })

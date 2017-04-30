@@ -1,9 +1,13 @@
 "use strict"
 
-BaseController = require 'pages/base.coffee'
+# requires
+PageBase = require 'pages/base.coffee'
 
-# application single point entry
-module.exports = class AboutController extends BaseController
+###
+#  Page class
+#  @author dvinciguerra
+###
+module.exports = class AboutPage extends PageBase
   el: $(document.body)
 
 

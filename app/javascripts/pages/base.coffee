@@ -1,23 +1,27 @@
 "use strict"
 
+# requires
 require 'jquery-ujs'
 
-module.exports = class BaseController
+###
+#  PageBase - Simple Page Base class using Marionette.Object
+#  @author dvinciguerra
+###
+module.exports = class PageBase extends Marionette.Object
 
-  @start: (options) ->
-    if options.config? and options.config['debug']
-      console.debug "Starting '#{options.name}' controller for #{document.location.href} page..."
-
-    new this(options)
-
-
-  # constructor
-  constructor: (@options) ->
+  start: () ->
     try
       @initialize(@options)
       @bind(@options)
     catch e
       throw e
+
+
+  # constructor
+  constructor: (@options = {}) ->
+    if @options.config? and @options.config['debug']
+      console.debug "Starting '#{@options.name}' controller for #{document.location.href} page..."
+
 
   # templates
   templates: []

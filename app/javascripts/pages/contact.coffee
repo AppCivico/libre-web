@@ -1,10 +1,13 @@
 "use strict"
 
 # requires
-BaseController = require 'pages/base.coffee'
+PageBase = require 'pages/base.coffee'
 
-# application single point entry
-module.exports = class ContactController extends BaseController
+###
+#  Page class
+#  @author dvinciguerra
+###
+module.exports = class ContactController extends PageBase
   el: $('form#contact-form')
 
 
