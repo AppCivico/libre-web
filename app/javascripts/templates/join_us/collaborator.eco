@@ -1,0 +1,249 @@
+<section id="main-content">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <h1>Faça Parte</h1>
+            </div>
+            <div class="col-md-12 section-content">
+                <br>
+                <br>
+                <br>
+                <div class="row 3col-content">
+                    <div class="col-md-4">
+                        <h3 class="text-muted">Libero Nisi</h3>
+                        <p>Hashtag organic ennui mlkshk, sriracha tbh literally la croix vape meditation street art tousled irony deep v sustainable.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="text-muted">Commodo</h3>
+                        <p>Hashtag organic ennui mlkshk, sriracha tbh literally la croix vape meditation street art tousled irony deep v sustainable.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h3 class="text-muted">Sit amet</h3>
+                        <p>Hashtag organic ennui mlkshk, sriracha tbh literally la croix vape meditation street art tousled irony deep v sustainable.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<section id="how-works-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-12">
+                <h2>Como funciona</h2>
+            </div>
+            <div class="col-md-12 section-content">
+                <div class="row 3col-features">
+                    <div class="col-md-4 text-center">
+                        <p><img src="/assets/images/libre-file-c50a6613.png" alt="" /></p>
+                        <h4><strong>Leia o artigo na íntegra</strong></h4>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <p><img src="/assets/images/libre-coin-6c7691a6.png" alt="" /></p>
+                        <h4><strong>Dê um Libre, apoiando a imprensa independente</strong></h4>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <p><img src="/assets/images/libre-field-d9c82105.png" alt="" /></p>
+                        <h4><strong>Faça <a>cadastro</a> ou <a>login</a> para confirmar sua doação</strong></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<section id="collaborator-section">
+    <div class="section-header">
+        <div class="container">
+            <h2>Cadastre-se</h2>
+        </div>
+    </div>
+    <div class="section-tabs">
+        <div class="container">
+
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class=" ">
+                    <a href="#personal" role="tab" data-toggle="tab">1. Dados cadastrais</a>
+                </li>
+                <li role="presentation" class=" ">
+                    <a href="#plan" role="tab" data-toggle="tab">2. Escolha do plano</a>
+                </li>
+                <li role="presentation" class=" active">
+                    <a href="#billing" role="tab" data-toggle="tab">3. Pagamento</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="form-container">
+        <div class="container">
+
+            <div class="tab-content">
+
+                <div role="tabpanel" class="tab-pane " id="personal">
+                    <div class="row">
+
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-spaced">Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify intelligentsia scenester cliche lomo la croix subway tile meditation.
+                                    </p>
+                                    <h4 class="text-green">Dados de acesso</h4>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" placeholder="E-mail" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" placeholder="Senha" class="form-control">
+                                </div>
+                                <div class="col-md-12">
+                                    <br class="text-spaced">
+                                    <h4 class="text-green">Dados gerais</h4>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" placeholder="Nome" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" placeholder="Sobrenome" class="form-control">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="text" placeholder="Telefone" class="form-control">
+                                </div>
+                                <div class="col-md-12"></div>
+                                <div class="col-md-6">
+                                    <a class="btn btn-green btn-block" href="#">
+Continuar
+</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-offset-1 col-md-3">
+                            <h4 class="text-spaced text-green">Ajuda</h4>
+                            <p>Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify intelligentsia scenester cliche lomo la croix subway tile meditation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div role="tabpanel" class="tab-pane " id="plan">
+                    <div class="row">
+
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-spaced">Escolha seu plano abaixo:
+                                    </p>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <div class="radio">
+                                        <label>
+<input type="radio" name="plan" value="10" class="form-control" required="required"/>&nbsp;R$ 10 por mês
+</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <div class="radio">
+                                        <label>
+<input type="radio" name="plan" value="20" class="form-control" required="required"/>&nbsp;R$ 20 por mês
+</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <div class="radio">
+                                        <label>
+<input type="radio" name="plan" value="30" class="form-control" required="required"/>&nbsp;R$ 30 por mês
+</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <div class="radio">
+                                        <label>
+<input type="radio" name="plan" value="40" class="form-control" required="required"/>&nbsp;R$ 40 por mês
+</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <div class="radio">
+                                        <label>
+<input type="radio" name="plan" value="50" class="form-control" required="required"/>&nbsp;R$ 50 por mês
+</label>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <div class="radio">
+                                        <label>
+																					<input type="radio" name="plan" class="form-control"/>&nbsp;Insira um valor
+																				</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-12"></div>
+                                <div class="col-md-6">
+                                    <a class="btn btn-green btn-block" href="#">Continuar</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-offset-1 col-md-3">
+                            <h4 class="text-spaced text-green">Ajuda</h4>
+                            <p>Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify intelligentsia scenester cliche lomo la croix subway tile meditation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div role="tabpanel" class="tab-pane active" id="billing">
+                    <div class="row">
+
+                        <div class="col-md-8">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <p class="text-spaced">Finalize seu cadastro efetuando o pagamento conforme o plano escolhido
+                                    </p>
+                                    <h4 class="text-green">Dados do cartão</h4>
+                                </div>
+                                <div> <input type="string" id="card_number" name="card_number" class="form-control" required="required" placeholder="Número do cartão" />
+                                </div>
+                                <div> <input type="string" id="card_date" name="card_date" class="form-control" required="required" placeholder="Vencimento" />
+                                </div>
+                                <div> <input type="string" id="card_cvv" name="card_cvv" class="form-control" required="required" placeholder="Cod. verif." />
+                                </div>
+                                <div class="col-md-12">
+                                    <br>
+                                    <br>
+                                    <h4 class="text-green">Dados do cartão</h4>
+                                </div>
+                                <div> <input type="string" id="address_cep" name="address_cep" class="form-control" required="required" placeholder="CEP" />
+                                </div>
+                                <div><a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" id="" class="btn btn-link" target="_blank"> Clique aqui para persquisar seu CEP caso não saiba.
+</a></div>
+                                <div> <input type="string" id="address_street" name="address_street" class="form-control" required="required" placeholder="Endereço" />
+                                </div>
+                                <div> <input type="string" id="address_number" name="address_number" class="form-control" required="required" placeholder="Número" />
+                                </div>
+                                <div> <input type="string" id="address_complement" name="address_complement" class="form-control" required="required" placeholder="Complemento" />
+                                </div>
+                                <div> <input type="string" id="address_state" name="address_state" class="form-control" required="required" placeholder="Estado" />
+                                </div>
+                                <div> <input type="string" id="address_city" name="address_city" class="form-control" required="required" placeholder="Cidade" />
+                                </div>
+                                <div class="col-md-12"></div>
+                                <div class="col-md-6">
+                                    <a class="btn btn-green btn-block" href="#">Continuar</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-offset-1 col-md-3">
+                            <h4 class="text-spaced text-green">Ajuda</h4>
+                            <p>Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify intelligentsia scenester cliche lomo la croix subway tile meditation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

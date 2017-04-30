@@ -16,5 +16,5 @@ module.exports = class JoinUsRouter extends Marionette.AppRouter
     'colaborador': 'collaborator'
 
   onRoute: (name, path, args) ->
-    console.log "-- Client navigated to \"/#{path}\"..."
+    console.log "-- Client navigated to '/#{path}'..." if @options.config.debug
 

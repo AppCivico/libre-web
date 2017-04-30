@@ -18,13 +18,11 @@ module.exports = class JoinUsModule extends ModuleBase
   # start event
   onStart: () ->
     router = new Router {
-      name: @options.name
-      config: @options.config
+      name: @options.name, config: @options.config
     }
 
     Backbone.history.start {
-      pushState: false
-      root: "/faca-parte"
+      root: "/faca-parte", pushState: false
     }
 
 
