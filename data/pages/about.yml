@@ -30,3 +30,8 @@ content: |
   kale chips chillwave celiac pitchfork. Hammock waistcoat slow-carb cornhole
   vice, synth yr authentic godard post-ironic franzen pour-over DIY.</p>
 
+button:
+  label: Faça Parte
+  path: /account/login
+  classes: btn btn-success btn-lg
+

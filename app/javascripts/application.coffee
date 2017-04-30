@@ -5,5 +5,7 @@ Application = require 'lib/application.coffee'
 
 # single point entry
 module.exports = do ->
-	jQuery ->
-		Application.start()
+  document.addEventListener 'DOMContentLoaded', ->
+    Application.start()
+  , false
+

@@ -4,37 +4,37 @@ controller: about
 ---
 
 
-    <section id="main-content">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h1><%= data.about.title %></h1>
-          </div>
+	<section id="main-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1><%= data.about.title %></h1>
+				</div>
 
-          <div class="col-md-8 section-content">
-            <%= data.about.content %>
-          </div>
-          <div class="col-md-4 text-center">
-            <p>
-              <%= image_tag '/images/libre-coin.png', height: '100px', title: 'Libre Coin' %>
-            </p>
-            <br>
-            <br>
-            <br>
-            <br>
-            <p>
-              <%= image_tag '/images/libre-coins.png', height: '120px', title: 'Libre Coins' %>
-            </p>
+				<div class="col-md-8 section-content">
+					<%= data.about.content %>
+				</div>
+				<div class="col-md-4 text-center">
+					<p>
+						<%= image_tag '/images/libre-coin.png', height: '100px', title: 'Libre Coin' %>
+					</p>
+					<br>
+					<br>
+					<br>
+					<br>
+					<p>
+						<%= image_tag '/images/libre-coins.png', height: '120px', title: 'Libre Coins' %>
+					</p>
 
-          </div>
+				</div>
 
-          <div class="col-md-12 section-content">
-            <p>
-              <a class="btn btn-lbr--default" href="">Faça Parte</a>
-            </p>
-          </div>
+				<div class="col-md-12 section-content">
+					<p>
+						<%= b = page_data[:about].button; link_to b.label, b.path, class: b.classes %>
+					</p>
+				</div>
 
-        </div>
-      </div>
-    </section>
+			</div>
+		</div>
+	</section>
 

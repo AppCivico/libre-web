@@ -2,25 +2,27 @@
 
 # configuration
 Config = require 'config.coffee'
-window.Cofig = Config or {}
-
 
 # application single point entry
 module.exports = class Application
-	@start: ->
+  @start: ->
+    config = Config.env('development')
 
-		# getting config
-		config = Config.env('development')
+    # getting page info
+    body = document.body
 
-		# getting page info
-		body = document.body
-		controller = body.getAttribute('data-controller') ? null
+    # getting an instance of page(controller)
+    if controller = body.getAttribute('data-controller')
+      Page = require "pages/#{controller.toLowerCase()}"
+      page = new Page {name: controller, config: config}
+      return page.start()
 
-		# getting an instance of controller
-		if controller? and controller isnt 'App'
-			Controller = require "pages/#{controller.toLowerCase()}"
-			return Controller.start {name: controller, config: config}
-		else
-			console.warn "Page '#{document.location.href}' dont have any controller defined"
+    # getting an instance of an application(module)
+    else if module = body.getAttribute('data-module')
+      Module = require "modules/#{module.toLowerCase()}"
+      module = new Module {name: module, config: config}
+      return module.start()
 
+    else
+      console.info 'No controller or module was defined!'
 
