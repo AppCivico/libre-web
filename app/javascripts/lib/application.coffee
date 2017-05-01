@@ -3,6 +3,14 @@
 # configuration
 Config = require 'config.coffee'
 
+# config renderer
+Marionette.Renderer.render = (obj, data, view) ->
+  data = _.extend(data, {stash: view.stash})
+
+  template = if _.isFunction(obj) then obj else require(obj)
+  return template(data)
+
+
 # application single point entry
 module.exports = class Application
   @start: ->
