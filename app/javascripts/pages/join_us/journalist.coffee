@@ -41,9 +41,8 @@ module.exports = class JournalistPage extends PageBase
   getAddressByZipcode: (event) ->
     postalcode = event.currentTarget.value
 
-    Backbone.Request = $.ajax
-
     if postalcode.match(/^\d{8}$/) or postalcode.match(/^\d{5}\-\d{3}$/)
+      # FIXME: export all this scope to an lib/plugin/service
       response = $.ajax {url: "http://api.postmon.com.br/cep/#{postalcode}"}
       response.done (response) ->
         data =
