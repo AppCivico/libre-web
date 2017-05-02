@@ -1,0 +1,217 @@
+---
+title:      Faça Parte - Cadastro de Jornalista
+controller: join_us/journalist
+---
+
+
+    <section id="main-content">
+      <div class="container">
+        <div class="row">
+
+          <!-- page title -->
+          <div class="col-md-12">
+            <h1><%= data.journalist.title %></h1>
+          </div>
+
+          <div class="col-md-8 section-content">
+
+            <div class="row">
+              <div class="col-md-6">
+                <% btn = data.journalist.buttons[0] %>
+                <p>
+                  <% content_tag :button, class: btn[:classes], data: btn[:data] do %>
+                    <%= btn[:label] %>
+                  <% end %>
+                </p>
+
+                <p><strong>Benefícios:</strong></p>
+                <ul class="clean-list">
+                  <% btn.benefits.each do |b| %>
+                    <li><%= b %></li>
+                  <% end %>
+                </ul>
+              </div>
+
+              <div class="col-md-6">
+                <% btn = data.journalist.buttons[1] %>
+                <p>
+                  <% content_tag :button, class: btn[:classes], data: btn[:data] do %>
+                    <%= btn[:label] %>
+                  <% end %>
+                </p>
+
+                <p><strong>Benefícios:</strong></p>
+                <ul class="clean-list">
+                  <% btn.benefits.each do |b| %>
+                    <li><%= b %></li>
+                  <% end %>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-green">Ajuda</h4>
+            <%= data.journalist.help %>
+          </div>
+        </div>
+    </section>
+
+    <hr>
+
+
+    <section id="form_section">
+      <div class="container">
+        <div class="row">
+						<!-- form section -->
+						<div class="col-md-8 section-content">
+
+							<% form_tag "#{data.config.routes['root']}/register/journalist", name: "journalist_form",  id: "journalist-form", class: "journalist-form", novalidate: true, data: { remote: true, type: 'json' } do %>
+								<% fields = data.journalist.form.fields %>
+
+								<%= f = fields[:vehicle]; tag :input, type: f.type, name: f.name, id: f.id || f.name, required: f.required, value: f.value || 0 %>
+
+									<!-- login data -->
+									<h3 class="text-green">
+										<%= data.journalist.subtitle[:access_data] %>
+									</h3>
+									<div class="row">
+										<div class="col-md-12">
+											<p>Os dados abaixos serão usados para acesso à plataforma.</p>
+										</div>
+										<div class="col-md-6 form-group">
+											<label for="email" class="sr-only">E-mail de acesso</label>
+											<%= f = fields[:email]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, disabled: f.disabled %>
+											<small class="help-block">Entre com um e-mail válido para criar sua conta e acessar a plataforma</small>
+										</div>
+										<div class="col-md-6 form-group">
+											<label for="password" class="sr-only">Senha</label>
+											<%= f = fields[:password]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, disabled: f.disabled %>
+											<small class="help-block">Escolha uma senha de no mínimo 6 caractéres</small>
+										</div>
+									</div>
+
+									<br>
+
+
+									<!-- general data -->
+									<h3 class="text-green">
+										<%= data.journalist.subtitle[:general_data] %>
+									</h3>
+									<div class="row">
+										<div class="col-md-6 form-group">
+											<label for="name" class="sr-only">Nome</label>
+											<%= f = fields[:name]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+										</div>
+										<div class="col-md-6 form-group">
+											<label for="surename" class="sr-only">Sobrenome</label>
+											<%= f = fields[:surname]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+										</div>
+										<div class="col-md-6 form-group">
+											<label for="phone" class="sr-only">Telefone</label>
+											<%= f = fields[:cellphone_number]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+											<small class="help-block">Digíte somente números seguindo o formato: <code>11 12345678</code></small>
+										</div>
+
+										<div class="col-md-12 form-group"></div>
+
+										<div class="col-md-6 form-group">
+											<label class="radio-inline">
+												Selecione um documento:
+											</label>
+											<label class="radio-inline">
+												<input type="radio" name="document_type" value="cpf" checked> CPF
+											</label>
+											<label class="radio-inline">
+												<input type="radio" name="document_type" value="cnpj"> CNPJ
+											</label>
+										</div>
+										<div class="col-md-6 form-group">
+											<label for="cpf" class="sr-only">Documento (CPF/CNPJ)</label>
+											<%= f = fields[:cpf]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+											<%= f = fields[:cnpj]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+											<small class="help-block">Digíte somente números do documento</small>
+										</div>
+
+										<!-- space -->
+										<div class="col-md-12 form-group">
+											<br>
+										</div>
+
+
+
+										<div class="col-md-6 form-group">
+											<label for="rg" class="sr-only">CEP</label>
+											<%= f = fields[:address_zipcode]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+										</div>
+										<div class="col-md-6 form-group">
+											<% link_to data.shared.zipcode_search[:path], target: '_blank', title: data.shared.zipcode_search[:label] do %>
+												<strong>Clique aqui</strong> para persquisar seu CEP caso não saiba.
+											<% end %>
+										</div>
+										<div class="col-md-12 form-group">
+											<label for="address_street" class="sr-only">Endereço</label>
+											<%= f = fields[:address_street]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+										</div>
+										<div class="col-md-6 form-group">
+											<label for="address_number" class="sr-only">Número</label>
+											<%= f = fields[:address_residence_number]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+										</div>
+										<div class="col-md-6 form-group">
+											<label for="address_complement" class="sr-only">Complemento</label>
+											<%= f = fields[:address_complement]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+										</div>
+										<div class="col-md-6 form-group">
+											<label for="address_state" class="sr-only">Estado</label>
+											<%= f = fields[:address_state]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+										</div>
+										<div class="col-md-6 form-group">
+											<label for="address_city" class="sr-only">Cidade</label>
+											<%= f = fields[:address_city]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+										</div>
+									</div>
+
+								<br>
+
+
+								<!-- banking data -->
+								<!-- h3 class="text-green">
+									<%= data.journalist.subtitle[:banking_data] %>
+								</h3>
+								<div class="row">
+									<div class="col-md-12">
+										<p>Os dados abáixo são referentes a sua conta bancária para receber seus <strong class="text-green">libres</strong>.</p>
+									</div>
+									<div class="col-md-12 form-group">
+										<label for="bank_name" class="sr-only">Banco</label>
+										<%= select_tag :bank_name, class: 'form-control', options: ['Banco*']  %>
+									</div>
+									<div class="col-md-6">
+										<label for="bank_agency" class="sr-only">Agência</label>
+										<%= text_field_tag :bank_agency, class: 'form-control', placeholder: 'Agência*' %>
+										<small class="help-block">Entre com o número separando o dígito com um ífem. Ex.: <code>12345-0</code></small>
+									</div>
+									<div class="col-md-6">
+										<label for="bank_account" class="sr-only">Conta</label>
+										<%= text_field_tag :bank_account, class: 'form-control', placeholder: 'Conta*' %>
+										<small class="help-block">Entre com o número separando o dígito com um ífem. Ex.: <code>12345-0</code></small>
+									</div>
+								</div -->
+
+								<div class="row">
+									<div class="col-md-12">
+										<%= f = fields[:submit]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, value: f.label, data: f.data || {}  %>
+									</div>
+								</div>
+								<br>
+
+
+							<% end %>
+
+						</div>
+
+
+        </div>
+      </div>
+    </section>
