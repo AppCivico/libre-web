@@ -12,8 +12,8 @@ module.exports = class JournalistPage extends PageBase
   template: false
 
   templates:
-    message: require 'templates/join_us/message'
-    input_message: require 'templates/join_us/input_message'
+    message: require 'templates/message'
+    input_message: require 'templates/input_message'
 
 
   # events
