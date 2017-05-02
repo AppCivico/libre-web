@@ -23,7 +23,7 @@ module.exports = class Application
     if controller = body.getAttribute('data-controller')
       Page = require "pages/#{controller.toLowerCase()}"
       page = new Page {name: controller, config: config}
-      return page.start()
+      #return page.start()
 
     # getting an instance of an application(module)
     else if module = body.getAttribute('data-module')
