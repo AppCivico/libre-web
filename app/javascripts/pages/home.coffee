@@ -1,7 +1,7 @@
 "use strict"
 
 # requires
-PageBase = require 'pages/base.coffee'
+PageBase = require './base.coffee'
 
 ###
 #  Page class
@@ -9,11 +9,4 @@ PageBase = require 'pages/base.coffee'
 ###
 module.exports = class HomePage extends PageBase
   el: $(document.body)
-
-  initialize: (@options) ->
-    # initialize your class here
-
-
-  bind: (@options) ->
-    # bind your events here
 

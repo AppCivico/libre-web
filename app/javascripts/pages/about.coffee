@@ -15,6 +15,3 @@ module.exports = class AboutPage extends PageBase
     # setting page initializations
 
 
-  bind: (@options) ->
-    # setting page events here
-
