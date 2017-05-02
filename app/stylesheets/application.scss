@@ -1,5 +1,5 @@
 
-@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css";
+@import "vendors/bootstrap.scss";
 
 /* VARS */
 $dark_green: #1e5f2f;
@@ -49,24 +49,35 @@ ul.clean-list {
 }
 
 .btn {
-  border-radius: 0px;
+  border-radius: 1px !important;
   border-color: transparent;
   border-size: 2px;
   box-shadow: none;
 	padding-left: 40px;
 	padding-right: 40px;
 }
+.btn-success-bordered {
+  color: $green !important;
+  border-color: $green !important;
+  background-color: transparent !important;
+
+  &:hover, &:active, &:focus {
+    //background-color: darkgreen;
+  }
+}
+
 .btn-bordered {
   background-color: transparent !important;
 }
 .btn-green {
-  color: $green;
-  background-color: $green;
-  border-color: $green;
+	//@extend .btn-success
+  //color: $green;
+  //background-color: $green !important;
+  //border-color: $green !important;
 
-  &:hover, &:active, &:focus {
-    background-color: darkgreen;
-  }
+  //&:hover, &:active, &:focus {
+  //  background-color: darkgreen;
+  //}
 }
 
 .section-citation-name {
