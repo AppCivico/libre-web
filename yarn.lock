@@ -178,9 +178,9 @@ aws4@^1.2.1:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/aws4/-/aws4-1.6.0.tgz#83ef5ca860b2b32e4a0deedee8c771b9db57471e"
 
-backbone.marionette@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/backbone.marionette/-/backbone.marionette-3.2.0.tgz#c98d146984344ec6453103ac7fa1987059e38de1"
+backbone.marionette@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/backbone.marionette/-/backbone.marionette-3.3.1.tgz#e6b44812a513cd35410b37a73d46423f6b8c57c8"
   dependencies:
     backbone.radio "^2.0.0"
 
@@ -280,6 +280,10 @@ boom@2.x.x:
   resolved "https://registry.yarnpkg.com/boom/-/boom-2.10.1.tgz#39c8918ceff5799f83f9492a848f625add0c766f"
   dependencies:
     hoek "2.x.x"
+
+bootstrap@^3.3.7:
+  version "3.3.7"
+  resolved "https://registry.yarnpkg.com/bootstrap/-/bootstrap-3.3.7.tgz#5a389394549f23330875a3b150656574f8a9eb71"
 
 bower-config@^1.4.0:
   version "1.4.0"
@@ -1528,7 +1532,7 @@ growl@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/growl/-/growl-1.8.1.tgz#4b2dec8d907e93db336624dcec0183502f8c9428"
 
-handlebars@^4.0.1, handlebars@^4.0.6:
+handlebars@^4.0.1:
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.0.6.tgz#2ce4484850537f9c97a8026d5399b935c4ed4ed7"
   dependencies:
