@@ -40,14 +40,15 @@ end
 activate :external_pipeline,
   name: :brunch,
   command: build? ?
-    "NODE_ENV=#{config[:environment]} ./node_modules/brunch/bin/brunch build --env #{config[:environment]}" :
-    "NODE_ENV=#{config[:environment]} ./node_modules/brunch/bin/brunch watch --stdin --env #{config[:environment]}",
+  "NODE_ENV=#{config[:environment]} ./node_modules/brunch/bin/brunch build --env #{config[:environment]} --debug" :
+    "NODE_ENV=#{config[:environment]} ./node_modules/brunch/bin/brunch watch --stdin --env #{config[:environment]} --debug",
   source: ".tmp/dist",
 latency: 1
 
 
-#after_build do |builder|
-#  # add event after build
-#  #Ex.: exit 1 unless builder.run 'karma start karma.config.js --single-run'
-#end
+after_build do |builder|
+  # add event after build
+  #Ex.: exit 1 unless builder.run 'karma start karma.config.js --single-run'
+  exit 1 unless system 'rm ./build/assets/js/test* &>/dev/null'
+end
 
