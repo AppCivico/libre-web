@@ -14,6 +14,7 @@ exports.config =
       joinTo:
         'assets/js/vendor.bundle.js': /^(?!app(\/|\\)javascripts(\/|\\))/
         'assets/js/application.bundle.js': /^app(\/|\\)javascripts(\/|\\)/
+        'assets/js/test.bundle.js': /^test(\/|\\).*\.coffee/
 
     stylesheets:
       joinTo:
@@ -38,11 +39,11 @@ exports.config =
   # modules configurations
   modules:
     nameCleaner: (path) =>
-      path.replace /^app(\/|\\)javascripts(\/|\\)/, ''
+      path.replace(/^app(\/|\\)javascripts(\/|\\)/, '')
+
 
   # plugins configurations
   #plugins:
-
 
   conventions:
     assets: /^source(\/|\\)assets/
@@ -52,6 +53,7 @@ exports.config =
     watched: [
       "app/javascripts"
       "app/stylesheets"
-      "app"
+      "test/"
+      "app/"
     ]
 

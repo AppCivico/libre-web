@@ -1,4 +1,7 @@
+# directory indexes
+# - convert 'app.html.erb' file to 'app/index.html'
 activate :directory_indexes
+
 
 # default asset directories
 set :js_dir,  'assets/js'
@@ -10,6 +13,8 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 page '/index.html', layout: 'default'
+
+
 
 
 # development env
