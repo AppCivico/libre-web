@@ -3,14 +3,13 @@ title:      Faça Parte - Cadastro de Colaborador
 controller: join_us/collaborator
 ---
 
-
     <section id="main-content">
       <div class="container">
         <div class="row">
 
           <!-- page title -->
           <div class="col-md-12">
-            <h1><%= data.collaborator.title %></h1>
+						<h1><%= data.collaborator.title %></h1>
           </div>
 
           <div class="col-md-12 section-content">
@@ -70,14 +69,14 @@ controller: join_us/collaborator
         <div class="container">
           <!-- nav tabs -->
           <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class=" <%= tabs.activated == 'personal' ? 'active' : ''%>">
-              <a href="#personal" role="tab" data-toggle="tab"><%= tabs.personal.title %></a>
+            <li role="presentation" class="js-navtab <%= tabs.activated == 'personal' ? 'active' : ''%>">
+              <a href="#personal-pane" role="tab" data-toggle="tab"><%= tabs.personal.title %></a>
             </li>
-            <li role="presentation" class=" <%= tabs.activated == 'plan' ? 'active' : ''%>">
-              <a href="#plan" role="tab" data-toggle="tab"><%= tabs.plan.title %></a>
+            <li role="presentation" class="js-navtab <%= tabs.activated == 'plan' ? 'active' : ''%>">
+              <a href="#plan-pane" role="tab" data-toggle="tab"><%= tabs.plan.title %></a>
             </li>
-            <li role="presentation" class=" <%= tabs.activated == 'billing' ? 'active' : ''%>">
-              <a href="#billing" role="tab" data-toggle="tab"><%= tabs.billing.title %></a>
+            <li role="presentation" class="js-navtab <%= tabs.activated == 'billing' ? 'active' : ''%>">
+              <a href="#billing-pane" role="tab" data-toggle="tab"><%= tabs.billing.title %></a>
             </li>
           </ul>
         </div>
@@ -88,108 +87,134 @@ controller: join_us/collaborator
         <div class="container">
 
           <!-- form section -->
-          <div class="tab-content">
+          <div class="js-tabcontainer tab-content">
 
-            <!-- personal data tab -->
-            <div role="tabpanel" class="tab-pane <%= tabs.activated == 'personal' ? 'active' : ''%>" id="personal">
-              <div class="row">
-                <!-- personal tab form -->
-                <div class="col-md-8">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <p class="text-spaced"><%= tabs.personal.subtitle %></p>
-                      <h4 class="text-green"><%= tabs.personal.section.access_data.title %></h4>
-                    </div>
+						<!-- personal data tab -->
+						<% tab = tabs.personal %>
+						<div id="personal-pane" role="tabpanel" class="js-tabpanes tab-pane <%= tabs.activated == 'personal' ? 'active' : ''%>" id="personal">
+							<form name="personal_form" id="personal-form" novalidate>
+								<div class="row">
+									<!-- personal tab form -->
+									<div class="col-md-8">
+										<div class="row">
+											<div class="col-md-12">
+												<p class="text-spaced"><%= tab.subtitle %></p>
+												<h4 class="text-green"><%= tab.section.access_data.title %></h4>
+											</div>
 
-                    <div class="form-group col-md-6">
-                      <input type="text" placeholder="E-mail" class="form-control">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <input type="text" placeholder="Senha" class="form-control">
-                    </div>
+											<% fields = tab.section.access_data.fields %>
+											<div class="form-group col-md-6">
+												<%= custom_input fields[:email] %>
+												<%= custom_helpblock fields[:email] %>
+											</div>
+											<div class="form-group col-md-6">
+												<%= custom_input fields[:password] %>
+												<%= custom_helpblock fields[:password] %>
+											</div>
 
 
-                    <div class="col-md-12">
-                      <br class="text-spaced">
-                      <h4 class="text-green"><%= tabs.personal.section.general_data.title %></h4>
-                    </div>
+											<div class="col-md-12">
+												<br class="text-spaced">
+												<h4 class="text-green"><%= tab.section.general_data.title %></h4>
+											</div>
 
-                    <div class="form-group col-md-6">
-                      <input type="text" placeholder="Nome" class="form-control">
-                    </div>
-                    <div class="form-group col-md-6">
-                      <input type="text" placeholder="Sobrenome" class="form-control">
-                    </div>
+											<% fields = tab.section.general_data.fields %>
+											<div class="form-group col-md-6">
+												<%= custom_input fields[:name] %>
+												<%= custom_helpblock fields[:name] %>
+											</div>
+											<div class="form-group col-md-6">
+												<%= custom_input fields[:surname] %>
+												<%= custom_helpblock fields[:surname] %>
+											</div>
 
-                    <div class="form-group col-md-6">
-                      <input type="text" placeholder="Telefone" class="form-control">
-                    </div>
+											<div class="form-group col-md-6">
+												<%= custom_input fields[:phone] %>
+												<%= custom_helpblock fields[:phone] %>
+											</div>
 
-                    <div class="col-md-12"></div>
+											<div class="col-md-12"></div>
 
-                    <div class="col-md-6">
-                      <a class="btn btn-green btn-block" href="#">
-                        <%= tabs.personal.next_button.label %>
-                      </a>
-                    </div>
+											<div class="form-group col-md-12">
+												<p><%= btn = tab.buttons.next; input_tag :submit, value: btn.label, class: btn.classes %></p>
+												<br>
 
-                  </div>
-                </div>
+											</div>
 
-                <!-- personal tab help -->
-                <div class="col-md-offset-1 col-md-3">
-                  <h4 class="text-spaced text-green">Ajuda</h4>
-                  <p><%= tabs.personal.help %></p>
-                </div>
-              </div>
-            </div>
+										</div>
+									</div>
+
+									<!-- personal tab help -->
+									<div class="col-md-offset-1 col-md-3">
+										<h4 class="text-spaced text-green">Ajuda</h4>
+										<p><%= tab.help %></p>
+									</div>
+								</div>
+							</form>
+						</div>
+
 
 
             <!-- plan data tab -->
-            <div role="tabpanel" class="tab-pane <%= tabs.activated == 'plan' ? 'active' : ''%>" id="plan">
-              <div class="row">
-                <!-- personal tab form -->
-                <div class="col-md-8">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <p class="text-spaced"><%= tabs.plan.subtitle %></p>
-                    </div>
+						<% tab = tabs.plan %>
+						<div id="plan-pane" role="tabpanel" class="js-tabpanes tab-pane <%= tabs.activated == 'plan' ? 'active' : ''%>" id="plan">
+							<form id="form-plan" name="form_plan" novalidate>
+								<div class="row">
+									<!-- personal tab form -->
+									<div class="col-md-8">
+										<div class="row">
+											<div class="col-md-12">
+												<p class="text-spaced"><%= tabs.plan.subtitle %></p>
+											</div>
 
-                    <!-- plan  list -->
-                    <% tabs.plan.form.fields.each do |f| %>
-                      <div class="form-group col-md-6">
-                        <% if f[:type] == 'radio' %>
-                          <div class="radio">
-                            <label>
-                              <%= input_tag f[:type], name: f[:name], value: f[:value], class: f[:classes], required: f[:required] %>&nbsp;<%= f[:label] %>
-                            </label>
-                          </div>
-                        <% end %>
-                      </div>
-                    <% end %>
+											<!-- plan  list -->
+												<div class="col-md-12">
+													<% fields = tab.fields; fields.each_with_index do |f, index| %>
+														<%= '<div class="row">' if index % 2 == 0 %>
+														<% if ['radio', 'checkbox'].include? f.type %>
+															<div class="form-group col-md-6">
+																<label><%= custom_input f %>&nbsp;<%= f[:label] %></label>
+																<%= custom_helpblock f %>
+															</div>
+														<% else %>
+															<div class="form-group col-md-6">
+																<label class="sr-only"><%= f.label %></label>
+																<%= custom_input f %>
+																<%= custom_helpblock f %>
+															</div>
+														<% end %>
+														<%= '</div>' if index % 2 == 1 %>
+													<% end %>
+												</div>
 
-                    <div class="col-md-12"></div>
+												<div class="col-md-12">
+													<br>
+												</div>
 
-                    <div class="col-md-6">
-                      <a class="btn btn-green btn-block" href="#">
-                        <%= tabs.plan.next_button.label %>
-                      </a>
-                    </div>
+												<div class="form-group col-md-12">
+													<%= btn = tab.buttons.next; input_tag :submit, value: btn.label, class: btn.classes %>
+													<br>
 
-                  </div>
-                </div>
+												</div>
 
-                <!-- plan tab help -->
-                <div class="col-md-offset-1 col-md-3">
-                  <h4 class="text-spaced text-green">Ajuda</h4>
-                  <p><%= tabs.plan.help %></p>
-                </div>
-              </div>
-            </div>
+												<br>
+										</div>
+									</div>
+
+									<!-- plan tab help -->
+									<div class="col-md-offset-1 col-md-3">
+										<h4 class="text-spaced text-green">Ajuda</h4>
+										<p><%= tab.help %></p>
+									</div>
+								</div>
+							</form>
+						</div>
+
 
 
             <!-- billing data tab -->
-            <div role="tabpanel" class="tab-pane <%= tabs.activated == 'billing' ? 'active' : ''%>" id="billing">
+						<% tab = tabs.billing %>
+            <div id="billing-pane" role="tabpanel" class="js-tabpanes tab-pane <%= tabs.activated == 'billing' ? 'active' : ''%>" id="billing">
               <div class="row">
                 <!-- billing tab form -->
                 <div class="col-md-8">

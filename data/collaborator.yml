@@ -38,7 +38,7 @@ form:
 
   tabs:
     # default active tab
-    activated: billing
+    activated: personal
 
     # personal data tab content
     personal:
@@ -51,11 +51,65 @@ form:
       section:
         access_data:
           title: Dados de acesso
+          fields:
+            email:
+              label: E-mail
+              name: email
+              type: email
+              value:
+              required: true
+              disabled: false
+              styles: form-control
+              help:
+
+            password:
+              label: Senha
+              name: password
+              type: password
+              value:
+              required: true
+              disabled: false
+              styles: form-control
+              help:
+
         general_data:
           title: Dados gerais
+          fields:
+            name:
+              label: Nome
+              name: name
+              type: text
+              value:
+              required: true
+              disabled: false
+              styles: form-control
+              help:
 
-      next_button:
-        label: Continuar
+            surname:
+              label: Sobrenome
+              name: surname
+              type: text
+              value:
+              required: true
+              disabled: false
+              styles: form-control
+              help:
+
+            phone:
+              label: Telefone
+              name: phone
+              type: text
+              value:
+              required: true
+              disabled: false
+              styles: form-control
+              help:
+
+      buttons:
+        next:
+          label: Continuar
+          path: #
+          classes: js-button-pane1 btn btn-success
 
       help: |
         Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify
@@ -69,56 +123,67 @@ form:
       subtitle: |
         Escolha seu plano abaixo:
 
-      form:
-        fields:
-          - label: R$ 10 por mês
-            type: radio
-            value: 10
-            name: plan
-            required: true
-            classes: form-control
+      fields:
+        - label: R$ 10 por mês
+          type: radio
+          value: 10
+          name: plan
+          required: true
+          disabled: false
+          styles:
+          help:
 
-          - label: R$ 20 por mês
-            type: radio
-            value: 20
-            name: plan
-            required: true
-            classes: form-control
+        - label: R$ 20 por mês
+          type: radio
+          value: 20
+          name: plan
+          required: true
+          disabled: false
+          styles:
+          help:
 
-          - label: R$ 30 por mês
-            type: radio
-            value: 30
-            name: plan
-            required: true
-            classes: form-control
+        - label: R$ 30 por mês
+          type: radio
+          value: 30
+          name: plan
+          required: true
+          disabled: false
+          styles:
+          help:
 
-          - label: R$ 40 por mês
-            type: radio
-            value: 40
-            name: plan
-            required: true
-            classes: form-control
+        - label: R$ 40 por mês
+          type: radio
+          value: 40
+          name: plan
+          required: true
+          disabled: false
+          styles:
+          help:
 
-          - label: R$ 50 por mês
-            type: radio
-            value: 50
-            name: plan
-            required: true
-            classes: form-control
+        - label: R$ 50 por mês
+          type: radio
+          value: 50
+          name: plan
+          required: true
+          disabled: false
+          styles:
+          help:
 
-          - label: Insira um valor
-            type: radio
-            value:
-            name: plan
-            required: false
-            classes: form-control
+        - label: Insira um valor
+          type: text
+          value:
+          name: plan
+          required: true
+          disabled: false
+          styles: form-control
+          help: Adicione um valor superior a R$ 10 reais
 
-      # next button
-      next_button:
-        id: js-step2-next
-        label: Continuar
-        type: button
-        classes: btn btn-green btn-block
+      buttons:
+        next:
+          label: Continuar
+          path: #
+          classes: js-button-pane2 btn btn-success
+
 
       help: |
         Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify
