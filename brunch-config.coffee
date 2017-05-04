@@ -17,8 +17,9 @@ exports.config =
         'assets/js/test.bundle.js': /^test(\/|\\).*\.coffee/
 
     stylesheets:
-      joinTo:
-        'assets/css/application.bundle.css': /^app(\/|\\)stylesheets(\/|\\)/
+      joinTo: 'assets/css/application.bundle.css'
+      order:
+        after: /^app(\/|\\)stylesheets(\/|\\)/
 
     templates:
       joinTo:
@@ -37,6 +38,7 @@ exports.config =
       'Backbone': 'backbone'
       'Marionette': 'backbone.marionette'
       'jquery-ujs': 'jquery-ujs'
+      'bootstrap': 'bootstrap-sass',
 
   # modules configurations
   modules:
@@ -45,7 +47,12 @@ exports.config =
 
 
   # plugins configurations
-  #plugins:
+  plugins:
+    sass:
+      options:
+        includePaths: ["node_modules/bootstrap-sass/assets/stylesheets"]
+        precision: 8
+
 
   conventions:
     assets: /^source(\/|\\)assets/
