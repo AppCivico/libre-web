@@ -1,5 +1,9 @@
+# requires
+require 'helpers/tag_helpers.rb'
+
 # Middleman Custom Helpers
 module CustomHelpers
+  include CustomTagHelpers
 
   # set current active link
   def current_link(ctrl, act=nil, css='link-light')
@@ -38,4 +42,5 @@ module CustomHelpers
   def page_data
     data.pages
   end
+
 end
