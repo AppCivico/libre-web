@@ -28,6 +28,8 @@ exports.config =
   # npm integration
   npm:
     enabled: true,
+    styles:
+      bootstrap: ['dist/css/bootstrap.css']
     globals:
       '$': 'jquery'
       'jQuery': 'jquery'
