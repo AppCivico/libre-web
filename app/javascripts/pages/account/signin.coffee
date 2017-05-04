@@ -1,7 +1,7 @@
 "use strict"
 
 # requires
-PageBase = require '../base.coffee'
+PageBase = require 'pages/base.coffee'
 
 ###
 #  Page class
@@ -13,8 +13,8 @@ module.exports = class LoginController extends PageBase
 
 
   templates:
-    message: require '../../templates/message'
-    input_message: require '../../templates/input_message'
+    message: require 'templates/message'
+    input_message: require 'templates/input_message'
 
 
   events:
