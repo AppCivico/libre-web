@@ -2,30 +2,35 @@
 
 
 module.exports = class Config
-	@config =
-		# route table
-		routes:
-			'contato': (args...) =>  "/contact"
-			'login':   (args...) =>  "/contact"
-		# config for development
-		development:
-			name:     "Libre-App"
-			api_base: "https://hapilibre.eokoe.com"
-			debug:    true
+  # default env
+  @environment = 'development'
+
+  @config =
+    # route table
+    routes:
+      contactPath: (args...) => "/contact"
+      donorPath:  (args...) => "/register/donor"
 
 
-		# config for production
-		production:
-			name:     "Libre-App"
-			api_base: ""
-			debug:    false
+    # config for development
+    development:
+      name:     "Libre-App"
+      api_base: "//hapilibre.eokoe.com/api"
+      debug:    true
 
 
-	# getting env config
-	@env = (name) =>
-		conf = if name is 'production' then @config.production else @config.development
-		conf.url_for = (token) => @routes[token]
-		return conf
+    # config for production
+    production:
+      name:     "Libre-App"
+      api_base: "//hapilibre.eokoe.com/api"
+      debug:    false
+
+
+  # getting env config
+  @env: =>
+    conf = if @environment is 'production' then @config.production else @config.development
+    conf.url_for = (token) => @routes[token]
+    return conf
 
 
 
