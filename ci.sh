@@ -35,7 +35,6 @@ if [ -f .nvmrc ]; then
 fi
 echo "    - node version: node $(node --version)"
 echo "    - npm version: npm $(npm --version)"
-# TODO: install and use nodeenv https://github.com/ekalinin/nodeenv
 echo "    - install yarn tool using npm"
 npm install yarn
 echo "    - resolve application dependencies using yarn version: $(yarn --version)"
