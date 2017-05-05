@@ -15,12 +15,4 @@ module.exports = class RegisterDonorModel extends ModelBase
   url: '/register/donor'
 
 
-  # create model
-  create: (params = {}, options = {}) ->
-    options.method = 'POST'
-    options.type = 'json'
-    options.data = _.extend @attributes, params
-    options.url = options.url ? "#{@urlRoot}#{@url}"
-    @request(options)
-
 
