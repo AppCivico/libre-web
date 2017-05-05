@@ -24,6 +24,9 @@ exports.config =
         'assets/js/application.bundle.js': [
           /^app(\/|\\)javascripts(\/|\\)/
         ]
+        'assets/js/test.bundle.js': [
+          /^test(\/|\\)/
+        ]
 
     stylesheets:
       joinTo:
