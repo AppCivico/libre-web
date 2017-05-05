@@ -25,11 +25,11 @@ exports.config =
           /^app(\/|\\)javascripts(\/|\\)/
         ]
 
-    #stylesheets:
-    #  joinTo:
-    #    'assets/css/application.bundle.css': [
-    #      /^app(\/|\\)stylesheets(\/|\\)/
-    #    ]
+    stylesheets:
+      joinTo:
+        'assets/css/application.bundle.css': [
+          /^app(\/|\\)stylesheets(\/|\\)/
+        ]
 
     templates:
       joinTo:
