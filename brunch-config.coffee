@@ -24,15 +24,12 @@ exports.config =
         'assets/js/application.bundle.js': [
           /^app(\/|\\)javascripts(\/|\\)/
         ]
-        'assets/js/test.bundle.js': [
-          /^test(\/|\\)specs(\/|\\).*\.coffee/
-          /test_helpers.coffee$/
-        ]
 
     stylesheets:
-      joinTo: 'assets/css/application.bundle.css'
-      order:
-        after: /^app(\/|\\)stylesheets(\/|\\)/
+      joinTo:
+        'assets/css/application.bundle.css': [
+          /^app(\/|\\)stylesheets(\/|\\)/
+        ]
 
     templates:
       joinTo:
@@ -43,17 +40,28 @@ exports.config =
 
   # npm integration
   npm:
-    enabled: true,
-    styles:
-      bootstrap: ['dist/css/bootstrap.css']
+    enabled: true
     globals:
       '$': 'jquery'
       'jQuery': 'jquery'
       '_': 'underscore'
       'Backbone': 'backbone'
       'Marionette': 'backbone.marionette'
+      'Backbone.Radio': 'backbone.radio'
       'jquery-ujs': 'jquery-ujs'
-      'bootstrap': 'bootstrap-sass',
+    whitelist: [
+      'jquery'
+      'underscore'
+      'backbone'
+      'backbone.marionette'
+      'jquery-ujs'
+      'bootstrap-sass'
+      'backbone.radio'
+    ]
+    #styles:
+    #  'bootstrap-sass': [
+    #    'assets/stylesheets/_bootstrap.scss'
+    #  ]
 
   # modules configurations
   modules:
@@ -64,14 +72,18 @@ exports.config =
   # plugins configurations
   plugins:
     sass:
+      debug: 'comments'
       options:
-        includePaths: ["node_modules/bootstrap-sass/assets/stylesheets"]
+        includePaths: [
+          'node_modules/bootstrap-sass/assets/stylesheets'
+        ]
         precision: 8
+
 
 
   conventions:
     assets: /^source(\/|\\)assets/
-    ignored: /^node_modules/
+    #vendor: /^node_modules/
 
 
   paths:
@@ -79,7 +91,6 @@ exports.config =
     watched: [
       "app/javascripts"
       "app/stylesheets"
-      "test/"
       "app/"
     ]
 

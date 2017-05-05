@@ -49,6 +49,6 @@ latency: 1
 after_build do |builder|
   # add event after build
   #Ex.: exit 1 unless builder.run 'karma start karma.config.js --single-run'
-  exit 1 unless system 'rm ./build/assets/js/test* &>/dev/null'
+  #exit 1 unless system 'rm ./build/assets/js/test* &>/dev/null'
 end
 

@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # global variables
-# FOR DEVELOPMENT USE: APP_DIR=$(pwd)
-APP_DIR=/home/jenkis/apps/libre/dev.libre.build
+# FOR DEVELOPMENT USE:
+APP_DIR=$(pwd)
+#APP_DIR=/home/jenkis/apps/libre/dev.libre.build
 
 
 # change to dir
@@ -40,4 +41,7 @@ yarn install
 # run middleman build task
 echo "=== RUN MIDDLEMAN BUILD TASK"
 echo "    - middleman version: $(bundle exec middleman version)"
-bundle exec middleman build --verbose --environment production
+LOGGY_STACKS=1
+bundle exec middleman build --environment production --verbose
+
+
