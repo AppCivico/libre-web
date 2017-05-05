@@ -25,11 +25,11 @@ exports.config =
           /^app(\/|\\)javascripts(\/|\\)/
         ]
 
-    stylesheets:
-      joinTo:
-        'assets/css/application.bundle.css': [
-          /^app(\/|\\)stylesheets(\/|\\)/
-        ]
+    #stylesheets:
+    #  joinTo:
+    #    'assets/css/application.bundle.css': [
+    #      /^app(\/|\\)stylesheets(\/|\\)/
+    #    ]
 
     templates:
       joinTo:
@@ -58,10 +58,6 @@ exports.config =
       'bootstrap-sass'
       'backbone.radio'
     ]
-    #styles:
-    #  'bootstrap-sass': [
-    #    'assets/stylesheets/_bootstrap.scss'
-    #  ]
 
   # modules configurations
   modules:
@@ -74,16 +70,13 @@ exports.config =
     sass:
       debug: 'comments'
       options:
-        includePaths: [
-          'node_modules/bootstrap-sass/assets/stylesheets'
-        ]
+        includePaths: ['node_modules/bootstrap-sass/assets/stylesheets']
         precision: 8
 
 
 
   conventions:
     assets: /^source(\/|\\)assets/
-    #vendor: /^node_modules/
 
 
   paths:

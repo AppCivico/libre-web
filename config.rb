@@ -40,8 +40,8 @@ end
 activate :external_pipeline,
   name: :brunch,
   command: build? ?
-  "NODE_ENV=#{config[:environment]} ./node_modules/brunch/bin/brunch build --env #{config[:environment]} --debug" :
-    "NODE_ENV=#{config[:environment]} ./node_modules/brunch/bin/brunch watch --stdin --env #{config[:environment]} --debug",
+  "LOGGY_STACKS=1 ./node_modules/brunch/bin/brunch build --env #{config[:environment]} --debug" :
+    "LOGGY_STACKS=1 ./node_modules/brunch/bin/brunch watch --stdin --env #{config[:environment]} --debug",
   source: ".tmp/dist",
 latency: 1
 
