@@ -101,7 +101,7 @@ module.exports = class JournalistPage extends PageBase
         if el = @getRegion('form').$el.find "[name=#{key}]"
           el.parent().addClass 'has-error'
             .append @templates.input_message {
-              content: "#{el.attr('placeholder')} #{@error_list(value)}"
+              content: "#{el.attr('placeholder')} #{@errorList(value)}"
             }
 
     # form error message

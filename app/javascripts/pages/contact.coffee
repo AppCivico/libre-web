@@ -42,7 +42,7 @@ module.exports = class ContactController extends PageBase
           el.parent()
             .addClass 'has-error'
             .append @templates.input_message {
-              content: "#{el.attr('placeholder')} #{@error_list(value)}"
+              content: "#{el.attr('placeholder')} #{@errorList(value)}"
             }
 
     # form error message
