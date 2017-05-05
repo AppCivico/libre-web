@@ -12,9 +12,22 @@ exports.config =
   files:
     javascripts:
       joinTo:
-        'assets/js/vendor.bundle.js': /^(?!app(\/|\\)javascripts(\/|\\))/
-        'assets/js/application.bundle.js': /^app(\/|\\)javascripts(\/|\\)/
-        'assets/js/test.bundle.js': /^test(\/|\\).*\.coffee/
+        'assets/js/vendor.bundle.js': [
+          /jquery.js$/
+          /undebackbone.js$/
+          /backbone.js$/
+          /backbone.marionette.js$/
+          /backbone.radio.js$/
+          /underscore.js$/
+          /rails.js$/
+        ]
+        'assets/js/application.bundle.js': [
+          /^app(\/|\\)javascripts(\/|\\)/
+        ]
+        'assets/js/test.bundle.js': [
+          /^test(\/|\\)specs(\/|\\).*\.coffee/
+          /test_helpers.coffee$/
+        ]
 
     stylesheets:
       joinTo: 'assets/css/application.bundle.css'
@@ -23,7 +36,9 @@ exports.config =
 
     templates:
       joinTo:
-        'assets/js/application.bundle.js': /^app(\/|\\)javascripts(\/|\\)templates(\/|\\)/
+        'assets/js/application.bundle.js': [
+          /\.eco$/
+        ]
 
 
   # npm integration
@@ -56,6 +71,8 @@ exports.config =
 
   conventions:
     assets: /^source(\/|\\)assets/
+    ignored: /^node_modules/
+
 
   paths:
     public: ".tmp/dist"
