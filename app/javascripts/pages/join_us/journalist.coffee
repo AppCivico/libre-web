@@ -113,5 +113,6 @@ module.exports = class JournalistPage extends PageBase
   # clear template
   _reset_messages: () ->
     @$el.find('.message').remove()
+    @$el.find('.input-message').remove()
     @$el.find('.has-error').toggleClass('has-error')
 

@@ -30,6 +30,7 @@ module.exports = class PageBase extends Marionette.View
       when 'required' then "é obrigatório"
       when 'empty_is_invalid' then "é obrigatório"
       when 'missing' then "é obrigatório"
+      when 'alredy exists' then "já está cadastrado"
       else ""
 
 	# load templates
