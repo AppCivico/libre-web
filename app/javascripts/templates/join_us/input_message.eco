@@ -1,0 +1,3 @@
+<small class="help-block message message-error">
+	<%= @content %>
+</small>
