@@ -85,5 +85,6 @@ exports.config =
       "app/javascripts"
       "app/stylesheets"
       "app/"
+      "test/"
     ]
 
