@@ -29,6 +29,11 @@ bundler install
 
 # install node deps
 echo "=== INSTALL NODE MODULES USING YARN"
+if [ -f .nvmrc ]; then
+	nvm install
+	nvm use
+fi
+echo "    - node version: node $(node --version)"
 echo "    - npm version: npm $(npm --version)"
 # TODO: install and use nodeenv https://github.com/ekalinin/nodeenv
 echo "    - install yarn tool using npm"
