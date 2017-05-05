@@ -2,6 +2,10 @@
 
 # configuration
 Config = require 'config.coffee'
+Backbone.Config = Config
+Backbone.Config.environment = 'development' # 'production'
+
+
 
 # config renderer
 Marionette.Renderer.render = (obj, data, view) ->
@@ -11,10 +15,11 @@ Marionette.Renderer.render = (obj, data, view) ->
   return template(data)
 
 
+
 # application single point entry
 module.exports = class Application
   @start: ->
-    config = Config.env('development')
+    config = Backbone.Config.env()
 
     # getting page info
     body = document.body

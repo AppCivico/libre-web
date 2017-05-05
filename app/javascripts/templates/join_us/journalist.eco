@@ -1,0 +1,215 @@
+
+
+    <section id="main-content">
+      <div class="container">
+        <div class="row">
+
+          <!-- page title -->
+          <div class="col-md-12">
+            <h1>Faça Parte</h1>
+          </div>
+
+          <div class="col-md-8 section-content">
+
+            <div class="row">
+              <div class="col-md-6">
+                <p>
+<button class="btn btn-green btn-bordered btn-block btn-lg active">                    Cadastrar como Jornalista
+</button>                </p>
+
+                <p><strong>Benefícios:</strong></p>
+                <ul class="clean-list">
+                    <li>Meditation tumblr pinterest lyft salvia</li>
+                    <li>Schlitz actually activated charcoal messenger bag</li>
+                    <li>Flannel brooklyn air plant offal</li>
+                </ul>
+              </div>
+
+              <div class="col-md-6">
+                <p>
+<button class="btn btn-green btn-bordered btn-block btn-lg disabled">                    Cadastrar como Veiculo
+</button>                </p>
+
+                <p><strong>Benefícios:</strong></p>
+                <ul class="clean-list">
+                    <li>Meditation tumblr pinterest lyft salvia</li>
+                    <li>Schlitz actually activated charcoal messenger bag</li>
+                    <li>Flannel brooklyn air plant offal</li>
+                </ul>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-md-4">
+            <h4 class="text-green">Ajuda</h4>
+            <p>Photo booth sriracha art party meggings VHS. Dreamcatcher hoodie
+echo park shoreditch chartreuse. Kogi mlkshk bicycle rights pork
+belly normcore jianbing chia literally, air plant bitters roof party
+vape pickled. </p>
+
+<p>Typewriter asymmetrical PBR&B beard pour-over
+single-origin coffee. Etsy raw denim selfies next level squid,
+gluten-free coloring book shoreditch hexagon cornhole aesthetic
+tumeric wayfarers synth. Pour-over organic ramps fap, lumbersexual la
+croix prism hot chicken quinoa unicorn williamsburg 3 wolf moon.</p>
+
+          </div>
+        </div>
+    </section>
+
+    <hr>
+
+
+    <section id="form_section">
+      <div class="container">
+        <div class="row">
+          <!-- form section -->
+          <div class="col-md-8 section-content">
+
+            <!-- login data -->
+            <h3 class="text-green">
+              Dados de acesso
+            </h3>
+            <div class="row">
+              <div class="col-md-12">
+                <p>Os dados abaixos serão usados para acesso à plataforma.</p>
+              </div>
+              <div class="col-md-6 form-group has-error">
+                <label for="email" class="sr-only">E-mail de acesso</label>
+                <input type="text" name="email" class="form-control" placeholder="E-mail*" />
+                <small class="help-block">Entre com um e-mail válido para criar sua conta e acessar a plataforma</small>
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="password" class="sr-only">Senha</label>
+                <input type="password" name="password" class="form-control" placeholder="Senha*" />
+                <small class="help-block">Escolha uma senha de no mínimo 6 caractéres</small>
+              </div>
+            </div>
+
+            <br>
+
+
+            <!-- general data -->
+            <h3 class="text-green">
+              Dados gerais
+            </h3>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <label for="name" class="sr-only">Nome</label>
+                <input type="text" name="name" class="form-control" placeholder="Nome*" />
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="surename" class="sr-only">Sobrenome</label>
+                <input type="text" name="surname" class="form-control" placeholder="Sobrenome*" />
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="phone" class="sr-only">Telefone</label>
+                <input type="text" name="phone" class="form-control" placeholder="Telefone*" />
+                <small class="help-block">Digíte somente números seguindo o formato: <code>11 12345678</code></small>
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="mobilephone" class="sr-only">Celular</label>
+                <input type="text" name="mobilephone" class="form-control" placeholder="Celular" />
+                <small class="help-block">Digíte somente números seguindo o formato: <code>11 12345678</code></small>
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="rg" class="sr-only">RG</label>
+                <input type="text" name="rg" class="form-control" placeholder="RG*" />
+                <small class="help-block">Digíte somente números do documento</small>
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="cpf" class="sr-only">CPF</label>
+                <input type="text" name="cpf" class="form-control" placeholder="CPF*" />
+                <small class="help-block">Digíte somente números do documento</small>
+              </div>
+
+              <!-- space -->
+              <div class="col-md-12 form-group">
+                <br>
+              </div>
+
+
+
+              <div class="col-md-6 form-group">
+                <label for="rg" class="sr-only">CEP</label>
+                <input type="text" name="rg" class="form-control" placeholder="CEP* (12345-678)" />
+              </div>
+              <div class="col-md-6 form-group">
+<a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" target="_blank" title="Busca CEP - Sistema correios">                  <strong>Clique aqui</strong> para persquisar seu CEP caso não saiba.
+</a>              </div>
+              <div class="col-md-12 form-group">
+                <label for="address_street" class="sr-only">Endereço</label>
+                <input type="text" name="address_street" class="form-control" placeholder="Endereço*" disabled="disabled" />
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="address_number" class="sr-only">Número</label>
+                <input type="text" name="address_number" class="form-control" placeholder="Número*" disabled="disabled" />
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="address_complement" class="sr-only">Complemento</label>
+                <input type="text" name="address_complement" class="form-control" placeholder="Complemento" disabled="disabled" />
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="address_state" class="sr-only">Estado</label>
+                <select name="address_state" class="form-control" disabled="disabled"><option value="Estado*">Estado*</option>
+</select>
+              </div>
+              <div class="col-md-6 form-group">
+                <label for="address_city" class="sr-only">Cidade</label>
+                <input type="text" name="address_city" class="form-control" placeholder="Cidade*" disabled="disabled" />
+              </div>
+            </div>
+
+            <br>
+
+
+            <!-- banking data -->
+            <h3 class="text-green">
+              Dados bancários
+            </h3>
+            <div class="row">
+              <div class="col-md-12">
+                <p>Os dados abáixo são referentes a sua conta bancária para receber seus <strong class="text-green">libres</strong>.</p>
+              </div>
+              <div class="col-md-12 form-group">
+                <label for="bank_name" class="sr-only">Banco</label>
+                <select name="bank_name" class="form-control"><option value="Banco*">Banco*</option>
+</select>
+              </div>
+              <div class="col-md-6">
+                <label for="bank_agency" class="sr-only">Agência</label>
+                <input type="text" name="bank_agency" class="form-control" placeholder="Agência*" />
+                <small class="help-block">Entre com o número separando o dígito com um ífem. Ex.: <code>12345-0</code></small>
+              </div>
+              <div class="col-md-6">
+                <label for="bank_account" class="sr-only">Conta</label>
+                <input type="text" name="bank_account" class="form-control" placeholder="Conta*" />
+                <small class="help-block">Entre com o número separando o dígito com um ífem. Ex.: <code>12345-0</code></small>
+              </div>
+            </div>
+
+            <br>
+
+
+            <div class="row">
+              <div class="col-md-12">
+                <div id="message" class="alert alert-danger">
+                  <h4>Os seguintes problemas foram encontrados ao enviar formulário:</h4>
+                  <ul class="clean-list">
+                    <li>Campo 'Nome' é obrigatório.</li>
+                    <li>Campo 'Nome' é obrigatório.</li>
+                    <li>Campo 'Nome' é obrigatório.</li>
+                    <li>Campo 'Nome' é obrigatório.</li>
+                    <li>Campo 'Nome' é obrigatório.</li>
+                  </ul>
+                </div>
+                <button class="btn btn-lbr--default">Cadastrar</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+

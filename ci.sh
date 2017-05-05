@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # global variables
-# FOR DEVELOPMENT USE: APP_DIR=$(pwd)
+# FOR DEVELOPMENT USE:APP_DIR=$(pwd)
 APP_DIR=/home/jenkis/apps/libre/dev.libre.build
 
 
