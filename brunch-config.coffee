@@ -60,6 +60,8 @@ exports.config =
       'jquery-ujs'
       'bootstrap-sass'
       'backbone.radio'
+      'mocha'
+      'chai'
     ]
 
   # modules configurations
