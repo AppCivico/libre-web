@@ -1,7 +1,7 @@
 "use strict"
 
 # requires
-Model = require 'models/register_donor'
+Model = require 'models/donor/register'
 
 
 # begin test
