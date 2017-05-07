@@ -158,7 +158,8 @@ controller: join_us/collaborator
             <!-- plan data tab -->
 						<% tab = tabs.plan %>
 						<div id="plan-pane" role="tabpanel" class="js-tabpanes tab-pane <%= tabs.activated == 'plan' ? 'active' : ''%>" id="plan">
-							<form id="form-plan" name="form_plan" novalidate>
+							<form name="plan_form" id="plan-form" novalidate>
+								<%= input_tag :hidden, name: 'amount', id: 'amount', value: '10'  %>
 								<div class="row">
 									<!-- personal tab form -->
 									<div class="col-md-8">
