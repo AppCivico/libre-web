@@ -4,12 +4,12 @@
             <% data.shared.menu.each do |l| %>
               <% if l.label == 'Login' %>
                 <li>
-                  <% link_to l.path, title: l.label do %>
+									<% link_to l.path, title: l.label, data: { bypass: true } do %>
                     <div class="login-button"><%= l.label.upcase %>&nbsp;<img src="/assets/images/login-arrow.png" height="16px"></div>
                   <% end %>
                 </li>
               <% else %>
-                <li><% link_to l.path, title: l.label do %><%= l.label %><% end %></li>
+                <li><% link_to l.path, title: l.label, data: { bypass: true } do %><%= l.label %><% end %></li>
               <% end %>
             <% end %>
           </ul>

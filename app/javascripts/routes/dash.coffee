@@ -1,21 +1,37 @@
 "use strict"
 
 # requires
-DashController = require 'controllers/dash.coffee'
+IndexView = require 'views/dash/index.coffee'
+PlanView = require 'views/dash/plan.coffee'
+StatementView = require 'views/dash/statement.coffee'
+
 
 ###
 #  Routes class
 #  @author dvinciguerra
 ###
 module.exports = class DashRouter extends Marionette.AppRouter
-  # default controller
-  # FIXME: add attributes on construct
-  controller: new DashController {name: @module, config: @config}
-
 
   # routes
-  appRoutes:
-    '':              'default'
-    'colaborador':   'collaborator'
-    'jornalista':    'journalist'
+  routes:
+    '': 'default'
+    'plano': 'plan'
+    'extrato': 'statement'
+
+
+  # actions
+  default: ->
+    view = new IndexView
+    view.render()
+
+
+  plan: ->
+    view = new PlanView
+    view.render()
+
+
+  statement: ->
+    view = new StatementView
+    view.render()
+
 

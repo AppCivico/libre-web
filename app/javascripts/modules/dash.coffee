@@ -1,8 +1,8 @@
 "use strict"
 
 # requires
-ModuleBase = require 'modules/base'
-Router = require 'routes/dash'
+ModuleBase = require 'modules/base.coffee'
+Router = require 'routes/dash.coffee'
 
 ###
 #  Module class
@@ -14,15 +14,16 @@ module.exports = class DashModule extends ModuleBase
   onBeforeStart: ->
     console.log "Module '#{@options.name}' running at '#{document.location.href}'..."
 
+    # hack to link navigation
+    $(document).on "click", "a:not([data-bypass])", (event) ->
+      event.preventDefault()
+      Backbone.history.navigate $(event.currentTarget).attr('href'), true
 
   # start event
   onStart: () ->
-    router = new Router {
-      module: @options.name, config: @options.config
-    }
+    router = new Router()
+    Backbone.history.start {root: "/app", pushState: true, hashChange: true}
+    #Backbone.history.start {root: "/app", pushState: true} #, hashChange: false}
 
-    Backbone.history.start {
-      root: "/faca-parte", pushState: true
-    }
 
 

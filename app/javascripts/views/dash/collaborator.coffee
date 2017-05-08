@@ -1,15 +1,15 @@
 "use strict"
 
 # requires
-ViewBase = require '../base'
+ViewBase = require 'views/base.coffee'
 
 ###
 #  View class
 #  @author dvinciguerra
 ###
 module.exports = class CollaoratorView extends ViewBase
-  el: '#app-container'
+  el: '#dash-container'
 
   # setting template
-  template: '../../templates/dash/collaborator'
+  template: 'templates/dash/collaborator'
 

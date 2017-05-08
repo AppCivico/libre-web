@@ -1,1 +1,24 @@
-<h1>DASHBOARD INDEX</h1>
+
+<div class="row">
+	<div class="col-md-12">
+		<h2 class="text-green">Minha conta</h2>
+	</div>
+
+	<div class="col-md-12">
+		<div class="alert alert-success welcome">
+			<h4><strong>Plataforma Libre</strong></h4>
+			<p>
+				IPhone actually put a bird on it pinterest pok pok, cliche plaid kitsch mixtape snackwave. Gastropub salvia fam, actually tote bag XOXO chartreuse.
+			</p>
+			<br>
+			<p>
+				Banjo hot chicken air plant, cardigan XOXO 90's vice authentic. Flexitarian asymmetrical before they sold out +1 chillwave, microdosing umami cliche migas PBR&B blog.
+			</p>
+			<br>
+			<p class="text-right">
+				<a class="btn btn-sm btn-default" href="#plano">Desejo contratar meu plano agora</a>
+			</p>
+		</div>
+	</div>
+
+</div>
