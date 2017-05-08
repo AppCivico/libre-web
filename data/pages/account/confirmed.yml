@@ -1,0 +1,24 @@
+
+
+# page texts
+title: Confirmação de E-mail
+
+description: |
+  Seu e-mail foi confirmado com sucesso. Obrigado!
+
+# next button
+buttons:
+  login:
+    label: Acessar a plataforma
+    path: /account/login
+    styles: btn btn-success
+
+  home:
+    label: Voltar ao início
+    path: /
+    styles: btn btn-success
+
+help: |
+  Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify
+  intelligentsia scenester cliche lomo la croix subway tile meditation.
+

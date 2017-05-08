@@ -1,0 +1,31 @@
+---
+title:      E-mail confirmado!
+controller: account/confirmed
+---
+
+<% page = data.pages.account.confirmed %>
+
+    <section id="main-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h1><%= page.title %></h1>
+          </div>
+
+          <div class="col-md-12 section-content text-center">
+            <p><%= page.description %></p>
+          </div>
+
+          <div class="col-md-12 section-content text-center">
+						<%= l = page.buttons[:login]; link_to l.label, l.path, class: l.styles %>
+						<%= l = page.buttons[:home]; link_to l.label, l.path, class: l.styles %>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- templates -->
+    <script id="message-template" type="lodash-template">
+    </script>
