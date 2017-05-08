@@ -1,10 +1,16 @@
 "use strict"
 
 # requires
-PageBase = require 'pages/base.coffee'
+PageBase        = require 'pages/base.coffee'
 
-PersonalModel = require 'models/donor/register'
-PlanModel = require 'models/donor/plan'
+# models
+PlanModel       = require 'models/donor/plan'
+PersonalModel   = require 'models/donor/register'
+CreditCardModel = require 'models/donor/credit_card'
+
+# views/components
+Button          = require 'views/button'
+
 
 ###
 #  Page class
@@ -21,7 +27,7 @@ module.exports = class CollaboratorPage extends PageBase
   models:
     personal: new PersonalModel()
     plan: new PlanModel()
-    #billing: new PlanModel()
+    billing: new CreditCardModel()
 
 
   # events
@@ -73,43 +79,45 @@ module.exports = class CollaboratorPage extends PageBase
 
 
 
-
   submitPersonalForm: (event) ->
     event.preventDefault()
 
     # submit button
-    # TODO: create a view component to submit form button
-    $button = @getUI('personal').find('input[type=submit]')
-    $button.attr('data-changed', $button.val())
-    $button.val('Salvando informações...')
-    $button.attr('disabled', true)
+    btn = new Button el: @getUI('personal').find('input[type=submit]')
+    btn.state 'loading'
 
     # create a new donor
     model = @models.personal
     model.create()
       .done (res) =>
-        @models.personal.set {id: res.id}
+        @models.personal.set 'id', res.id
+
         @clearMessages()
-        @renderMessage $button.parent(), {
-          type: 'success', title: 'Obrigado!', message: 'Dados salvos!'
+        @renderMessage btn.$el.parent(), {
+          type: 'success'
+          title: 'Obrigado!'
+          message: 'Dados salvos!'
         }
-        @enableTab('plan')
+
+        if document.location.href.match /faca-parte\/colaborador$/
+          document.location = '/faca-parte/obrigado?rel=1'
+        else
+          @enableTab('plan')
 
       .fail (xhr, message, other) =>
-        @renderMessage $button.parent(), {
-          type: 'danger', title: 'Desculpe!', message: 'Não foi possível salvar seus dados!'
+        @renderMessage btn.$el.parent(), {
+          type: 'danger'
+          title: 'Desculpe!'
+          message: 'Não foi possível salvar seus dados!'
         }
 
         # input validation messages
         response = xhr.responseJSON or {}
         if response? and _.has(response, 'form_error')
-          @renderInputMessages($(event.currentTarget), response.form_error)
-
-        #@enableTab('plan')
+          @renderInputMessages $(event.currentTarget), response.form_error
 
       .always =>
-        $button.val($button.data('changed'))
-        $button.removeAttr('disabled')
+        btn.state 'loaded'
 
 
 
@@ -117,11 +125,8 @@ module.exports = class CollaboratorPage extends PageBase
     event.preventDefault()
 
     # submit button
-    # TODO: create a view component to submit form button
-    $button = @getUI('plan').find('input[type=submit]')
-    $button.attr('data-changed', $button.val())
-    $button.val('Salvando informações...')
-    $button.attr('disabled', true)
+    btn = new Button el: @getUI('plan').find('input[type=submit]')
+    btn.state 'loading'
 
     # create a new donor
     @models.plan.set {id: @models.personal.id }
@@ -129,14 +134,59 @@ module.exports = class CollaboratorPage extends PageBase
     model.create()
       .done (res) =>
         @clearMessages()
-        @renderMessage $button.parent(), {
-          type: 'success', title: 'Obrigado!', message: 'Dados salvos!'
+        @renderMessage btn.$el.parent(), {
+          type: 'success'
+          title: 'Obrigado!'
+          message: 'Dados salvos!'
         }
         @enableTab('billing')
 
       .fail (xhr, message, other) =>
-        @renderMessage $button.parent(), {
-          type: 'danger', title: 'Desculpe!', message: 'Não foi possível salvar os dados de planos!'
+        @renderMessage btn.$el.parent(), {
+          type: 'danger'
+          title: 'Desculpe!'
+          message: 'Não foi possível salvar os dados de planos!'
+        }
+
+        # input validation messages
+        response = xhr.responseJSON or {}
+        if response? and _.has(response, 'form_error')
+          @renderInputMessages $(event.currentTarget), response.form_error
+
+        @enableTab('billing')
+
+      .always =>
+        btn.state 'loaded'
+
+
+
+  submitBillingForm: (event) ->
+    event.preventDefault()
+
+    # submit button
+    btn = new Button el: @getUI('billing').find('input[type=submit]')
+    btn.state 'loading'
+
+    # create a new donor
+    @models.billing.set {id: @models.personal.id || 28 }
+    model = @models.billing
+    model.create()
+      .done (res) =>
+        @clearMessages()
+        @renderMessage btn.$el.parent(), {
+          type: 'success'
+          title: 'Obrigado!'
+          message: 'Dados salvos!'
+        }
+        console.log res
+        #@redirectTo '/faca-parte/sucesso?rel=colaborador'
+        #@enableTab('billing')
+
+      .fail (xhr, message, other) =>
+        @renderMessage btn.$el.parent(), {
+          type: 'danger'
+          title: 'Desculpe!'
+          message: 'Não foi possível salvar os dados de pagamento!'
         }
 
         # input validation messages
@@ -144,16 +194,11 @@ module.exports = class CollaboratorPage extends PageBase
         if response? and _.has(response, 'form_error')
           @renderInputMessages($(event.currentTarget), response.form_error)
 
+          console.log response
+
       .always =>
-        $button.val($button.data('changed'))
-        $button.removeAttr('disabled')
+        btn.state 'loaded'
 
-
-  submitBillingForm: (event) ->
-    event.preventDefault()
-
-    console.log event
-    # TODO: redirect to success
 
 
   enableTab: (tabname) ->
