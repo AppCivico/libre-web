@@ -28,6 +28,7 @@ module.exports = class LoginController extends PageBase
     @$el.append @templates.message {
       type: 'success', message: 'Usuário autênticado!'
     }
+    setInterval ( -> document.location = '/app'), 500
 
   renderError: (event, xhr, error) ->
     response = xhr.responseJSON || {}
