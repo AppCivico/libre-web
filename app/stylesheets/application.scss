@@ -278,3 +278,97 @@ div.radio {
   line-height: 28px;
 }
 
+
+/* custom alerts */
+.alert {
+	border-radius: 0px;
+	border: solid 0px transparent !important;
+	box-shadow: none;
+}
+.alert-success {
+	background-color: #00a44f !important;
+	color: #ffffff !important;
+	border: solid 0px transparent;
+	box-shadow: none;
+}
+.alert-danger {
+	background-color: #bb3b38 !important;
+	color: #ffffff !important;
+	border: solid 0px transparent;
+	box-shadow: none;
+}
+
+
+
+/* dashboard number panels */
+.number-box {
+	color: #999999 !important;
+	margin: 0px 20% 0px;
+	text-align: left !important;
+	padding: 10px 10px;
+
+	.number-title {
+		color: #999999 !important;
+		font-size: 80px !important;
+		line-height: 70px;
+			margin: 0px
+	}
+	.number-icon {
+		color: #999999 !important;
+		font-size: 28px !important;
+		line-height: 28px;
+		font-weight: bolder;
+		vertical-align: top;
+		margin-left: -20px;
+	}
+	p {
+		line-height: 16px;
+	}
+	h5 {
+		text-align: left;
+		margin: 0px;
+		padding: 8px 0px;
+		font-weight: bolder;
+		font-size: 16px;
+	}
+}
+.number-buttons {
+	font-size: 12px;
+	font-weight: bolder;
+
+	a:first-child {
+		float:left
+	}
+	a:last-child {
+		float: right
+	}
+}
+.number-pane {
+	text-align: center;
+	margin: 0px;
+	min-width: 200px;
+	min-height: 150px;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.number-bordered {
+	border: solid 1px #cccccc !important;
+}
+.number-title {
+	font-size: 120px !important;
+	line-height: 120px;
+}
+.number-icon {
+	font-size: 20px !important;
+	font-weight: bolder;
+	line-height: 80px;
+	vertical-align: top;
+	margin-left: -20px;
+	display: inline-block;
+}
+.number-description {
+	color: #999;
+	font-weight: bold;
+}
+
