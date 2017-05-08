@@ -93,3 +93,6 @@ exports.config =
       "test/"
     ]
 
+  watcher:
+    awaitWriteFinish: true
+    usePolling: true
