@@ -12,7 +12,9 @@
     "bootstrap-sass": "^3.3.7",
     "jquery": "2",
     "jquery-ujs": "^1.2.2",
-    "underscore": "^1.8.3"
+    "store": "^2.0.4",
+    "underscore": "^1.8.3",
+    "vanilla-text-mask": "^5.0.1"
   },
   "devDependencies": {
     "brunch": "^2.10.9",
