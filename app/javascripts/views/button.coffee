@@ -12,22 +12,15 @@ module.exports = class Button extends ViewBase
 
   stateName: 'none'
 
-  getLabel: () ->
-    @$el.val()
-    this
+  # get or set label
+  label: (text = null) ->
+    return @$el.val text if text?
+    return @$el.val() unless text?
 
-
-  setLabel: (text) ->
-    @$el.val(text)
-    this
-
-
-  disable: (bool) ->
-    if bool
-      @$el.attr 'disabled', true
-    else
-      @$el.removeAttr 'disabled'
-    this
+  # disable view
+  disable: (bool = true) ->
+    return @$el.attr 'disabled', true if bool
+    return @$el.removeAttr 'disabled' unless bool
 
 
   state: (state, options = {}) ->
@@ -57,4 +50,3 @@ module.exports = class Button extends ViewBase
       else
         @$el.stateName = 'none'
 
-    this
