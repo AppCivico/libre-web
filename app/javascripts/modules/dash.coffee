@@ -17,13 +17,12 @@ module.exports = class DashModule extends ModuleBase
     # hack to link navigation
     $(document).on "click", "a:not([data-bypass])", (event) ->
       event.preventDefault()
-      Backbone.history.navigate $(event.currentTarget).attr('href'), true
+      Backbone.history.navigate event.currentTarget.getAttribute('href'), true
 
   # start event
-  onStart: () ->
+  onStart: ->
     router = new Router()
     Backbone.history.start {root: "/app", pushState: true, hashChange: true}
-    #Backbone.history.start {root: "/app", pushState: true} #, hashChange: false}
 
 
 
