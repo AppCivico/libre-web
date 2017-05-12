@@ -16,17 +16,13 @@ module.exports = class Session
   # setting adapter
   adapter: Store
 
+  id: Guid.generate()
+
   # session default attributes
   attributes:
-    id: Guid.generate()
     api_key: null
     roles: []
     user_id: 0
-
-
-  constructor: ->
-    @save() # session creation on class instance
-
 
   # update attributes from store and return key value
   get: (key = null) ->
@@ -38,14 +34,35 @@ module.exports = class Session
   # set an attribute and store
   set: (key = null, value = null, duration = null) ->
     @attributes = @adapter.get(@sessionKey) or @attributes
-    @attributes[key] = value if key?
+
+    if key? and _.isString key
+      @attributes[key] = value
+    else if key? and _.isObject key
+      @attributes = key
+
+    @save()
+
+
+  # persist atributes
+  save: (data) ->
+    @attributes = _.extend @attributes, {id: @id}
     @adapter.set @sessionKey, @attributes
 
 
-  # force persist atributes
-  save: ->
-    @adapter.set(@sessionKey, @attributes)
+  # load current session
+  @load: ->
+    session = (new @)
+    data = session.adapter.get session.sessionKey
 
+    unless _.isEmpty data
+      session.attributes = data
+      session.id = data.id if _.has data, 'id'
+
+    session
+
+  # clear session keys
+  clear: ->
+    @adapter.set @sessionKey, @attributes
 
   # return storage name
   storageName: () ->

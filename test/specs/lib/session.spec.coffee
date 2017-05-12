@@ -20,7 +20,7 @@ describe Session.name, ->
 
   context '#attributes', ->
     it 'should have default attributes', ->
-      expect(object.attributes).to.include.keys ['id', 'api_key', 'roles', 'user_id']
+      expect(object.attributes).to.include.keys ['api_key', 'roles', 'user_id']
 
 
   context '#set()', ->
@@ -40,6 +40,12 @@ describe Session.name, ->
       object.set 'foo', true
       expect(object.attributes.foo).to.be.true
 
+    it 'should set all when key is an object', ->
+      object.set {name: 'foo', surname: 'bar'}
+      expect(object.attributes).to.have.property 'name'
+        .that.is.equal 'foo'
+      expect(object.attributes).to.have.property 'surname'
+        .that.is.equal 'bar'
 
   context '#get()', ->
     it 'should not have a default key', ->
