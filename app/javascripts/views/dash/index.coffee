@@ -13,6 +13,6 @@ module.exports = class IndexView extends ViewBase
   # setting template
   template: 'templates/dash/index'
 
-  # setting model
-  stash:
-    title: 'dash#index (no content)'
+  # constructor
+  initialize: ->
+    @stash 'title', 'Minha conta'
