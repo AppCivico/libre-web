@@ -1,5 +1,4 @@
-
-          <ul class="nav navbar-nav navbar-right">
+					<% content_tag :ul, id: 'dash-usermenu', class: 'nav navbar-nav navbar-right' do %>
             <!-- top navbar menu -->
             <% data.shared.menu.each do |l| %>
               <% if l.label == 'Login' %>
@@ -12,4 +11,4 @@
                 <li><% link_to l.path, title: l.label, data: { bypass: true } do %><%= l.label %><% end %></li>
               <% end %>
             <% end %>
-          </ul>
+					<% end %>
