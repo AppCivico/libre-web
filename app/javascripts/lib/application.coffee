@@ -6,6 +6,15 @@ Backbone.Config = Config
 Backbone.Config.environment = 'development' # 'production'
 
 
+# Backbone.ajax hack for resources with our perl api
+# (force data, content_type and process_data)
+_backboneAjax = Backbone.ajax
+Backbone.ajax = (options = {}) ->
+  options.data = JSON.parse(options.data)
+  options.contentType = 'application/x-www-form-urlencoded'
+  options.processData = true
+  return _backboneAjax(options)
+
 
 # config renderer
 Marionette.Renderer.render = (obj, data, view) ->
