@@ -15,17 +15,22 @@ module.exports = class ModelBase extends Backbone.Model
   # configurations
   config: -> config
 
+  # constructor
+  initialize: ->
+    # build default url using urlRoot
+    @url = "#{@urlRoot}#{@url}" unless @url is "#{@urlRoot}#{@url}"
+
 
   # generic abstraction of ajax request
   request: (options = {}) ->
     $.ajax(options)
 
 
+  # save model method
+  save: (args...) ->
+    super args
+
   # create model
-  create: (params = {}, options = {}) ->
-    options.method = 'POST'
-    options.type = 'json'
-    options.data = _.extend @attributes, params
-    options.url = options.url ? "#{@urlRoot}#{@url}"
-    @request(options)
+  create: (args...) ->
+    @save(args)
 
