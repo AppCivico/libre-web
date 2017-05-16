@@ -1,6 +1,8 @@
 
+# page title
 title: Conheça
 
+# page content
 content: |
   <p>Kickstarter vexillologist street art vinyl stumptown. Cronut sustainable
   typewriter, pitchfork kombucha stumptown fashion axe 3 wolf moon semiotics.
@@ -30,8 +32,22 @@ content: |
   kale chips chillwave celiac pitchfork. Hammock waistcoat slow-carb cornhole
   vice, synth yr authentic godard post-ironic franzen pour-over DIY.</p>
 
-button:
-  label: Faça Parte
-  path: /account/login
-  classes: btn btn-success btn-lg
+# page images
+images:
+  coin:
+    path: /assets/images/libre-coin.png
+    height: 100px
+    title: Libre Coin
+
+  coins:
+    path: /assets/images/libre-coins.png
+    height: 120px
+    title: Libre Coins
+
+# page buttons
+links:
+  faca_parte:
+    label: Faça Parte
+    path: /account/login
+    class: btn btn-success btn-lg
 

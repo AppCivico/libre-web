@@ -1,18 +1,21 @@
-
 # title
 title: Faça Parte
 
 # register type (jornalist or portal)
 buttons:
   - label: Cadastrar como Jornalista
-    classes: btn btn-green btn-bordered btn-block btn-lg active
+    classes: btn btn-success btn-block btn-lg active js-journalist-type
+    data:
+      register-type: journalist
     benefits:
       - Meditation tumblr pinterest lyft salvia
       - Schlitz actually activated charcoal messenger bag
       - Flannel brooklyn air plant offal
 
   - label: Cadastrar como Veiculo
-    classes: btn btn-green btn-bordered btn-block btn-lg disabled
+    classes: btn btn-success btn-success-bordered btn-block btn-lg js-journalist-type
+    data:
+      register-type: vehicle
     benefits:
       - Meditation tumblr pinterest lyft salvia
       - Schlitz actually activated charcoal messenger bag
@@ -23,6 +26,157 @@ subtitle:
   access_data:  Dados de acesso
   general_data: Dados gerais
   banking_data: Dados bancários
+
+form:
+  fields:
+    email:
+      label: E-mail
+      name: email
+      type: email
+      value:
+      required: true
+      disabled: false
+      styles: form-control
+      help:
+
+    password:
+      label: Senha
+      name: password
+      type: password
+      value:
+      required: true
+      disabled: false
+      styles: form-control
+      help:
+
+    name:
+      label: Nome
+      name: name
+      type: text
+      value:
+      required: true
+      disabled: false
+      styles: form-control
+      help:
+
+    surname:
+      label: Sobrenome
+      name: surname
+      type: text
+      value:
+      required: true
+      disabled: false
+      styles: form-control
+      help:
+
+    cnpj:
+      label: CNPJ
+      name: cnpj
+      type: text
+      value:
+      required: true
+      disabled: false
+      styles: form-control hide
+      help:
+
+    cpf:
+      label: CPF
+      name: cpf
+      type: text
+      value:
+      required: true
+      disabled: false
+      styles: form-control
+      help:
+
+    cellphone_number:
+      label: Telefone
+      name: cellphone_number
+      type: text
+      value:
+      required: false
+      disabled: false
+      styles: form-control
+      help:
+
+    address_zipcode:
+      label: CEP
+      name: address_zipcode
+      type: text
+      value:
+      required: true
+      disabled: false
+      styles: form-control
+      help:
+
+    address_street:
+      label: Endereço
+      name: address_street
+      type: text
+      value:
+      required: true
+      disabled: true
+      styles: form-control disabled
+      help:
+
+    address_residence_number:
+      label: Número
+      name: address_residence_number
+      type: text
+      value:
+      required: true
+      disabled: true
+      styles: form-control
+      help:
+
+    address_complement:
+      label: Complemento
+      name: address_complement
+      type: text
+      value:
+      required: true
+      disabled: true
+      styles: form-control
+      help:
+
+    address_city:
+      label: Cidade
+      name: address_city
+      type: text
+      value:
+      required: true
+      disabled: true
+      styles: form-control disabled
+      help:
+
+    address_state:
+      label: Estado
+      name: address_state
+      type: text
+      value:
+      required: true
+      disabled: true
+      styles: form-control disabled
+      help:
+
+    vehicle:
+      label: Veículo
+      name: vehicle
+      type: hidden
+      value: 0
+      required: true
+      disabled: false
+      styles: form-control
+      help:
+
+    submit:
+      label: Cadastrar
+      name: js-btn_save
+      id: js-btn_save
+      type: submit
+      styles: btn btn-success
+      data:
+        disable-with: Salvando dados...
 
 
 # help right content
