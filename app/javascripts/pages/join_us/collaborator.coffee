@@ -4,13 +4,16 @@
 PageBase        = require 'pages/base.coffee'
 
 # models
-PlanModel       = require 'models/donor/plan'
-PersonalModel   = require 'models/donor/register'
-CreditCardModel = require 'models/donor/credit_card'
+AuthModel       = require 'models/auth.coffee'
+PlanModel       = require 'models/donor/plan.coffee'
+PersonalModel   = require 'models/donor/register.coffee'
+CreditCardModel = require 'models/donor/credit_card.coffee'
 
 # views/components
-Button          = require 'views/button'
+Button          = require 'views/button.coffee'
 
+TextMask        = require 'vanilla-text-mask'
+TextMaskAddons  = require 'text-mask-addons'
 
 ###
 #  Page class
@@ -24,10 +27,13 @@ module.exports = class CollaboratorPage extends PageBase
     message: require 'templates/message'
     input_message: require 'templates/input_message'
 
+
+  # models
   models:
-    personal: new PersonalModel()
-    plan: new PlanModel()
-    billing: new CreditCardModel()
+    auth:     new AuthModel
+    personal: new PersonalModel
+    plan:     new PlanModel
+    billing:  new CreditCardModel
 
 
   # events
@@ -45,16 +51,63 @@ module.exports = class CollaboratorPage extends PageBase
     navtabs:  '.nav-tabs'
     panetabs: '.js-tabcontainer'
 
+
   # view events
   events:
-    # getting field changes
+    # field changes
     "change @ui.personal input":  'changePersonalFields'
     "change @ui.plan input":      'changePlanFields'
     "change @ui.billing input":   'changeBillingFields'
-    # submit forms
+    # form submit
     "submit @ui.personal":  'submitPersonalForm'
     "submit @ui.plan":      'submitPlanForm'
     "submit @ui.billing":   'submitBillingForm'
+
+
+
+  initialize: ->
+
+    # phone mask
+    for el in @$el.find('[data-mask="phone"]')
+      TextMask.maskInput {
+        inputElement: el
+        guide: false
+        mask: ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d?/]
+      }
+
+    # date mask
+    for el in @$el.find('[data-mask="date"]')
+      TextMask.maskInput {
+        inputElement: el
+        guide: false
+        mask: [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
+      }
+
+    # date month year mask
+    for el in @$el.find('[data-mask="month_year"]')
+      TextMask.maskInput {
+        inputElement: el
+        guide: false
+        mask: [/\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
+      }
+
+    # number mask
+    for el in @$el.find('[data-mask="number"]')
+      pattern = TextMaskAddons.createNumberMask {allowDecimal: false, decimalSymbol: '', thousandsSeparatorSymbol: '', prefix: '', suffix: ''}
+      TextMask.maskInput { inputElement: el, mask: pattern }
+
+    # money mask
+    for el in @$el.find('[data-mask="money"]')
+      pattern = TextMaskAddons.createNumberMask {allowDecimal: true, decimalSymbol: ',', thousandsSeparatorSymbol: '.', decimalLimit: 2, requireDecimal:true}
+      TextMask.maskInput { inputElement: el, mask: pattern }
+
+
+    # restoring session and current tab
+    s = @session.get() or {}
+    if (_.has s, 'register_step') and (_.contains ['personal', 'plan', 'billing'], s.register_step)
+      @models.personal.set 'id', s.user_id
+      @enableTab(s.register_step)
+      location.hash = "##{s.register_step}-pane"
 
 
   # update personal model attributes
@@ -78,7 +131,7 @@ module.exports = class CollaboratorPage extends PageBase
     @models.billing.set field.id, field.value
 
 
-
+  # submit personal data form
   submitPersonalForm: (event) ->
     event.preventDefault()
 
@@ -87,28 +140,30 @@ module.exports = class CollaboratorPage extends PageBase
     btn.state 'loading'
 
     # create a new donor
+    auth  = @models.auth
     model = @models.personal
     model.create()
-      .done (res) =>
-        @models.personal.set 'id', res.id
+      # request success
+      .done (response, status, xhr) =>
+        model.set 'id', response.id
 
         @clearMessages()
         @renderMessage btn.$el.parent(), {
-          type: 'success'
-          title: 'Obrigado!'
-          message: 'Dados salvos!'
+          type: 'success', title: 'Obrigado!', message: 'Dados salvos!'
         }
 
-        if document.location.href.match /faca-parte\/colaborador$/
-          document.location = '/faca-parte/obrigado?rel=1'
-        else
+        # make user authentication
+        a = auth.authenticate {email: model.get('email'), password: model.get('password')}
+        a.then (response, status, xhr) =>
+          @session.set response
           @enableTab('plan')
 
+        # authentication fail is disabled
+
+      # request error
       .fail (xhr, message, other) =>
         @renderMessage btn.$el.parent(), {
-          type: 'danger'
-          title: 'Desculpe!'
-          message: 'Não foi possível salvar seus dados!'
+          type: 'danger', title: 'Desculpe!', message: 'Não foi possível salvar seus dados!'
         }
 
         # input validation messages
@@ -116,11 +171,12 @@ module.exports = class CollaboratorPage extends PageBase
         if response? and _.has(response, 'form_error')
           @renderInputMessages $(event.currentTarget), response.form_error
 
+      # request complete
       .always =>
         btn.state 'loaded'
 
 
-
+  # submit plan data form
   submitPlanForm: (event) ->
     event.preventDefault()
 
@@ -129,35 +185,30 @@ module.exports = class CollaboratorPage extends PageBase
     btn.state 'loading'
 
     # create a new donor
-    @models.plan.set {id: @models.personal.id }
     model = @models.plan
+    model.set {user_id: @models.personal.id, api_key: @session.get('api_key')}
     model.create()
-      .done (res) =>
+      # request success
+      .done (response, status, xhr) =>
+        model.set 'id', response.id
+
         @clearMessages()
         @renderMessage btn.$el.parent(), {
-          type: 'success'
-          title: 'Obrigado!'
-          message: 'Dados salvos!'
+          type: 'success', title: 'Obrigado!', message: 'Dados salvos!'
         }
+
+        # goto billing step
         @enableTab('billing')
 
+      # request error
       .fail (xhr, message, other) =>
         @renderMessage btn.$el.parent(), {
-          type: 'danger'
-          title: 'Desculpe!'
-          message: 'Não foi possível salvar os dados de planos!'
+          type: 'danger', title: 'Desculpe!', message: 'Não foi possível salvar os dados de planos!'
         }
 
-        # input validation messages
-        response = xhr.responseJSON or {}
-        if response? and _.has(response, 'form_error')
-          @renderInputMessages $(event.currentTarget), response.form_error
-
-        @enableTab('billing')
-
+      # request complete
       .always =>
         btn.state 'loaded'
-
 
 
   submitBillingForm: (event) ->
@@ -168,17 +219,27 @@ module.exports = class CollaboratorPage extends PageBase
     btn.state 'loading'
 
     # create a new donor
-    @models.billing.set {id: @models.personal.id || 28 }
     model = @models.billing
+    model.set {user_id: @models.personal.id, api_key: @session.get('api_key')}
     model.create()
-      .done (res) =>
-        @clearMessages()
-        @renderMessage btn.$el.parent(), {
-          type: 'success'
-          title: 'Obrigado!'
-          message: 'Dados salvos!'
-        }
-        console.log res
+      # request success
+      .done (response, status, xhr) =>
+
+        # callback response
+        console.log response
+
+        # request callback
+        model.request_callback(response.href)
+          .done (response, status, xhr) =>
+            console.log arguments
+
+            @clearMessages()
+            @renderMessage btn.$el.parent(), {
+              type: 'success'
+              title: 'Obrigado!'
+              message: 'Dados salvos!'
+            }
+
         #@redirectTo '/faca-parte/sucesso?rel=colaborador'
         #@enableTab('billing')
 
@@ -224,6 +285,9 @@ module.exports = class CollaboratorPage extends PageBase
         $navTabs.find('a[href="#billing-pane"]').parent().addClass('active')
         $paneTabs.find("#billing-pane").addClass('active')
 
+    # save register stap status
+    @session.set('register_step', tabname)
+
 
   renderMessage: ($root = null, stash = {}) ->
     # reset messages
@@ -251,4 +315,5 @@ module.exports = class CollaboratorPage extends PageBase
     @$el.find('.message').remove()
     @$el.find('small.error-message').remove()
     @$el.find('.has-error').toggleClass('has-error')
+
 
