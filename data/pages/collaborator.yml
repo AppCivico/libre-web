@@ -28,7 +28,7 @@ how_to_works:
     - title: Dê um Libre, apoiando a imprensa independente
       image: /assets/images/libre-coin.png
 
-    - title: Faça <a>cadastro</a> ou <a>login</a> para confirmar sua doação
+    - title: Faça cadastro ou login para confirmar sua doação
       image: /assets/images/libre-field.png
 
 
@@ -38,7 +38,7 @@ form:
 
   tabs:
     # default active tab
-    activated: billing
+    activated: personal
 
     # personal data tab content
     personal:
@@ -51,11 +51,67 @@ form:
       section:
         access_data:
           title: Dados de acesso
+          fields:
+            email:
+              label: E-mail
+              name: email
+              type: email
+              value:
+              required: true
+              disabled: false
+              styles: form-control
+              help:
+
+            password:
+              label: Senha
+              name: password
+              type: password
+              value:
+              required: true
+              disabled: false
+              styles: form-control
+              help:
+
         general_data:
           title: Dados gerais
+          fields:
+            name:
+              label: Nome
+              name: name
+              type: text
+              value:
+              required: true
+              disabled: false
+              styles: form-control
+              help:
 
-      next_button:
-        label: Continuar
+            surname:
+              label: Sobrenome
+              name: surname
+              type: text
+              value:
+              required: true
+              disabled: false
+              styles: form-control
+              help:
+
+            phone:
+              label: Telefone
+              name: phone
+              type: text
+              value:
+              required: true
+              disabled: false
+              styles: form-control
+              help:
+              data:
+                mask: phone
+
+      buttons:
+        next:
+          label: Continuar
+          path: #
+          classes: js-button-pane1 btn btn-success
 
       help: |
         Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify
@@ -69,56 +125,69 @@ form:
       subtitle: |
         Escolha seu plano abaixo:
 
-      form:
-        fields:
-          - label: R$ 10 por mês
-            type: radio
-            value: 10
-            name: plan
-            required: true
-            classes: form-control
+      fields:
+        - label: R$ 20 por mês
+          type: radio
+          value: 20,00
+          name: plan
+          required: true
+          disabled: false
+          styles:
+          help:
 
-          - label: R$ 20 por mês
-            type: radio
-            value: 20
-            name: plan
-            required: true
-            classes: form-control
+        - label: R$ 30 por mês
+          type: radio
+          value: 30,00
+          name: plan
+          required: true
+          disabled: false
+          styles:
+          help:
 
-          - label: R$ 30 por mês
-            type: radio
-            value: 30
-            name: plan
-            required: true
-            classes: form-control
+        - label: R$ 40 por mês
+          type: radio
+          value: 40,00
+          name: plan
+          required: true
+          disabled: false
+          styles:
+          help:
 
-          - label: R$ 40 por mês
-            type: radio
-            value: 40
-            name: plan
-            required: true
-            classes: form-control
+        - label: R$ 50 por mês
+          type: radio
+          value: 50,00
+          name: plan
+          required: true
+          disabled: false
+          styles:
+          help:
 
-          - label: R$ 50 por mês
-            type: radio
-            value: 50
-            name: plan
-            required: true
-            classes: form-control
+        - label: R$ 100 por mês
+          type: radio
+          value: 100,00
+          name: plan
+          required: true
+          disabled: false
+          styles:
+          help:
 
-          - label: Insira um valor
-            type: radio
-            value:
-            name: plan
-            required: false
-            classes: form-control
+        - label: Insira um valor
+          type: text
+          value:
+          name: plan
+          required: true
+          disabled: false
+          styles: form-control
+          help: Adicione um valor superior a R$ 20 reais
+          data:
+            mask: money
 
-      # next button
-      next_button:
-        id: js-step2-next
-        label: Continuar
-        type: button
-        classes: btn btn-green btn-block
+      buttons:
+        next:
+          label: Continuar
+          path: #
+          classes: js-button-pane2 btn btn-success
+
 
       help: |
         Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify
@@ -131,91 +200,79 @@ form:
       name: billing
       subtitle: |
         Finalize seu cadastro efetuando o pagamento conforme o plano escolhido
+
       section:
         card_data:
           title: Dados do cartão
           fields:
-            - label: Número do cartão
+            card_name:
+              label: Nome no cartão
+              name: card_name
+              type: text
+              value:
+              required: true
+              disabled: false
+              styles: form-control
+              help: Escreva o nome da mesma forma que se encontra no cartão
+              container_style: form-group col-md-6 col-sm-12
+
+            card_document:
+              label: Documento
+              name: card_document
+              type: text
+              value:
+              required: true
+              disabled: false
+              styles: form-control
+              help: Documento (cpf/cnpj) relacionado ao cartão
+              container_style: form-group col-md-6 col-sm-12
+
+
+            card_number:
+              label: Número do cartão
               name: card_number
-              type: string
+              type: text
+              value:
               required: true
-              classes: form-control
-              container_classes: form-group col-md-6 col-sm-12
+              disabled: false
+              styles: form-control
+              help:
+              container_style: form-group col-md-12 col-sm-12
+              data:
+                mask: number
 
-            - label: Vencimento
-              name: card_date
-              type: string
+            card_validity:
+              label: Validade (01/2018)
+              name: card_validity
+              type: text
+              value:
               required: true
-              classes: form-control
-              container_classes: form-group col-md-3 col-sm-12
+              disabled: false
+              styles: form-control
+              help: Entre com a validade do cartão no formato 01/2020
+              container_style: form-group col-md-6 col-sm-12
+              data:
+                mask: month_year
 
-            - label: Cod. verif.
-              name: card_cvv
-              type: string
+            card_csc:
+              label: Código Verificador
+              name: card_csc
+              type: password
+              value:
               required: true
-              classes: form-control
-              container_classes: form-group col-md-3 col-sm-12
+              disabled: false
+              styles: form-control
+              help: Entre com o código que se encontra atrás do cartão
+              container_style: form-group col-md-6 col-sm-12
 
-        address_data:
-          title: Endereço da fatura
-          fields:
-            - label: CEP
-              name: address_cep
-              type: string
-              required: true
-              classes: form-control
-              container_classes: form-group col-md-6 col-sm-12
-
-            - label: Clique aqui para persquisar seu CEP caso não saiba.
-              path: http://www.buscacep.correios.com.br/sistemas/buscacep/
-              target: _blank
-              type: link
-              classes: btn btn-link
-              container_classes: form-group col-md-6 col-sm-12
-
-            - label: Endereço
-              name: address_street
-              type: string
-              required: true
-              classes: form-control
-              container_classes: form-group col-md-6 col-sm-12
-
-            - label: Número
-              name: address_number
-              type: string
-              required: true
-              classes: form-control
-              container_classes: form-group col-md-3 col-sm-12
-
-            - label: Complemento
-              name: address_complement
-              type: string
-              required: true
-              classes: form-control
-              container_classes: form-group col-md-3 col-sm-12
-
-            - label: Estado
-              name: address_state
-              type: string
-              required: true
-              disabled: true
-              classes: form-control
-              container_classes: form-group col-md-6 col-sm-12
-
-            - label: Cidade
-              name: address_city
-              type: string
-              required: true
-              disabled: true
-              classes: form-control
-              container_classes: form-group col-md-6 col-sm-12
 
       # next button
-      next_button:
-        id: js-step3-next
-        label: Continuar
-        type: button
-        classes: btn btn-green btn-block
+      buttons:
+        next:
+          label: Continuar
+          path: #
+          classes: js-button-pane2 btn btn-success
+
 
       help: |
         Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify
