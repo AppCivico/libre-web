@@ -3,18 +3,20 @@ title:      Contato
 controller: contact
 ---
 
+<% page = data.pages.contact %>
+
     <section id="main-content">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h1><%= data.contact.title %></h1>
+            <h1><%= page.title %></h1>
           </div>
 
           <div class="col-md-8 section-content">
-            <p><%= data.contact.description %></p>
+            <p><%= page.description %></p>
 
             <% form_tag "#{data.config.routes['root']}/contact", name: "cotact_form",  id: "contact-form", class: "contact-form", novalidate: true, data: { remote: true, type: 'json' } do %>
-              <% data.contact.fields.each do |f| %>
+              <% page.fields.each do |f| %>
 
                 <div class="form-group">
 

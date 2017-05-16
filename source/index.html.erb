@@ -1,8 +1,9 @@
 ---
-title:      Pagina Inicial
+title:      Início
 controller: home
 ---
 
+<% page = data.pages.home %>
 
     <!-- navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -39,17 +40,17 @@ controller: home
       <div class="container">
         <div class="row">
           <div class="col-md-5 section-content">
-            <%= data.home.content %>
+            <%= page.content %>
           </div>
           <div class="col-md-offset-2 col-md-5">
 
             <h3 class="section-citation">
-              <%= data.home.citation %>
+              <%= page.citation %>
             </h3>
             <br>
             <br>
             <span class="section-citation-name">
-              <%= data.home.citation_name %>
+              <%= page.citation_name %>
             </span>
 
           </div>
@@ -68,7 +69,7 @@ controller: home
             <h2 class="section-title">Quem Faz Parte</h2>
           </div>
 
-          <% data.home.who_using.each do |p| %>
+          <% page.who_using.each do |p| %>
             <div class="col-md-3 text-center">
               <p>
                 <% link_to p.path, target: '_blank' do %>

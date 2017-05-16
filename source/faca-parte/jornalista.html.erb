@@ -3,6 +3,7 @@ title:      Faça Parte - Cadastro de Jornalista
 controller: join_us/journalist
 ---
 
+<% page = data.pages.journalist %>
 
     <section id="main-content">
       <div class="container">
@@ -10,14 +11,14 @@ controller: join_us/journalist
 
           <!-- page title -->
           <div class="col-md-12">
-            <h1><%= data.journalist.title %></h1>
+            <h1><%= page.title %></h1>
           </div>
 
           <div class="col-md-8 section-content">
 
             <div class="row">
               <div class="col-md-6">
-                <% btn = data.journalist.buttons[0] %>
+                <% btn = page.buttons[0] %>
                 <p>
                   <% content_tag :button, class: btn[:classes], data: btn[:data] do %>
                     <%= btn[:label] %>
@@ -33,7 +34,7 @@ controller: join_us/journalist
               </div>
 
               <div class="col-md-6">
-                <% btn = data.journalist.buttons[1] %>
+                <% btn = page.buttons[1] %>
                 <p>
                   <% content_tag :button, class: btn[:classes], data: btn[:data] do %>
                     <%= btn[:label] %>
@@ -53,7 +54,7 @@ controller: join_us/journalist
           </div>
           <div class="col-md-4">
             <h4 class="text-green">Ajuda</h4>
-            <%= data.journalist.help %>
+            <%= page.help %>
           </div>
         </div>
     </section>
@@ -68,13 +69,13 @@ controller: join_us/journalist
 						<div class="col-md-8 section-content">
 
 							<% form_tag "#{data.config.routes['root']}/register/journalist", name: "journalist_form",  id: "journalist-form", class: "journalist-form", novalidate: true, data: { remote: true, type: 'json' } do %>
-								<% fields = data.journalist.form.fields %>
+								<% fields = page.form.fields %>
 
 								<%= f = fields[:vehicle]; tag :input, type: f.type, name: f.name, id: f.id || f.name, required: f.required, value: f.value || 0 %>
 
 									<!-- login data -->
 									<h3 class="text-green">
-										<%= data.journalist.subtitle[:access_data] %>
+										<%= page.subtitle[:access_data] %>
 									</h3>
 									<div class="row">
 										<div class="col-md-12">
@@ -97,7 +98,7 @@ controller: join_us/journalist
 
 									<!-- general data -->
 									<h3 class="text-green">
-										<%= data.journalist.subtitle[:general_data] %>
+										<%= page.subtitle[:general_data] %>
 									</h3>
 
 									<div class="row">
@@ -192,7 +193,7 @@ controller: join_us/journalist
 
 								<!-- banking data -->
 								<!-- h3 class="text-green">
-									<%= data.journalist.subtitle[:banking_data] %>
+									<%= page.subtitle[:banking_data] %>
 								</h3>
 								<div class="row">
 									<div class="col-md-12">
