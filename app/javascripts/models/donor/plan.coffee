@@ -10,14 +10,17 @@ ModelBase = require 'models/base.coffee'
 #  @author dvinciguerra
 ###
 module.exports = class PlanModel extends ModelBase
+  url: "/donor/:user_id/plan"
 
-  # default endpoints
-  url: "/donor/#{@id || 0}/plan"
+  # default attributes
+  defaults:
+    user_id: 0
+    amount: 0
 
   # constructor
-  initialize: () ->
-    @on 'change:id', (model, id) =>
-      @url = "/donor/#{@id || 0}/plan"
+  initialize: ->
+    @on 'change:user_id', (model, user_id) =>
+      @url = "#{@urlRoot}/donor/#{user_id}/plan"
 
 
 
