@@ -21,6 +21,7 @@ exports.config =
           /underscore.js$/
           /rails.js$/
           /vanillaTextMask.js$/
+          /textMaskAddons.js$/
           /store.*.js$/
         ]
         'assets/js/application.bundle.js': [
@@ -54,7 +55,6 @@ exports.config =
       'Marionette': 'backbone.marionette'
       'Backbone.Radio': 'backbone.radio'
       'jquery-ujs': 'jquery-ujs'
-      'text-mask': 'vanilla-text-mask'
       'store': 'store'
     whitelist: [
       'jquery'
@@ -64,10 +64,11 @@ exports.config =
       'jquery-ujs'
       'bootstrap-sass'
       'backbone.radio'
+      'vanilla-text-mask'
+      'text-mask-addons'
+      'store'
       'mocha'
       'chai'
-      'vanilla-text-mask'
-      'store'
     ]
 
   # modules configurations

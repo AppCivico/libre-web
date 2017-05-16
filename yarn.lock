@@ -3680,6 +3680,10 @@ tar@^2.0.0, tar@^2.2.1:
     fstream "^1.0.2"
     inherits "2"
 
+text-mask-addons@^3.5.1:
+  version "3.5.1"
+  resolved "https://registry.yarnpkg.com/text-mask-addons/-/text-mask-addons-3.5.1.tgz#3b3de80a5665b0dbf5be7680d570aca423ea8b81"
+
 throttleit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/throttleit/-/throttleit-1.0.0.tgz#9e785836daf46743145a5984b6268d828528ac6c"
