@@ -14,8 +14,7 @@ module.exports = class Button extends ViewBase
 
   # get or set label
   label: (text = null) ->
-    return @$el.val text if text?
-    return @$el.val() unless text?
+    if text? then @$el.val(text) else @$el.val()
 
   # disable view
   disable: (bool = true) ->
@@ -28,13 +27,13 @@ module.exports = class Button extends ViewBase
 
     switch state
       when 'loading'
-        @setLabel(if options.label? then options.label else 'Salvando...')
-        @$el.attr 'data-changed', @$el.val()
+        @$el.attr 'data-changed', @label()
+        @label(if options.label? then options.label else 'Salvando...')
         @$el.attr 'disabled', true
         @$el.stateName = 'loading'
 
       when 'loaded'
-        @setLabel(if options.label? then options.label else @$el.attr 'data-changed')
+        @label(if options.label? then options.label else @$el.attr('data-changed'))
         @$el.removeAttr 'data-changed'
         @$el.removeAttr 'disabled'
         @$el.stateName = 'loaded'
