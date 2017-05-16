@@ -10,9 +10,13 @@ ModelBase = require 'models/base.coffee'
 #  @author dvinciguerra
 ###
 module.exports = class RegisterDonorModel extends ModelBase
-
-  # default endpoints
   url: '/register/donor'
 
+  # default attributes
+  defaults:
+    email: null
+    password: null
+    name: null
+    surname: null
 
 
