@@ -3,6 +3,10 @@
 # requires
 PageBase = require 'pages/base.coffee'
 
+# masks
+Masks           = require 'lib/masks.coffee'
+
+
 ###
 #  Page class
 #  @author dvinciguerra
@@ -36,6 +40,12 @@ module.exports = class JournalistPage extends PageBase
     'click @ui.journalist-type': 'clickJournalistType'
     'change @ui.document-type': 'changeDocumentType'
     'keyup @ui.zipcode-input': 'getAddressByZipcode'
+
+
+  # constructor
+  initialize: ->
+    masks = new Masks
+    masks.register ['number', 'phone', 'zipcode']
 
 
   getAddressByZipcode: (event) ->

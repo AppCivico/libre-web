@@ -78,6 +78,8 @@ form:
       disabled: false
       styles: form-control hide
       help:
+      data:
+        mask: number
 
     cpf:
       label: CPF
@@ -88,6 +90,8 @@ form:
       disabled: false
       styles: form-control
       help:
+      data:
+        mask: number
 
     cellphone_number:
       label: Telefone
@@ -98,6 +102,8 @@ form:
       disabled: false
       styles: form-control
       help:
+      data:
+        mask: phone
 
     address_zipcode:
       label: CEP
@@ -108,6 +114,8 @@ form:
       disabled: false
       styles: form-control
       help:
+      data:
+        mask: zipcode
 
     address_street:
       label: Endereço
@@ -128,6 +136,8 @@ form:
       disabled: true
       styles: form-control
       help:
+      data:
+        mask: number
 
     address_complement:
       label: Complemento

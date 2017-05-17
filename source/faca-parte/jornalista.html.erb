@@ -83,12 +83,12 @@ controller: join_us/journalist
 										</div>
 										<div class="col-md-6 form-group">
 											<label for="email" class="sr-only">E-mail de acesso</label>
-											<%= f = fields[:email]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, disabled: f.disabled %>
+											<%= f = fields[:email]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, disabled: f.disabled, data: f.data || {} %>
 											<small class="help-block">Entre com um e-mail válido para criar sua conta e acessar a plataforma</small>
 										</div>
 										<div class="col-md-6 form-group">
 											<label for="password" class="sr-only">Senha</label>
-											<%= f = fields[:password]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, disabled: f.disabled %>
+											<%= f = fields[:password]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, disabled: f.disabled, data: f.data || {} %>
 											<small class="help-block">Escolha uma senha de no mínimo 6 caractéres</small>
 										</div>
 									</div>
@@ -104,18 +104,18 @@ controller: join_us/journalist
 									<div class="row">
 										<div class="col-md-6 form-group">
 											<label for="name" class="sr-only">Nome</label>
-											<%= f = fields[:name]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+											<%= f = fields[:name]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
 										</div>
 										<div class="col-md-6 form-group">
 											<label for="surename" class="sr-only">Sobrenome</label>
-											<%= f = fields[:surname]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+											<%= f = fields[:surname]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
 										</div>
 									</div>
 
 									<div class="row">
 										<div class="col-md-6 form-group">
 											<label for="phone" class="sr-only">Telefone</label>
-											<%= f = fields[:cellphone_number]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+											<%= f = fields[:cellphone_number]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
 											<small class="help-block">Digíte somente números seguindo o formato: <code>11 12345678</code></small>
 										</div>
 									</div>
@@ -136,8 +136,8 @@ controller: join_us/journalist
 										</div>
 										<div class="col-md-6 form-group">
 											<label for="cpf" class="sr-only">Documento (CPF/CNPJ)</label>
-											<%= f = fields[:cpf]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
-											<%= f = fields[:cnpj]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+											<%= f = fields[:cpf]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
+											<%= f = fields[:cnpj]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
 											<small class="help-block">Digíte somente números do documento</small>
 										</div>
 									</div>
@@ -150,7 +150,7 @@ controller: join_us/journalist
 									<div class="row">
 										<div class="col-md-6 form-group">
 											<label for="rg" class="sr-only">CEP</label>
-											<%= f = fields[:address_zipcode]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+											<%= f = fields[:address_zipcode]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
 										</div>
 										<div class="col-md-6 form-group">
 											<% link_to data.shared.zipcode_search[:path], target: '_blank', title: data.shared.zipcode_search[:label] do %>
@@ -162,29 +162,29 @@ controller: join_us/journalist
 									<div class="row">
 										<div class="col-md-12 form-group">
 											<label for="address_street" class="sr-only">Endereço</label>
-											<%= f = fields[:address_street]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+											<%= f = fields[:address_street]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
 										</div>
 									</div>
 
 									<div class="row">
 										<div class="col-md-6 form-group">
 											<label for="address_number" class="sr-only">Número</label>
-											<%= f = fields[:address_residence_number]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+											<%= f = fields[:address_residence_number]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
 										</div>
 										<div class="col-md-6 form-group">
 											<label for="address_complement" class="sr-only">Complemento</label>
-											<%= f = fields[:address_complement]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+											<%= f = fields[:address_complement]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
 										</div>
 									</div>
 
 									<div class="row">
 										<div class="col-md-6 form-group">
 											<label for="address_state" class="sr-only">Estado</label>
-											<%= f = fields[:address_state]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+											<%= f = fields[:address_state]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
 										</div>
 										<div class="col-md-6 form-group">
 											<label for="address_city" class="sr-only">Cidade</label>
-											<%= f = fields[:address_city]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled %>
+											<%= f = fields[:address_city]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
 										</div>
 									</div>
 
