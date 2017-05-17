@@ -1,7 +1,7 @@
 "use strict"
 
 # requires
-PageBase = require './base.coffee'
+PageBase = require 'pages/base.coffee'
 
 ###
 #  Page class
