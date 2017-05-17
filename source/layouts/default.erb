@@ -4,8 +4,9 @@
     <%= partial 'partial/_metatags.erb' %>
     <title>Libre <%= current_page.data.title ? "- #{current_page.data.title}" : "Save" %></title>
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css' crossorigin="anonymous">
     <%= stylesheet_link_tag "application.bundle" %>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
 
 	<body class="<%= page_classes %>" <%= page_controller 'attr' %> <%= page_module 'attr' %> >
@@ -22,7 +23,7 @@
     <% if build? %>
       <script src="https://cdn.ravenjs.com/3.14.2/raven.min.js" crossorigin="anonymous"></script>
       <script id="sentry-config" type="text/javascript">
-        Raven.config('https://6fb4281a87474f388d1e68e090aac108@sentry.io/159417').install()
+				Raven.config('https://a02921e72dec4d0ab6069dea79ceceba@sentry.io/162166').install()
       </script>
     <% end %>
 
