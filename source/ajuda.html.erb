@@ -1,0 +1,36 @@
+---
+title:      Tópicos de Ajuda
+controller: help
+---
+
+<% page = data.pages.help %>
+
+	<section id="main-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1><%= page.title %></h1>
+				</div>
+
+				<div class="col-md-8 section-content">
+					<% topics = page.topics; topics.each_with_index do |item, index| %>
+						<div class="help-topic">
+							<h3 class="text-green"><%= item.title %></h3>
+
+							<%= item.content %>
+
+							<br>
+						</div>
+					<% end %>
+				</div>
+
+				<div class="col-md-4 text-center"></div>
+
+				<div class="col-md-12 section-content">
+					<!-- comentário do disqus ou link para pagina de contato -->
+				</div>
+
+			</div>
+		</div>
+	</section>
+
