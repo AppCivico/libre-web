@@ -11,7 +11,16 @@ module.exports = class Mask
 
   # available mask list
   masks:
-    zipcode: [/\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/]
+    zipcode:    [/\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/]
+    phone:      ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d?/]
+    date:       [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
+    month_year: [/\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
+    number:     TextMaskAddons.createNumberMask {
+      allowDecimal: false, decimalSymbol: '', thousandsSeparatorSymbol: '', prefix: '', suffix: ''
+    }
+    money:      TextMaskAddons.createNumberMask {
+      allowDecimal: true, decimalSymbol: ',', thousandsSeparatorSymbol: '.', decimalLimit: 2, requireDecimal:true, prefix: '', suffix: ''
+    }
 
 
   # register masks
@@ -29,34 +38,32 @@ module.exports = class Mask
     if _.contains masks, 'phone'
       for el in $('[data-mask="phone"]')
         TextMask.maskInput {
-          inputElement: el
-          guide: false
-          mask: ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d?/]
+          inputElement: el, guide: false, mask: @masks['phone']
         }
 
     # date mask
     if _.contains masks, 'date'
       for el in $('[data-mask="date"]')
         TextMask.maskInput {
-          inputElement: el, guide: false, mask: [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
+          inputElement: el, guide: false, mask: @masks['date']
         }
 
     # date month year mask
     if _.contains masks, 'month_year'
       for el in $('[data-mask="month_year"]')
         TextMask.maskInput {
-          inputElement: el, guide: false, mask: [/\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
+          inputElement: el, guide: false, mask: @masks['month_year']
         }
 
     # number mask
     if _.contains masks, 'number'
       for el in $('[data-mask="number"]')
         pattern = TextMaskAddons.createNumberMask {allowDecimal: false, decimalSymbol: '', thousandsSeparatorSymbol: '', prefix: '', suffix: ''}
-        TextMask.maskInput { inputElement: el, mask: pattern }
+        TextMask.maskInput { inputElement: el, mask: @masks['number'] }
 
     # money mask
     if _.contains masks, 'money'
       for el in $('[data-mask="money"]')
-        pattern = TextMaskAddons.createNumberMask {allowDecimal: true, decimalSymbol: ',', thousandsSeparatorSymbol: '.', decimalLimit: 2, requireDecimal:true}
-        TextMask.maskInput { inputElement: el, mask: pattern }
+        pattern = TextMaskAddons.createNumberMask {allowDecimal: true, decimalSymbol: ',', thousandsSeparatorSymbol: '.', decimalLimit: 2, requireDecimal:true, prefix: '', suffix: ''}
+        TextMask.maskInput { inputElement: el, mask: @masks['money'] }
 
