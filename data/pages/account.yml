@@ -1,38 +1,41 @@
 
-signin:
-  title: Login de usuário
-  subtitle: |
-    Preencha os campos abaixo para ter acesso á plataforma.
+# page title
+title: Login de usuário
 
-  form:
-    fields:
-      email:
-        label: E-mail
-        type: email
-        name: email
-        required: true
-        classes: form-control
+# page content
+subtitle: |
+  Preencha os campos abaixo para ter acesso á plataforma.
 
-      password:
-        label: Senha
-        type: password
-        name: password
-        required: true
-        classes: form-control
+# page form
+form:
+  fields:
+    email:
+      label: E-mail
+      type: email
+      name: email
+      required: true
+      classes: form-control
 
-      save_data:
-        label: Deseja manter sua sessão nesse computador?
-        type: checkbox
-        name: save_session
-        required: false
-        classes:
-        help: Esta opção não é aconselhada se você estar utilizando um computador público.
+    password:
+      label: Senha
+      type: password
+      name: password
+      required: true
+      classes: form-control
 
-      submit:
-        label: Entrar
-        name: btn_enviar
-        type: submit
-        classes: btn btn-success
+    save_data:
+      label: Deseja manter sua sessão nesse computador?
+      type: checkbox
+      name: save_session
+      required: false
+      classes:
+      help: Esta opção não é aconselhada se você estar utilizando um computador público.
+
+    submit:
+      label: Entrar
+      name: btn_enviar
+      type: submit
+      classes: btn btn-success
 
 
 

@@ -3,6 +3,7 @@ title:      Login de Usuário
 controller: account/signin
 ---
 
+<% page = data.pages.account %>
 
     <section id="main-content">
       <div class="container">
@@ -10,7 +11,7 @@ controller: account/signin
 
           <!-- page title -->
           <div class="col-md-12">
-            <h1><%= page_data[:account].signin.title %></h1>
+            <h1><%= page.title %></h1>
           </div>
 
           <!-- user register -->
@@ -28,11 +29,11 @@ controller: account/signin
 
           <!-- user signin -->
           <div class="col-md-offset-1 col-md-5 section-content">
-            <h3><%= page_data[:account].signin.title %></h3>
-            <p><%= page_data[:account].signin.subtitle %></p>
+            <h3><%= page.title %></h3>
+            <p><%= page.subtitle %></p>
 
 						<% form_tag "#{data.config.routes['root']}/login", name: "login_form",  id: "login-form", class: "login-form", novalidate: true, data: { remote: true, type: 'json' } do %>
-							<% page_data[:account].signin.form.fields.each do |name, f| %>
+							<% page.form.fields.each do |name, f| %>
 
 								<div class="<%= f[:type] == 'radio' || f[:type] == 'checkbox' ? f[:type] : 'form-group' %>">
 
