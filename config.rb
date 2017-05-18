@@ -20,12 +20,20 @@ page '/index.html', layout: 'default'
 # development env
 configure :development do
   activate :livereload
-  activate :asset_hash
+  activate :asset_hash,
+    ignore: [
+      /^sdk/,
+      /^assets\/sdk/
+    ]
 end
 
 # production env
 configure :production do
-  activate :asset_hash
+  activate :asset_hash,
+    ignore: [
+      /^sdk/,
+      /^assets\/sdk/
+    ]
   #activate :minify_css
   #activate :minify_javascript
 end
