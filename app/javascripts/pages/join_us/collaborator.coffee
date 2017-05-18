@@ -12,8 +12,8 @@ CreditCardModel = require 'models/donor/credit_card.coffee'
 # views/components
 Button          = require 'views/button.coffee'
 
-TextMask        = require 'vanilla-text-mask'
-TextMaskAddons  = require 'text-mask-addons'
+# masks
+Masks           = require 'lib/masks.coffee'
 
 ###
 #  Page class
@@ -58,6 +58,7 @@ module.exports = class CollaboratorPage extends PageBase
     "change @ui.personal input":  'changePersonalFields'
     "change @ui.plan input":      'changePlanFields'
     "change @ui.billing input":   'changeBillingFields'
+    "keyup @ui.billing input":    'changeBillingFields'
     # form submit
     "submit @ui.personal":  'submitPersonalForm'
     "submit @ui.plan":      'submitPlanForm'
@@ -65,42 +66,14 @@ module.exports = class CollaboratorPage extends PageBase
 
 
 
+  # constructor
   initialize: ->
+    masks = new Masks
+    masks.register ['phone', 'number', 'month_year', 'money']
 
-    # phone mask
-    for el in @$el.find('[data-mask="phone"]')
-      TextMask.maskInput {
-        inputElement: el
-        guide: false
-        mask: ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d?/]
-      }
-
-    # date mask
-    for el in @$el.find('[data-mask="date"]')
-      TextMask.maskInput {
-        inputElement: el
-        guide: false
-        mask: [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
-      }
-
-    # date month year mask
-    for el in @$el.find('[data-mask="month_year"]')
-      TextMask.maskInput {
-        inputElement: el
-        guide: false
-        mask: [/\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
-      }
-
-    # number mask
-    for el in @$el.find('[data-mask="number"]')
-      pattern = TextMaskAddons.createNumberMask {allowDecimal: false, decimalSymbol: '', thousandsSeparatorSymbol: '', prefix: '', suffix: ''}
-      TextMask.maskInput { inputElement: el, mask: pattern }
-
-    # money mask
-    for el in @$el.find('[data-mask="money"]')
-      pattern = TextMaskAddons.createNumberMask {allowDecimal: true, decimalSymbol: ',', thousandsSeparatorSymbol: '.', decimalLimit: 2, requireDecimal:true}
-      TextMask.maskInput { inputElement: el, mask: pattern }
-
+    # change brand icon when model brand is changed
+    @models.billing.on 'change:card_brand', (model, brand) =>
+      @changeBrandIcon model, brand
 
     # restoring session and current tab
     s = @session.get() or {}
@@ -129,6 +102,7 @@ module.exports = class CollaboratorPage extends PageBase
     event.preventDefault()
     field = event.currentTarget
     @models.billing.set field.id, field.value
+
 
 
   # submit personal data form
@@ -224,15 +198,8 @@ module.exports = class CollaboratorPage extends PageBase
     model.create()
       # request success
       .done (response, status, xhr) =>
-
-        # callback response
-        console.log response
-
-        # request callback
         model.request_callback(response.href)
           .done (response, status, xhr) =>
-            console.log arguments
-
             @clearMessages()
             @renderMessage btn.$el.parent(), {
               type: 'success'
@@ -240,7 +207,8 @@ module.exports = class CollaboratorPage extends PageBase
               message: 'Dados salvos!'
             }
 
-        #@redirectTo '/faca-parte/sucesso?rel=colaborador'
+        # redirect to success page
+        @redirectTo '/faca-parte/obrigado?rel=colaborador'
         #@enableTab('billing')
 
       .fail (xhr, message, other) =>
@@ -289,13 +257,31 @@ module.exports = class CollaboratorPage extends PageBase
     @session.set('register_step', tabname)
 
 
+  # change brand icon
+  changeBrandIcon: (model, brand) ->
+    $icon = @getUI('billing').find('#card-brand-icon')
+    switch brand
+      when 'visa'
+        $icon.attr 'title', 'Cartão Visa'
+        $icon.removeClass 'fa-credit-card-alt fa-cc-visa fa-cc-mastercard'
+          .addClass 'fa-cc-visa'
+      when 'mastercard'
+        $icon.attr 'title', 'Cartão MasterCard'
+        $icon.removeClass 'fa-credit-card-alt fa-cc-visa fa-cc-mastercard'
+          .addClass 'fa-cc-mastercard'
+      else
+        $icon.attr 'title', 'Cartão não identificado'
+        $icon.removeClass 'fa-credit-card-alt fa-cc-visa fa-cc-mastercard'
+          .addClass 'fa-credit-card-alt'
+
+
+  # render message
   renderMessage: ($root = null, stash = {}) ->
     # reset messages
     @$el.find('.message').remove()
     rendered = @templates.message(stash)
     $root.append(rendered) if $root?
     rendered
-
 
 
   renderInputMessages: ($root = null, stash = {}) ->
@@ -315,5 +301,4 @@ module.exports = class CollaboratorPage extends PageBase
     @$el.find('.message').remove()
     @$el.find('small.error-message').remove()
     @$el.find('.has-error').toggleClass('has-error')
-
 

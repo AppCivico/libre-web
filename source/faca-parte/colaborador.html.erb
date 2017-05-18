@@ -161,7 +161,7 @@ controller: join_us/collaborator
 						<% tab = tabs.plan %>
 						<div id="plan-pane" role="tabpanel" class="js-tabpanes tab-pane <%= tabs.activated == 'plan' ? 'active' : ''%>" id="plan">
 							<form name="plan_form" id="plan-form" novalidate>
-								<%= input_tag :hidden, name: 'amount', id: 'amount', value: '10', placeholder: 'Valor do plano'  %>
+								<%= input_tag :hidden, name: 'amount', id: 'amount', value: '2000', placeholder: 'Valor do plano'  %>
 								<div class="row">
 									<!-- personal tab form -->
 									<div class="col-md-8">
@@ -169,6 +169,8 @@ controller: join_us/collaborator
 											<div class="col-md-12">
 												<p class="text-spaced"><%= tabs.plan.subtitle %></p>
 											</div>
+
+											<div class="col-md-12"></div>
 
 											<!-- plan  list -->
 												<div class="col-md-12">
@@ -197,7 +199,6 @@ controller: join_us/collaborator
 												<div class="form-group col-md-12">
 													<%= btn = tab.buttons.next; input_tag :submit, value: btn.label, class: btn.classes %>
 													<br>
-
 												</div>
 
 												<br>
@@ -246,6 +247,10 @@ controller: join_us/collaborator
 												<%= custom_input f %>
 												<%= custom_helpblock f %>
 											<% end %>
+
+											<div class="col-md-1 text-right text-green">
+												<i id="card-brand-icon" class="fa fa-2x fadein fa-credit-card-alt" title="Cartão não identificado"></i>
+											</div>
 
 											<% f = fields[:card_validity]; content_tag :div, class: f.container_style do %>
 												<label class="sr-only"><%= f.label %></label>

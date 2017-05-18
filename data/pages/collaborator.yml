@@ -98,7 +98,7 @@ form:
             phone:
               label: Telefone
               name: phone
-              type: text
+              type: tel
               value:
               required: true
               disabled: false
@@ -224,8 +224,10 @@ form:
               required: true
               disabled: false
               styles: form-control
-              help: Documento (cpf/cnpj) relacionado ao cartão
+              help: CPF ou CNPJ relacionado ao cartão (somente números)
               container_style: form-group col-md-6 col-sm-12
+              data:
+                mask: number
 
 
             card_number:
@@ -236,8 +238,8 @@ form:
               required: true
               disabled: false
               styles: form-control
-              help:
-              container_style: form-group col-md-12 col-sm-12
+              help: Cartões permitidos <code>Visa</code> e <code>MasterCard</code>
+              container_style: form-group col-md-11 col-sm-12
               data:
                 mask: number
 
