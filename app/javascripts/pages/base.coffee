@@ -3,7 +3,12 @@
 # requires
 require 'jquery-ujs'
 
+# views/components
+UserMenuView = require 'views/user_menu.coffee'
+
+# libs
 Session = require 'lib/session.coffee'
+Exception = require 'lib/exception.coffee'
 
 
 ###
@@ -18,26 +23,19 @@ module.exports = class PageBase extends Marionette.View
   session: Session.load()
 
   # constructor
-  constructor: (@options = {}) ->
+  initialize: ->
     if @options.config? and @options.config['debug']
       console.debug "Starting '#{@options.name}' controller for #{document.location.href} page..."
-
-    super
+    super()
 
   # templates
   templates: {}
 
+
   # error messages
   errorList: (token) ->
-    # TODO: Always check for new error messages on https://github.com/eokoe/libre-api
-    # TODO: Remove messages to other class
-    return switch token
-      when 'invalid' then "é inválido"
-      when 'required' then "é obrigatório"
-      when 'empty_is_invalid' then "é obrigatório"
-      when 'missing' then "é obrigatório"
-      when 'alredy exists' then "já está cadastrado"
-      else ""
+    Exception.getMessage(token)
+
 
 	# load templates
   @load_template: (path) =>
