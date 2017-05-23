@@ -68,3 +68,7 @@ module.exports = class Session
   storageName: () ->
     @adapter.storage
 
+  # is session new
+  isNew: ->
+    if @attributes.api_key? then true else false
+
