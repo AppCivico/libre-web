@@ -1,1 +1,71 @@
-<h1>DASHBOARD INDEX</h1>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h2 class="text-green">Meus Apoios</h2>
+			<br>
+		</div>
+
+		<div class="col-md-12">
+			<% @title = "Yr disrupt polaroid la croix readymade prism neutra shoreditch wolf" %>
+			<% @supports = [{title:@title, path:'#' }, {title:@title, path:'#' }, {title:@title, path:'#' }, {title:@title, path:'#' }] %>
+			<%# @supports = [] %>
+
+			<h3 class="support-title text-green" style="margin: 20px 0px;font-size:20px">
+				<% if @supports.length > 0: %>
+					Janeiro 2017
+					<a href="#" class="support-arrow pull-right" style="margin-left: 10px;">
+						<img src="/assets/images/arrow-right.svg" alt="&gt;" height="32px">
+					</a>
+					<a href="#" class="support-arrow pull-right">
+						<img src="/assets/images/arrow-left.svg" alt="&lt;" height="32px">
+					</a>
+				<% end %>
+			</h3>
+
+			<div class="js-carousel carousel slide" data-ride="carousel">
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+
+						<div class="row">
+							<% if @supports.length > 0: %>
+								<% for item in @supports: %>
+									<div class="col-md-3 support-item">
+										<div class="support-image">
+											<img src="/assets/images/image_holder.png" class="img-responsive" alt="Image não encontrada">
+										</div>
+										<div class="support-title">
+											<h5 title="<%= item.title %>"><%= if item.title.length > 40 then "#{item.title.substr(0, 40)}..." else item.title %></h5>
+										</div>
+										<div class="support-title">
+											<a href="<%= item.path %>" title="Acessar: <%= item.path %>" class="text-green"  target="_blank">acessar site</a>
+										</div>
+									</div>
+								<% end %>
+							<% else: %>
+								<div class="col-md-12">
+									<div class="alert alert-warning">
+										<h4>Você ainda não possui nenhum apoio contabilizado!</h4>
+										<p>Acesse os sites que possuam os botões do Libre e colabora com a mídia independente.</p>
+									</div>
+								</div>
+							<% end %>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- Controls -->
+				<!-- a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true">&lt;</span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true">&gt;</span>
+					<span class="sr-only">Next</span>
+				</a -->
+			</div>
+		</div>
+
+	</div>
+</div>

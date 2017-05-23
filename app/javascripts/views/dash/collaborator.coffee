@@ -8,7 +8,7 @@ ViewBase = require 'views/base.coffee'
 #  @author dvinciguerra
 ###
 module.exports = class CollaoratorView extends ViewBase
-  el: '#dash-container'
+  el: 'section#dash-main'
 
   # setting template
   template: 'templates/dash/collaborator'
