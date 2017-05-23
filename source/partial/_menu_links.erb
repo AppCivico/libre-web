@@ -1,10 +1,10 @@
-					<% content_tag :ul, id: 'dash-usermenu', class: 'nav navbar-nav navbar-right' do %>
+					<% content_tag :ul, id: 'dash-usermenu', class: 'nav navbar-nav navbar-right hide' do %>
             <!-- top navbar menu -->
             <% data.shared.menu.each do |l| %>
               <% if l.label == 'Login' %>
                 <li>
 									<% link_to l.path, title: l.label, data: { bypass: true } do %>
-                    <div class="login-button"><%= l.label.upcase %>&nbsp;<img src="/assets/images/login-arrow.png" height="16px"></div>
+										<div class="login-button"><strong><%= l.label.upcase %></strong>&nbsp;<img src="/assets/images/login-arrow.png" height="16px"></div>
                   <% end %>
                 </li>
               <% else %>
