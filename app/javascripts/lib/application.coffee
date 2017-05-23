@@ -24,6 +24,9 @@ Marionette.Renderer.render = (obj, data, view) ->
   return template(data)
 
 
+# views/components
+UserMenuView = require 'views/user_menu.coffee'
+
 
 # application single point entry
 module.exports = class Application
@@ -32,6 +35,9 @@ module.exports = class Application
 
     # getting page info
     body = document.body
+
+    # user menu
+    menu = new UserMenuView
 
     # getting an instance of page(controller)
     if controller = body.getAttribute('data-controller')

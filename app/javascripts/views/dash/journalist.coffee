@@ -3,6 +3,7 @@
 # requires
 ViewBase = require 'views/base.coffee'
 ButtonView = require 'views/button.coffee'
+LoadingView = require 'views/loading.coffee'
 
 ###
 #  View class
@@ -14,6 +15,8 @@ module.exports = class JournalistView extends ViewBase
   # setting template
   template: 'templates/dash/journalist'
 
+  # loading
+  loading: new LoadingView
 
   # ui elements
   ui:
@@ -93,3 +96,9 @@ module.exports = class JournalistView extends ViewBase
 
     # reset button state
     @btn.state 'loaded'
+
+
+  # event on render
+  onRender: ->
+    # FIXME: fadein()
+    @loading.hide()
