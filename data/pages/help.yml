@@ -10,112 +10,65 @@ content: |
 
 # help topics
 topics:
-  - title: O que é a plataforma LIBRE?
+  - title: O que é o LIBRE?
     content: |
-      <p>Offal leggings glossier, 90's kinfolk celiac master cleanse man braid
-      portland cred activated charcoal mlkshk asymmetrical. Kombucha locavore
-      celiac umami four loko, tbh YOLO af trust fund pop-up. Selvage humblebrag
-      everyday carry, cold-pressed photo booth readymade single-origin coffee
-      skateboard hella fap VHS shabby chic pour-over. YOLO seitan bicycle
-      rights, four loko schlitz four dollar toast jianbing chartreuse. Butcher
-      lomo narwhal lo-fi. Try-hard intelligentsia tacos waistcoat dreamcatcher,
-      freegan pok pok hot chicken. Kitsch food truck farm-to-table tacos.</p>
+      <p>Libre é uma ferramenta, uma moeda e uma plataforma para facilitar a
+      contribuição financeira do público à imprensa e incentivar uma relação
+      mais próxima entre quem produz e quem valoriza jornalismo de qualidade.</p>
+
+      <p>Como ferramenta, o Libre foi desenvolvido para facilitar ao máximo o
+      microfinanciamento a posts, autores ou veículos.
+      Com cadastro e adesão simples, o público pode distribuir seus créditos
+      livremente, de acordo com os conteúdos que mais valorizou durante o dia a dia.
+      Para os veículos é uma forma de gerar receita e avaliar relevância e
+      impacto diretamente com o público. </p>
+
+      <p>Como moeda, o Libre funciona como uma “bolsa mensal”. Ele é convertido
+      em reais de acordo com a relação entre a quantidade de LBRs (Libres)
+      distribuídos e os créditos em reais disponíveis por mês na conta do
+      usuário. O valor doado pelo público é transferido na íntegra (descontados
+      os impostos e taxas bancárias) ao autor ou veículo.</p>
+
+      <p>Como plataforma, o Libre pretende estreitar relações entre público e
+      veículos; conectar melhor, pelo compartilhamento da mesma ferramenta
+      econômica, o campo de imprensa independente no Brasil; e criar novas
+      métricas de relevância jornalística, diretamente ligadas ao reconhecimento
+      público, que vão além da mera audiência. </p>
+
 
   - title: Quem pode utilizar a plataforma LIBRE?
     content: |
-      <p>Offal leggings glossier, 90's kinfolk celiac master cleanse man braid
-      portland cred activated charcoal mlkshk asymmetrical. Kombucha locavore
-      celiac umami four loko, tbh YOLO af trust fund pop-up. Selvage humblebrag
-      everyday carry, cold-pressed photo booth readymade single-origin coffee
-      skateboard hella fap VHS shabby chic pour-over. YOLO seitan bicycle
-      rights, four loko schlitz four dollar toast jianbing chartreuse. Butcher
-      lomo narwhal lo-fi. Try-hard intelligentsia tacos waistcoat dreamcatcher,
-      freegan pok pok hot chicken. Kitsch food truck farm-to-table tacos.</p>
+      <p>Como usuário, qualquer pessoa interessada em valorizar o jornalismo de
+      interesse de qualidade e participar da criação de um novo modelo de
+      financiamento para a imprensa. Basta um cadastro simples e adesão a um
+      plano mensal.</p>
 
-  - title: O que é Jornalismo Independente?
-    content: |
-      <p>Offal leggings glossier, 90's kinfolk celiac master cleanse man braid
-      portland cred activated charcoal mlkshk asymmetrical. Kombucha locavore
-      celiac umami four loko, tbh YOLO af trust fund pop-up. Selvage humblebrag
-      everyday carry, cold-pressed photo booth readymade single-origin coffee
-      skateboard hella fap VHS shabby chic pour-over. YOLO seitan bicycle
-      rights, four loko schlitz four dollar toast jianbing chartreuse. Butcher
-      lomo narwhal lo-fi. Try-hard intelligentsia tacos waistcoat dreamcatcher,
-      freegan pok pok hot chicken. Kitsch food truck farm-to-table tacos.</p>
 
-  - title: O que é Jornalismo Independente?
+  - title: Por que devo aderir ao Libre? O que ganho com isso?
     content: |
-      <p>Offal leggings glossier, 90's kinfolk celiac master cleanse man braid
-      portland cred activated charcoal mlkshk asymmetrical. Kombucha locavore
-      celiac umami four loko, tbh YOLO af trust fund pop-up. Selvage humblebrag
-      everyday carry, cold-pressed photo booth readymade single-origin coffee
-      skateboard hella fap VHS shabby chic pour-over. YOLO seitan bicycle
-      rights, four loko schlitz four dollar toast jianbing chartreuse. Butcher
-      lomo narwhal lo-fi. Try-hard intelligentsia tacos waistcoat dreamcatcher,
-      freegan pok pok hot chicken. Kitsch food truck farm-to-table tacos.</p>
+      <p>A imprensa brasileira vive um de seus momentos mais delicados. Uma
+      crise financeira e de credibilidade sem precedentes. Ao mesmo tempo, nunca
+      tivemos tantos coletivos, novos veículos e iniciativas de mídia
+      independente explorando as possibilidades do jornalismo de rede.</p>
 
-  - title: Eu sou Jornalista, o que eu preciso fazer para começar a receber Libres?
-    content: |
-      <p>Offal leggings glossier, 90's kinfolk celiac master cleanse man braid
-      portland cred activated charcoal mlkshk asymmetrical. Kombucha locavore
-      celiac umami four loko, tbh YOLO af trust fund pop-up. Selvage humblebrag
-      everyday carry, cold-pressed photo booth readymade single-origin coffee
-      skateboard hella fap VHS shabby chic pour-over. YOLO seitan bicycle
-      rights, four loko schlitz four dollar toast jianbing chartreuse. Butcher
-      lomo narwhal lo-fi. Try-hard intelligentsia tacos waistcoat dreamcatcher,
-      freegan pok pok hot chicken. Kitsch food truck farm-to-table tacos.</p>
+      <p>Acreditamos que a única forma de superar ambas as crises e dar
+      sustentação a essa nova realidade midiática está no engajamento do
+      público e na valorização econômica do jornalismo no dia a dia, durante o
+      consumo de informação.</p>
 
-  - title: Como adicionar o botão no meu blog ou site para receber Libres(lbr)?
-    content: |
-      <p>Offal leggings glossier, 90's kinfolk celiac master cleanse man braid
-      portland cred activated charcoal mlkshk asymmetrical. Kombucha locavore
-      celiac umami four loko, tbh YOLO af trust fund pop-up. Selvage humblebrag
-      everyday carry, cold-pressed photo booth readymade single-origin coffee
-      skateboard hella fap VHS shabby chic pour-over. YOLO seitan bicycle
-      rights, four loko schlitz four dollar toast jianbing chartreuse. Butcher
-      lomo narwhal lo-fi. Try-hard intelligentsia tacos waistcoat dreamcatcher,
-      freegan pok pok hot chicken. Kitsch food truck farm-to-table tacos.</p>
+      <p>E o benefício não é apenas garantir a viabilidade dos jornalistas. Mas
+      a chance de criarmos, juntos, um modelo de imprensa cada vez mais
+      democrática e realmente independente - uma vez que só depende de seu
+      público. </p>
 
-  - title: Eu quero apoiar um jornalismo independente, o que devo fazer?
-    content: |
-      <p>Offal leggings glossier, 90's kinfolk celiac master cleanse man braid
-      portland cred activated charcoal mlkshk asymmetrical. Kombucha locavore
-      celiac umami four loko, tbh YOLO af trust fund pop-up. Selvage humblebrag
-      everyday carry, cold-pressed photo booth readymade single-origin coffee
-      skateboard hella fap VHS shabby chic pour-over. YOLO seitan bicycle
-      rights, four loko schlitz four dollar toast jianbing chartreuse. Butcher
-      lomo narwhal lo-fi. Try-hard intelligentsia tacos waistcoat dreamcatcher,
-      freegan pok pok hot chicken. Kitsch food truck farm-to-table tacos.</p>
 
-  - title: Qual é o valor de um LIBRE na plataforma?
+  - title: Eu sou jornalista, como posso fazer usar a o Libre para financiar meu trabalho?
     content: |
-      <p>Offal leggings glossier, 90's kinfolk celiac master cleanse man braid
-      portland cred activated charcoal mlkshk asymmetrical. Kombucha locavore
-      celiac umami four loko, tbh YOLO af trust fund pop-up. Selvage humblebrag
-      everyday carry, cold-pressed photo booth readymade single-origin coffee
-      skateboard hella fap VHS shabby chic pour-over. YOLO seitan bicycle
-      rights, four loko schlitz four dollar toast jianbing chartreuse. Butcher
-      lomo narwhal lo-fi. Try-hard intelligentsia tacos waistcoat dreamcatcher,
-      freegan pok pok hot chicken. Kitsch food truck farm-to-table tacos.</p>
+      <p>Para veículos ou jornalistas, o Libre ainda está em sua fase
+      experimental. Nos primeiros meses nossa rede ainda está restrita a alguns
+      veículos pré cadastrados. Uma forma de testar a ferramenta, receber
+      retorno do público e parceiros antes de aprimorar e aumentar o escopo da
+      ferramenta.</p>
+      <p>Mas já estamos fazendo pré cadastros e entrando em contato com veículos
+      e jornalistas interessados. </p>
 
-  - title: Como é realizado o repasse de recursos para o jornalista ou veículo?
-    content: |
-      <p>Offal leggings glossier, 90's kinfolk celiac master cleanse man braid
-      portland cred activated charcoal mlkshk asymmetrical. Kombucha locavore
-      celiac umami four loko, tbh YOLO af trust fund pop-up. Selvage humblebrag
-      everyday carry, cold-pressed photo booth readymade single-origin coffee
-      skateboard hella fap VHS shabby chic pour-over. YOLO seitan bicycle
-      rights, four loko schlitz four dollar toast jianbing chartreuse. Butcher
-      lomo narwhal lo-fi. Try-hard intelligentsia tacos waistcoat dreamcatcher,
-      freegan pok pok hot chicken. Kitsch food truck farm-to-table tacos.</p>
-
-  - title: Quais são as formas de pagamento para contribuir na plataforma?
-    content: |
-      <p>Offal leggings glossier, 90's kinfolk celiac master cleanse man braid
-      portland cred activated charcoal mlkshk asymmetrical. Kombucha locavore
-      celiac umami four loko, tbh YOLO af trust fund pop-up. Selvage humblebrag
-      everyday carry, cold-pressed photo booth readymade single-origin coffee
-      skateboard hella fap VHS shabby chic pour-over. YOLO seitan bicycle
-      rights, four loko schlitz four dollar toast jianbing chartreuse. Butcher
-      lomo narwhal lo-fi. Try-hard intelligentsia tacos waistcoat dreamcatcher,
-      freegan pok pok hot chicken. Kitsch food truck farm-to-table tacos.</p>
