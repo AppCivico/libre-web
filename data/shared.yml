@@ -5,7 +5,7 @@ menu:
     path: /conheca
 
   - label: Faça Parte
-    path: /faca-parte/jornalista
+    path: /account/login
 
   - label: Contato
     path: /contato
@@ -16,9 +16,10 @@ menu:
 
 # footer places
 places:
-  - state: SÃO PAULO
-    address: CORIFEU DE AZEVEDO MARQUES, 583<br> BUTANTA SÂO PAULO SP BRASIL
-    phone: T +55 11 3722 3691
+  - name: Open Knowledge Foundation Brasil
+    state: SÃO PAULO
+    address: Rua Scipiao, 506<br> Vila Romana, SÃO PAULO, BRASIL
+    phone: T +55 11 8155-9703
 
 
 # social buttons
