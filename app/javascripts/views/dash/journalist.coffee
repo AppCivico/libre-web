@@ -44,31 +44,33 @@ module.exports = class JournalistView extends ViewBase
     $codeContainer = $el.find('pre#codigo')
 
     code = """
-        <html>
-          <head>
-            <title>Titulo do seu website</title>
-              <!-- You can use open graph tags to customize link previews.
-              Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
-            <meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
-            <meta property="og:type"          content="website" />
-            <meta property="og:title"         content="Your Website Title" />
-            <meta property="og:description"   content="Your description" />
-            <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
-          </head>
-          <body>
+      <html>
+        <head>
+          <title>Titulo do seu website</title>
+          <!--
+            Você pode utilizar as open graph tags para customizar as informações coletadas
+            Learn more: https://developers.facebook.com/docs/sharing/webmasters
+          -->
+          <meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
+          <meta property="og:type"          content="website" />
+          <meta property="og:title"         content="Your Website Title" />
+          <meta property="og:description"   content="Your description" />
+          <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
+        </head>
+        <body>
 
-          <!-- load sdk -->
+          <!-- carrega o libre sdk -->
           <div id="lbr-root"></div>
           <script>(function(d, s, id) {
             var js, ljs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
-            js.src = "//libre.com.br/sdk/libre.js#v1.0;";
+            js.src = "//midialibre.com.br/sdk/libre.js#v1.0;";
             ljs.parentNode.insertBefore(js, ljs);
           }(document, 'script', 'libre-sdk'));
           </script>
 
-          <!-- your button code -->
+          <!-- adiciona o botão do libre -->
           <div class="lbr-button"
             data-location="http://www.your-domain.com/your-page.html"
             data-theme="default"
