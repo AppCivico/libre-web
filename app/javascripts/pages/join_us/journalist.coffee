@@ -4,7 +4,7 @@
 PageBase = require 'pages/base.coffee'
 
 # masks
-Masks           = require 'lib/masks.coffee'
+Masks = require 'lib/masks.coffee'
 
 
 ###
@@ -15,10 +15,10 @@ module.exports = class JournalistPage extends PageBase
   el: document.body
   template: false
 
+  # templates
   templates:
     message: require 'templates/message'
     input_message: require 'templates/input_message'
-
 
   # events
   regions:
@@ -36,6 +36,7 @@ module.exports = class JournalistPage extends PageBase
   # view events
   events:
     'ajax:error': 'renderError'
+    'ajax:before': 'renderBefore'
     'ajax:success': 'renderSuccess'
     'click @ui.journalist-type': 'clickJournalistType'
     'change @ui.document-type': 'changeDocumentType'
@@ -48,6 +49,19 @@ module.exports = class JournalistPage extends PageBase
     masks.register ['number', 'phone', 'zipcode']
 
 
+  renderBefore: (event, xhr, settings) ->
+    $input = $(event.target).find 'input#cellphone_number'
+    phone = $input.val() or ''
+    phone = "+55" + phone.replace /[\(\)]/g, ''
+      .replace /\s+/g, ''
+
+    # save changed
+    $input.data 'value', $input.val()
+    $input.val(phone)
+
+
+
+  # getting zipcode
   getAddressByZipcode: (event) ->
     postalcode = event.currentTarget.value
 
@@ -92,9 +106,13 @@ module.exports = class JournalistPage extends PageBase
       @$('input#cnpj').removeClass 'hide'
 
 
+
   # succee event
   renderSuccess: (event, xhr) ->
     @_reset_messages()
+
+    $input = @$el.find 'input#cellphone_number'
+    $input.val $input.data('value')
 
     @getRegion('form').$el.append @templates.message {
       type: 'success', message: 'Usuário cadastrado!'
@@ -104,6 +122,9 @@ module.exports = class JournalistPage extends PageBase
   renderError: (event, xhr, error) ->
     response = xhr.responseJSON || {}
     @_reset_messages()
+
+    $input = @$el.find 'input#cellphone_number'
+    $input.val $input.data('value')
 
     # input validation messages
     if response? and _.has(response, 'form_error')
