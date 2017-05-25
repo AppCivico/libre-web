@@ -171,16 +171,25 @@ form:
           styles:
           help:
 
-        - label: Insira um valor
-          type: text
-          value:
+        - label: R$ 500 por mês
+          type: radio
+          value: 500,00
           name: plan
           required: true
           disabled: false
-          styles: form-control
-          help: Adicione um valor superior a R$ 20 reais
-          data:
-            mask: money
+          styles:
+          help:
+
+            #        - label: Insira um valor
+            #          type: text
+            #          value:
+            #          name: plan
+            #          required: true
+            #          disabled: false
+            #          styles: form-control
+            #          help: Adicione um valor superior a R$ 20 reais
+            #          data:
+            #            mask: money
 
       buttons:
         next:
