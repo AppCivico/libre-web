@@ -10,6 +10,7 @@ set :css_dir, 'assets/css'
 
 # layouts and file-types
 page '/*.xml', layout: false
+page '/*.js', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 page '/index.html', layout: 'default'
@@ -46,12 +47,22 @@ end
 
 # external asset pipeline
 activate :external_pipeline,
-  name: :brunch,
+  name: :webapp,
   command: build? ?
-  "LOGGY_STACKS=1 ./node_modules/brunch/bin/brunch build --env #{config[:environment]} --debug" :
-    "LOGGY_STACKS=1 ./node_modules/brunch/bin/brunch watch --stdin --env #{config[:environment]} --debug",
+    "export MMPROJECT=default; LOGGY_STACKS=1 ./node_modules/brunch/bin/brunch build --env #{config[:environment]}" :
+    "export MMPROJECT=default; LOGGY_STACKS=1 ./node_modules/brunch/bin/brunch watch --stdin --env #{config[:environment]}",
   source: ".tmp/dist",
-latency: 1
+  latency: 1
+
+
+activate :external_pipeline,
+  name: :sdk,
+  command: build? ?
+    "export MMPROJECT=sdk; LOGGY_STACKS=1 ./node_modules/brunch/bin/brunch build --env #{config[:environment]}" :
+    "export MMPROJECT=sdk; LOGGY_STACKS=1 ./node_modules/brunch/bin/brunch watch --stdin --env #{config[:environment]}",
+  source: ".tmp/dist",
+  latency: 1
+
 
 
 after_build do |builder|
