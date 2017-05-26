@@ -53,3 +53,10 @@ fields:
     type: submit
     classes: btn btn-success
 
+help:
+  title: Perguntas frequentes
+  subtitle: |
+    <p>Você tem alguma dúvida sobre o sistema? <a href="/ajuda">Clique aqui</a>
+    para ver nossos tópicos de ajuda.</p>
+
+    <a class="btn btn-success" href="/ajuda">Tópicos de Ajuda</a>
