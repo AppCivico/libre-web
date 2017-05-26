@@ -1,36 +1,41 @@
 
 # page title
-title: Conheça
+title: Conheça a plataforma
 
 # page content
 content: |
-  <p>Kickstarter vexillologist street art vinyl stumptown. Cronut sustainable
-  typewriter, pitchfork kombucha stumptown fashion axe 3 wolf moon semiotics.
-  Sustainable quinoa williamsburg deep v, bitters salvia health goth.
-  Kickstarter next level cardigan, mumblecore succulents tbh affogato hoodie
-  actually woke subway tile. Tattooed chicharrones austin, bitters copper mug
-  snackwave ethical whatever pok pok fam lumbersexual tumeric roof party.
-  Mumblecore actually sartorial lo-fi, poke flexitarian readymade tilde
-  farm-to-table. Squid godard food truck thundercats cardigan retro.</p>
+  <p>Há muito tempo a imprensa vive duas grandes crises: financeira e de
+  credibilidade. Nunca foi tão fácil difundir jornalismo, nunca foi tão
+  difícil manter-se na profissão. Nunca o jornalismo esteve em tamanho
+  descrédito, nunca o público o considerou tão fundamental.</p>
 
-  <p>Celiac try-hard vegan, VHS chillwave hella kale chips bitters sustainable
-  disrupt venmo woke. Retro tofu mumblecore, man bun +1 franzen poutine.
-  Glossier dreamcatcher small batch, humblebrag squid schlitz beard green juice
-  messenger bag gentrify heirloom swag air plant gochujang hot chicken. Heirloom
-  pabst kale chips vaporware, austin health goth authentic. Williamsburg
-  drinking vinegar fap messenger bag. Live-edge portland blue bottle disrupt
-  tote bag, whatever snackwave XOXO 3 wolf moon. Af glossier coloring book
-  tumblr, craft beer air plant shabby chic stumptown roof party.</p>
+  <p>Em nossa opinião, essas duas crises apontam para a mesma solução: um pacto
+  de confiança e valorização mútua entre o público e os jornalistas.</p>
 
-  <p>XOXO polaroid tbh leggings deep v ugh. Intelligentsia skateboard literally
-  chia, polaroid gastropub trust fund ennui DIY messenger bag. Raw denim poutine
-  bespoke, keffiyeh affogato twee kitsch pour-over bicycle rights franzen
-  gluten-free plaid. Hella banjo fingerstache pop-up, tattooed vice retro
-  organic succulents food truck fam art party. Kickstarter raclette hashtag yr,
-  yuccie fixie kinfolk edison bulb fanny pack occupy schlitz affogato.
-  Fingerstache portland subway tile viral, austin mixtape edison bulb hoodie
-  kale chips chillwave celiac pitchfork. Hammock waistcoat slow-carb cornhole
-  vice, synth yr authentic godard post-ironic franzen pour-over DIY.</p>
+  <p>Libre é uma ferramenta, uma moeda e uma plataforma para criar essa nova
+  relação. </p>
+
+  <p>Oferecer ao público uma forma direta e segura de valorizar e estimular o
+  jornalismo que considera mais relevante para si e para a sociedade. E dar
+  aos jornalistas e aos veículos um instrumento econômico que crie receita
+  diretamente a partir de seu público, sem intermediários. </p>
+
+  <p>Nosso objetivo é interromper a lógica disfuncional de cliques, curtidas,
+  compartilhamentos e valor de anúncio como as únicas métricas de sucesso.
+  Queremos reduzir o papel e a influência das verbas publicitárias na
+  manutenção da imprensa. E oferecer uma ferramenta digital que faça da
+  qualidade, impacto e relevância não apenas objetivos editoriais. Mas também
+  um modelo de negócio no jornalismo.</p>
+
+  <p>Queremos promover uma relação mais próxima, simbiótica entre um público
+  consciente da importância do jornalismo e um jornalismo que possa contar com
+  o engajamento de seu público. Acreditamos que é nessa relação que vamos criar
+  uma imprensa realmente democrática. </p>
+
+  <p>Pois jornalismo independente é aquele que só depende do público. E só a
+  ele deve satisfações. </p>
+
+  <p><strong>Conheça aqui mais sobre como o LIBRE funciona.</strong></p>
 
 # page images
 images:
@@ -43,6 +48,7 @@ images:
     path: /assets/images/libre-coins.png
     height: 120px
     title: Libre Coins
+
 
 # page buttons
 links:
