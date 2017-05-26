@@ -14,26 +14,31 @@ controller: account/signin
             <h1><%= page.title %></h1>
           </div>
 
-          <!-- user register -->
+					<!-- user register -->
+					<% section = page.section[:register] %>
           <div class="col-md-6 section-content">
-            <h3>Efetue se cadastro para utilizar o Libre</h3>
+						<h3><%= section.title %></h3>
+            <p><%= section.subtitle %></p>
 
-            <p>Colabore com canais de informação independentes efetuando doações:</p>
-            <p><a class="btn btn-success btn-lg btn-block" href="/faca-parte/colaborador">Cadastrar-se como Colaborador</a></p>
-
-            <br>
-
-            <p>Adicionar os botões de doação de libres em sua página e garanta que os colaboradores possam suportar o seu trabalho:</p>
-            <p><a class="btn btn-success btn-lg btn-block" href="/faca-parte/jornalista">Cadastrar-se como Jornalista/Veículo</a></p>
+						<% section.list.each do |name, item| %>
+							<p><%= item.description %></p>
+							<p>
+								<% link_to item.button.path, class: 'btn btn-success btn-lg btn-block' do %>
+									<%= item.button.label %>
+								<% end %>
+							</p>
+							<br>
+						<% end %>
           </div>
 
           <!-- user signin -->
+					<% section = page.section[:login] %>
           <div class="col-md-offset-1 col-md-5 section-content">
-            <h3><%= page.title %></h3>
-            <p><%= page.subtitle %></p>
+            <h3><%= section.title %></h3>
+            <p><%= section.subtitle %></p>
 
 						<% form_tag "#{data.config.routes['root']}/login", name: "login_form",  id: "login-form", class: "login-form", novalidate: true, data: { remote: true, type: 'json' } do %>
-							<% page.form.fields.each do |name, f| %>
+							<% section.form.fields.each do |name, f| %>
 
 								<div class="<%= f[:type] == 'radio' || f[:type] == 'checkbox' ? f[:type] : 'form-group' %>">
 
