@@ -4,18 +4,19 @@ title: Faça Parte
 
 # 3 column content
 contents:
-  - title: Libero Nisi
+  - title: Cadastre-se
     content: |
-      Hashtag organic ennui mlkshk, sriracha tbh literally la croix vape meditation street art tousled irony deep v sustainable.
+      Preencha o cadastro e crie seu log-in como usuário do Libre.
 
-  - title: Commodo
+  - title: Escolha seu plano
     content: |
-      Hashtag organic ennui mlkshk, sriracha tbh literally la croix vape meditation street art tousled irony deep v sustainable.
+      Escolha um de nossos planos mensais e abra sua primeira conta com Libres
+      para distribuir ao longo do mês.
 
-  - title: Sit amet
+  - title: Acompanhe!
     content: |
-      Hashtag organic ennui mlkshk, sriracha tbh literally la croix vape meditation street art tousled irony deep v sustainable.
-
+      Você está pronto para distribuir seus LIbres e acompanhar sua conta e as
+      matérias que você apoiou.
 
 
 # how to works
@@ -45,8 +46,7 @@ form:
       title: 1. Dados cadastrais
       name: personal
       subtitle: |
-        Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify
-        intelligentsia scenester cliche lomo la croix subway tile meditation.
+        Preencha os campos abaixo para se cadastrar na plataforma.
 
       section:
         access_data:
@@ -114,8 +114,11 @@ form:
           classes: js-button-pane1 btn btn-success
 
       help: |
-        Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify
-        intelligentsia scenester cliche lomo la croix subway tile meditation.
+        <p>Os campos de e-mail, senha, nome e sobrenome são de preenchimento
+        obrigatórios.</p><br>
+
+        <p>Após o preenchimento dos dados, pressione o botão "continuar" e
+        avance para a etapa de seleção do seu plano!</p>
 
 
     # plan tab content
