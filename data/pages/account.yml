@@ -24,7 +24,7 @@ section:
         button:
           label: |
             <span class="hidden-xs">Cadastrar-se como </span>Jornalista/Veículo
-          path: /faca-parte/colaborador
+          path: /faca-parte/jornalista
 
   login:
     title: Acesse sua conta
