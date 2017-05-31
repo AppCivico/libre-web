@@ -52,7 +52,7 @@ activate :external_pipeline,
     "export MMPROJECT=default; LOGGY_STACKS=1 ./node_modules/brunch/bin/brunch build --env #{config[:environment]}" :
     "export MMPROJECT=default; LOGGY_STACKS=1 ./node_modules/brunch/bin/brunch watch --stdin --env #{config[:environment]}",
   source: ".tmp/dist",
-  latency: 1
+  latency: 2
 
 
 activate :external_pipeline,
@@ -61,7 +61,7 @@ activate :external_pipeline,
     "export MMPROJECT=sdk; LOGGY_STACKS=1 ./node_modules/brunch/bin/brunch build --env #{config[:environment]}" :
     "export MMPROJECT=sdk; LOGGY_STACKS=1 ./node_modules/brunch/bin/brunch watch --stdin --env #{config[:environment]}",
   source: ".tmp/dist",
-  latency: 1
+  latency: 2
 
 
 
