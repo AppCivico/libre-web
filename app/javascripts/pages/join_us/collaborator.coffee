@@ -72,8 +72,8 @@ module.exports = class CollaboratorPage extends PageBase
     masks.register ['phone', 'number', 'month_year', 'money']
 
     # change brand icon when model brand is changed
-    @models.billing.on 'change:card_brand', (model, brand) =>
-      @changeBrandIcon model, brand
+    @listenTo @models.billing, 'change:card_brand', @changeBrandIcon
+    #@listenTo @models.personal, 'change', @showPersonalFieldsError
 
     # restoring session and current tab
     s = @session.get() or {}
@@ -82,6 +82,9 @@ module.exports = class CollaboratorPage extends PageBase
       @enableTab(s.register_step)
       location.hash = "##{s.register_step}-pane"
 
+  # update personal model attributes
+  showPersonalFieldsError: () ->
+    console.log arguments
 
   # update personal model attributes
   changePersonalFields: (event) ->
@@ -109,13 +112,22 @@ module.exports = class CollaboratorPage extends PageBase
   submitPersonalForm: (event) ->
     event.preventDefault()
 
+    # create a new donor
+    auth  = @models.auth
+    model = @models.personal
+
+    # on invalid event
+    unless model.isValid()
+      @clearMessages()
+      if model.errors? and _.has(model.errors, 'form_error')
+        @renderInputMessages($(event.currentTarget), model.errors.form_error)
+      return false
+
     # submit button
     btn = new Button el: @getUI('personal').find('input[type=submit]')
     btn.state 'loading'
 
-    # create a new donor
-    auth  = @models.auth
-    model = @models.personal
+    # submit data
     model.create()
       # request success
       .done (response, status, xhr) =>
@@ -127,8 +139,10 @@ module.exports = class CollaboratorPage extends PageBase
         }
 
         # make user authentication
-        a = auth.authenticate {email: model.get('email'), password: model.get('password')}
-        a.then (response, status, xhr) =>
+        auth = auth.authenticate {
+          email: model.get('email'), password: model.get('password')
+        }
+        auth.then (response, status, xhr) =>
           @session.set response
           @enableTab('plan')
 
@@ -137,7 +151,9 @@ module.exports = class CollaboratorPage extends PageBase
       # request error
       .fail (xhr, message, other) =>
         @renderMessage btn.$el.parent(), {
-          type: 'danger', title: 'Desculpe!', message: 'Não foi possível salvar seus dados!'
+          type: 'danger'
+          title: 'Desculpe!'
+          message: 'Não foi possível salvar seus dados!'
         }
 
         # input validation messages
@@ -146,7 +162,7 @@ module.exports = class CollaboratorPage extends PageBase
           @renderInputMessages $(event.currentTarget), response.form_error
 
       # request complete
-      .always =>
+      .always ->
         btn.state 'loaded'
 
 
@@ -177,11 +193,13 @@ module.exports = class CollaboratorPage extends PageBase
       # request error
       .fail (xhr, message, other) =>
         @renderMessage btn.$el.parent(), {
-          type: 'danger', title: 'Desculpe!', message: 'Não foi possível salvar os dados de planos!'
+          type: 'danger'
+          title: 'Desculpe!'
+          message: 'Não foi possível salvar os dados de planos!'
         }
 
       # request complete
-      .always =>
+      .always ->
         btn.state 'loaded'
 
 
@@ -225,7 +243,7 @@ module.exports = class CollaboratorPage extends PageBase
 
           console.log response
 
-      .always =>
+      .always ->
         btn.state 'loaded'
 
 
