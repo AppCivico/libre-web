@@ -60,7 +60,7 @@ form:
               required: true
               disabled: false
               styles: form-control
-              help:
+              help: Este e-mail será utilizado para acessar sua conta.
 
             password:
               label: Senha
@@ -70,7 +70,7 @@ form:
               required: true
               disabled: false
               styles: form-control
-              help:
+              help: Digite uma senha de no mínimo 4 dígitos.
 
         general_data:
           title: Dados gerais
@@ -83,7 +83,7 @@ form:
               required: true
               disabled: false
               styles: form-control
-              help:
+              help: Entre apenas com seu primeiro nome
 
             surname:
               label: Sobrenome
@@ -93,7 +93,7 @@ form:
               required: true
               disabled: false
               styles: form-control
-              help:
+              help: Preencha apenas seu sobrenome
 
             phone:
               label: Telefone
@@ -103,7 +103,7 @@ form:
               required: true
               disabled: false
               styles: form-control
-              help:
+              help: Digite um telefone no formato <code>(11) 987654321</code>
               data:
                 mask: phone
 
@@ -135,6 +135,7 @@ form:
           name: plan
           required: true
           disabled: false
+          checked: true
           styles:
           help:
 
