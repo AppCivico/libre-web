@@ -6,27 +6,22 @@ module.exports =
       optimize: true
       sourceMaps: true
 
+  # notifications config
+  notifications: false
+
   # add assets configurations
   files:
     javascripts:
       joinTo:
         'assets/js/vendor.bundle.js': [
-          /jquery.js$/
-          /undebackbone.js$/
-          /backbone.js$/
-          /backbone.marionette.js$/
-          /backbone.radio.js$/
-          /underscore.js$/
-          /rails.js$/
-          /vanillaTextMask.js$/
-          /textMaskAddons.js$/
-          /store.*.js$/
+          /^node_modules/
         ]
         'assets/js/application.bundle.js': [
           /^app(\/|\\)javascripts(\/|\\)/
         ]
         'assets/js/test.bundle.js': [
-          /^test(\/|\\)/
+          /^app(\/||\\)tests(\/|\\)spec_helpers.coffee/
+          /^app(\/||\\)tests(\/|\\)specs(\/|\\)[views|models|pages|routes|modules|lib]/
         ]
 
     stylesheets:
