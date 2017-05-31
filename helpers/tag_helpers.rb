@@ -21,7 +21,7 @@ module CustomTagHelpers
 	# custom help block creator
 	# USAGE:  custom_helpblock fields[:email]
   def custom_helpblock(f)
-		return content_tag :small do |t|
+		return content_tag :small, class: 'help-block' do |t|
       f.help
     end if f.help
 	end
