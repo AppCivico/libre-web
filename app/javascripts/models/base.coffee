@@ -15,10 +15,18 @@ module.exports = class ModelBase extends Backbone.Model
   # configurations
   config: -> config
 
+  # validation errors
+  errors: {}
+
   # constructor
   initialize: ->
     # build default url using urlRoot
     @url = "#{@urlRoot}#{@url}" unless @url is "#{@urlRoot}#{@url}"
+
+    # binding events
+    @on(key, @[value], @) for key, value of @events
+
+    super arguments
 
 
   # generic abstraction of ajax request
@@ -30,7 +38,14 @@ module.exports = class ModelBase extends Backbone.Model
   save: (args...) ->
     super args
 
+
   # create model
   create: (args...) ->
     @save(args)
+
+
+  # setting form errors
+  setError: (field, message) ->
+    @errors.form_error = {} unless @errors.form_error?
+    @errors.form_error[field] = message if field? and message?
 
