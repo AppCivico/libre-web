@@ -23,8 +23,7 @@ module.exports = (config) ->
       '.tmp/dist/assets/js/vendor.bundle.js'
       '.tmp/dist/assets/js/application.bundle.js'
       '.tmp/dist/assets/js/test.bundle.js'
-      'test/runner.js'
-      #'test/**/*.spec.coffee'
+      'app/tests/runner.js'
     ]
 
 
@@ -33,7 +32,7 @@ module.exports = (config) ->
 
     # test results reporter to use
     # possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['nyan']
+    reporters: ['progress', 'nyan']
 
     # web server port
     port: 9876
@@ -57,7 +56,6 @@ module.exports = (config) ->
     # - PhantomJS
     # - IE (only Windows)
     browsers: ['PhantomJS']
-    #browsers: ['PhantomJS'] #['Chrome', 'Firefox', 'PhantomJS']
 
     # If browser does not capture in given timeout [ms], kill it
     captureTimeout: 60000
