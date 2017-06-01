@@ -226,7 +226,7 @@ form:
               required: true
               disabled: false
               styles: form-control
-              help: Escreva o nome da mesma forma que se encontra no cartão
+              help: Nome da mesma forma que se encontra no cartão
               container_style: form-group col-md-6 col-sm-12
 
             card_document:
@@ -237,7 +237,7 @@ form:
               required: true
               disabled: false
               styles: form-control
-              help: CPF ou CNPJ relacionado ao cartão (somente números)
+              help: CPF relacionado ao cartão (somente números)
               container_style: form-group col-md-6 col-sm-12
               data:
                 mask: number
@@ -264,7 +264,7 @@ form:
               required: true
               disabled: false
               styles: form-control
-              help: Entre com a validade do cartão no formato 01/2020
+              help: Validade do cartão no formato <code>01/2020</code>
               container_style: form-group col-md-6 col-sm-12
               data:
                 mask: month_year
@@ -277,7 +277,7 @@ form:
               required: true
               disabled: false
               styles: form-control
-              help: Entre com o código que se encontra atrás do cartão
+              help: Código que se encontra atrás do cartão
               container_style: form-group col-md-6 col-sm-12
 
 
