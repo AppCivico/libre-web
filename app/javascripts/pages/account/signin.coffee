@@ -15,7 +15,7 @@ Button          = require 'views/button'
 #  @author dvinciguerra
 ###
 module.exports = class SigninPage extends PageBase
-  el: 'form#login-form'
+  el: document.body
   template: false
 
   # templates
@@ -32,9 +32,7 @@ module.exports = class SigninPage extends PageBase
 
   # events
   events:
-    # TODO: change usj to page and components
-    'ajax:error': 'renderError'
-    'ajax:success': 'renderSuccess'
+    'submit @ui.main': 'onSubmitLoginForm'
     'change input, radio, checkbox': 'changeFormFields'
 
 
@@ -45,33 +43,72 @@ module.exports = class SigninPage extends PageBase
     @model.set field.id, field.value
 
 
-  # success ajax callback
-  renderSuccess: (event, json) ->
-    @_reset_messages()
-    @$el.append @templates.message {type: 'success', message: 'Usuário autênticado!'}
+  # submit login form action
+  onSubmitLoginForm: (event) ->
+    event.preventDefault()
 
-    # setting session and redirect to dash
-    @session.set json if _.isObject json
-    setInterval ( -> document.location = '/app'), 250
+    # on invalid event
+    unless @model.isValid()
+      @clearMessages()
+      if @model.errors? and _.has(@model.errors, 'form_error')
+        @renderInputMessages($(event.currentTarget), @model.errors.form_error)
+      return false
 
+    # submit button
+    btn = new Button el: @getUI('main').find('input[type=submit]')
+    btn.state 'loading'
 
-  # error ajax callback
-  renderError: (event, xhr, error) ->
-    response = xhr.responseJSON || {}
-    @_reset_messages()
+    # make user authentication
+    params = @model.toJSON()
 
-    # input validation messages
-    if response? and _.has(response, 'form_error')
-      for key, value of response.form_error
-        if el = @$el.find "[name=#{key}]"
-          el.parent().addClass 'has-error'
+    @model.authenticate params
+      .then (response, status, xhr) =>
+        @clearMessages()
+        @renderMessage btn.$el.parent(), {
+          type: 'success'
+          title: 'Bem vindo!'
+          message: 'Usuário autênticado...'
+        }
 
-    # form error message
-    @$el.append @templates.message({type: 'danger', message: 'E-mail ou senha inválidos'})
+        @session.set response if _.isObject response
+        setInterval ( -> document.location = '/app'), 250
 
+      .fail (xhr, status) =>
+        @clearMessages()
+        @renderMessage btn.$el.parent(), {
+          type: 'danger'
+          title: 'Erro!'
+          message: 'Usuário ou senha inválidos'
+        }
 
-  # clear template
-  _reset_messages: () ->
+      .always ->
+        btn.state 'loaded'
+
+  # render message
+  renderMessage: ($root = null, stash = {}) ->
+    # reset messages
     @$el.find('.message').remove()
+    rendered = @templates.message(stash)
+    $root.append(rendered) if $root?
+    rendered
+
+
+  renderInputMessages: ($root = null, stash = {}) ->
+    # reset messages
+    @$el.find('small.input-message').remove()
     @$el.find('.has-error').toggleClass('has-error')
+
+    for key, value of stash
+      if el = $root.find("[name=#{key}]")
+        el.parent().addClass 'has-error'
+          .append @templates.input_message({
+            content: "#{el.attr('placeholder')} #{@errorList(value)}"
+          })
+
+
+  clearMessages: ->
+    @$el.find('.message').remove()
+    @$el.find('small.error-message').remove()
+    @$el.find('.has-error').toggleClass('has-error')
+    return
 
