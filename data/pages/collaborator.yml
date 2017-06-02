@@ -113,12 +113,7 @@ form:
           path: #
           classes: js-button-pane1 btn btn-success
 
-      help: |
-        <p>Os campos de e-mail, senha, nome e sobrenome são de preenchimento
-        obrigatórios.</p><br>
-
-        <p>Após o preenchimento dos dados, pressione o botão "continuar" e
-        avance para a etapa de seleção do seu plano!</p>
+      help:
 
 
     # plan tab content
@@ -202,9 +197,7 @@ form:
           classes: js-button-pane2 btn btn-success
 
 
-      help: |
-        Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify
-        intelligentsia scenester cliche lomo la croix subway tile meditation.
+      help:
 
 
     # billing tab content
@@ -289,8 +282,6 @@ form:
           classes: js-button-pane2 btn btn-success
 
 
-      help: |
-        Hot chicken shoreditch quinoa chicharrones umami, hoodie gentrify
-        intelligentsia scenester cliche lomo la croix subway tile meditation.
+      help:
 
 
