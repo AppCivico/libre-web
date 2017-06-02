@@ -73,7 +73,6 @@ module.exports = class CollaboratorPage extends PageBase
 
     # change brand icon when model brand is changed
     @listenTo @models.billing, 'change:card_brand', @changeBrandIcon
-    #@listenTo @models.personal, 'change', @showPersonalFieldsError
 
     # restoring session and current tab
     s = @session.get() or {}
@@ -206,13 +205,21 @@ module.exports = class CollaboratorPage extends PageBase
   submitBillingForm: (event) ->
     event.preventDefault()
 
+    model = @models.billing
+    model.set {user_id: @models.personal.id, api_key: @session.get('api_key')}
+
+    # on invalid event
+    unless model.isValid()
+      @clearMessages()
+      if model.errors? and _.has(model.errors, 'form_error')
+        @renderInputMessages($(event.currentTarget), model.errors.form_error)
+      return false
+
     # submit button
     btn = new Button el: @getUI('billing').find('input[type=submit]')
     btn.state 'loading'
 
     # create a new donor
-    model = @models.billing
-    model.set {user_id: @models.personal.id, api_key: @session.get('api_key')}
     model.create()
       # request success
       .done (response, status, xhr) =>
@@ -225,9 +232,20 @@ module.exports = class CollaboratorPage extends PageBase
               message: 'Dados salvos!'
             }
 
-        # redirect to success page
-        @redirectTo '/faca-parte/obrigado?rel=colaborador'
-        #@enableTab('billing')
+            # redirect to thanks page
+            @redirectTo '/faca-parte/obrigado?rel=colaborador'
+
+
+          .fail (xhr, message, other) =>
+            unless xhr? and _.isEmpty xhr.responseJSON
+              @clearMessages()
+              @renderMessage btn.$el.parent(), {
+                type: 'danger'
+                title: 'Erro!'
+                message: '[Flotum] Erro ao cadastrar dados do cartão'
+              }
+              console.error xhr
+
 
       .fail (xhr, message, other) =>
         @renderMessage btn.$el.parent(), {
@@ -282,15 +300,15 @@ module.exports = class CollaboratorPage extends PageBase
       when 'visa'
         $icon.attr 'title', 'Cartão Visa'
         $icon.removeClass 'fa-credit-card-alt fa-cc-visa fa-cc-mastercard'
-          .addClass 'fa-cc-visa'
+          .addClass 'fa-cc-visa text-green'
       when 'mastercard'
         $icon.attr 'title', 'Cartão MasterCard'
         $icon.removeClass 'fa-credit-card-alt fa-cc-visa fa-cc-mastercard'
-          .addClass 'fa-cc-mastercard'
+          .addClass 'fa-cc-mastercard text-green'
       else
         $icon.attr 'title', 'Cartão não identificado'
-        $icon.removeClass 'fa-credit-card-alt fa-cc-visa fa-cc-mastercard'
-          .addClass 'fa-credit-card-alt'
+        $icon.removeClass 'fa-credit-card-alt fa-cc-visa fa-cc-mastercard text-green'
+          .addClass 'fa-credit-card-alt text-muted'
 
 
   # render message
@@ -319,4 +337,5 @@ module.exports = class CollaboratorPage extends PageBase
     @$el.find('.message').remove()
     @$el.find('small.error-message').remove()
     @$el.find('.has-error').toggleClass('has-error')
+    return
 
