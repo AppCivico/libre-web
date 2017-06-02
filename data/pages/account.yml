@@ -55,6 +55,15 @@ section:
           classes:
           help: Esta opção não é aconselhada se você estar utilizando um computador público.
 
+        forgot_password:
+          label: Esqueceu sua senha?
+          type: link
+          name: forgot_password
+          required: false
+          path: /account/recuperar-senha
+          classes:
+          help:
+
         submit:
           label: Entrar
           name: btn_enviar
