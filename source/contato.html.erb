@@ -47,8 +47,10 @@ controller: contact
 					<!-- help section -->
 					<% section = page.help%>
 					<div class="col-md-offset-1 col-md-3 section-content">
-						<h3 class="text-green"><%= section.title %></h3>
-						<%= section.subtitle %>
+						<% if section.show %>
+							<h3 class="text-green"><%= section.title %></h3>
+							<%= section.content %>
+						<% end %>
 					</div>
 
         </div>

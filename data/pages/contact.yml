@@ -54,9 +54,10 @@ fields:
     classes: btn btn-success
 
 help:
+  show: true
   title: Perguntas frequentes
-  subtitle: |
-    <p>Você tem alguma dúvida sobre o sistema? <a href="/ajuda">Clique aqui</a>
-    para ver nossos tópicos de ajuda.</p>
+  content: |
+    <p><small>Você tem alguma dúvida sobre o sistema? Clique no botão abaixo
+    para ver nossos tópicos de ajuda.</small></p>
 
     <a class="btn btn-success" href="/ajuda">Tópicos de Ajuda</a>
