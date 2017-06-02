@@ -116,7 +116,7 @@ controller: join_us/collaborator
 
 
 											<div class="col-md-12">
-												<br class="text-spaced">
+												<br>
 												<h4 class="text-green"><%= tab.section.general_data.title %></h4>
 											</div>
 
@@ -148,8 +148,10 @@ controller: join_us/collaborator
 
 									<!-- personal tab help -->
 									<div class="col-md-offset-1 col-md-3">
-										<h4 class="text-spaced text-green">Ajuda</h4>
-										<p><%= tab.help %></p>
+										<% if tab.help %>
+											<h4 class="text-spaced text-green">Ajuda</h4>
+											<p><%= tab.help %></p>
+										<% end %>
 									</div>
 								</div>
 							</form>
@@ -207,8 +209,10 @@ controller: join_us/collaborator
 
 									<!-- plan tab help -->
 									<div class="col-md-offset-1 col-md-3">
-										<h4 class="text-spaced text-green">Ajuda</h4>
-										<p><%= tab.help %></p>
+										<% if tab.help %>
+											<h4 class="text-spaced text-green">Ajuda</h4>
+											<p><%= tab.help %></p>
+										<% end %>
 									</div>
 								</div>
 							</form>
@@ -248,8 +252,8 @@ controller: join_us/collaborator
 												<%= custom_helpblock f %>
 											<% end %>
 
-											<div class="col-md-1 text-right text-green">
-												<i id="card-brand-icon" class="fa fa-2x fadein fa-credit-card-alt" title="Cartão não identificado"></i>
+											<div class="col-md-1 text-right">
+												<i id="card-brand-icon" class="fa fa-2x fadein fa-credit-card-alt text-muted" title="Cartão não identificado"></i>
 											</div>
 
 											<% f = fields[:card_validity]; content_tag :div, class: f.container_style do %>
@@ -279,8 +283,10 @@ controller: join_us/collaborator
 
 									<!-- personal tab help -->
 									<div class="col-md-offset-1 col-md-3">
-										<h4 class="text-spaced text-green">Ajuda</h4>
-										<p><%= tabs.billing.help %></p>
+										<% if tab.help %>
+											<h4 class="text-spaced text-green">Ajuda</h4>
+											<p><%= tab.help %></p>
+										<% end %>
 									</div>
 								</div>
 							</form>
