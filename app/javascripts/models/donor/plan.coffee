@@ -1,4 +1,4 @@
-"use strict"
+'use strict'
 
 
 # requires
@@ -17,16 +17,45 @@ module.exports = class PlanModel extends ModelBase
     user_id: 0
     amount: 2000
 
+
+  # events
+  events:
+    'change:user_id': 'onChangeUserId'
+    'change:amount': 'onChangeAmount'
+
+
   # constructor
   initialize: ->
-    # set url when user_id is changed
-    @on 'change:user_id', (model, user_id) =>
-      @url = "#{@urlRoot}/donor/#{user_id}/plan"
+    @set 'id', 1 # force PUT setting a fake id
 
-    # clean amount when amount changes
-    @on 'change:amount', (model, amount) =>
-      amount = amount.replace(',', '').replace('.', '')
-      @set 'amount', amount
 
+  # set url when user_id is changed
+  onChangeUserId: (model, user_id) ->
+    @url = "#{@urlRoot}/donor/#{user_id}/plan"
+
+
+  # clean amount when amount changes
+  onChangeAmount: (model, amount) ->
+    amount = amount.replace(',', '').replace('.', '')
+    @set 'amount', amount
+
+
+  # validate attributes
+  validate: (p = {}, settings = {}) ->
+    @errors = {form_error: {}}
+
+    # email validation (required; matchs: /\@/)
+    if p.amount?
+      @setError 'amount', 'invalid' unless p.amount >= 2000
+    else
+      @setError 'amount', 'required'
+
+    return @errors unless _.isEmpty(@errors.form_error)
+
+
+  # save plan using always PUT method
+  save: ->
+    @url = "#{@urlRoot}/donor/#{@get('user_id')}/plan"
+    super arguments
 
 
