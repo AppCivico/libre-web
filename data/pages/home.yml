@@ -20,6 +20,19 @@ content: |
   mensais e começar a distribuir seus Libres entre os sites e autores que você
   mais gostou. </p>
 
+
+# home right citation
+citation: |
+  <blockquote class="section-citation text-green">
+    <h3>
+    "O bom jornalismo pode até ser gratuito. Mas para que ele seja realmente
+    livre, o jornalismo precisa ser valorizado."
+    </h3>
+  </blockquote>
+
+  <br>
+  <br>
+
   <p>Para jornalistas e veículos, o Libre é uma forma de criar receita
   diretamente com seu público. Criar uma métrica de sucesso e impacto além do
   clique. E, com isso, apostar em qualidade e relevância do conteúdo como um
@@ -28,29 +41,23 @@ content: |
   <p>Para fazer parte da rede de veículos e produtores parceiros, preencha o
   cadastro e conheça nosso modelo de adesão. </p>
 
-# home right citation
-citation: |
-  "O bom jornalismo pode até ser gratuito. Mas para que ele seja realmente
-  livre, o jornalismo precisa ser valorizado."
-
-citation_name:
-
 
 # portals that use libre
 who_using:
-  - label: Nexo
-    image: /assets/images/nexo.png
+  - label: Nexo Jornal
+    image: /assets/images/quem-faz-parte/nexo.png
     path: http://google.com.br
 
-  - label: Público
-    image: /assets/images/publico.png
+  - label: Agência Pública
+    image: /assets/images/quem-faz-parte/agencia-publica.png
     path: http://google.com.br
 
-  - label: The Intercept
-    image: /assets/images/the-intercept.png
+  - label: AzMina
+    image: /assets/images/quem-faz-parte/azmina.png
     path: http://google.com.br
 
-  - label: El País
-    image: /assets/images/el-pais.png
+  - label: Drops De Jogos
+    image: /assets/images/quem-faz-parte/drops-de-jogos.png
     path: http://google.com.br
+
 
