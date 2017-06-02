@@ -37,7 +37,7 @@ controller: account/signin
             <h3><%= section.title %></h3>
             <p><%= section.subtitle %></p>
 
-						<% form_tag "#{data.config.routes['root']}/login", name: "login_form",  id: "login-form", class: "login-form", novalidate: true, data: { remote: true, type: 'json' } do %>
+						<% form_tag "#", name: "login_form",  id: "login-form", class: "login-form", novalidate: true, data: {} do # { remote: true, type: 'json' } do %>
 							<% section.form.fields.each do |name, f| %>
 
 								<div class="<%= f[:type] == 'radio' || f[:type] == 'checkbox' ? f[:type] : 'form-group' %>">
@@ -60,11 +60,15 @@ controller: account/signin
 
                   <% elsif f[:type] == 'checkbox' or f[:type] == 'radio' %>
 										<% content_tag :label do %>
-											<%= tag :input, type: f[:type], id: f[:name], class: f[:classes] || '', required: f[:required]  %> <%= f[:label]%>
+											<%= tag :input, type: f[:type], id: f[:name], class: f[:classes] || '', required: f[:required]  %> <%= f[:label] %>
 										<% end %>
 
-                  <% elsif f[:type] == 'submit' %>
-                    <%= submit_tag f[:label], id: f[:name], class: f[:classes], data: {'disable-with': 'Validando dados...'} %>
+                  <% elsif 'submit' == f[:type] or 'button' == f[:type] %>
+										<%= tag :input, type: f[:type], name: f[:id], value: f[:label], id: f[:name], class: f[:classes], data: {} %>
+										<% #{'disable-with': 'Validando dados...'} %>
+
+                  <% elsif 'link' == f[:type] %>
+										<%= link_to f[:label], f[:path] || '#', id: f[:name], class: f[:classes], data: f[:data] || {} %>
 
 									<% end %>
 
