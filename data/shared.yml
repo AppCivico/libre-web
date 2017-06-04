@@ -24,14 +24,20 @@ places:
 
 # social buttons
 social:
-  - label: Facebook
-    link: /#
-    image: /assets/images/social/facebook.png
+  facebook:
+    label: Facebook
+    path: https://www.facebook.com/OpenKnowledgeBrasil
+    icon: fa-facebook text-green
 
-  - label: Vimeo
-    link: /#
-    image: /assets/images/social/vimeo.png
+  twitter:
+    label: Twitter
+    path: https://twitter.com/okfnbr
+    icon: fa-twitter text-green
 
+  github:
+    label: Github
+    path: https://github.com/eokoe/libre-api
+    icon: fa-github-alt text-green
 
 zipcode_search:
   label: Busca CEP - Sistema correios

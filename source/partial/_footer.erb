@@ -10,17 +10,12 @@
             <% end %>
           </div>
           <div class="col-md-8 text-right">
-            <!-- form name="search_form" id="search_form" action="GET">
-              <input type="text" name="search_by" id="search_by">&nbsp;
-              <% data.shared.social.each do |s| %>
-                <a href="<%= s.link %>" class="__social-button" target="_blank">
-                  <%# image_tag s.image, title: s.label, alt: s.label %>
-                </a>
-              <% end %>
-            </form -->
-
-						<img src="/assets/images/okfn-logo.png" alt="">
-						<img src="/assets/images/appcivico-logo.png" alt="" style="margin-left:20px">
+						<a href="https://br.okfn.org/" target="_blank">
+							<img src="/assets/images/okfn-logo.png" alt="">
+						</a>
+						<a href="https://appcivico.com/pt/" target="_blank">
+							<img src="/assets/images/appcivico-logo.png" alt="" style="margin-left:20px">
+						</a>
           </div>
 				</div>
 
@@ -32,24 +27,14 @@
 							<strong>SIGA-NOS</strong>
 							<br>
 
-							<a href="#" class="_social-button" style="color:#333;text-decoration:none" title="Siga-nos no Facebook">
-								<span class="fa-stack fa-lg">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-facebook fa-stack-1x text-green"></i>
-								</span>
-							</a>
-							<a href="#" class="_social-button" style="color:#333;text-decoration:none" title="Siga-nos no Twitter">
-								<span class="fa-stack fa-lg">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-twitter fa-stack-1x text-green"></i>
-								</span>
-							</a>
-							<a href="https://github.com/eokoe/libre-api" class="_social-button" style="color:#333;text-decoration:none" title="Código fonte no GitHub">
-								<span class="fa-stack fa-lg">
-									<i class="fa fa-circle fa-stack-2x"></i>
-									<i class="fa fa-github-alt fa-stack-1x text-green"></i>
-								</span>
-							</a>
+              <% data.shared.social.each do |name, item| %>
+								<a href="<%= item.path %>" target="_blank" class="_social-button" style="color:#333;text-decoration:none" title="<%= item.label%>">
+									<span class="fa-stack fa-lg">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa <%= item.icon %> fa-stack-1x"></i>
+									</span>
+								</a>
+              <% end %>
 						</p>
 						<p><small>O <strong>LIBRE</strong> é uma plataforma aberta e baseada em software livre e esta disponibilizada no <a href="https://github.com/eokoe/libre-api" target="_blank" style="color:#333;text-decoration:underline;">GitHub</a>.</small><br>
 						<small>Este projeto é distribuido sob a licença <a href="https://www.gnu.org/licenses/agpl-3.0.en.html" target="_blank" style="color:#333;text-decoration:underline;">Affero General Public License</a>.</small></p>
