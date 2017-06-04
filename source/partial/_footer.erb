@@ -14,34 +14,37 @@
               <input type="text" name="search_by" id="search_by">&nbsp;
               <% data.shared.social.each do |s| %>
                 <a href="<%= s.link %>" class="__social-button" target="_blank">
-                  <%= image_tag s.image, title: s.label, alt: s.label %>
+                  <%# image_tag s.image, title: s.label, alt: s.label %>
                 </a>
               <% end %>
             </form -->
 
+						<img src="/assets/images/okfn-logo.png" alt="">
+						<img src="/assets/images/appcivico-logo.png" alt="" style="margin-left:20px">
           </div>
 				</div>
 
-				<br>
-				<br>
 				<br>
 
 				<div class="row">
 					<div class="col-md-12 section-content text-center">
 						<p>
-							<a href="#" class="" style="color:#ffffff;text-decoration:none" title="Siga-nos no Facebook">
+							<strong>SIGA-NOS</strong>
+							<br>
+
+							<a href="#" class="_social-button" style="color:#333;text-decoration:none" title="Siga-nos no Facebook">
 								<span class="fa-stack fa-lg">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-facebook fa-stack-1x text-green"></i>
 								</span>
 							</a>
-							<a href="#" class="" style="color:#ffffff;text-decoration:none" title="Siga-nos no Twitter">
+							<a href="#" class="_social-button" style="color:#333;text-decoration:none" title="Siga-nos no Twitter">
 								<span class="fa-stack fa-lg">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-twitter fa-stack-1x text-green"></i>
 								</span>
 							</a>
-							<a href="#" class="" style="color:#ffffff;text-decoration:none" title="Código fonte no GitHub">
+							<a href="https://github.com/eokoe/libre-api" class="_social-button" style="color:#333;text-decoration:none" title="Código fonte no GitHub">
 								<span class="fa-stack fa-lg">
 									<i class="fa fa-circle fa-stack-2x"></i>
 									<i class="fa fa-github-alt fa-stack-1x text-green"></i>
