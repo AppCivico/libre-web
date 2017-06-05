@@ -2,11 +2,23 @@
             <!-- top navbar menu -->
             <% data.shared.menu.each do |l| %>
               <% if l.label == 'Login' %>
-                <li>
+                <!-- li>
 									<% link_to l.path, title: l.label, data: { bypass: true } do %>
 										<div class="login-button"><strong><%= l.label.upcase %></strong>&nbsp;<img src="/assets/images/login-arrow.png" height="16px"></div>
                   <% end %>
-                </li>
+                </li -->
+								<li class="dropdown">
+									<!-- a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a -->
+									<% link_to l.path, title: l.label, class: 'dropdown-toggle', data: { bypass: true, toogle: 'dropdown' } do %>
+										<div class="login-button"><strong><%= l.label.upcase %></strong>&nbsp;<img src="/assets/images/login-arrow.png" height="16px"></div>
+                  <% end %>
+									<ul class="dropdown-menu">
+										<li><a href="/">Meu painel</a></li>
+										<li class="disabled"><a href="/usuario/editar">Editar minha informações</a></li>
+										<li role="separator" class="divider"></li>
+										<li><a href="#" class="js-signout_button">Sair</a></li>
+									</ul>
+								</li>
               <% else %>
                 <li><% link_to l.path, title: l.label, data: { bypass: true } do %><%= l.label %><% end %></li>
               <% end %>
