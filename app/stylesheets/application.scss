@@ -296,6 +296,20 @@ div.radio {
 	border: solid 0px transparent !important;
 	box-shadow: none;
 }
+
+/* custom dropdown */
+.navbar-nav > .open > a {
+  background-color: transparent !important;
+}
+.dropdown {
+	&-menu {
+		width: 250px;
+		margin-top: 20px !important;
+		border-radius: 0px !important;
+		border-color: #eaeaea;
+	}
+}
+
 /*
 .alert-success {
 	background-color: #00a44f !important;
