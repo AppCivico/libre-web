@@ -10,6 +10,8 @@ ViewBase = require 'views/base.coffee'
 module.exports = class UserMenuView extends ViewBase
   el: 'nav#navigation'
 
+  state: 'signedout'
+
   # ui components
   ui:
     navbar: '#navbar'
@@ -32,12 +34,12 @@ module.exports = class UserMenuView extends ViewBase
   initialize: ->
     session = @session.get()
 
-    console.log session
-
     if _.has(session, 'api_key') and session.api_key?
       @triggerMethod 'user:signedin', session
+      @state = 'signedin'
     else
       @triggerMethod 'user:signedout'
+      @state = 'signedout'
 
 
   # on mobile menu button pressed
@@ -54,9 +56,10 @@ module.exports = class UserMenuView extends ViewBase
 
   # on click dropdown button
   onClickDropdown: (event) ->
-    event.preventDefault()
-    if $uiEl = $(event.currentTarget)
-      $uiEl.toggleClass 'open'
+    if @state is 'signedin'
+      event.preventDefault()
+      if $uiEl = $(event.currentTarget)
+        $uiEl.toggleClass 'open'
 
 
   # event to render menu for user signedin
