@@ -18,8 +18,9 @@ module.exports = class UserMenuView extends ViewBase
     mobile: 'button:first-child'
     login_button: 'div.login-button'
     username: 'div.login-button > strong'
-    dropdown: '.dropdown'
+    dropdown: '.js-username_button'
     signout: '.js-signout_button'
+    menu: '.dropdown-menu'
 
   # ui triggers
   triggers:
@@ -28,6 +29,7 @@ module.exports = class UserMenuView extends ViewBase
   events:
     'click @ui.dropdown': 'onClickDropdown'
     'click @ui.signout': 'onClickSignout'
+    'click @ui.menu': 'onClickMenuLink'
 
 
   # constructor
@@ -58,8 +60,15 @@ module.exports = class UserMenuView extends ViewBase
   onClickDropdown: (event) ->
     if @state is 'signedin'
       event.preventDefault()
-      if $uiEl = $(event.currentTarget)
+      if $uiEl = $(event.currentTarget).parent()
         $uiEl.toggleClass 'open'
+
+
+  # on click dropdown menu item button
+  onClickMenuLink: (event) ->
+    if $uiEl = $(event.currentTarget).parent()
+      $uiEl.toggleClass 'open'
+
 
 
   # event to render menu for user signedin
