@@ -9,7 +9,6 @@ ViewBase = require 'views/base.coffee'
 ###
 module.exports = class UserMenuView extends ViewBase
   el: 'nav#navigation'
-  #el: '#dash-usermenu'
 
   # ui components
   ui:
@@ -17,15 +16,23 @@ module.exports = class UserMenuView extends ViewBase
     mobile: 'button:first-child'
     login_button: 'div.login-button'
     username: 'div.login-button > strong'
+    dropdown: '.dropdown'
+    signout: '.js-signout_button'
 
   # ui triggers
   triggers:
     'click @ui.mobile': 'mobile:button'
 
+  events:
+    'click @ui.dropdown': 'onClickDropdown'
+    'click @ui.signout': 'onClickSignout'
+
 
   # constructor
   initialize: ->
     session = @session.get()
+
+    console.log session
 
     if _.has(session, 'api_key') and session.api_key?
       @triggerMethod 'user:signedin', session
@@ -45,12 +52,22 @@ module.exports = class UserMenuView extends ViewBase
         .addClass 'collapse'
 
 
+  # on click dropdown button
+  onClickDropdown: (event) ->
+    event.preventDefault()
+    if $uiEl = $(event.currentTarget)
+      $uiEl.toggleClass 'open'
+
+
   # event to render menu for user signedin
   onUserSignedin: (session) ->
     $link = @getLoginButton()
     $text = @getUI('username')
 
-    username = if session.name.length >= 40 then "#{session.name.substr(0, 40)}..." else session.name
+    username = if session.name.length >= 40
+      "#{session.name.substr(0, 40)}..."
+    else
+      session.name
     $text.addClass('text-green').text "Olá, #{username}"
     $link.attr 'href', '/app'
       .attr 'title', 'Painel do usuário'
@@ -68,15 +85,23 @@ module.exports = class UserMenuView extends ViewBase
     @show()
 
 
+  # signout button
+  onClickSignout: (event) ->
+    event.preventDefault()
+    @session.clear()
+    document.location = '/account/login?message=signed-out'
+
 
   # get login button
   getLoginButton: ->
     @getUI('login_button').parent()
 
+
   # show user menu
   hide: ->
     @$el.find 'ul#dash-usermenu'
       .addClass 'hide'
+
 
   # show user menu
   show: ->
