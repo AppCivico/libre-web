@@ -62,7 +62,8 @@ module.exports = class Session
 
   # clear session keys
   clear: ->
-    @adapter.set @sessionKey, @attributes
+    s = new Session
+    @adapter.set @sessionKey, s.attributes
 
   # return storage name
   storageName: () ->
