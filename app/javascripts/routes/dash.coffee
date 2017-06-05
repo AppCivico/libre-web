@@ -1,10 +1,11 @@
 "use strict"
 
 # requires
-Session           = require 'lib/session.coffee'
+Session       = require 'lib/session.coffee'
 
 # views/components
-IndexView  = require 'views/dash/index.coffee'
+IndexView     = require 'views/dash/index.coffee'
+UserFormView  = require 'views/dash/user/form.coffee'
 
 
 
@@ -17,6 +18,7 @@ module.exports = class DashRouter extends Marionette.AppRouter
   # routes
   routes:
     '': 'default'
+    'usuario/editar': 'userEdit'
 
 
   # session attribute
@@ -31,4 +33,15 @@ module.exports = class DashRouter extends Marionette.AppRouter
     # render default layout
     view = new IndexView
     #view.render()
+
+
+  userEdit: ->
+    view = new UserFormView
+    view.render()
+
+
+  onRoute: (route) ->
+    # clear header container
+    unless route is 'default'
+      document.getElementById('dash-header').innerHTML = ''
 
