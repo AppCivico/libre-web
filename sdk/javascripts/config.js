@@ -1,11 +1,12 @@
 'use strict';
 
 // configurations
+console.warn('WARN: development is point to devlibre.eokoe.com domain');
 const _configs = {
 
 	// development env
 	development: {
-		base: '//localhost:4567',
+		base: '//devlibre.eokoe.com',
 		assets: {
 			button: '/assets/sdk/v1.0/img/lbr-button-image.svg'
 		}
@@ -13,7 +14,7 @@ const _configs = {
 
 	// production env
 	production: {
-		base: '//192.168.1.151:4567',
+		base: '//midialibre.com.br',
 		assets: {
 			button: '/assets/sdk/v1.0/img/lbr-button-image.svg'
 		}
@@ -25,7 +26,7 @@ const _configs = {
 * Configuration class
 */
 module.exports = class Config {
-	static env(name = 'development'){
+	static env(name = 'production'){
 		return _configs[name] || {}
 	}
 }
