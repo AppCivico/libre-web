@@ -19,20 +19,31 @@ class SDK {
 	}
 
 	// dom object
-	dom() { return document }
+	dom() {
+		return document
+	}
 
 	// configs
-	config(){ return Config.env() }
+	config(){
+		return Config.env()
+	}
 
 	// sdk renderer
 	render() {
-		// button renderer
-		this.dom().querySelectorAll('.lbr-button')
-			.forEach( b => (new ButtonView({el: b, config: this.config()})).render() )
+		let button = new ButtonView({ config: this.config() });
+		this.dom().querySelectorAll('.lbr-button').forEach((b) => {
+			//b.replaceWith(button.render());
+			//b.appendChild(button.render());
+			new ButtonView({ el: b, config: this.config() }).render();
+		});
 	}
 }
 
 
+/**
+ * Libre SDK Bootstrap
+ * author: @dvinciguerra
+ */
 const Libre = {
 	start(args = {}){
 		return (new SDK(args)).render()
