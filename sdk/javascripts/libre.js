@@ -4,7 +4,7 @@
 
 // requires
 const Config = require('config.js');
-const ButtonView = require('views/button.js');
+const ButtonView = require('v1/views/button.js');
 
 
 /**
