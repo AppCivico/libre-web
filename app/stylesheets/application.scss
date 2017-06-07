@@ -67,6 +67,9 @@ ul.clean-list {
 	padding-left: 40px;
 	padding-right: 40px;
 }
+.btn-default {
+	background-color: #f3f3f3;
+}
 .btn-success-bordered {
   color: $green !important;
   border-color: $green !important;
@@ -152,6 +155,9 @@ section#main-divider {
   text-align: center;
   color: #fff;
   min-height: 400px;
+}
+section#dash-main {
+	min-height: 500px;
 }
 
 footer {
