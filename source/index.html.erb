@@ -65,8 +65,9 @@ controller: home
 
           <% page.who_using.each do |p| %>
             <div class="col-md-3 text-center">
-              <p>
-                <% link_to p.path, target: '_blank' do %>
+              <p class="section-content">
+							<% link_to p.path, target: '_blank' do %>
+									<br>
                   <%= image_tag p.image, title: p.label, alt: p.title, width: '90%' %>
                 <% end %>
               </p>

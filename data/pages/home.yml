@@ -44,20 +44,53 @@ citation: |
 
 # portals that use libre
 who_using:
-  - label: Nexo Jornal
-    image: /assets/images/quem-faz-parte/nexo.png
-    path: http://google.com.br
-
   - label: Agência Pública
     image: /assets/images/quem-faz-parte/agencia-publica.png
-    path: http://google.com.br
+    path: #
+
+  - label: Aos Fatos
+    image: /assets/images/quem-faz-parte/aos-fatos.png
+    path: #
 
   - label: AzMina
     image: /assets/images/quem-faz-parte/azmina.png
-    path: http://google.com.br
+    path: #
+
+  - label: Bravo!
+    image: /assets/images/quem-faz-parte/bravo.png
+    path: #
 
   - label: Drops De Jogos
     image: /assets/images/quem-faz-parte/drops-de-jogos.png
-    path: http://google.com.br
+    path: #
+
+  - label: Fluxo
+    image: /assets/images/quem-faz-parte/fluxo.png
+    path: #
+
+  - label: Gastrolândia
+    image: /assets/images/quem-faz-parte/gastrolandia.png
+    path: #
+
+  - label: Nexo
+    image: /assets/images/quem-faz-parte/nexo.png
+    path: #
+
+  - label: Outras Palavras
+    image: /assets/images/quem-faz-parte/outras-palavras.png
+    path: #
+
+  - label: Piauí
+    image: /assets/images/quem-faz-parte/piaui.png
+    path: #
+
+  - label: Trip
+    image: /assets/images/quem-faz-parte/trip.png
+    path: #
+
+    #  - label: Faça parte você também
+    #    image: /assets/images/quem-faz-parte/faca-parte.png
+    #    path: /account/login
+    #
 
 
