@@ -236,13 +236,13 @@ controller: join_us/collaborator
 											<% fields = tab.section.card_data.fields %>
 											<% f = fields[:card_name]; content_tag :div, class: f.container_style do %>
 												<label class="sr-only"><%= f.label %></label>
-												<%= custom_input f %>
+												<%= custom_input f, { maxlength: 26 } %>
 												<%= custom_helpblock f %>
 											<% end %>
 
 											<% f = fields[:card_document]; content_tag :div, class: f.container_style do %>
 												<label class="sr-only"><%= f.label %></label>
-												<%= custom_input f %>
+												<%= custom_input f, { maxlength: 11 }%>
 												<%= custom_helpblock f %>
 											<% end %>
 
@@ -258,13 +258,13 @@ controller: join_us/collaborator
 
 											<% f = fields[:card_validity]; content_tag :div, class: f.container_style do %>
 												<label class="sr-only"><%= f.label %></label>
-												<%= custom_input f %>
+												<%= custom_input f, { maxlength: 7 }%>
 												<%= custom_helpblock f %>
 											<% end %>
 
 											<% f = fields[:card_csc]; content_tag :div, class: f.container_style do %>
 												<label class="sr-only"><%= f.label %></label>
-												<%= custom_input f %>
+												<%= custom_input f, { maxlength: 6 }%>
 												<%= custom_helpblock f %>
 											<% end %>
 
