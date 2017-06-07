@@ -26,7 +26,7 @@ module.exports = class PlanModel extends ModelBase
 
   # constructor
   initialize: ->
-    @set 'id', 1 # force PUT setting a fake id
+    #@set 'id', 1 # force PUT setting a fake id
 
 
   # set url when user_id is changed
