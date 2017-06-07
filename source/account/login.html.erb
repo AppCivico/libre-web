@@ -68,7 +68,7 @@ controller: account/signin
 										<% #{'disable-with': 'Validando dados...'} %>
 
                   <% elsif 'link' == f[:type] %>
-										<small><%= link_to f[:label], f[:path] || '#', id: f[:name], class: f[:classes], data: f[:data] || {} %></small>
+										<small><%= link_to f[:label], f[:path] || '#', id: f[:name], class: f[:classes], data: f[:data] || {}, tabindex: '-1' %></small>
 
 									<% end %>
 
