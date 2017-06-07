@@ -46,11 +46,11 @@
 			</div>
 
 			<div class="col-md-12 form-group">
-				<a class="text-green" href="#">Redefinir minha senha</a>
+				<a class="text-green" href="/account/recuperar-senha" data-bypass="true" >Redefinir minha senha</a>
 				<small class="help-block">Altere ou recupere sua senha.</small>
 			</div>
 
-			<div class="col-md-12 form-group">
+			<!-- div class="col-md-12 form-group">
 				<a class="text-green" href="/plano">Detalhes do plano</a>
 				<small class="help-block">Acompanhe e altere seu plano.</small>
 			</div>
@@ -58,7 +58,7 @@
 			<div class="col-md-12 form-group">
 				<a class="text-green" href="/extrato">Informações de apoios</a>
 				<small class="help-block">Veja detalhes sobre seus apoios.</small>
-			</div>
+			</div -->
 
 			<div class="col-md-12 form-group">
 				<small class="help-block">
