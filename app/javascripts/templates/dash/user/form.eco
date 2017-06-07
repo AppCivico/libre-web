@@ -32,7 +32,7 @@
 		<div class="row">
 			<div class="col-md-12 form-group">
 				<button class="btn btn-success" type="submit">Salvar</button>
-				<a class="btn btn-default" href="/app">Voltar</a>
+				<a class="btn btn-default" href="/">Voltar</a>
 			</div>
 
 		</div>
