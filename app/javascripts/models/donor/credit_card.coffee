@@ -45,7 +45,9 @@ module.exports = class CreditCardModel extends ModelBase
 
     # card name validation (required; min: 6)
     if p.card_name?
-      @setError 'card_name', 'invalid' unless p.card_name.length > 5
+      @setError 'card_name', 'min_invalid' unless p.card_name.length > 5
+      @setError 'card_name', 'max_invalid' unless p.card_name.length <= 26
+      @setError 'card_name', 'char_invalid' unless p.card_name.match /^[A-Za-z\s]+$/
     else
       @setError 'card_name', 'required'
 
@@ -64,6 +66,8 @@ module.exports = class CreditCardModel extends ModelBase
     # card validity validation (required; matchs: 99/9999)
     if p.card_validity?
       @setError 'card_validity', 'invalid' unless p.card_validity.match /^\d{2}\/\d{4}$/
+      #TODO: validate month range
+      #TODO: validate year range
     else
       @setError 'card_validity', 'required'
 
