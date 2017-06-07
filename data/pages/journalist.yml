@@ -8,18 +8,20 @@ buttons:
     data:
       register-type: journalist
     benefits:
-      - Meditation tumblr pinterest lyft salvia
-      - Schlitz actually activated charcoal messenger bag
-      - Flannel brooklyn air plant offal
+      - Apoio direto a autores e jornalistas independentes, sem a mediação de um veículo
+      - Não é necessário CNPJ, apenas o CPF e uma conta de pessoa física
+      - Toda a renda gerada, descontados os impostos, vai para o autor
+      - Descubra quem é o público que mais valoriza seu trabalho e crie sua comunidade
 
   - label: Cadastrar como Veiculo
     classes: btn btn-success btn-success-bordered btn-block btn-lg js-journalist-type
     data:
       register-type: vehicle
     benefits:
-      - Meditation tumblr pinterest lyft salvia
-      - Schlitz actually activated charcoal messenger bag
-      - Flannel brooklyn air plant offal
+      - Apoio direto a veículos ou coletivos de jornalismo
+      - Relatórios detalhados do volume de apoio por posts
+      - Descubra que tipo de conteúdo é mais valorizado por seu público
+      - Descubra quem é o público que mais valoriza seu trabalho e crie sua comunidade
 
 # form subtitle
 subtitle:

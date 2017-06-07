@@ -14,7 +14,7 @@ controller: join_us/journalist
             <h1><%= page.title %></h1>
           </div>
 
-          <div class="col-md-8 section-content">
+          <div class="col-md-12 section-content">
 
             <div class="row">
               <div class="col-md-6">
@@ -28,7 +28,7 @@ controller: join_us/journalist
                 <p><strong>Benefícios:</strong></p>
                 <ul class="clean-list">
                   <% btn.benefits.each do |b| %>
-                    <li><%= b %></li>
+										<li><small><%= b %></small></li>
                   <% end %>
                 </ul>
               </div>
@@ -44,7 +44,7 @@ controller: join_us/journalist
                 <p><strong>Benefícios:</strong></p>
                 <ul class="clean-list">
                   <% btn.benefits.each do |b| %>
-                    <li><%= b %></li>
+										<li><small><%= b %></small></li>
                   <% end %>
                 </ul>
 
@@ -52,21 +52,21 @@ controller: join_us/journalist
             </div>
 
           </div>
-          <div class="col-md-4">
-            <h4 class="text-green">Ajuda</h4>
-            <%= page.help %>
+					<div class="col-md-4 hide">
+						<% if page.help %>
+							<h4 class="text-green">Ajuda</h4>
+							<%= page.help %>
+						<% end %>
           </div>
         </div>
     </section>
-
-    <hr>
 
 
     <section id="form_section">
       <div class="container">
         <div class="row">
 						<!-- form section -->
-						<div class="col-md-8 section-content">
+						<div class="col-md-12 section-content">
 
 							<% form_tag "#{data.config.routes['root']}/register/journalist", name: "journalist_form",  id: "journalist-form", class: "journalist-form", novalidate: true, data: { remote: true, type: 'json' } do %>
 								<% fields = page.form.fields %>
@@ -76,6 +76,7 @@ controller: join_us/journalist
 									<!-- login data -->
 									<h3 class="text-green">
 										<%= page.subtitle[:access_data] %>
+										&nbsp;<small id="register-type">(sou um jornalista)</small>
 									</h3>
 									<div class="row">
 										<div class="col-md-12">
@@ -125,7 +126,7 @@ controller: join_us/journalist
 									<div id="js-journalist-document" class="row">
 										<div class="col-md-6 form-group">
 											<label class="radio-inline">
-												Selecione um documento:
+												Documento:
 											</label>
 											<label class="radio-inline">
 												<input type="radio" name="document_type" value="cpf" checked> CPF
@@ -153,9 +154,9 @@ controller: join_us/journalist
 											<%= f = fields[:address_zipcode]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
 										</div>
 										<div class="col-md-6 form-group">
-											<% link_to data.shared.zipcode_search[:path], target: '_blank', title: data.shared.zipcode_search[:label] do %>
-												<strong>Clique aqui</strong> para persquisar seu CEP caso não saiba.
-											<% end %>
+												<% link_to data.shared.zipcode_search[:path], target: '_blank', title: data.shared.zipcode_search[:label] do %>
+													<i class="fa fa-search"></i>&nbsp;<small><strong>Clique</strong> para persquisar o CEP caso não saiba</small>
+												<% end %>
 										</div>
 									</div>
 

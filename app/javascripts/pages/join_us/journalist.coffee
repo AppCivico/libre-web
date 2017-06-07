@@ -26,12 +26,14 @@ module.exports = class JournalistPage extends PageBase
       el: 'form#journalist-form'
       replaceElement: false
 
+
   # ui elements
   ui:
     'journalist-type': '.js-journalist-type'
     'document-type': 'input[name=document_type]'
     'vehicle-input': 'input#vehicle'
     'zipcode-input': 'input#address_zipcode'
+    'type_note': '#register-type'
 
   # view events
   events:
@@ -80,7 +82,10 @@ module.exports = class JournalistPage extends PageBase
         for name, value of data
           $el = document.getElementById(name)
           $el.value = value || ""
-          unless value? then $el.removeAttribute('readonly') else $el.setAttribute('readonly', 'readonly')
+          unless value?
+            $el.removeAttribute 'readonly'
+          else
+            $el.setAttribute 'readonly', 'readonly'
 
 
   clickJournalistType: (event) ->
@@ -90,8 +95,12 @@ module.exports = class JournalistPage extends PageBase
 
     # setting vehicle flag
     if type = event.currentTarget.getAttribute 'data-register-type'
-      @getUI('vehicle-input').val '0' if type is 'journalist'
-      @getUI('vehicle-input').val '1' if type is 'vehicle'
+      if type is 'journalist'
+        @getUI('vehicle-input').val '0' if type is 'journalist'
+        @getUI('type_note').text '(sou um jornalista)'
+      else if type is 'vehicle'
+        @getUI('vehicle-input').val '1' if type is 'vehicle'
+        @getUI('type_note').text '(sou um veículo)'
 
 
   changeDocumentType: (event) ->
