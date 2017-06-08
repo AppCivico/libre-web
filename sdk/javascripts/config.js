@@ -14,7 +14,7 @@ const _configs = {
 
 	// production env
 	production: {
-		base: '//midialibre.com.br',
+		base: '//devlibre.eokoe.com',
 		assets: {
 			button: '/assets/sdk/v1.0/img/lbr-button-image.svg'
 		}

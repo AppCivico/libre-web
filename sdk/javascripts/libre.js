@@ -32,10 +32,8 @@ class SDK {
 	render() {
 		let button = new ButtonView({ config: this.config() });
 		this.dom().querySelectorAll('.lbr-button').forEach((b) => {
-			//b.replaceWith(button.render());
-			//b.appendChild(button.render());
-			new ButtonView({ el: b, config: this.config() }).render();
-		});
+			new ButtonView({ el: b, config: this.config() }).render()
+		})
 	}
 }
 

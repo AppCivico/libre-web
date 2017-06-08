@@ -10,11 +10,20 @@ module.exports =
   files:
     javascripts:
       joinTo:
-        'sdk/libre.js': /^sdk(\/|\\)/
+        'sdk/libre.js': [
+          /^sdk(\/|\\)javascripts(\/|\\)/
+          /^node_modules/
+        ]
+
+  npm:
+    enabled: true
+    whitelist: [
+      'fetch-ie8'
+    ]
 
   # modules configurations
   modules:
-    nameCleaner: (path) =>
+    nameCleaner: (path) ->
       path.replace(/^sdk(\/|\\)javascripts(\/|\\)/, '')
     autoRequire:
       'sdk/libre.js': ['libre.js']
