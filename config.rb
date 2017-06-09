@@ -1,5 +1,6 @@
 # directory indexes
 # - convert 'app.html.erb' file to 'app/index.html'
+activate :gzip
 activate :directory_indexes
 
 
