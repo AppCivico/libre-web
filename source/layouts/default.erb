@@ -4,7 +4,7 @@
     <%= partial 'partial/_metatags.erb' %>
     <title>Libre <%= current_page.data.title ? "- #{current_page.data.title}" : "Save" %></title>
 
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css' crossorigin="anonymous">
+    <!-- link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css' crossorigin="anonymous" -->
     <%= stylesheet_link_tag "application.bundle" %>
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
@@ -16,8 +16,8 @@
     <%= yield %>
 
     <!-- the javascripts -->
-    <%= javascript_include_tag "vendor.bundle" %>
-    <%= javascript_include_tag "application.bundle" %>
+    <%# javascript_include_tag "vendor.bundle", async: true %>
+    <%= javascript_include_tag "application.bundle", async: true %>
 		<script id="js-entry">require('application')</script>
 
     <% if build? %>

@@ -17,6 +17,7 @@ module.exports =
           /^node_modules/
         ]
         'assets/js/application.bundle.js': [
+          /^node_modules/
           /^app(\/|\\)javascripts(\/|\\)/
         ]
         'assets/js/test.bundle.js': [
@@ -66,7 +67,7 @@ module.exports =
 
   # modules configurations
   modules:
-    nameCleaner: (path) =>
+    nameCleaner: (path) ->
       path.replace(/^app(\/|\\)javascripts(\/|\\)/, '')
 
 
