@@ -50,6 +50,7 @@ module.exports =
       'Backbone.Radio': 'backbone.radio'
       'jquery-ujs': 'jquery-ujs'
       'store': 'store'
+      'application': 'application.coffee'
     whitelist: [
       'jquery'
       'underscore'
@@ -69,7 +70,6 @@ module.exports =
   modules:
     nameCleaner: (path) ->
       path.replace(/^app(\/|\\)javascripts(\/|\\)/, '')
-
 
   # plugins configurations
   plugins:

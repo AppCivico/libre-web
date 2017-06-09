@@ -17,8 +17,7 @@
 
     <!-- the javascripts -->
     <%# javascript_include_tag "vendor.bundle", async: true %>
-    <%= javascript_include_tag "application.bundle", async: true %>
-		<script id="js-entry">require('application')</script>
+    <%= javascript_include_tag "application.bundle", id: 'js-app', async: true %>
 
     <% if build? %>
       <script src="https://cdn.ravenjs.com/3.14.2/raven.min.js" crossorigin="anonymous"></script>
