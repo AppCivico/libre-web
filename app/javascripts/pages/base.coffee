@@ -25,7 +25,10 @@ module.exports = class PageBase extends Marionette.View
   # constructor
   initialize: ->
     if @options.config? and @options.config['debug']
-      console.debug "Starting '#{@options.name}' controller for #{document.location.href} page..."
+      name = @options.name || 'none'
+      page document.location.href
+      console.debug "Starting '#{name}' controller for #{page} page..."
+
     super()
 
   # templates
@@ -37,8 +40,14 @@ module.exports = class PageBase extends Marionette.View
     Exception.getMessage(token)
 
 
-	# load templates
-  @load_template: (path) =>
+  # load templates
+  @load_template: (path) ->
     template = require "templates/#{path}"
     return template
+
+
+  # user page redirect
+  redirectTo: (href = null) ->
+    document.location = href if href?
+    return false
 
