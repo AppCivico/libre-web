@@ -101,7 +101,7 @@ module.exports = class UserMenuView extends ViewBase
   onClickSignout: (event) ->
     event.preventDefault()
     @session.clear()
-    document.location = '/account/login?message=signed-out'
+    document.location = '/'
 
 
   # get login button
