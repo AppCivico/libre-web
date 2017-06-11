@@ -18,8 +18,11 @@ module.exports = class JournalistView extends ViewBase
   # loading
   loading: new LoadingView
 
+  model: new Backbone.Model()
+
   # ui elements
   ui:
+    'form': 'form#button-form'
     'code': 'div#code-preview'
     'button': 'input#btn-code-gen'
 
@@ -28,9 +31,18 @@ module.exports = class JournalistView extends ViewBase
   events:
     'click input#btn-code-gen': 'generateCode'
 
+  # event for change input data using
+  onChangeInputForm: (event) ->
+    event.preventDefault()
+    field = event.currentTarget
+    @model.set field.id, field.value
+
 
   # generate code event
   generateCode: (event) ->
+    event.prenventDefault
+    @model.set @buttonParams().toJSON()
+
     @btn = new ButtonView el: @getUI('button')
     @btn.state 'loading', { label: 'Gerando...' }
     setTimeout =>
@@ -42,6 +54,10 @@ module.exports = class JournalistView extends ViewBase
   showCode: (data = {}) ->
     $el = @getUI('code')
     $codeContainer = $el.find('pre#codigo')
+
+    # setting session info for model
+    s = @session.get() or {}
+    @model.set 'user_id', s.user_id || 0
 
     code = """
       <html>
@@ -72,9 +88,10 @@ module.exports = class JournalistView extends ViewBase
 
           <!-- adiciona o botão do libre -->
           <div class="lbr-button"
-            data-location="http://www.your-domain.com/your-page.html"
-            data-theme="default"
-            data-size="md">
+            data-id="#{@model.get('user_id')}"
+            data-location="#{@model.get('website')}"
+            data-theme="#{@model.get('aparencia')}"
+            data-theme="#{@model.get('tamanho')}">
           </div>
 
         </body>
@@ -104,3 +121,8 @@ module.exports = class JournalistView extends ViewBase
   onRender: ->
     # FIXME: fadein()
     @loading.hide()
+
+
+  buttonParams: ->
+    form = @getUI('form')
+    return @params(form).permit 'website', 'tamanho', 'aparencia'
