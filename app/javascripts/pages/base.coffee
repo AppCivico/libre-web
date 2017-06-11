@@ -7,6 +7,7 @@ require 'jquery-ujs'
 UserMenuView = require 'views/user_menu.coffee'
 
 # libs
+Params = require 'lib/params.coffee'
 Session = require 'lib/session.coffee'
 Exception = require 'lib/exception.coffee'
 
@@ -33,6 +34,20 @@ module.exports = class PageBase extends Marionette.View
 
   # templates
   templates: {}
+
+  # method to handle params
+  params: (form) ->
+    if typeof form is 'string'
+      Params.init document.querySelector(form)
+
+    else if typeof form is 'object' and form.hasOwnProperty 'context'
+      Params.init form.context
+
+    else if typeof form is 'object' and form.hasOwnProperty 'context'
+      Params.init form
+
+    else
+      throw new Error 'Element must be a query selector, jquery or an element'
 
 
   # error messages

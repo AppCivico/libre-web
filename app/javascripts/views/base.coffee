@@ -1,6 +1,7 @@
 "use strict"
 
 # requires
+Params = require 'lib/params.coffee'
 Session = require 'lib/session.coffee'
 
 
@@ -20,6 +21,21 @@ module.exports = class ViewBase extends Marionette.View
 
   # stash variable
   _stash: {}
+
+  # method to handle params
+  params: (form = null) ->
+    return if typeof form is 'string'
+      Params.init document.querySelector(form)
+
+    else if typeof form is 'object' and form.hasOwnProperty('context')
+      Params.init form[0]
+
+    else if typeof form is 'object' and form.tagName is 'FORM'
+      Params.init form
+
+    else
+      throw new Error 'Element must be a query selector, jquery or an element'
+
 
   # set and get for stash
   stash: (key = null, value = undefined) ->
