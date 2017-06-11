@@ -4,22 +4,22 @@
               <% if l.label == 'Login' %>
 								<li class="dropdown">
 									<% link_to l.path, title: l.label, class: 'js-username_button dropdown-toggle', data: { bypass: true, toogle: 'dropdown' } do %>
-										<div class="login-button"><strong><%= l.label.upcase %></strong>&nbsp;<img src="/assets/images/login-arrow.png" height="16px"></div>
+											<div class="login-button"><strong><%= l.label.upcase %></strong>&nbsp;<img src="/assets/images/login-arrow.png" height="16px"></div>
                   <% end %>
 									<ul class="dropdown-menu">
-										<% if page_module =~ /dash/ %>
+											<% if page_module =~ /dash/ %>
 											<li><a href="/">Meu painel</a></li>
-											<li><a href="/usuario/editar">Editar minha informações</a></li>
+											<!-- li><a href="/usuario/editar">Editar minha informações</a></li -->
 										<% else %>
-											<li><a href="/app" data-bypass="true">Meu painel</a></li>
-											<li><a href="/app#usuario/editar" data-bypass="true">Editar minha informações</a></li>
+												<li><a href="/app" data-bypass="true">Meu painel</a></li>
+											<!-- li><a href="/app#usuario/editar" data-bypass="true">Editar minha informações</a></li -->
 										<% end %>
 										<li role="separator" class="divider"></li>
 										<li><a href="#" class="js-signout_button">Sair</a></li>
 									</ul>
-								</li>
+										</li>
               <% else %>
-                <li><% link_to l.path, title: l.label, data: { bypass: true } do %><%= l.label %><% end %></li>
+	               <li><% link_to l.path, title: l.label, data: { bypass: true } do %><%= l.label %><% end %></li>
               <% end %>
-            <% end %>
+		            <% end %>
 					<% end %>
