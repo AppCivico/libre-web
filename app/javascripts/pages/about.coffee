@@ -8,10 +8,5 @@ PageBase = require 'pages/base.coffee'
 #  @author dvinciguerra
 ###
 module.exports = class AboutPage extends PageBase
-  el: $(document.body)
-
-
-  initialize: (@options) ->
-    # setting page initializations
 
 
