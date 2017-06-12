@@ -8,8 +8,8 @@
 
 		<div class="col-md-12">
 			<% @title = "Yr disrupt polaroid la croix readymade prism neutra shoreditch wolf" %>
-			<% @supports = [{title:@title, path:'#' }, {title:@title, path:'#' }, {title:@title, path:'#' }, {title:@title, path:'#' }] %>
-			<%# @supports = [] %>
+			<%# @supports = [{title:@title, path:'#' }, {title:@title, path:'#' }, {title:@title, path:'#' }, {title:@title, path:'#' }] %>
+			<% @supports = [] %>
 
 			<h3 class="support-title text-green" style="margin: 20px 0px;font-size:20px">
 				<% if @supports.length > 0: %>
@@ -28,7 +28,7 @@
 					<div class="item active">
 
 						<div class="row">
-							<% if @supports.length > 0: %>
+							<% if @supports and @supports.length > 0: %>
 								<% for item in @supports: %>
 									<div class="col-md-3 support-item">
 										<div class="support-image">
@@ -45,7 +45,7 @@
 							<% else: %>
 								<div class="col-md-12">
 									<div class="alert alert-warning">
-										<h4>Você ainda não possui nenhum apoio contabilizado!</h4>
+										<h3>Você ainda não possui nenhum apoio contabilizado!</h3>
 										<p>Acesse os sites que possuam os botões do Libre e colabora com a mídia independente.</p>
 									</div>
 								</div>
