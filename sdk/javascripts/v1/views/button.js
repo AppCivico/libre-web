@@ -5,23 +5,6 @@
 require('fetch-ie8');
 //const Resource = require('resources');
 //Resource().then(...).then(...)
-const donor = {
-	name: "Collaborator",
-	surname: "Doe",
-	roles: ["donor"],
-	api_key: "LF8TunqySaJuoRFLHpmJBkO4McCL3zhNY3HPtoxPYiS5ZVaI2oz1I5DIJ6TBPJ9LTOI3aCVNWhalluHF6VxJnG2U2F4KMsLGeJwVyPLzpLnJKddTjuFIaWU0iWHLtamB",
-	user_id: 91,
-	id: "8114F38D-1F49-A962-00B3-C288EA9B66D8",
-	current: "donor"
-};
-const journalist = {
-	name: "Journalist",
-	surname: "Doe",
-	roles: ["journalist"],
-	user_id: 90,
-	id: "8114F38D-1F49-A962-00B3-C288EA9B66D8",
-	current: "journalist"
-};
 
 const Promise = require('promise-polyfill');
 const ViewBase = require('lib/view.js');
@@ -59,8 +42,7 @@ module.exports = class ButtonView extends ViewBase {
 
 	isAuth() {
 		let s = this.session();
-		return s.isAuth() && (s.getAttributes().roles || [])[0] === 'journalist' ?
-			true : false
+		return s.isAuth() ? true : false
 	}
 
 	bind() {
@@ -94,10 +76,18 @@ module.exports = class ButtonView extends ViewBase {
 		}
 
 		if (confirm('Você confirma a contribuição de 1 Libre por este conteúdo?')) {
+			var data = new FormData();
+			data.append('page_title', document.title);
+			data.append('page_referer', self._data.location);
+
 			// DEBUG: console.log(`//hapilibre.eokoe.com/api/journalist/${journalist.user_id}/support?api_key=${donor.api_key}`);
-			fetch(`//hapilibre.eokoe.com/api/journalist/${journalist.user_id}/support?api_key=${donor.api_key}`, {
-				method: 'POST'
-			}).then((res) => {
+			let apikey = self.session().getAttr('api_key');
+			console.log(self._data);
+			var f = fetch(`//hapilibre.eokoe.com/api/journalist/${self._data.uid}/support?api_key=${apikey}`, {
+				method: 'POST', body: data
+			})
+
+			f.then((res) => {
 				// success
 				if (res.status >= 300) return res;
 				console.log(res.json())
