@@ -17,9 +17,8 @@ Backbone.ajax = (options = {}) ->
 
 
 # config renderer
-Marionette.Renderer.render = (obj, data, view) ->
-  data = _.extend(data, {stash: view.stash})
-
+Marionette.Renderer.render = (obj, data = {}, view) ->
+  data = _.extend(data, {stash: view._stash}) if view._stash?
   template = if _.isFunction(obj) then obj else require(obj)
   return template(data)
 
