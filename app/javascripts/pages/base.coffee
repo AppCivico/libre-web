@@ -27,7 +27,7 @@ module.exports = class PageBase extends Marionette.View
   initialize: ->
     if @options.config? and @options.config['debug']
       name = @options.name || 'none'
-      page document.location.href
+      page = document.location.href
       console.debug "Starting '#{name}' controller for #{page} page..."
 
     super()
