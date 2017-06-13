@@ -16,6 +16,7 @@ module.exports = class Utils {
 	}
 
 	static has(obj = null, str) {
+		if (obj == null) return false
 		if (typeof obj === 'object') return obj.hasOwnProperty(str) ? true : false;
 		if (typeof obj === 'string') return obj.match(new RegExp(str)) ? true : false;
 		return false

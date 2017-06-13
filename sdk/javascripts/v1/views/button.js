@@ -22,6 +22,10 @@ module.exports = class ButtonView extends ViewBase {
 	}
 
 	/* accessors */
+	getData(key = null) {
+		if (key != null) return this._data[key] || null
+		return this._data || {};
+	}
 
 	isRendered() {
 		return this._rendered;
@@ -60,39 +64,55 @@ module.exports = class ButtonView extends ViewBase {
 	onSupportSubmit(self, event) {
 		event.preventDefault();
 
+		// getting data
+		let data = {
+			'page_title': document.title || '', // use metatag
+			'page_referer': self._data.location || '', // use referer
+			'uid': self._data.uid, //
+			'api_key': self.session().getAttr('api_key') || null,
+			'referer': document.location.href, // return referer
+		};
+
 		// user is not authenticated
-		if (!self.isAuth()){
-			// TODO: get data
-			// TODO: redirect data using storage or url
+		if (!self.isAuth()) {
+			let session = self.session();
+			session.setItem('donation', data);
+
 			document.location = `//midialibre.com.br/account/login?act=support&referer=${encodeURIComponent(document.location.href)}`;
+			return false
 		}
 
 		// user is authenticated but role is not allowed
-		if (self.isAuth()){
-			if(self.isJournalist()) {
+		if (self.isAuth()) {
+			if (self.isJournalist()) {
 				alert('[Libre] Você não pode doar estando logado como jornalista');
 				return false
 			}
 		}
 
+		// confirmation of support
 		if (confirm('Você confirma a contribuição de 1 Libre por este conteúdo?')) {
-			var data = new FormData();
-			data.append('page_title', document.title);
-			data.append('page_referer', self._data.location);
+			let params = new FormData();
+			for (var i in data) {
+				console.log(i, data[i]);
+				params.append(i, data[i]);
+			}
 
 			// DEBUG: console.log(`//hapilibre.eokoe.com/api/journalist/${journalist.user_id}/support?api_key=${donor.api_key}`);
 			let apikey = self.session().getAttr('api_key');
 			console.log(self._data);
 			var f = fetch(`//hapilibre.eokoe.com/api/journalist/${self._data.uid}/support?api_key=${apikey}`, {
-				method: 'POST', body: data
-			})
-
-			f.then((res) => {
+				method: 'POST',
+				body: params
+			}).then((res) => {
 				// success
 				if (res.status >= 300) return res;
-				console.log(res.json())
+				console.log(res.json());
+				alert('Muito obrigado! Sua colaboração foi computada com sucesso.');
+
 
 			}).then((res) => {
+				// error
 				if (res.status >= 400 && res.status < 500) {}
 				console.log(res.json())
 

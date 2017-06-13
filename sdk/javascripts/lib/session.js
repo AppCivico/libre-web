@@ -89,7 +89,7 @@ module.exports = class Session {
 		this.setAttributes(data);
 
 		if (key != null && typeof key === 'string')
-			this.attributes[key] = value
+			this._attributes[key] = value
 		else if (key != null && typeof key === 'object')
 			this.setAttributes(key)
 
@@ -100,12 +100,12 @@ module.exports = class Session {
 	save(data = {}) {
 		let attr = this.getAttributes();
 		attr.id = this.getId();
-		return this.getAdapter().setItem(this.getSessionKey(), attr)
+		return this.getAdapter().setItem(this.getSessionKey(), JSON.stringify(attr))
 	}
 
 	// clear current session
 	clear() {
-		return this.getAdapter().setItem(this.getSessionKey(), this.setDefaultAttributes())
+		return this.getAdapter().setItem(this.getSessionKey(), JSON.stringify(this.setDefaultAttributes()))
 	}
 
 }
