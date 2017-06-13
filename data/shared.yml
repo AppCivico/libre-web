@@ -7,6 +7,9 @@ menu:
   - label: Faça Parte
     path: /account/login
 
+  - label: Ajuda
+    path: /ajuda
+
   - label: Contato
     path: /contato
 
@@ -39,6 +42,7 @@ social:
     label: Github
     path: https://github.com/eokoe/libre-api
     icon: fa-github-alt text-green
+
 
 zipcode_search:
   label: Busca CEP - Sistema correios
