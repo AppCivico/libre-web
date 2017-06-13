@@ -16,9 +16,10 @@ menu:
 
 # footer places
 places:
-  - name: Open Knowledge Foundation Brasil
+  - name: Open Knowledge Brasil
     state: SÃO PAULO
-    address: Rua Scipião, 506 - Sala 1<br> Vila Romana São Paulo - SP
+    address: |
+      <p>Rua Scipião, 506 - Sala 1<br> Vila Romana São Paulo - SP</p>
     phone: T +55 11 8155-9703
 
 
