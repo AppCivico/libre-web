@@ -40,12 +40,12 @@ controller: home
       <div class="container">
         <div class="row">
 
-					<div class="col-md-6 section-content">
+          <div class="col-md-6 section-content">
             <%= page.content %>
           </div>
 
-					<div class="col-md-6 section-content">
-						<%= page.citation %>
+          <div class="col-md-6 section-content">
+            <%= page.citation %>
           </div>
 
         </div>
@@ -66,10 +66,10 @@ controller: home
           <% page.who_using.each do |p| %>
             <div class="col-md-3 text-center">
               <p class="section-content">
-							<% link_to p.path, target: '_blank' do %>
-									<br>
+                <%# link_to p.path, target: '_blank' do %>
+                  <br>
                   <%= image_tag p.image, title: p.label, alt: p.title, width: '90%' %>
-                <% end %>
+                <%# end %>
               </p>
             </div>
           <% end %>
