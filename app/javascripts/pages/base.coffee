@@ -10,6 +10,7 @@ UserMenuView = require 'views/user_menu.coffee'
 Params = require 'lib/params.coffee'
 Session = require 'lib/session.coffee'
 Exception = require 'lib/exception.coffee'
+QueryString = require 'lib/query_string.coffee'
 
 
 ###
@@ -49,6 +50,9 @@ module.exports = class PageBase extends Marionette.View
     else
       throw new Error 'Element must be a query selector, jquery or an element'
 
+  # get query string param
+  query: (name) ->
+    QueryString.getParam(name)
 
   # error messages
   errorList: (token) ->

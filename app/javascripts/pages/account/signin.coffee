@@ -4,10 +4,11 @@
 PageBase        = require 'pages/base.coffee'
 
 # models
-AuthModel      = require 'models/auth'
+AuthModel       = require 'models/auth.coffee'
+SupportModel    = require 'models/donor/support.coffee'
 
 # views/components
-Button          = require 'views/button'
+Button          = require 'views/button.coffee'
 
 
 ###
@@ -70,7 +71,36 @@ module.exports = class SigninPage extends PageBase
           message: 'Usuário autênticado...'
         }
 
+        # getting and update session
+        s = @session.get() || {}
+        response.donation = s.donation || {}
         @session.set response if _.isObject response
+
+        # its a donation process
+        if @query('act') is 'support'
+          # TODO: pega os dados da sessão
+          # TODO: seta os dados da sessão no model
+          # TODO: submete os dados para api
+          support = $.ajax {
+            url: "//hapilibre.eokoe.com/api/journalist/#{response.donation.uid || 0}/support?api_key=#{response.api_key || ''}"
+            method: 'POST',
+            data: response.donation || {}
+          }
+
+          # success
+          support.done (res) =>
+            alert 'Muito obrigado! Sua colaboração foi computada com sucesso.'
+            document.location = response.donation.referer
+
+          # error
+          support.fail (res) =>
+            console.log res
+            if confirm("Desculpe! Ocorreu algum erro ao processar a sua colaboração.\nDeseja voltar ao artigo?")
+              document.location = response.donation.referer
+
+          return false
+
+        # its a simple login process
         setInterval ( -> document.location = '/app'), 250
 
       .fail (xhr, status) =>
