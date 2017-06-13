@@ -101,7 +101,7 @@ module.exports = class SigninPage extends PageBase
           return false
 
         # its a simple login process
-        setInterval ( -> document.location = '/app'), 250
+        setTimeout ( -> document.location = '/app'), 250
 
       .fail (xhr, status) =>
         @clearMessages()
