@@ -38,21 +38,31 @@ module.exports = class PageBase extends Marionette.View
 
   # method to handle params
   params: (form) ->
-    if typeof form is 'string'
+    # form string seelctor
+    return if typeof form is 'string'
       Params.init document.querySelector(form)
 
-    else if typeof form is 'object' and form.hasOwnProperty 'context'
-      Params.init form.context
+    # for jQuery instance object
+    else if form instanceof jQuery
+      if form.length > 0 and form.get(0).tagName is 'FORM'
+        Params.init form.get(0)
+      else
+        # exception
+        throw new Error 'jQuery object dont returned an form element'
 
-    else if typeof form is 'object' and form.hasOwnProperty 'context'
+    # for element instance
+    else if typeof form is 'object' and not form instanceof jQuery
       Params.init form
 
+    # not allowed object
     else
       throw new Error 'Element must be a query selector, jquery or an element'
+
 
   # get query string param
   query: (name) ->
     QueryString.getParam(name)
+
 
   # error messages
   errorList: (token) ->
