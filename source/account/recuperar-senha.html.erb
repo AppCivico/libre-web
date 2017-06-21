@@ -14,33 +14,33 @@ controller: account/forgot
 
           <div class="col-md-12 section-content">
             <p><%= page.description %></p>
-						<br>
-						<br>
-
+            <br>
           </div>
 
-					<div class="col-md-8 section-content">
-						<% fields = page.form.fields %>
+          <div class="col-md-8 section-content">
+            <% fields = page.form.fields %>
             <% form_tag "#", name: "forgot_form",  id: "forgot-form", class: "contact-form", novalidate: true do %>
-							<div class="form-group col-md-12">
-								<%= custom_input fields[:email] %>
-								<%= custom_helpblock fields[:email] %>
-							</div>
-							<div class="form-group col-md-12">
-								<p><%= btn = page.form.buttons[:submit]; custom_input btn %></p>
-								<br>
-							</div>
-						<% end %>
+              <div class="form-group col-md-12">
+                <%= custom_input fields[:email] %>
+                <%= custom_helpblock fields[:email] %>
+              </div>
+              <div class="form-group col-md-12">
+                <p><%= btn = page.form.buttons[:submit]; custom_input btn %></p>
+                <br>
+
+                <div id="message" class="message"></div>
+              </div>
+            <% end %>
           </div>
 
-					<!-- help section -->
-					<% section = page.help%>
-					<div class="col-md-offset-1 col-md-3 section-content">
-						<% if section.show %>
-							<h3 class="text-green"><%= section.title %></h3>
-							<%= section.content %>
-						<% end %>
-					</div>
+          <!-- help section -->
+          <% section = page.help%>
+          <div class="col-md-offset-1 col-md-3 section-content">
+            <% if section.show %>
+              <h3 class="text-green"><%= section.title %></h3>
+              <%= section.content %>
+            <% end %>
+          </div>
 
         </div>
       </div>
