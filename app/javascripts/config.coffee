@@ -1,15 +1,16 @@
-"use strict"
-
-
-module.exports = class Config
+###
+#  Application config class
+#  @author dvinciguerra
+###
+module.exports = Backbone.Config = class Config
   # default env
   @environment = 'development'
 
   @config =
     # route table
     routes:
-      contactPath: (args...) => "/contact"
-      donorPath:  (args...) => "/register/donor"
+      contactPath: (args...) -> "/contact"
+      donorPath:  (args...) -> "/register/donor"
 
 
     # config for development
@@ -28,8 +29,12 @@ module.exports = class Config
 
   # getting env config
   @env: =>
-    conf = if @environment is 'production' then @config.production else @config.development
-    conf.url_for = (token) => @routes[token]
+    conf = @config[@environment || 'production']
+
+    # config helpers
+    conf.urlFor = conf.url_for = (token) =>
+      return @routes[token]
+
     return conf
 
 
