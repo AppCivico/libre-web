@@ -1,6 +1,6 @@
 <div id="message" class="message alert alert-<%= @type %>" style="margin-top: 20px;">
 	<% if @title?: %>
-		<strong><%= @title %></strong>&nbsp;
+		<strong><%= @title %></strong><br>
 	<% end %>
 	<%= @message %>
 </div>
