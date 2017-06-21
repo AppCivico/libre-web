@@ -2,12 +2,16 @@
 
 # configuration
 Config = require 'config.coffee'
-Backbone.Config = Config
 Backbone.Config.environment = 'development' # 'production'
+
+# views/components
+UserMenuView = require 'views/user_menu.coffee'
+
 
 
 # Backbone.ajax hack for resources with our perl api
 # (force data, content_type and process_data)
+Backbone.rest = $.ajax
 _backboneAjax = Backbone.ajax
 Backbone.ajax = (options = {}) ->
   options.data = JSON.parse(options.data)
@@ -17,14 +21,12 @@ Backbone.ajax = (options = {}) ->
 
 
 # config renderer
+# FIXME: replace this and put into view|page base classes
 Marionette.Renderer.render = (obj, data = {}, view) ->
   data = _.extend(data, {stash: view._stash}) if view._stash?
   template = if _.isFunction(obj) then obj else require(obj)
   return template(data)
 
-
-# views/components
-UserMenuView = require 'views/user_menu.coffee'
 
 
 # application single point entry
