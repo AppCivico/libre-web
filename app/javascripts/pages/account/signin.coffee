@@ -1,14 +1,12 @@
 "use strict"
 
 # requires
-PageBase        = require 'pages/base.coffee'
+PageBase = require 'pages/base.coffee'
+ButtonView = require 'views/button.coffee'
+AuthModel = require 'models/auth.coffee'
+SupportModel = require 'models/donor/support.coffee'
 
-# models
-AuthModel       = require 'models/auth.coffee'
-SupportModel    = require 'models/donor/support.coffee'
-
-# views/components
-Button          = require 'views/button.coffee'
+RequestError = require 'lib/exception/request.coffee'
 
 
 ###
@@ -19,100 +17,91 @@ module.exports = class SigninPage extends PageBase
   el: document.body
   template: false
 
-  # templates
+  model: new AuthModel
+
   templates:
     message: require 'templates/message'
     input_message: require 'templates/input_message'
 
-  # model
-  model: new AuthModel
-
-  # ui elements
   ui:
-    main: 'form#login-form'
+    form: 'form#login-form'
+    button: 'form#login-form input[type=submit]'
 
-  # events
   events:
-    'submit @ui.main': 'onSubmitLoginForm'
-    'change input, radio, checkbox': 'changeFormFields'
+    'submit @ui.form': 'onSubmitLoginForm'
 
 
-  # update model when input changes
-  changeFormFields: (event) ->
-    event.preventDefault()
-    field = event.currentTarget
-    @model.set field.id, field.value
+  submitButton: ->
+    unless @_button?
+      @_button = new ButtonView el: @getUI('button')
+
+    return @_button
 
 
-  # submit login form action
+  # submit event
   onSubmitLoginForm: (event) ->
     event.preventDefault()
 
-    # on invalid event
+    # form params
+    @model.set @signinParams().toJSON()
+
+    # validations
     unless @model.isValid()
       @clearMessages()
       if @model.errors? and _.has(@model.errors, 'form_error')
         @renderInputMessages($(event.currentTarget), @model.errors.form_error)
       return false
 
-    # submit button
-    btn = new Button el: @getUI('main').find('input[type=submit]')
+    btn = @submitButton()
     btn.state 'loading'
 
-    # make user authentication
-    params = @model.toJSON()
-
-    @model.authenticate params
-      .then (response, status, xhr) =>
-        @clearMessages()
-        @renderMessage btn.$el.parent(), {
-          type: 'success'
-          title: 'Bem vindo!'
-          message: 'Usuário autênticado...'
-        }
-
-        # getting and update session
-        s = @session.get() || {}
-        response.donation = s.donation || {}
-        @session.set response if _.isObject response
-
-        # its a donation process
-        if @query('act') is 'support'
-          # TODO: pega os dados da sessão
-          # TODO: seta os dados da sessão no model
-          # TODO: submete os dados para api
-          support = $.ajax {
-            url: "//hapilibre.eokoe.com/api/journalist/#{response.donation.uid || 0}/support?api_key=#{response.api_key || ''}"
-            method: 'POST',
-            data: response.donation || {}
+    try
+      @model.authenticate @model.toJSON()
+        .then (response, status, xhr) =>
+          @clearMessages()
+          @renderMessage btn.$el.parent(), {
+            type: 'success'
+            title: 'Bem vindo!'
+            message: 'Usuário autênticado...'
           }
 
-          # success
-          support.done (res) =>
-            alert 'Muito obrigado! Sua colaboração foi computada com sucesso.'
-            document.location = response.donation.referer
+          # update session
+          s = @session.get()
+          response.donation = s.donation || {}
+          @session.set response if _.isObject response
 
-          # error
-          support.fail (res) =>
-            console.log res
-            if confirm("Desculpe! Ocorreu algum erro ao processar a sua colaboração.\nDeseja voltar ao artigo?")
-              document.location = response.donation.referer
+          # its a donation process
+          if @query('act') is 'support'
+            support = new SupportModel
+            support.processSupport @supportParams()
+            return false
 
-          return false
+          # its a simple login process
+          setTimeout ( -> document.location = '/app'), 250
 
-        # its a simple login process
-        setTimeout ( -> document.location = '/app'), 250
+        .fail (xhr, status) =>
+          @clearMessages()
+          @renderMessage btn.$el.parent(), {
+            type: 'danger'
+            title: 'Erro!'
+            message: 'Usuário ou senha inválidos'
+          }
 
-      .fail (xhr, status) =>
-        @clearMessages()
-        @renderMessage btn.$el.parent(), {
-          type: 'danger'
-          title: 'Erro!'
-          message: 'Usuário ou senha inválidos'
-        }
+        .always ->
+          btn.state 'loaded'
 
-      .always ->
-        btn.state 'loaded'
+    catch e
+      @clearMessages()
+      @renderMessage btn.$el.parent(), {
+        type: 'danger'
+        title: 'Ops!'
+        message: 'Ocorreu um erro inesperado quando tentamos enviar suar informações ao servidor'
+      }
+      RequestError.throws e.message
+
+    finally
+      btn.state 'loaded'
+
 
   # render message
   renderMessage: ($root = null, stash = {}) ->
@@ -142,3 +131,14 @@ module.exports = class SigninPage extends PageBase
     @$el.find('.has-error').toggleClass('has-error')
     return
 
+
+  signinParams: ->
+    @params @getUI('form')
+      .permit 'email', 'password'
+
+
+  supportParams: ->
+    session = @session.get()
+    params = session.donation || {}
+    params = _.extend params, {api_key: session.api_key}
+    return params
