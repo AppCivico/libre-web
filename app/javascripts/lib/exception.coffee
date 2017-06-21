@@ -1,6 +1,3 @@
-"use strict"
-
-
 ###
 #  Exception class
 #  @author dvinciguerra
@@ -29,3 +26,5 @@ module.exports = class Exception
       when 'brand_required' then "não compatível com nenhuma bandeira"
       else ""
 
+  @throws: (message, options = {}) ->
+    throw new Error message
