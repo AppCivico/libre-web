@@ -1,0 +1,56 @@
+---
+title: Exemplo de botão
+controller: home
+---
+
+
+
+<section id="main-content">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-8">
+            <h2>Libre - Área do Desenvolvedor</h2>
+            <br>
+            <p>Esta área é destinada aos desenvolvedores que pretendem utilizar
+            o SDK da plataforma Libre em seus sites.</p>
+
+
+
+        </div>
+
+        <div class="col-md-4">
+          <h4 class="text-green">Não emcontrou o que procura?</h4>
+          <p><small>Caso não tenha encontrado as informações que precisa, entre em contato conosco solicitando suporte e enviando sua dúvida!</small></p>
+          <p><a class="btn btn-sm btn-success" href="/contato">Solicitar ajuda</a></p>
+        </div>
+
+
+
+        </div>
+    </div>
+</section>
+
+<% unless build? %>
+    <script>
+        (function(d, s, id) {
+            var js, ljs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//midialibre.com.br/sdk/libre.js#v1.0";
+            ljs.parentNode.insertBefore(js, ljs);
+        }(document, 'script', 'libre-sdk'));
+    </script>
+    <% else %>
+        <script>
+            (function(d, s, id) {
+                var js, ljs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//devlibre.eokoe.com/sdk/libre.js#v1.0";
+                ljs.parentNode.insertBefore(js, ljs);
+            }(document, 'script', 'libre-sdk'));
+        </script>
+        <% end %>
