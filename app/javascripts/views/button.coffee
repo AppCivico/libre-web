@@ -39,6 +39,10 @@ module.exports = class Button extends ViewBase
     return @$el.removeAttr('disabled') unless bool
 
 
+  getState: ->
+    @stateName
+
+
   # change status method
   state: (state, options = {}) ->
     throw new Error 'Element not defined' unless @$el?
