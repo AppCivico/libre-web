@@ -20,7 +20,6 @@ module.exports = (config) ->
 
     # list of files / patterns to load in the browser
     files: [
-      '.tmp/dist/assets/js/vendor.bundle.js'
       '.tmp/dist/assets/js/application.bundle.js'
       '.tmp/dist/assets/js/test.bundle.js'
       'app/tests/runner.js'
