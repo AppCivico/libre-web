@@ -12,7 +12,7 @@ describe Page.name, ->
   mock = null
 
   # before each test
-  beforeEach =>
+  beforeEach ->
     page = new Page
     mock = new MockedBase
 
