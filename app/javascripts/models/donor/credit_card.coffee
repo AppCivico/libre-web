@@ -1,6 +1,3 @@
-"use strict"
-
-
 # requires
 ModelBase = require 'models/base.coffee'
 CreditCardValidator = require 'lib/validation/credit_card.coffee'
@@ -59,7 +56,8 @@ module.exports = class CreditCardModel extends ModelBase
 
     # card brand validation (required; metchs: visa, mastercard)
     if p.card_brand?
-      @setError 'card_number', 'brand_invalid' unless _.contains ['visa', 'mastercard'], p.card_brand
+      brands = ['visa', 'mastercard']
+      @setError 'card_number', 'brand_invalid' unless _.contains(brands, p.card_brand)
     else
       @setError 'card_number', 'brand_required'
 
