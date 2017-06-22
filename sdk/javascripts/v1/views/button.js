@@ -113,7 +113,9 @@ module.exports = class ButtonView extends ViewBase {
 
 			}).then((res) => {
 				// error
-				if (res.status >= 400 && res.status < 500) {}
+				if (res.status >= 400 && res.status < 500) {
+					console.error(`Error: ${res}`)
+				}
 				console.log(res.json())
 
 			}).catch(function(error) {
