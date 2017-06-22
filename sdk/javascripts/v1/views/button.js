@@ -23,8 +23,8 @@ module.exports = class ButtonView extends ViewBase {
 
 	/* accessors */
 	getData(key = null) {
-		if (key != null) return this._data[key] || null
-		return this._data || {};
+		if (key != null) return this._data[key]
+		return this._data;
 	}
 
 	isRendered() {
@@ -52,12 +52,14 @@ module.exports = class ButtonView extends ViewBase {
 	bind() {
 		let self = this;
 
-		this.el().querySelectorAll('.lbr-sdk-button')
-			.forEach((x) => {
+		let button = this.el().querySelectorAll('.lbr-sdk-button');
+		if(button != null){
+			button.forEach((x) => {
 				x.addEventListener('submit', (event) => {
 					return self.onSupportSubmit(self, event)
 				}, false)
-			});
+			})
+		}
 	}
 
 	// DOC: https://github.com/eokoe/libre-api/blob/master/t/donor/004-support.t#L21
@@ -69,7 +71,7 @@ module.exports = class ButtonView extends ViewBase {
 			'page_title': document.title || '', // use metatag
 			'page_referer': self._data.location || '', // use referer
 			'uid': self._data.uid, //
-			'api_key': self.session().getAttr('api_key') || null,
+			'api_key': self.session().getAttr('api_key'),
 			'referer': document.location.href, // return referer
 		};
 
