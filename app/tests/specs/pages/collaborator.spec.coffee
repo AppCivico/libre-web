@@ -9,7 +9,7 @@ describe Page.name, ->
   page = null
 
   # before each test
-  beforeEach =>
+  beforeEach ->
     page = new Page
 
 
