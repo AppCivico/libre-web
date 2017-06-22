@@ -7,6 +7,7 @@ Guid = require 'lib/data/guid.coffee'
 # begin test
 describe Guid.name, ->
   object = Guid
+  pattern = /^([A-F0-9]{8})-([A-F0-9]{4})-([A-F0-9]{4})-([A-F0-9]{4})-([A-F0-9]{12})$/
 
   context '.generate()', ->
     it 'should return a random pseudo guid', ->
@@ -16,6 +17,7 @@ describe Guid.name, ->
     it 'should return a string in a specific format', ->
       [1 .. 20].forEach (x) ->
         guid = object.generate()
-        expect(guid).to.match /^([A-F0-9]{8})-([A-F0-9]{4})-([A-F0-9]{4})-([A-F0-9]{4})-([A-F0-9]{12})$/
-        expect(guid).to.have.lengthOf 36
+        expect(guid)
+          .to.match pattern
+          .and.have.lengthOf 36
 
