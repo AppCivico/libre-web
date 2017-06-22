@@ -1,5 +1,3 @@
-"use strict"
-
 # requires
 Model = require 'models/base'
 
@@ -12,7 +10,7 @@ describe Model.name, ->
   mock = null
 
   # before each test
-  beforeEach =>
+  beforeEach ->
     model = new Model
     mock = new MockedBase
 
