@@ -27,17 +27,17 @@ module.exports = class Utils
 
   # encode html strings
   @escapeHTML: (str = '') ->
-    unless html.legth > 0 and typeof html is 'string'
+    unless str.length > 0 and typeof str is 'string'
       console.warn 'An empty html string passed as param'
-    str.replace '<', '&lt;'
-      .replace '>', '&gt;'
+    str.replace /\</g, '&lt;'
+      .replace /\>/g, '&gt;'
 
 
   # decode html strings
   @unescapeHTML: (str = '') ->
-    unless html.legth > 0 and typeof html is 'string'
+    unless str.length > 0 and typeof str is 'string'
       console.warn 'An empty html string passed as param'
-    str.replace '&lt;', '<'
-      .replace '&gt;', '>'
+    return str.replace /&lt;/g, '<'
+      .replace /&gt;/g, '>'
 
 
