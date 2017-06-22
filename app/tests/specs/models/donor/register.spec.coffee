@@ -9,7 +9,7 @@ describe Model.name, ->
   model = null
 
   # before each test
-  beforeEach =>
+  beforeEach ->
     model = new Model
 
 
