@@ -31,7 +31,7 @@ module.exports = class I18n
   # @return <string>
   @t: (nodes) ->
     # param nodes|keys must be  string or array
-    unless typeof(nodes) is 'string' or typeof(nodes) is 'array'
+    unless typeof(nodes) is 'string' or typeof(nodes) is 'object'
       throw new Error 'Node param must be an string or an array variable'
 
     # recusive func
