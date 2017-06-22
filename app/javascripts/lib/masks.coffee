@@ -19,7 +19,13 @@ module.exports = class Mask
       allowDecimal: false, decimalSymbol: '', thousandsSeparatorSymbol: '', prefix: '', suffix: ''
     }
     money:      TextMaskAddons.createNumberMask {
-      allowDecimal: true, decimalSymbol: ',', thousandsSeparatorSymbol: '.', decimalLimit: 2, requireDecimal:false, prefix: '', suffix: ''
+      allowDecimal: true
+      decimalSymbol: ','
+      thousandsSeparatorSymbol: '.'
+      decimalLimit: 2
+      requireDecimal: false
+      prefix: ''
+      suffix: ''
     }
 
 
