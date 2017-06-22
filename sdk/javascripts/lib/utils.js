@@ -9,8 +9,11 @@ module.exports = class Utils {
 	static merge(obj = null, src = null) {
 		if (obj == null || src == null) return null;
 
-		if (typeof obj === 'object')
-			for (var key in src) obj[key] = src[key];
+		if (typeof obj === 'object') {
+			for (var key in src) {
+				obj[key] = src[key]
+			}
+		}
 
 		return obj
 	}
@@ -25,8 +28,10 @@ module.exports = class Utils {
 
 	// validations
 	static isEmpty(o = null) {
-		return (typeof o === 'string') && (o === null || o === '' || o.length === 0) ? true : false;
-		return (o === null || o.length === 0) ? true : false
+		if (o === null || o.length === 0) {
+			return true
+		}
+		return (typeof o === 'string') && (o === null || o === '' || o.length === 0) ? true : false
 	}
 
 	static isNull(o) {
