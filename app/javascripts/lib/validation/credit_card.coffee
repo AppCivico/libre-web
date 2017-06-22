@@ -1,5 +1,3 @@
-"use strict"
-
 ###
 #  Validator class
 #  @author dvinciguerra
