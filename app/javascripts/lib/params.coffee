@@ -18,7 +18,7 @@ module.exports = class Params
     @data = {}
     for f in fields
       @data[f] = @element[f].value
-    return @
+    return this
 
   # return as json
   toJSON: ->
