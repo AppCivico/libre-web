@@ -1,0 +1,53 @@
+---
+title:      Recuperar minha senha
+controller: account/reset
+---
+
+<% page = page_data.reset_password %>
+
+    <section id="main-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1><%= page.title %></h1>
+          </div>
+
+          <div class="col-md-12 section-content">
+            <p><%= page.description %></p>
+						<br>
+						<br>
+
+          </div>
+
+					<div class="col-md-8 section-content">
+						<% fields = page.form.fields %>
+            <% form_tag "#", name: "reset_form",  id: "reset-form", class: "reset-form", novalidate: true do %>
+							<div class="form-group col-md-12">
+								<%= custom_input fields[:token] %>
+								<%= custom_helpblock fields[:token] %>
+							</div>
+							<div class="form-group col-md-12">
+								<%= custom_input fields[:new_password] %>
+								<%= custom_helpblock fields[:new_password] %>
+							</div>
+							<div class="form-group col-md-12">
+								<p><%= btn = page.form.buttons[:submit]; custom_input btn %></p>
+								<br>
+                <div id="message" class="message"></div>
+							</div>
+						<% end %>
+          </div>
+
+					<!-- help section -->
+					<% section = page.help%>
+					<div class="col-md-offset-1 col-md-3 section-content">
+						<% if section.show %>
+							<h3 class="text-green"><%= section.title %></h3>
+							<%= section.content %>
+						<% end %>
+					</div>
+
+        </div>
+      </div>
+    </section>
+
