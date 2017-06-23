@@ -1,6 +1,3 @@
-'use strict'
-
-
 # requires
 ModelBase = require 'models/base.coffee'
 
@@ -37,7 +34,8 @@ module.exports = class DashboardModel extends ModelBase
       dataType: 'json'
     }
 
-  toJSON: () ->
+
+  toJSON: ->
     return {
       user_id: @get('user_id') || 0
       api_key: @get('api_key') || null
