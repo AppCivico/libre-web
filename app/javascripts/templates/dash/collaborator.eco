@@ -3,17 +3,18 @@
 	<div class="row">
 		<div class="col-md-12">
 			<h2 class="text-green">Meus Apoios</h2>
+			<p>Veja abaixo a lista dos seus ultimos apoios realizados.</p>
 			<br>
 		</div>
 
 		<div class="col-md-12">
-			<% @title = "Yr disrupt polaroid la croix readymade prism neutra shoreditch wolf" %>
+			<%# @title = "Yr disrupt polaroid la croix readymade prism neutra shoreditch wolf" %>
 			<%# @supports = [{title:@title, path:'#' }, {title:@title, path:'#' }, {title:@title, path:'#' }, {title:@title, path:'#' }] %>
-			<% @supports = [] %>
+			<% @supports = @stash.supports or [] %>
 
-			<h3 class="support-title text-green" style="margin: 20px 0px;font-size:20px">
+			<h3 class="support-title text-green hide" style="margin: 20px 0px;font-size:20px">
 				<% if @supports.length > 0: %>
-					Janeiro 2017
+					<%# Janeiro 2017 %>
 					<a href="#" class="support-arrow pull-right" style="margin-left: 10px;">
 						<img src="/assets/images/arrow-right.svg" alt="&gt;" height="32px">
 					</a>
@@ -29,19 +30,36 @@
 
 						<div class="row">
 							<% if @supports and @supports.length > 0: %>
-								<% for item in @supports: %>
-									<div class="col-md-3 support-item">
-										<div class="support-image">
-											<img src="/assets/images/image_holder.png" class="img-responsive" alt="Image não encontrada">
-										</div>
-										<div class="support-title">
-											<h5 title="<%= item.title %>"><%= if item.title.length > 40 then "#{item.title.substr(0, 40)}..." else item.title %></h5>
-										</div>
-										<div class="support-title">
-											<a href="<%= item.path %>" title="Acessar: <%= item.path %>" class="text-green"  target="_blank">acessar site</a>
-										</div>
-									</div>
-								<% end %>
+								<div class="list-group">
+									<% for item in @supports: %>
+										<a href="<%= item.page_referer %>" class="list-group-item" title="Acessar: <%= item.page_referer %>" data-bypass="true" target="_blank" style="padding: 25px 20px;">
+											<span class="badge" style="padding: 5px 5px;border-radius: 2px;background-color: #3cb878">
+												<i class="fa fa-globe"></i>
+												acessar
+											</span>
+											<h4 class="list-group-item-heading" title="<%= item.page_title %>">
+												<strong><%= if item.page_title.length > 40 then "#{item.page_title.substr(0, 40)}..." else item.page_title or 'Artigo sem titulo' %></strong>
+											</h4>
+											<p class="list-group-item-text">
+												<strong>Link:</strong> <span><%= item.page_referer %></span>
+											</p>
+										</a>
+
+										<!-- div class="col-md-3 support-item" data-id="<%= item.id %>" data-journalist="<%= item.journalist_id %>">
+											<div class="support-image">
+												<img src="/assets/images/image_holder.png" class="img-responsive" alt="Image não encontrada">
+											</div>
+											<div class="support-title">
+												<h4 title="<%= item.page_title %>"><%= if item.page_title.length > 40 then "#{item.page_title.substr(0, 40)}..." else item.page_title or 'Artigo sem titulo' %></h4>
+											</div>
+											<div class="support-title">
+												<a href="<%= item.page_referer %>" title="Acessar: <%= item.page_referer %>" class="text-green" data-bypass="true" target="_blank">
+													acessar site
+												</a>
+											</div>
+										</div -->
+									<% end %>
+								</div>
 							<% else: %>
 								<div class="col-md-12">
 									<div class="alert alert-warning">
