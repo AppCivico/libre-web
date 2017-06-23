@@ -26,7 +26,7 @@ module.exports = class Session
 
   # update attributes from store and return key value
   get: (key = null) ->
-    @attributes = @adapter.get(@sessionKey)
+    @attributes = @adapter.get(@sessionKey) or @attributes
     return @attributes[key] if key?
     return @attributes
 
