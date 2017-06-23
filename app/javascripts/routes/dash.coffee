@@ -1,12 +1,9 @@
-"use strict"
-
 # requires
-Session       = require 'lib/session.coffee'
-
-# views/components
-IndexView     = require 'views/dash/index.coffee'
-UserFormView  = require 'views/dash/user/form.coffee'
-
+Session = require 'lib/session.coffee'
+IndexView = require 'views/dash/index.coffee'
+UserFormView = require 'views/dash/user/form.coffee'
+UserPlanView = require 'views/dash/user/plan.coffee'
+UserPaymentView = require 'views/dash/user/payment.coffee'
 
 
 ###
@@ -19,24 +16,32 @@ module.exports = class DashRouter extends Marionette.AppRouter
   routes:
     '': 'default'
     'usuario/editar': 'userEdit'
+    'usuario/pagamento': 'userPayment'
+    'usuario/plano': 'userPlan'
 
-
-  # session attribute
   session: new Session
+
 
   # actions
   default: ->
-    # getting current role and update
-    current = @session.get('current') or _.first(@session.get 'roles')
-    @session.set('current', current) unless @session.get('current')?
-
-    # render default layout
+    current = @getUserRole()
     view = new IndexView
-    #view.render()
 
 
   userEdit: ->
     view = new UserFormView
+    view.render()
+
+
+  userPlan: ->
+    current = @getUserRole()
+    view = new UserPlanView
+    view.render()
+
+
+  userPayment: ->
+    current = @getUserRole()
+    view = new UserPaymentView
     view.render()
 
 
@@ -45,3 +50,8 @@ module.exports = class DashRouter extends Marionette.AppRouter
     unless route is 'default'
       document.getElementById('dash-header').innerHTML = ''
 
+
+  getUserRole: ->
+    current = @session.get('current') or _.first(@session.get 'roles')
+    @session.set('current', current) unless @session.get('current')?
+    current
