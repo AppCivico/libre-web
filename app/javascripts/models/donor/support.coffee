@@ -12,6 +12,7 @@ module.exports = class SupportModel extends ModelBase
   defaults:
     uid: 0
     api_key: ''
+    donor_id: 0
 
   # events
   events:
@@ -27,7 +28,7 @@ module.exports = class SupportModel extends ModelBase
   save: (params = {}) ->
     @set params
     @url = "#{@urlRoot}/journalist/#{@get('uid')}/support?api_key=#{@get('api_key')}"
-    super
+    super()
 
 
   # specialized method to process donor support
@@ -42,3 +43,13 @@ module.exports = class SupportModel extends ModelBase
       .always ->
         document.location = params.referer
 
+
+  findSupports: (params = {}) ->
+    @set params
+    @url = "#{@urlRoot}/donor/#{@get('donor_id')}/support?api_key=#{@get('api_key')}"
+    $.ajax {
+      url: @url or ''
+      method: 'GET'
+      data: @toJSON()
+      type: 'json'
+    }
