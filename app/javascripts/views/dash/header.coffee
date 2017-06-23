@@ -1,9 +1,5 @@
-"use strict"
-
 # requires
 ViewBase = require 'views/base.coffee'
-
-# models
 DashboardModel = require 'models/donor/dashboard.coffee'
 
 ###
@@ -13,12 +9,11 @@ DashboardModel = require 'models/donor/dashboard.coffee'
 module.exports = class HeaderView extends ViewBase
   el: 'section#dash-header'
 
-  # setting template
   template: 'templates/dash/header'
 
-  # model
   model: new DashboardModel
 
+  # load statistics and render
   render: ->
     data = {}
     @model.set @session.get() || {}
@@ -26,7 +21,9 @@ module.exports = class HeaderView extends ViewBase
       .then (json) =>
         @model.set json
         super()
+
       .fail (res) ->
         alert 'Não foi possível carregar os dados do plano atual.'
 
     super()
+
