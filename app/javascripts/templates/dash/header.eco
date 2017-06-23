@@ -39,9 +39,9 @@
 						<small>Próxima data de débito:</small><br>
 						<small>02.02.2017</small>
 					</p>
-					<div class="number-buttons hide">
-						<a class="text-green" href="#plano">DETALHES</a>
-						<a class="text-green" href="#extrato">VER EXTRATO</a>
+					<div class="number-buttons">
+						<a class="text-green pull-left" href="#usuario/plano">VER PLANO</a>
+						<a class="text-green pull-right" href="#usuario/pagamento">PAGAMENTO</a>
 					</div>
 				</div>
 			</div>
