@@ -1,8 +1,17 @@
 # See docs at http://brunch.readthedocs.org/en/latest/config.html.
 
 # getting configuration by context
-context = process.env.MMPROJECT or 'default'
-console.log "### Running Project '#{context}' ###"
+context = if process.env.hasOwnProperty 'BrunchApp'
+  process.env.BrunchApp
+else
+  console.warn 'BrunchApp ENV not defined, using default application name'
+  'default'
+
+console.log """
+  ###################################################################
+  ## BRUNCH - Running Project '#{context}'
+  ###################################################################
+"""
 
 # choose project compilation
 brunch_config = switch context

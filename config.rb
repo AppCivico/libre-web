@@ -72,21 +72,50 @@ configure :build do
 end
 
 
+module Brunch
+
+  def self.command(opts = {})
+    opts = prepare_params(opts)
+    "export BrunchApp=#{opts[:project]}; LOGGY_STACKS=#{opts[:loggy]} #{opts[:brunch_path]} #{opts[:command]} --env #{opts[:env]}"
+  end
+
+  def self.build(opts = {})
+    opts[:command] = 'build'
+    command(opts)
+  end
+
+  def self.watch(opts = {})
+    opts[:command] = 'watch --stdin'
+    command(opts)
+  end
+
+  private
+
+  def self.prepare_params(opts = {})
+    opts[:command] ||=  'build'
+    opts[:project] ||=  'default'
+    opts[:loggy] ||= 1
+    opts[:env] ||= 'development'
+    opts[:brunch_path] ||= './node_modules/brunch/bin/brunch'
+    opts
+  end
+end
+
+
 # external asset pipeline
 activate :external_pipeline,
   name: :webapp,
   command: build? ?
-    "export MMPROJECT=default; LOGGY_STACKS=1 ./node_modules/brunch/bin/brunch build --env #{config[:environment]}" :
-    "export MMPROJECT=default; LOGGY_STACKS=1 ./node_modules/brunch/bin/brunch watch --stdin --env #{config[:environment]}",
+    Brunch.build(project: 'default', env: config[:environment]) :
+    Brunch.watch(project: 'default', env: config[:environment]),
   source: ".tmp/dist",
   latency: 2
-
 
 activate :external_pipeline,
   name: :sdk,
   command: build? ?
-    "export MMPROJECT=sdk; LOGGY_STACKS=1 ./node_modules/brunch/bin/brunch build --env #{config[:environment]}" :
-    "export MMPROJECT=sdk; LOGGY_STACKS=1 ./node_modules/brunch/bin/brunch watch --stdin --env #{config[:environment]}",
+    Brunch.build(project: 'sdk', env: config[:environment]) :
+    Brunch.watch(project: 'sdk', env: config[:environment]),
   source: ".tmp/dist",
   latency: 2
 
