@@ -1,5 +1,3 @@
-"use strict"
-
 # configuration
 config = require('config.coffee').env()
 
@@ -20,11 +18,10 @@ module.exports = class ModelBase extends Backbone.Model
 
   # constructor
   initialize: ->
-    # build default url using urlRoot
     @url = "#{@urlRoot}#{@url}" unless @url is "#{@urlRoot}#{@url}"
 
     # binding events
-    @on(key, @[value], @) for key, value of @events
+    @on(key, this[value], this) for key, value of @events
 
     super arguments
 
