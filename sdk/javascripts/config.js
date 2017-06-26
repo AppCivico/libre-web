@@ -25,7 +25,7 @@ module.exports = class Config {
 	}
 
 	static env(name = 'production'){
-		return getEntry(name);
+		return this.getEntry(name);
 	}
 }
 
