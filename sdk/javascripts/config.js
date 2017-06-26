@@ -1,16 +1,16 @@
 // configurations
 const _configs = {
 	development: {
-		base: '//devlibre.eokoe.com',
+		base: "//devlibre.eokoe.com",
 		assets: {
-			button: '/assets/sdk/v1.0/img/lbr-button-image.svg'
+			button: "/assets/sdk/v1.0/img/lbr-button-image.svg"
 		}
 	},
 
 	production: {
-		base: '//devlibre.eokoe.com',
+		base: "//devlibre.eokoe.com",
 		assets: {
-			button: '/assets/sdk/v1.0/img/lbr-button-image.svg'
+			button: "/assets/sdk/v1.0/img/lbr-button-image.svg"
 		}
 	}
 };
