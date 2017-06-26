@@ -1,10 +1,5 @@
-'use strict';
-
 // configurations
-console.warn('WARN: development is point to devlibre.eokoe.com domain');
 const _configs = {
-
-	// development env
 	development: {
 		base: '//devlibre.eokoe.com',
 		assets: {
@@ -12,7 +7,6 @@ const _configs = {
 		}
 	},
 
-	// production env
 	production: {
 		base: '//devlibre.eokoe.com',
 		assets: {
@@ -26,8 +20,12 @@ const _configs = {
 * Configuration class
 */
 module.exports = class Config {
+	static getEntry(key) {
+		return _configs[key] || {};
+	}
+
 	static env(name = 'production'){
-		return _configs[name] || {}
+		return getEntry(name);
 	}
 }
 
