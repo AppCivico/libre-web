@@ -1,6 +1,6 @@
 // requires
-const Guid = require('lib/data/guid.js');
-const Utils = require('lib/utils.js');
+const Guid = require("lib/data/guid.js");
+const Utils = require("lib/utils.js");
 
 /**
  * Session class
@@ -20,7 +20,7 @@ module.exports = class Session {
 
 		if (!Utils.isEmpty(data)) {
 			session.setAttributes(data);
-			session.id = (Utils.has(data, 'id')) ? data.id : session.id;
+			session.id = (Utils.has(data, "id")) ? data.id : session.id;
 		}
 
 		return session;
@@ -43,7 +43,7 @@ module.exports = class Session {
 	}
 
 	getSessionKey() {
-		this._sessionKey = this._sessionKey || 'libre-session';
+		this._sessionKey = this._sessionKey || "libre-session";
 		return this._sessionKey;
 	}
 
@@ -90,10 +90,10 @@ module.exports = class Session {
 		let data = JSON.parse(this.getAdapter().getItem(this.getSessionKey()));
 		this.setAttributes(data);
 
-		if (key != null && typeof key === 'string') {
+		if (key != null && typeof key === "string") {
 			this._attributes[key] = value;
 		}
-		else if (key != null && typeof key === 'object') {
+		else if (key != null && typeof key === "object") {
 			this.setAttributes(key);
 		}
 
