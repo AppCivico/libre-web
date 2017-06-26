@@ -1,9 +1,7 @@
-"use strict"
-
 # requires
 PageBase = require 'pages/base.coffee'
 ButtonView = require 'views/button.coffee'
-AuthModel = require 'models/auth.coffee'
+SessionModel = require 'models/session.coffee'
 SupportModel = require 'models/donor/support.coffee'
 
 RequestError = require 'lib/exception/request.coffee'
@@ -17,7 +15,7 @@ module.exports = class SigninPage extends PageBase
   el: document.body
   template: false
 
-  model: new AuthModel
+  model: new SessionModel {type: 'signin'}
 
   templates:
     message: require 'templates/message'
@@ -56,8 +54,8 @@ module.exports = class SigninPage extends PageBase
     btn.state 'loading'
 
     try
-      @model.authenticate @model.toJSON()
-        .then (response, status, xhr) =>
+      @model.authenticate()
+        .done (response, status, xhr) =>
           @clearMessages()
           @renderMessage btn.$el.parent(), {
             type: 'success'

@@ -1,14 +1,13 @@
-"use strict"
-
 # requires
 PageBase = require 'pages/base.coffee'
-ForgotModel = require 'models/account/forgot.coffee'
+SessionModel = require 'models/session.coffee'
 ButtonView = require 'views/button.coffee'
 
 I18n = require 'lib/i18n.coffee'
 FormMessage = require 'lib/mixin/form_message.coffee'
 InputMessages = require 'lib/mixin/input_message.coffee'
 
+RequestError = require 'lib/exception/request.coffee'
 
 
 ###
@@ -21,7 +20,7 @@ module.exports = class ForgotPage extends PageBase
   _.extend ForgotPage.prototype, InputMessages.prototype
 
   # model
-  model: new ForgotModel
+  model: new SessionModel {type: 'forgot'}
 
   # ui elements
   ui:
@@ -63,7 +62,7 @@ module.exports = class ForgotPage extends PageBase
     btn.state 'loading', label: 'Enviando...'
 
     try
-      @model.save()
+      @model.forgotPassword()
         .done (response, status, xhr) =>
           @renderFormMessage {
             type: 'success'

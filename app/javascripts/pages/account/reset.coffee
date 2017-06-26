@@ -1,6 +1,6 @@
 # requires
 PageBase = require 'pages/base.coffee'
-ResetModel = require 'models/account/reset.coffee'
+SessionModel = require 'models/session.coffee'
 ButtonView = require 'views/button.coffee'
 
 I18n = require 'lib/i18n.coffee'
@@ -20,7 +20,7 @@ module.exports = class ResetPage extends PageBase
   _.extend ResetPage.prototype, InputMessages.prototype
 
   # model
-  model: new ResetModel
+  model: new SessionModel {type: 'reset'}
 
   # ui elements
   ui:
@@ -55,6 +55,7 @@ module.exports = class ResetPage extends PageBase
 
     # validations
     unless @model.isValid()
+      console.log @model
       @renderInputMessages($form, @model.errors.form_error)
       return false
 
