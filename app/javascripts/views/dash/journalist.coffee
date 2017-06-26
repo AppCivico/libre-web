@@ -81,7 +81,7 @@ module.exports = class JournalistView extends ViewBase
             var js, ljs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
-            js.src = "//midialibre.com.br/sdk/libre.js#v1.0;";
+            js.src = "//devlibre.eokoe.com/sdk/libre.js#v1.0;";
             ljs.parentNode.insertBefore(js, ljs);
           }(document, 'script', 'libre-sdk'));
           </script>

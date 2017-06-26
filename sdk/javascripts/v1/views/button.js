@@ -73,7 +73,8 @@ module.exports = class ButtonView extends ViewBase {
 			let session = self.session();
 			session.setItem("donation", data);
 
-			document.location = `//midialibre.com.br/account/login?act=support&referer=${encodeURIComponent(document.location.href)}`;
+			//document.location = `//midialibre.com.br/account/login?act=support&referer=${encodeURIComponent(document.location.href)}`;
+			document.location = `//devlibre.eokoe.com/account/login?act=support&referer=${encodeURIComponent(document.location.href)}`;
 			return false
 		}
 
