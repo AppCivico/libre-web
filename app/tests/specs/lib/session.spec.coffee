@@ -9,7 +9,7 @@ describe Session.name, ->
   object = null
 
   # before each test
-  beforeEach =>
+  beforeEach ->
     object = new Session
 
 
