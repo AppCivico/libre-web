@@ -51,7 +51,7 @@ module.exports = class Session
 
   # load current session
   @load: ->
-    session = (new @)
+    session = (new this)
     data = session.adapter.get session.sessionKey
 
     unless _.isEmpty data
