@@ -1,19 +1,11 @@
-"use strict"
-
 # requires
-PageBase        = require 'pages/base.coffee'
-
-# models
-AuthModel       = require 'models/auth.coffee'
-PlanModel       = require 'models/donor/plan.coffee'
-PersonalModel   = require 'models/donor/register.coffee'
+PageBase = require 'pages/base.coffee'
+SessionModel = require 'models/session.coffee'
+PlanModel = require 'models/donor/plan.coffee'
+PersonalModel = require 'models/donor/register.coffee'
 CreditCardModel = require 'models/donor/credit_card.coffee'
-
-# views/components
-Button          = require 'views/button.coffee'
-
-# masks
-Masks           = require 'lib/masks.coffee'
+Button = require 'views/button.coffee'
+Masks = require 'lib/masks.coffee'
 
 ###
 #  Page class
@@ -27,23 +19,17 @@ module.exports = class CollaboratorPage extends PageBase
     message: require 'templates/message'
     input_message: require 'templates/input_message'
 
-
-  # models
   models:
-    auth:     new AuthModel
+    auth:     new SessionModel {type: 'signin'}
     personal: new PersonalModel
     plan:     new PlanModel
     billing:  new CreditCardModel
 
-
-  # events
   regions:
     personal: 'form#personal-form'
     plan:     'form#plan-form'
     billing:  'form#billing-form'
 
-
-  # ui elements
   ui:
     personal: 'form#personal-form'
     plan:     'form#plan-form'
@@ -51,8 +37,6 @@ module.exports = class CollaboratorPage extends PageBase
     navtabs:  '.nav-tabs'
     panetabs: '.js-tabcontainer'
 
-
-  # view events
   events:
     # field changes
     "change @ui.personal input":  'changePersonalFields'
@@ -138,12 +122,12 @@ module.exports = class CollaboratorPage extends PageBase
         }
 
         # make user authentication
-        auth = auth.authenticate {
-          email: model.get('email'), password: model.get('password')
-        }
-        auth.then (response, status, xhr) =>
-          @session.set response
-          @enableTab('plan')
+        auth.set 'email', model.get('email')
+        auth.set 'password', model.get('password')
+        auth.authenticate()
+          .then (response, status, xhr) =>
+            @session.set response
+            @enableTab('plan')
 
         # authentication fail is disabled
 
