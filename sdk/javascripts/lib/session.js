@@ -30,10 +30,10 @@ module.exports = class Session {
 
 	setDefaultAttributes() {
 		return this._attributes = {
-			api_key: null,
-			roles: [],
-			user_id: 0,
-			timestamp: new Date().getTime()
+			"api_key": null,
+			"roles": [],
+			"user_id": 0,
+			"timestamp": new Date().getTime()
 		};
 	}
 
