@@ -49,7 +49,7 @@ module.exports = class ButtonView extends ViewBase {
 		let button = this.el().querySelectorAll(".lbr-sdk-button");
 		if(button != null){
 			button.forEach((x) => {
-				x.addEventListener('submit', (event) => {
+				x.addEventListener("submit", (event) => {
 					return self.onSupportSubmit(self, event);
 				}, false);
 			});
