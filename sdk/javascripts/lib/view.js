@@ -1,5 +1,5 @@
 // requires
-const Session = require('lib/session.js');
+const Session = require("lib/session.js");
 
 /**
  *	Component class
@@ -10,24 +10,19 @@ module.exports = class ViewBase {
 
 	constructor(args = {}) {
 		this._el = (args.el != null) ? args.el : document.createElement('div');
-		this._config = (args.config != null) ? args.config : {}
+		this._config = (args.config != null) ? args.config : {};
 	}
 
-	/* accessors */
-
 	el() {
-		return this._el
+		return this._el;
 	}
 
 	config() {
-		return this._config
+		return this._config;
 	}
 
-	// return the current or a new session
 	session() {
-		return Session.load()
+		return Session.load();
 	}
-
-	/* methods */
 }
 
