@@ -1,5 +1,5 @@
 // requires
-const Resource = require('lib/resource.js');
+const Resource = require("lib/resource.js");
 
 /**
 * Support resource class
