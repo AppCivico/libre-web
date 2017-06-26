@@ -6,7 +6,7 @@ module CustomHelpers
   include CustomTagHelpers
 
   # set current active link
-  def current_link(ctrl, act=nil, css='link-light')
+  def current_link(ctrl, act = nil, css = 'link-light')
     if ctrl and not act
       current_page.data.controller == ctrl ? css : ''
     elsif ctrl and act
@@ -18,20 +18,21 @@ module CustomHelpers
 
   # shortcut that return controller name
   def page_controller(type = nil)
-    if type == 'attr'
-      current_page.data.controller ?  "data-controller=\"#{current_page.data.controller}\"" : ""
-    else
-      current_page.data.controller
-    end
+    page_application :controller, type
   end
 
   # shortcut that return module name
   def page_module(type = nil)
-    if type == 'attr'
-      current_page.data.module ?  "data-module=\"#{current_page.data.module}\"" : ""
-    else
-      current_page.data.module
+    page_application :module, type
+  end
+
+  def page_application(name = :controller, type = nil)
+    source = current_page.data[name]
+    if type == 'attr' and source
+      source = "data-#{name}=\"#{source}\""
     end
+
+    source
   end
 
   # shortcut that return action name
