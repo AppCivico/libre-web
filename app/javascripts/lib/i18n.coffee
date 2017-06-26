@@ -12,6 +12,21 @@ module.exports = class I18n
       '''
       request_message: 'Encontramos um erro ao enviar seus dados para o servidor'
 
+      # error messages
+      # TODO: Always check for new error
+      # messages on https://github.com/eokoe/libre-api
+      'invalid': "é inválido"
+      'required': "é obrigatório"
+      'empty_is_invalid': "é obrigatório"
+      'missing': "é obrigatório"
+      'alredy exists': "já está cadastrado"
+      'in_fucture': "tem valor muito no futuro"
+      'min_invalid': "tem valor muito pequeno"
+      'max_invalid': "excede o tamanho máximo"
+      'char_invalid': "contém caracteres inválidos"
+      'brand_invalid': "deve ser de uma bandeira válida"
+      'brand_required': "não compatível com nenhuma bandeira"
+
     error:
       forgot_title: 'Ops!'
       forgot_message: 'Encontramos um erro ao enviar seus dados para o servidor'
