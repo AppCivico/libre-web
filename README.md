@@ -6,29 +6,54 @@
 
 Esta é a implementação do front-end web do projeto **Libre** construindo utilizando Middleman, Coffeescript, Backbone e Marionette.js.
 
+## Guias e Documentação
 
-## Plataformas
+**Dependencias**
+
+- Instalação do rbenv
+
+- Instalação do nvm
+
+
+**Instalação**
+
+- Fazendo o build da plataforma Libre
+
+
+
+## Informações Técnicas
+
+Veja abaixo uma lista de ferramentas e linguagens utilizadas para a criação do projeto.
+
+### Plataformas
 	- Ruby v2.4
 	- Node v8.1.2
 
-## Linguagens
+### Linguagens
 	- Coffeescript
 	- ES2015
 	- Ruby
 	- Sass
 
-## Build & Deploy
+### Build & Deploy
 	- Brunch as build system
 	- Middleman 4+ as Static Site Generator
 	- Mila as deployer
 
-## Frameworks & Libs
+### Frameworks & Libs
 	- BackboneJS
 	- jQuery
 	- Underscore
 
-## Testes & Code Quality
+### Testes & Code Quality
 	- Coffeelint
 	- ESlint
 	- Codacy
 	- Karma using Mocha + Chaijs
+
+
+## Problemas ou Suporte
+
+Caso encontre algum problema ou bug neste projeto você pode abrir uma **issue** aqui no **GitHub**
+que nosso time de desenvolvedores será notificado para verificar sua solicitação.
+
