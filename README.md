@@ -2,9 +2,12 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/71af2f74facb45d4b0ed4bf1b2c0f6d0)](https://www.codacy.com/app/Eokoe/libre-web?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eokoe/libre-web&amp;utm_campaign=Badge_Grade)
 
+
 ## Descrição
 
-Esta é a implementação do front-end web do projeto **Libre** construindo utilizando Middleman, Coffeescript, Backbone e Marionette.js.
+Libre é uma ferramenta, uma moeda e uma plataforma para facilitar o apoio financeiro a veículos e
+jornalistas. E estreitar a relação entre imprensa e público.
+
 
 ## Guias e Documentação
 
@@ -49,7 +52,7 @@ Veja abaixo uma lista de ferramentas e linguagens utilizadas para a criação do
 	- Coffeelint
 	- ESlint
 	- Codacy
-	- Karma using Mocha + Chaijs
+	- Karma using Mocha + Chaijs + Sinonjs
 
 
 ## Problemas ou Suporte
