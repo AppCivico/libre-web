@@ -37,6 +37,8 @@ module.exports =
     eslint:
       pattern: /^sdk\/.*\.js?$/
       warnOnly: true
+      config:
+        extends: ["eslint:recommended"]
 
   paths:
     public: ".tmp/dist"

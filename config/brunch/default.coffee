@@ -89,6 +89,8 @@ module.exports =
     eslint:
       pattern: /^app\/.*\.js?$/
       warnOnly: true
+      config:
+        extends: ["eslint:recommended"]
 
 
 
