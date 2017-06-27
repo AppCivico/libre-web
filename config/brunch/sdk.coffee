@@ -34,6 +34,9 @@ module.exports =
     babel:
       presets: ['latest']
 
+    eslint:
+      pattern: /^sdk\/.*\.js?$/
+      warnOnly: true
 
   paths:
     public: ".tmp/dist"

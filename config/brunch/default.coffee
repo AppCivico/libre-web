@@ -78,8 +78,19 @@ module.exports =
       options:
         includePaths: ['node_modules/bootstrap-sass/assets/stylesheets']
         precision: 8
+
     babel:
       presets: ['env']
+
+    coffeelint:
+      pattern: /^app\/.*\.coffee$/
+      useCoffeelintJson: yes
+
+    eslint:
+      pattern: /^app\/.*\.js?$/
+      warnOnly: true
+
+
 
 
   conventions:
