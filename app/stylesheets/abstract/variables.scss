@@ -1,0 +1,48 @@
+/**
+* Sass Style Variables
+*/
+
+$dark_green: #1e5f2f;
+$green: #00a44f;
+$light_green: #3cb878;
+
+$white: #ffffff;
+$gray: #999999;
+
+
+// foreground colors
+$fg_white: #ffffff;
+$fg_black: #333333;
+$fg_grayc: #cccccc;
+$fg_gray9: #999999;
+$fg_gray4: #444444;
+$fg_gray3: #333333;
+$fg_gray2: #222222;
+$fg_green: #33cc66;
+
+$fg_default: $fg_white;
+
+
+
+// background colors
+$bg_white: #ffffff;
+$bg_black: #333333;
+$bg_grayc: #cccccc;
+$bg_gray9: #999999;
+$bg_gray4: #444444;
+$bg_gray3: #333333;
+$bg_gray2: #222222;
+$bg_green: #33cc66;
+
+$bg_default: $bg_white;
+
+
+
+// font defaults
+
+// MEDIA QUERY USAGE:
+// @media ($phone) { ... }
+$phone: 'max-width: 640px';
+$tablet: 'min-width: 768px';
+$desktop: 'min-width: 1024px';
+$widescreen: 'min-width: 1024px';

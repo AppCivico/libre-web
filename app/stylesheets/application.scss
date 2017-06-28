@@ -1,23 +1,7 @@
 
 @import 'bootstrap';
+@import 'abstract/variables.scss';
 
-/* VARS */
-$dark_green: #1e5f2f;
-$green: #00a44f;
-$light_green: #3cb878;
-
-$white: #ffffff;
-$gray: #999999;
-
-
-/**
-* MEDIA QUERY USAGE:
-* @media ($phone) { ... }
-*/
-$phone: 'max-width: 640px';
-$tablet: 'min-width: 768px';
-$desktop: 'min-width: 1024px';
-$widescreen: 'min-width: 1024px';
 
 .debug {
   border: solid 1px red;
