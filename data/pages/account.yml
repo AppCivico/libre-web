@@ -34,18 +34,26 @@ section:
     form:
       fields:
         email:
-          label: E-mail
-          type: email
+          label: E-mail de usuário
           name: email
+          type: email
+          value:
           required: true
+          disabled: false
+          styles: form-control
           classes: form-control
+          help:
 
         password:
           label: Senha
-          type: password
           name: password
+          type: password
+          value:
           required: true
+          disabled: false
+          styles: form-control
           classes: form-control
+          help:
 
         save_data:
           label: Deseja manter sua sessão nesse computador?
@@ -68,7 +76,13 @@ section:
           label: Entrar
           name: btn_enviar
           type: submit
+          value: Entrar
+          required: true
+          disabled: false
+          styles: btn btn-success
           classes: btn btn-success
+          help:
+
 
 
 
