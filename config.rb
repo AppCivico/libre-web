@@ -16,6 +16,7 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 page '/sdk*', layout: false
 page '/index.html', layout: 'default'
+page '/account/external/*', layout: 'default'
 
 
 
