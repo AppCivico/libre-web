@@ -4,7 +4,6 @@
 Config = require 'config.coffee'
 Backbone.Config.environment = 'development' # 'production'
 
-# views/components
 UserMenuView = require 'views/user_menu.coffee'
 
 
@@ -38,7 +37,10 @@ module.exports = class Application
     body = document.body
 
     # user menu
-    menu = new UserMenuView
+    menu = try
+      new UserMenuView
+    catch
+      null
 
     # getting an instance of page(controller)
     if controller = body.getAttribute('data-controller')
