@@ -27,13 +27,28 @@ module.exports = class SigninPage extends PageBase
 
   events:
     'submit @ui.form': 'onSubmitLoginForm'
+    'click a.js-btn-toogle': 'onClickJSTooglePanels'
 
 
   submitButton: ->
     unless @_button?
       @_button = new ButtonView el: @getUI('button')
-
     return @_button
+
+
+  onClickJSTooglePanels: (event) ->
+    $signin   = @$ '#signin-section'
+    $register = @$ '#register-section'
+
+    if $signin.css('display') is 'none'
+      $signin.css 'display', 'block'
+    else
+      $signin.css 'display', 'none'
+
+    if $register.css('display') is 'none'
+      $register.css 'display', 'block'
+    else
+      $register.css 'display', 'none'
 
 
   # submit event
