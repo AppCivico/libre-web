@@ -1,23 +1,23 @@
 
-    <footer id="main-footer">
+    <footer id="footer">
       <div class="container">
         <div class="row">
           <div class="col-md-4">
             <% data.shared.places.each do |p| %>
-              <h4><strong><%= p.name %></strong></h4>
+							<h4><strong><%= p.name %></strong></h4>
               <p><%= p.address %></p>
               <p><strong><%= p.phone %></strong></p>
             <% end %>
           </div>
           <div class="col-md-8 text-right">
             <a href="https://br.okfn.org/" target="_blank">
-              <img src="/assets/images/okfn-logo.png" alt="OKfn">
+              <img src="/assets/images/default/okfn-logo.png" alt="OKfn">
             </a>
             <a href="https://appcivico.com/pt/" target="_blank">
-              <img src="/assets/images/appcivico-logo.png" alt="" style="margin-left:20px">
+              <img src="/assets/images/default/appcivico-logo.png" alt="" style="margin-left:20px">
             </a>
             <a href="http://www.fluxo.net/" target="_blank">
-              <img src="/assets/images/fluxo-logo.png" alt="Fluxo" title="Fluxo" style="margin-left:20px">
+              <img src="/assets/images/default/fluxo-logo.png" alt="Fluxo" title="Fluxo" style="margin-left:20px">
             </a>
           </div>
 				</div>
@@ -27,14 +27,14 @@
 				<div class="row">
 					<div class="col-md-12 section-content text-center">
 						<p>
-							<strong>SIGA-NOS</strong>
-							<br>
+							<small>Siga-nos</small>
+							<br class="space-top">
 
               <% data.shared.social.each do |name, item| %>
 								<a href="<%= item.path %>" target="_blank" class="_social-button" style="color:#333;text-decoration:none" title="<%= item.label%>">
 									<span class="fa-stack fa-lg">
-										<i class="fa fa-circle fa-stack-2x"></i>
-										<i class="fa <%= item.icon %> fa-stack-1x"></i>
+										<!-- i class="fa fa-circle fa-stack-2x"></i -->
+										<i class="fa <%= item.icon %> fa-1x" style="font-size:36px;color:#ffffff"></i>
 									</span>
 								</a>
               <% end %>
