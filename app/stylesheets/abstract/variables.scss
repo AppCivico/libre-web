@@ -13,6 +13,7 @@ $gray: #999999;
 // foreground colors
 $fg_white: #ffffff;
 $fg_black: #333333;
+$fg_graye: #eeeeee;
 $fg_grayc: #cccccc;
 $fg_gray9: #999999;
 $fg_gray4: #444444;
@@ -20,13 +21,15 @@ $fg_gray3: #333333;
 $fg_gray2: #222222;
 $fg_green: #33cc66;
 
-$fg_default: $fg_white;
+$fg_default: $fg_black;
+$fg_invert: $fg_white;
 
 
 
 // background colors
 $bg_white: #ffffff;
 $bg_black: #333333;
+$bg_graye: #eeeeee;
 $bg_grayc: #cccccc;
 $bg_gray9: #999999;
 $bg_gray4: #444444;
@@ -35,10 +38,12 @@ $bg_gray2: #222222;
 $bg_green: #33cc66;
 
 $bg_default: $bg_white;
+$bg_invert: $bg_black;
 
 
 
 // font defaults
+$fnt_default: 'Montserrat';
 
 // MEDIA QUERY USAGE:
 // @media ($phone) { ... }
