@@ -14,21 +14,16 @@
     <%= partial 'partial/_noscript.erb' %>
 
 
-    <!-- navbar -->
-    <%= partial 'partial/_navbar.erb' %>
+		<%# unless ['app', 'dash'].include? current_page.data.module %>
+      <section id="navbar">
+        <div class="container">
+          <%= partial 'partial/_navbar.erb' %>
+        </div>
+      </section>
 
-
-		<% unless ['app', 'dash'].include? current_page.data.module %>
 			<header class="header-internal">
-				<div class="container">
-					<div class="intro-text hide">
-						<div class="intro-lead-in">Photo booth sriracha art party meggings VHS!</div>
-						<div class="intro-heading">Dreamcatcher hoodie echo park shoreditch chartreuse</div>
-						<a href="#services" class="page-scroll btn btn-xl">Veja mais</a>
-					</div>
-				</div>
-			</header>
-		<% end %>
+      </header>
+		<%# end %>
 
 
     <%= yield %>
