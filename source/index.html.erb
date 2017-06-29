@@ -5,60 +5,156 @@ controller: home
 
 <% page = data.pages.home %>
 
-    <!-- navbar -->
-    <%= partial 'partial/_navbar.erb' %>
+    <div class="side-green"></div>
 
     <header class="header-index">
       <div class="container">
-        <div class="intro-text hide">
-          <div class="intro-lead-in">Photo booth sriracha art party meggings VHS!</div>
-          <div class="intro-heading">Dreamcatcher hoodie echo park shoreditch chartreuse</div>
-          <a href="#services" class="page-scroll btn btn-xl">Veja mais</a>
+        <%= partial 'partial/_navbar.erb' %>
+
+        <div class="intro-text">
+          <div class="intro-lead-in">
+            O bom jornalismo pode até ser gratuito. Mas para que ele seja realmente livre, precisa ser <strong class="text-green">valorizado</strong>
+          </div>
+          <a href="/account/login?ref=home" data-bypess="true" class="btn btn-action btn-xl space-top"> valorize o jornalismo, faça parte </a>
         </div>
+
       </div>
     </header>
 
 
-    <section id="main-content">
+    <section id="whats-this">
       <div class="container">
+
+        <div class="row">
+          <div class="col-md-12 section-content">
+            <h2 class="section-title text-green">O QUE É</h2>
+          </div>
+        </div>
+
         <div class="row">
 
-          <div class="col-md-6 section-content">
-            <%= page.content %>
+          <div class="section-background layer-1 hidden-sm hidden-xs">
+            <span class="text-background layer-2">LIVRE</span>
+            <img src="/assets/images/default/img-camera.png" class="photo-background" alt="">
+            <span class="text-background">JORNALISMO</span>
           </div>
 
-          <div class="col-md-6 section-content">
-            <%= page.citation %>
-          </div>
+          <div class="col-md-7" style="z-index:2">
+            <p>Libre é uma <strong class="text-green">ferramenta, uma moeda e uma plataforma</strong>
+            para facilitar o apoio financeiro a veículos e jornalistas. E estreitar a relação entre
+            imprensa e público.</p>
 
+            <p>Para quem reconhece o jornalismo de qualidade, o Libre é um botão universal, de
+            simples utilização. Em vez de doações avulsas ou múltiplas assinaturas em diferentes
+            veículos, o Libre permite distribuir seu apoio diretamente aos veículos, posts,
+            reportagens, vídeos e autores que você mais valoriza.</p>
+
+            <p>Quase como um botão de like, mas em vez de só uma curtida, você contribui com um
+            pequeno valor. Para usá-lo, basta se cadastrar em nosso site, escolher um dos planos
+            mensais e começar a distribuir seus Libres entre os sites e autores que você mais
+            gostou.</p>
+
+            <p>Para jornalistas e veículos, o Libre é uma forma de criar receita diretamente com
+            seu público. Criar uma métrica de sucesso e impacto além do clique. E, com isso,
+            apostar em qualidade e relevância do conteúdo como um modelo de negócio.</p>
+
+            <p>Para fazer parte da rede de veículos e produtores parceiros, <strong class="text-green">
+            preencha o cadastro</strong> e conheça nosso modelo de adesão.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="howitworks" class="space-top">
+      <div class="container">
+        <div class="row text-center">
+          <h2 class="section-title text-green">COMO FUNCIONA</h2>
+          <br class="space-top">
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 text-center">
+            <img src="/assets/images/default/art-passo-1.png" alt="" class="space-top">
+            <br>
+            <h3>Aprecie a matéria</h3>
+            <br>
+            <small class="text-muted">Mauris ultricies turpis non ligula <br>placerat aliquet. Phasellus placerat</small>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="/assets/images/default/art-passo-2.png" alt="">
+            <br>
+            <h3>Doe um Libre</h3>
+            <br>
+            <small class="text-muted">Mauris ultricies turpis non ligula <br>placerat aliquet. Phasellus placerat</small>
+          </div>
+          <div class="col-md-4 text-center">
+            <img src="/assets/images/default/art-passo-3.png" alt="" class="space-top">
+            <br>
+            <h3>Pronto!</h3>
+            <br>
+            <small class="text-muted">Mauris ultricies turpis non ligula <br>placerat aliquet. Phasellus placerat</small>
+          </div>
         </div>
       </div>
     </section>
 
 
-    <section id="main-divider"></section>
-
+    <section id="maindivider">
+      <div class="container">
+        <h3>"Uma imprensa livre é a condição fundamental para que as sociedades resolvam seus
+        conflitos, promovam o bem-estar e protejam sua liberdade."</h3>
+        <span class="text-green">Declaração de Chapultepec</span>
+      </div>
+    </section>
 
     <section id="main-partners">
       <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="section-title">Quem Faz Parte</h2>
-          </div>
+        <div class="row text-center">
+          <h2 class="section-title text-green">QUEM FAZ PARTE</h2>
+        </div>
 
+        <div class="row">
           <% page.who_using.each do |p| %>
             <div class="col-md-3 text-center">
-              <p class="section-content">
-                <%# link_to p.path, target: '_blank' do %>
+              <p class="space-top">
+                <% link_to p.path, target: '_blank' do %>
                   <br>
                   <%= image_tag p.image, title: p.label, alt: p.title, width: '90%' %>
-                <%# end %>
+                <% end %>
               </p>
             </div>
           <% end %>
+            <div class="col-md-3 text-center">
+              <div class="space-top" style="width:100px;height:100px;padding:20px;border:2px dotted #33cc66; border-radius: 50px;margin-left:auto;margin-right:auto;position:relative;display:inline-block;margin-top: 70px;">
+                <a href="#"><small class="text-green">seja o<br> próximo</small></a>
+              </div>
+            </div>
 
         </div>
       </div>
     </section>
 
     <%= partial 'partial/_footer.erb'%>
+
+
+
+    <style>
+      .typed-cursor { display: none; }
+    </style>
+
+    <script type="text/javascript">
+      !function(t,s,e){"use strict";var i=function(t,s){var i=this;this.el=t,this.options={},Object.keys(r).forEach(function(t){i.options[t]=r[t]}),Object.keys(s).forEach(function(t){i.options[t]=s[t]}),this.isInput="input"===this.el.tagName.toLowerCase(),this.attr=this.options.attr,this.showCursor=!this.isInput&&this.options.showCursor,this.elContent=this.attr?this.el.getAttribute(this.attr):this.el.textContent,this.contentType=this.options.contentType,this.typeSpeed=this.options.typeSpeed,this.startDelay=this.options.startDelay,this.backSpeed=this.options.backSpeed,this.backDelay=this.options.backDelay,this.fadeOut=this.options.fadeOut,this.fadeOutClass=this.options.fadeOutClass,this.fadeOutDelay=this.options.fadeOutDelay,e&&this.options.stringsElement instanceof e?this.stringsElement=this.options.stringsElement[0]:this.stringsElement=this.options.stringsElement,this.strings=this.options.strings,this.strPos=0,this.arrayPos=0,this.stopNum=0,this.loop=this.options.loop,this.loopCount=this.options.loopCount,this.curLoop=0,this.stop=!1,this.cursorChar=this.options.cursorChar,this.shuffle=this.options.shuffle,this.sequence=[],this.build()};i.prototype={constructor:i,init:function(){var t=this;t.timeout=setTimeout(function(){for(var s=0;s<t.strings.length;++s)t.sequence[s]=s;t.shuffle&&(t.sequence=t.shuffleArray(t.sequence));var e;e=t.isInput?t.el.value:"html"===t.contentType?t.el.innerHTML:t.el.textContent,0==e.length?t.typewrite(t.strings[t.sequence[t.arrayPos]],t.strPos):t.backspace(e,e.length)},t.startDelay)},build:function(){var t=this;if(this.showCursor===!0&&(this.cursor=s.createElement("span"),this.cursor.className="typed-cursor",this.cursor.innerHTML=this.cursorChar,this.el.parentNode&&this.el.parentNode.insertBefore(this.cursor,this.el.nextSibling)),this.stringsElement){this.strings=[],this.stringsElement.style.display="none";var e=Array.prototype.slice.apply(this.stringsElement.children);e.forEach(function(s){t.strings.push(s.innerHTML)})}this.init()},typewrite:function(t,s){if(this.stop!==!0){this.fadeOut&&this.el.classList.contains(this.fadeOutClass)&&(this.el.classList.remove(this.fadeOutClass),this.cursor.classList.remove(this.fadeOutClass));var e=Math.round(70*Math.random())+this.typeSpeed,i=this;i.timeout=setTimeout(function(){var e=0,r=t.substr(s);if("^"===r.charAt(0)){var n=1;/^\^\d+/.test(r)&&(r=/\d+/.exec(r)[0],n+=r.length,e=parseInt(r)),t=t.substring(0,s)+t.substring(s+n)}if("html"===i.contentType){var o=t.substr(s).charAt(0);if("<"===o||"&"===o){var a="",h="";for(h="<"===o?">":";";t.substr(s+1).charAt(0)!==h&&(a+=t.substr(s).charAt(0),s++,!(s+1>t.length)););s++,a+=h}}i.timeout=setTimeout(function(){if(s===t.length){if(i.options.onStringTyped(i.arrayPos),i.arrayPos===i.strings.length-1&&(i.options.callback(),i.curLoop++,i.loop===!1||i.curLoop===i.loopCount))return;i.timeout=setTimeout(function(){i.backspace(t,s)},i.backDelay)}else{0===s&&i.options.preStringTyped(i.arrayPos);var e=t.substr(0,s+1);i.attr?i.el.setAttribute(i.attr,e):i.isInput?i.el.value=e:"html"===i.contentType?i.el.innerHTML=e:i.el.textContent=e,s++,i.typewrite(t,s)}},e)},e)}},backspace:function(t,s){var e=this;if(this.stop!==!0){if(this.fadeOut)return void this.initFadeOut();var i=Math.round(70*Math.random())+this.backSpeed;e.timeout=setTimeout(function(){if("html"===e.contentType&&">"===t.substr(s).charAt(0)){for(var i="";"<"!==t.substr(s-1).charAt(0)&&(i-=t.substr(s).charAt(0),s--,!(s<0)););s--,i+="<"}var r=t.substr(0,s);e.replaceText(r),s>e.stopNum?(s--,e.backspace(t,s)):s<=e.stopNum&&(e.arrayPos++,e.arrayPos===e.strings.length?(e.arrayPos=0,e.shuffle&&(e.sequence=e.shuffleArray(e.sequence)),e.init()):e.typewrite(e.strings[e.sequence[e.arrayPos]],s))},i)}},initFadeOut:function(){return self=this,this.el.className+=" "+this.fadeOutClass,this.cursor.className+=" "+this.fadeOutClass,setTimeout(function(){self.arrayPos++,self.replaceText(""),self.strings.length>self.arrayPos?self.typewrite(self.strings[self.sequence[self.arrayPos]],0):(self.typewrite(self.strings[0],0),self.arrayPos=0)},self.fadeOutDelay)},replaceText:function(t){this.attr?this.el.setAttribute(this.attr,t):this.isInput?this.el.value=t:"html"===this.contentType?this.el.innerHTML=t:this.el.textContent=t},shuffleArray:function(t){var s,e,i=t.length;if(i)for(;--i;)e=Math.floor(Math.random()*(i+1)),s=t[e],t[e]=t[i],t[i]=s;return t},reset:function(){var t=this;clearInterval(t.timeout);this.el.getAttribute("id");this.el.textContent="","undefined"!=typeof this.cursor&&"undefined"!=typeof this.cursor.parentNode&&this.cursor.parentNode.removeChild(this.cursor),this.strPos=0,this.arrayPos=0,this.curLoop=0,this.options.resetCallback()}},i["new"]=function(t,e){var r=Array.prototype.slice.apply(s.querySelectorAll(t));r.forEach(function(t){var s=t._typed,r="object"==typeof e&&e;s&&s.reset(),t._typed=s=new i(t,r),"string"==typeof e&&s[e]()})},e&&(e.fn.typed=function(t){return this.each(function(){var s=e(this),r=s.data("typed"),n="object"==typeof t&&t;r&&r.reset(),s.data("typed",r=new i(this,n)),"string"==typeof t&&r[t]()})}),t.Typed=i;var r={strings:["These are the default values...","You know what you should do?","Use your own!","Have a great day!"],stringsElement:null,typeSpeed:0,startDelay:0,backSpeed:0,shuffle:!1,backDelay:500,fadeOut:!1,fadeOutClass:"typed-fade-out",fadeOutDelay:500,loop:!1,loopCount:!1,showCursor:!0,cursorChar:"|",attr:null,contentType:"html",callback:function(){},preStringTyped:function(){},onStringTyped:function(){},resetCallback:function(){}}}(window,document,window.jQuery);
+
+      document.addEventListener('DOMContentLoaded', function() {
+        Typed.new('.intro-lead-in', {
+          strings: ["O bom jornalismo ^200 pode até ser gratuito. Mas para que ele seja ^100 realmente livre, precisa ser ^400 <strong class=\"text-green\">valorizado</strong>_"],
+          contentType: 'html',
+          cursorChar: "_",
+          loop: true,
+          typeSpeed: 0
+        });
+        return false;
+      }, false);
+    </script>
