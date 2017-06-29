@@ -4,7 +4,8 @@
               <% if l.label == 'Login' %>
 								<li class="dropdown">
 									<% link_to l.path, title: l.label, class: 'js-username_button dropdown-toggle', data: { bypass: true, toogle: 'dropdown' } do %>
-											<div class="login-button"><strong><%= l.label.upcase %></strong>&nbsp;<img src="/assets/images/login-arrow.png" height="16px"></div>
+											<!-- div class="login-button"><strong><%= l.label.upcase %></strong>&nbsp;<img src="/assets/images/login-arrow.png" height="16px"></div -->
+                      <strong><%= l.label %></strong>
                   <% end %>
 									<ul class="dropdown-menu">
 											<% if page_module =~ /dash/ %>
