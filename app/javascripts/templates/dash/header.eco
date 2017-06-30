@@ -1,3 +1,4 @@
+	<% type = @stash.dashboard || null %>
 
 	<div class="container">
 		<div class="row">
@@ -13,37 +14,69 @@
 				</div>
 			</div -->
 
-			<div class="col-md-6 text-center">
-				<div class="number-pane">
-					<h3 class="number-title text-green">
-						<span><%= @libres_donated || '0' %></span>
-						<small class="number-icon text-green">
-							<img src="/assets/images/ico-hand.svg" alt="" height="34px">
-						</small>
-					</h3>
-					<p class="text-center">
-						<span class="number-description">Total de apoios</span>
-					</p>
-				</div>
-			</div>
-
-
-			<div class="col-md-6 text-center">
-				<div class="number-pane number-bordered number-box">
-					<h5>Seu Plano</h5>
-					<h3 class="number-title">
-						<span><%= (@user_plan_amount/100).toFixed(2) %></span>
-						<small class="number-icon">R$</small>
-					</h3>
-					<p class="number-description hide">
-						<small>Próxima data de débito:</small><br>
-						<small>02.02.2017</small>
-					</p>
-					<div class="number-buttons">
-						<a class="text-green pull-left" href="#usuario/plano">VER PLANO</a>
-						<a class="text-green pull-right" href="#usuario/pagamento">PAGAMENTO</a>
+			<% if type is 'donor': %>
+				<div class="col-md-6 text-center">
+					<div class="number-pane">
+						<h3 class="number-title text-green">
+							<span><%= @libres_donated || '0' %></span>
+							<small class="number-icon text-green">
+								<img src="/assets/images/ico-hand.svg" alt="" height="34px">
+							</small>
+						</h3>
+						<p class="text-center">
+							<span class="number-description">Total de apoios</span>
+						</p>
 					</div>
 				</div>
-			</div>
+
+
+				<div class="col-md-6 text-center">
+					<div class="number-pane number-bordered number-box">
+						<h5>Seu Plano</h5>
+						<h3 class="number-title">
+							<span><%= (@user_plan_amount/100).toFixed(2).toString().replace('.', ',') %></span>
+							<small class="number-icon">R$</small>
+						</h3>
+						<p class="number-description hide">
+							<small>Próxima data de débito:</small><br>
+							<small>02.02.2017</small>
+						</p>
+						<div class="number-buttons hide">
+							<a class="text-green pull-left" href="#usuario/plano">VER PLANO</a>
+							<a class="text-green pull-right" href="#usuario/pagamento">PAGAMENTO</a>
+						</div>
+					</div>
+				</div>
+
+			<% else if type is 'journalist': %>
+				<div class="col-md-offset-3 col-md-6 text-center">
+					<div class="number-pane">
+						<h3 class="number-title text-green">
+							<span><%= @libres_donated || '0' %></span>
+							<small class="number-icon text-green">
+								<img src="/assets/images/ico-hand.svg" alt="" height="34px">
+							</small>
+						</h3>
+						<p class="text-center">
+							<span class="number-description">Total de apoios</span>
+						</p>
+					</div>
+				</div>
+
+			<% end %>
+
 		</div>
+
+		<% if type?: %>
+			<div class="row space-top">
+				<div style="background-color: #33cc66; padding: 10px 0px;text-align: center; color: white;border-radius: 10px;">
+					<% if type is 'donor': %>
+						<a href="/" style="color: white">Meu painel</a>
+					<% else if type is 'journalist': %>
+						<a href="/" style="color: white">Meu painel</a> |
+						<a href="/sdk/gerar-botao" style="color: white">Gerar botão</a>
+					<% end %>
+				</div>
+			</div>
+		<% end %>
 	</div>
