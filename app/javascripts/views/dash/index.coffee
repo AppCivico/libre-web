@@ -5,7 +5,7 @@ ViewBase = require 'views/base.coffee'
 
 # views/components
 LoadingView = require 'views/loading.coffee'
-DashboardView = require 'views/dash/header.coffee'
+#DashboardView = require 'views/dash/header.coffee'
 
 ###
 #  View class
@@ -15,7 +15,7 @@ module.exports = class IndexView extends ViewBase
   # view regions
   regions:
     main: "section#dash-main"
-    header: "section#dash-header"
+    #header: "section#dash-header"
 
   # loading component
   loading: new LoadingView
@@ -28,6 +28,9 @@ module.exports = class IndexView extends ViewBase
       when 'donor' then require 'views/dash/collaborator.coffee'
       when 'journalist' then  require 'views/dash/journalist.coffee'
 
-    @showChildView 'header', (new DashboardView).render() if current is 'donor'
+    #header = new DashboardView
+    #header.stash 'dashboard', current
+    #@showChildView 'header', header.render()
+
     @showChildView 'main', (new View).render()
 
