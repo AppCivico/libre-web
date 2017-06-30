@@ -1,0 +1,87 @@
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<h2 class="text-green">Apoios Recebidos <small id="cicle-current">(ciclo atual)</small></h2>
+			<p>Veja abaixo a lista dos seus ultimos artigos que receberam libres.</p>
+			<br>
+		</div>
+
+		<div class="col-md-12">
+			<% @supports = @stash.supports or [] %>
+
+			<h3 class="support-title text-green hide" style="margin: 20px 0px;font-size:20px">
+				<% if @supports.length > 0: %>
+					<%# Janeiro 2017 %>
+					<a href="#" class="support-arrow pull-right" style="margin-left: 10px;">
+						<img src="/assets/images/arrow-right.svg" alt="&gt;" height="32px">
+					</a>
+					<a href="#" class="support-arrow pull-right">
+						<img src="/assets/images/arrow-left.svg" alt="&lt;" height="32px">
+					</a>
+				<% end %>
+			</h3>
+
+			<div class="js-carousel carousel slide" data-ride="carousel">
+				<div class="carousel-inner" role="listbox">
+					<div class="item active">
+
+						<div class="row">
+							<% if @supports and @supports.length > 0: %>
+								<div class="list-group">
+									<% for item in @supports: %>
+										<a href="<%= item.page_referer %>" class="list-group-item" title="Acessar: <%= item.page_referer %>" data-bypass="true" target="_blank" style="padding: 25px 20px;">
+											<span class="badge" style="padding: 5px 5px;border-radius: 2px;background-color: #3cb878">
+												<i class="fa fa-globe"></i>
+												acessar
+											</span>
+											<h4 class="list-group-item-heading" title="<%= item.page_title %>">
+												<strong><%= if item.page_title.length > 40 then "#{item.page_title.substr(0, 40)}..." else item.page_title or 'Artigo sem titulo' %></strong>
+											</h4>
+											<p class="list-group-item-text">
+												<strong>Link:</strong> <span><%= item.page_referer %></span>
+											</p>
+										</a>
+
+										<!-- div class="col-md-3 support-item" data-id="<%= item.id %>" data-journalist="<%= item.journalist_id %>">
+											<div class="support-image">
+												<img src="/assets/images/image_holder.png" class="img-responsive" alt="Image não encontrada">
+											</div>
+											<div class="support-title">
+												<h4 title="<%= item.page_title %>"><%= if item.page_title.length > 40 then "#{item.page_title.substr(0, 40)}..." else item.page_title or 'Artigo sem titulo' %></h4>
+											</div>
+											<div class="support-title">
+												<a href="<%= item.page_referer %>" title="Acessar: <%= item.page_referer %>" class="text-green" data-bypass="true" target="_blank">
+													acessar site
+												</a>
+											</div>
+										</div -->
+									<% end %>
+								</div>
+							<% else: %>
+								<div class="col-md-12">
+									<div class="alert alert-warning">
+										<h3></h3>
+										<p>Infelizmente você ainda não possui nenhum apoio contabilizado!</p>
+									</div>
+								</div>
+							<% end %>
+						</div>
+
+					</div>
+				</div>
+
+				<!-- Controls -->
+				<!-- a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true">&lt;</span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true">&gt;</span>
+					<span class="sr-only">Next</span>
+				</a -->
+			</div>
+		</div>
+
+	</div>
+</div>
