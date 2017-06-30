@@ -172,10 +172,12 @@ footer {
 }
 
 .login-button {
+/*
   margin-top: -7px;
   border: solid 2px #999999;
   padding: 0px 10px;
   line-height: 30px;
+*/
 }
 
 .internal-header {
@@ -453,10 +455,18 @@ div.radio {
 		font-family: Montserrat, Arial;
 		font-weight: 300 !important;
 		color: $fg_invert !important;
+		text-transform: uppercase;
 
 		&:hover {
 			color: $fg_green !important;
 			transition: 0.3s;
+		}
+	}
+
+	.dropdown-menu a {
+		color: $fg_green !important;
+		&:hover {
+			color: green !important;
 		}
 	}
 }
