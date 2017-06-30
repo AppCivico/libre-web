@@ -21,6 +21,7 @@ module.exports = class UserMenuView extends ViewBase
     dropdown: '.js-username_button'
     signout: '.js-signout_button'
     menu: '.dropdown-menu'
+    placeholder: '#placeholder-usermenu'
 
   # ui triggers
   triggers:
@@ -80,7 +81,7 @@ module.exports = class UserMenuView extends ViewBase
       "#{session.name.substr(0, 40)}..."
     else
       session.name
-    $text.addClass('text-green').text "Olá, #{username}"
+    $text.addClass('text-green').text "Olá, #{username} →"
     $link.attr 'href', '/app'
       .attr 'title', 'Painel do usuário'
     @show()
@@ -91,7 +92,7 @@ module.exports = class UserMenuView extends ViewBase
     $link = @getLoginButton()
     $text = @getUI('username')
 
-    $text.removeClass('text-green').text "LOGIN"
+    $text.removeClass('text-green').text "Login"
     $link.attr 'href', '/account/login'
       .attr 'title', 'Login de usuário'
     @show()
@@ -111,11 +112,13 @@ module.exports = class UserMenuView extends ViewBase
 
   # show user menu
   hide: ->
+    @getUI('placeholder').removeClass 'hide'
     @$el.find 'ul#dash-usermenu'
       .addClass 'hide'
 
 
   # show user menu
   show: ->
+    @getUI('placeholder').addClass 'hide'
     @$el.find 'ul#dash-usermenu'
       .removeClass 'hide'
