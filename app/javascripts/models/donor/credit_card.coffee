@@ -32,12 +32,12 @@ module.exports = class CreditCardModel extends ModelBase
 
   # on change card number
   onChangeCardNumber: (model, card_number) ->
-    card_brand = @brandByNumber(card_number) || ''
+    card_brand = @brandByNumber(card_number) or ''
     @set 'card_brand', card_brand.toLowerCase()
 
 
   # validate attributes
-  validate: (p, settings) ->
+  validate: (p = {}, settings = {}) ->
     @errors = {form_error: {}}
 
     # card name validation (required; min: 6)
@@ -80,7 +80,7 @@ module.exports = class CreditCardModel extends ModelBase
   create: (options = {isCallback: false}) ->
     @url = "#{@urlRoot}/donor/#{@get('user_id')}/credit-card"
     Backbone.ajax {
-      url: @url, method: 'POST', data: JSON.stringify @toJSON(options)
+      url: @url, method: 'POST', data: JSON.stringify(@toJSON options)
     }
 
 
@@ -91,7 +91,7 @@ module.exports = class CreditCardModel extends ModelBase
       url: endpoint or ''
       dataType : "json",
       contentType: "application/json; charset=utf-8",
-      data: JSON.stringify @toJSON({isCallback: true})
+      data: JSON.stringify(@toJSON {isCallback: true})
     }
 
 
