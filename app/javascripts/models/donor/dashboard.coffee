@@ -6,11 +6,12 @@ ModelBase = require 'models/base.coffee'
 #  @author dvinciguerra
 ###
 module.exports = class DashboardModel extends ModelBase
-  url: "/donor/:donor_id/dashboard"
+  url: "/:type/:user_id/dashboard"
 
   # default attributes
   defaults:
     user_id: 0
+    current: 'donor'
     libres_donated: 0
     user_plan_amount: 0
 
@@ -22,13 +23,13 @@ module.exports = class DashboardModel extends ModelBase
 
   # set url when user_id is changed
   onChangeUserId: (model, user_id) ->
-    @url = "#{@urlRoot}/donor/#{user_id}/plan"
+    @url = "#{@urlRoot}/#{@get 'type'}/#{user_id}/dashboard"
 
 
   # save plan using always PUT method
   fetch: ->
     $.ajax {
-      url: "#{@urlRoot}/donor/#{@get('user_id')}/dashboard"
+      url: "#{@urlRoot}/donor/#{@get 'user_id'}/dashboard"
       method: 'GET'
       data: @toJSON() || {}
       dataType: 'json'
