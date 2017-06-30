@@ -12,7 +12,7 @@ SupportModel = require 'models/donor/support.coffee'
 module.exports = class CollaoratorView extends ViewBase
   el: 'section#dash-main'
 
-  template: 'templates/dash/collaborator'
+  template: 'templates/dash/collaborator/index.eco'
 
   loading: new LoadingView
 
