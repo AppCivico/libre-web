@@ -28,6 +28,8 @@ module.exports = class I18n
       'brand_required': "não compatível com nenhuma bandeira"
 
     error:
+      header_message: 'Nao foi possível carregar sa informações do dashboard do usuário'
+
       forgot_title: 'Ops!'
       forgot_message: 'Encontramos um erro ao enviar seus dados para o servidor'
 
