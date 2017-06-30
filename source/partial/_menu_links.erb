@@ -1,3 +1,6 @@
+
+					<img id="placeholder-usermenu" src="/assets/images/default/placeholder/usermenu.svg" style="float:right; padding:10px;" class="placeholder placeholder-usermenu">
+
 					<% content_tag :ul, id: 'dash-usermenu', class: 'nav navbar-nav navbar-right hide' do %>
             <!-- top navbar menu -->
             <% data.shared.menu.each do |l| %>
@@ -5,7 +8,7 @@
 								<li class="dropdown">
 									<% link_to l.path, title: l.label, class: 'js-username_button dropdown-toggle', data: { bypass: true, toogle: 'dropdown' } do %>
 											<!-- div class="login-button"><strong><%= l.label.upcase %></strong>&nbsp;<img src="/assets/images/login-arrow.png" height="16px"></div -->
-                      <strong><%= l.label %></strong>
+											<div class="login-button"><strong><%= l.label.camelize %></strong> <!-- span class="caret text-green"></span --></div>
                   <% end %>
 									<ul class="dropdown-menu">
 											<% if page_module =~ /dash/ %>
@@ -22,5 +25,5 @@
               <% else %>
 	               <li><% link_to l.path, title: l.label, data: { bypass: true } do %><%= l.label %><% end %></li>
               <% end %>
-		            <% end %>
+						<% end %>
 					<% end %>
