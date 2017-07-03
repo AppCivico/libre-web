@@ -49,13 +49,13 @@ module.exports = class Button extends ViewBase
 
     switch state
       when 'loading'
-        @$el.attr 'data-changed', @label()
-        @label options.label || @label()# if options? and options.label?
+        #@$el.attr 'data-changed', @label()
+        #@label options.label || @label()# if options? and options.label?
         @$el.attr 'disabled', true
         @$el.stateName = 'loading'
 
       when 'loaded'
-        @label options.label || @$el.attr('data-changed')
+        #@label options.label || @$el.attr('data-changed')
         @$el.removeAttr 'data-changed'
         @$el.removeAttr 'disabled'
         @$el.stateName = 'loaded'
