@@ -32,15 +32,23 @@ module.exports = class SupportModel extends ModelBase
 
 
   # specialized method to process donor support
-  processSupport: (params = {}) ->
+  processSupport: (params = {}, options = {}) ->
     @save params
       .done (res) ->
-        alert 'Muito obrigado! Sua colaboração foi computada com sucesso.'
+        unless document.location.href.match /faca-parte\/colaborador/
+          alert 'Muito obrigado! Sua colaboração foi computada com sucesso.'
 
       .fail (res) ->
         alert "Desculpe! Ocorreu algum erro ao processar a sua colaboração."
 
       .always ->
+        if document.location.href.match /faca-parte\/colaborador/
+          return false
+
+        if document.location.href.match /external\/login/
+          window.close()
+          return false
+
         document.location = params.referer
 
 
