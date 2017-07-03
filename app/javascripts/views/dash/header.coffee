@@ -19,13 +19,15 @@ module.exports = class HeaderView extends ViewBase
   # load statistics and render
   render: ->
     @model.set @headerParams()
-    @model.fetch()
-      .then (json) =>
-        @model.set json
-        super()
+    if @model.get 'current' is 'donor'
+      @model.fetch()
+        .then (json) =>
+          @model.set json
+          @$('.number-title > span').text json.length || 0
+          super()
 
-      .fail (res) ->
-        Message.show {content: I18n.t 'error/header_message'}
+        .fail (res) ->
+          Message.show {content: I18n.t 'error/header_message'}
 
     super()
 
