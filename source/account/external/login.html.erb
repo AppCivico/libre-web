@@ -1,0 +1,95 @@
+---
+title:      Login de Usuário
+controller: account/signin
+---
+<!-- navbar -->
+<%# partial 'partial/_navbar.erb' %>
+
+
+<% page = data.pages.account %>
+
+    <section id="main-content" style="margin-top: 20px; margin-bottom: 20px">
+      <div class="container">
+          <div class="col-md-offset-4 col-md-4 section-content">
+            <div class="form-group col-md-12">
+              <!-- logo -->
+              <a href="//midialibre.com.br" target="_blank" title="Acesse a pagina inicial do Libre">
+                <img src="/assets/images/libre-logo.svg" alt="" height="32px">
+              </a>
+              <br>
+            </div>
+          </div>
+
+          <!-- user signin -->
+					<% section = page.section[:login] %>
+          <div id="signin-section" class="col-md-offset-4 col-md-4 section-content">
+            <div class="form-group col-md-12">
+              <!-- title and subtitle -->
+              <h2 class="text-green">Acesse para contribuir!</h2>
+              <p><small>Acesse sua conta para continuar colaborando</small></p>
+            </div>
+
+						<% form_tag "#", name: "login_form",  id: "login-form", class: "login-form", novalidate: true, data: {} do # { remote: true, type: 'json' } do %>
+							<% fields = section.form.fields %>
+              <div class="form-group col-md-12">
+                <%= custom_input fields[:email] %>
+                <%= custom_helpblock fields[:email] %>
+              </div>
+
+              <div class="form-group col-md-12">
+                <%= custom_input fields[:password] %>
+                <%= custom_helpblock fields[:password] %>
+              </div>
+
+              <div class="form-group col-md-12">
+                <p>
+                  <%= fields[:submit][:value] = 'Acessar conta'; custom_input fields[:submit] %>
+                </p>
+              </div>
+
+              <div class="form-group col-md-12">
+                <hr>
+                <p>
+                  <h4 class="text-green">Ainda não possui uma conta?</h4>
+                  <a href="#" class="js-btn-toogle"><small>
+                      Clique aqui para criar uma conta e colaborar!
+                  </small></a>
+                </p>
+              </div>
+
+						<% end %>
+          </div>
+
+          <!-- register links -->
+          <div id="register-section" class="col-md-offset-4 col-md-4 section-content" style="display: none">
+            <div class="form-group col-md-12">
+              <h3 class="text-green">Ainda não possui uma conta?</h3>
+              <p><small>Então clique abaixo para se cadastrar e colaborando!</small></p>
+
+              <% links = page.section[:register].list %>
+							<p>
+                <% collaborator = links[:collaborator] %>
+								<% link_to "#{collaborator.button.path}?act=support", class: 'btn btn-success btn-block', target: '_blank' do %>
+                  Criar minha conta no Libre
+								<% end %>
+							</p>
+							<p>
+                <% journalist = links[:journalist] %>
+                <small><% link_to journalist.button.path do %>
+                  Sou produtor de conteúdo e gostaria de utilizar a plataforma Libre!
+                <% end %></small>
+							</p>
+              <hr>
+
+              <p>
+                <strong class="text-green">Ja possui uma conta?</strong><br>
+                <a href="#" class="js-btn-toogle"><small>Clique abaixo para acessar sua conta e continuar colaborando!</small></a>
+              </p>
+              <br>
+            </div>
+          </div>
+
+        </div>
+    </section>
+
+
