@@ -19,7 +19,8 @@ module.exports = class HeaderView extends ViewBase
   # load statistics and render
   render: ->
     @model.set @headerParams()
-    if @model.get 'current' is 'donor'
+
+    if @model.get('current') is 'donor'
       @model.fetch()
         .then (json) =>
           @model.set json
