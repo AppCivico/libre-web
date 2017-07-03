@@ -4,6 +4,7 @@ ButtonView = require 'views/button.coffee'
 SessionModel = require 'models/session.coffee'
 SupportModel = require 'models/donor/support.coffee'
 
+I18n = require 'lib/i18n.coffee'
 RequestError = require 'lib/exception/request.coffee'
 
 
@@ -54,6 +55,7 @@ module.exports = class SigninPage extends PageBase
   # submit event
   onSubmitLoginForm: (event) ->
     event.preventDefault()
+    @clearMessages()
 
     # form params
     @model.set @signinParams().toJSON()
@@ -71,11 +73,10 @@ module.exports = class SigninPage extends PageBase
     try
       @model.authenticate()
         .done (response, status, xhr) =>
-          @clearMessages()
           @renderMessage btn.$el.parent(), {
             type: 'success'
-            title: 'Bem vindo!'
-            message: 'Usuário autênticado...'
+            title: I18n.t 'success/signin_title'
+            message: I18n.t 'success/signin_message'
           }
 
           # update session
@@ -93,11 +94,10 @@ module.exports = class SigninPage extends PageBase
           setTimeout ( -> document.location = '/app'), 250
 
         .fail (xhr, status) =>
-          @clearMessages()
           @renderMessage btn.$el.parent(), {
             type: 'danger'
-            title: 'Erro!'
-            message: 'Usuário ou senha inválidos'
+            title: I18n.t 'error/signin_title'
+            message: I18n.t 'error/signin_message'
           }
 
         .always ->
@@ -107,13 +107,12 @@ module.exports = class SigninPage extends PageBase
       @clearMessages()
       @renderMessage btn.$el.parent(), {
         type: 'danger'
-        title: 'Ops!'
-        message: 'Ocorreu um erro inesperado quando tentamos enviar suar informações ao servidor'
+        message: I18n.t 'exception/request_message'
       }
-      RequestError.throws e.message
 
-    finally
+      RequestError.throws e.message
       btn.state 'loaded'
+
 
 
   # render message
