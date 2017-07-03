@@ -74,7 +74,7 @@ module.exports = class ButtonView extends ViewBase {
 			session.setItem("donation", data);
 
 			//let rootLocation = '//devlibre.eokoe.com';
-			let rootLocation = "//midialibre.com.br";
+			let rootLocation = "//devlibre.eokoe.com";
 			let location = `${rootLocation}/account/external/login?act=support&referer=${encodeURIComponent(document.location.href)}`;
 			let w = window.open(location, '_blank', 'width=530,height=550,scrollbars=no,centerscreen=yes,chrome=yes');
 			console.log(w);
