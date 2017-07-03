@@ -7,6 +7,8 @@ CreditCardModel = require 'models/donor/credit_card.coffee'
 Button = require 'views/button.coffee'
 Masks = require 'lib/masks.coffee'
 
+SupportModel = require 'models/donor/support.coffee'
+
 ###
 #  Page class
 #  @author dvinciguerra
@@ -126,7 +128,16 @@ module.exports = class CollaboratorPage extends PageBase
         auth.set 'password', model.get('password')
         auth.authenticate()
           .then (response, status, xhr) =>
-            @session.set response
+            # update session
+            s = @session.get()
+            response.donation = s.donation || {}
+            @session.set response if _.isObject response
+
+            # its a donation process
+            if @query('act') is 'support'
+              support = new SupportModel
+              support.processSupport @supportParams(), {from: 'register'}
+
             @enableTab('plan')
 
         # authentication fail is disabled
@@ -323,3 +334,8 @@ module.exports = class CollaboratorPage extends PageBase
     @$el.find('.has-error').toggleClass('has-error')
     return
 
+  supportParams: ->
+    session = @session.get()
+    params = session.donation || {}
+    params = _.extend params, {api_key: session.api_key}
+    return params
