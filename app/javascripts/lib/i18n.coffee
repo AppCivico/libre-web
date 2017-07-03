@@ -30,6 +30,9 @@ module.exports = class I18n
     error:
       header_message: 'Nao foi possível carregar sa informações do dashboard do usuário'
 
+      signin_title: 'Erro!'
+      signin_message: 'Usuário ou senha inválidos...'
+
       forgot_title: 'Ops!'
       forgot_message: 'Encontramos um erro ao enviar seus dados para o servidor'
 
@@ -37,6 +40,9 @@ module.exports = class I18n
       reset_message: 'Encontramos um erro ao enviar seus dados para o servidor'
 
     success:
+      signin_title: 'Bem vindo!'
+      signin_message: 'Usuário autênticado...'
+
       forgot_title: 'Falta pouco...'
       forgot_message: 'Verifique seu e-mail para prosseguir com a recuperação de senha'
 
