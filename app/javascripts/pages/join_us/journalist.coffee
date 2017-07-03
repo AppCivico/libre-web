@@ -127,6 +127,13 @@ module.exports = class JournalistPage extends PageBase
       type: 'success', message: 'Usuário cadastrado!'
     }
 
+    # redirect to login page
+    setTimeout ->
+      document.location = '/account/login?rel=journalist-signup'
+    , 1000
+
+    false
+
   # error event
   renderError: (event, xhr, error) ->
     response = xhr.responseJSON || {}
