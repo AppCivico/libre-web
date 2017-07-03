@@ -81,7 +81,7 @@ form:
       styles: form-control hide
       help:
       data:
-        mask: number
+        mask: none
 
     cpf:
       label: CPF
@@ -93,7 +93,7 @@ form:
       styles: form-control
       help:
       data:
-        mask: number
+        mask: none
 
     cellphone_number:
       label: Telefone
