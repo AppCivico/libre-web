@@ -3,7 +3,7 @@
 # requires
 ViewBase = require 'views/base.coffee'
 LoadingView = require 'views/loading.coffee'
-#SupportModel = require 'models/donor/support.coffee'
+DashboardModel = require 'models/journalist/dashboard.coffee'
 
 ###
 #  View class
@@ -16,21 +16,20 @@ module.exports = class JournalistView extends ViewBase
 
   loading: new LoadingView
 
-  #model: new SupportModel
+  model: new DashboardModel
 
 
   render: ->
-    #@model.set @supportParams()
-    #@model.findSupports()
-    #  .done (res) =>
-    #    res ?= []
-    #    @stash 'supports', res
+    @model.set @dashboardParams()
+    @model.fetch()
+      .done (res) =>
+        @stash 'supports', res || []
 
-    #  .fail (res) ->
-    #    console.log res
+      .fail (res) ->
+        console.log res
 
-    #  .always (res) =>
-    #    super()
+      .always (res) =>
+        super()
 
     @stash 'supports', []
     super()
@@ -42,9 +41,9 @@ module.exports = class JournalistView extends ViewBase
     @loading.hide()
 
 
-  supportParams: ->
+  dashboardParams: ->
     session = @session.get()
     return {
       api_key: session.api_key
-      donor_id: session.user_id
+      user_id: session.user_id
     }
