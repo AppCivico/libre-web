@@ -76,7 +76,7 @@ module.exports = class ButtonView extends ViewBase {
 			//let rootLocation = '//devlibre.eokoe.com';
 			let rootLocation = "//midialibre.com.br";
 			let location = `${rootLocation}/account/external/login?act=support&referer=${encodeURIComponent(document.location.href)}`;
-			let w = window.open(location, '_blank', 'width=500,height=460,scrollbars=no,centerscreen=yes,chrome=yes');
+			let w = window.open(location, '_blank', 'width=530,height=550,scrollbars=no,centerscreen=yes,chrome=yes');
 			console.log(w);
 			w.addEventListener('beforeunload', (event) => {
 				self.successButtonsStatus();
