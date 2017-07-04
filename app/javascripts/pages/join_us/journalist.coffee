@@ -2,10 +2,7 @@
 
 # requires
 PageBase = require 'pages/base.coffee'
-
-# masks
 Masks = require 'lib/masks.coffee'
-
 
 ###
 #  Page class
@@ -42,7 +39,7 @@ module.exports = class JournalistPage extends PageBase
     'ajax:success': 'renderSuccess'
     'click @ui.journalist-type': 'clickJournalistType'
     'change @ui.document-type': 'changeDocumentType'
-    'keyup @ui.zipcode-input': 'getAddressByZipcode'
+    'change @ui.zipcode-input': 'getAddressByZipcode'
 
 
   # constructor
@@ -65,27 +62,41 @@ module.exports = class JournalistPage extends PageBase
 
   # getting zipcode
   getAddressByZipcode: (event) ->
-    postalcode = event.currentTarget.value
+    field = event.currentTarget
+    postalcode = field.value || ""
 
     if postalcode.match(/^\d{8}$/) or postalcode.match(/^\d{5}\-\d{3}$/)
-      # FIXME: export all this scope to an lib/plugin/service
-      response = $.ajax {url: "http://api.postmon.com.br/cep/#{postalcode}"}
-      response.done (response) ->
-        data =
-          address_state: response.estado_info.nome || null
-          address_city: response.cidade || null
-          address_street: if response.logradouro? then response.logradouro else null
-          address_residence_number: null
-          address_complement: null
+      try
+        field.value = 'Carregando CEP...'
 
-        # populate address fields
-        for name, value of data
-          $el = document.getElementById(name)
-          $el.value = value || ""
-          unless value?
-            $el.removeAttribute 'readonly'
-          else
-            $el.setAttribute 'readonly', 'readonly'
+        # FIXME: export all this scope to an lib/plugin/service
+        response = $.ajax url: "http://api.postmon.com.br/cep/#{postalcode}"
+          .done (response) ->
+            data =
+              address_state: response.estado_info.nome || null
+              address_city: response.cidade || null
+              address_street: if response.logradouro? then response.logradouro else null
+              address_residence_number: null
+              address_complement: null
+
+            # populate address fields
+            for name, value of data
+              $el = document.getElementById(name)
+              $el.value = value || ""
+              unless value?
+                $el.removeAttribute 'readonly'
+              else
+                $el.setAttribute 'readonly', 'readonly'
+
+            field.value = postalcode
+
+          .fail (res) ->
+            field.value = postalcode
+            if res.status is 404
+              alert 'O CEP digitado não pode ser encontardo'
+
+      catch e
+        field.value = postalcode
 
 
   clickJournalistType: (event) ->
@@ -101,6 +112,8 @@ module.exports = class JournalistPage extends PageBase
       else if type is 'vehicle'
         @getUI('vehicle-input').val '1' if type is 'vehicle'
         @getUI('type_note').text '(sou um veículo)'
+
+      @_showDocuments(type)
 
 
   changeDocumentType: (event) ->
@@ -162,4 +175,22 @@ module.exports = class JournalistPage extends PageBase
     @$el.find('.message').remove()
     @$el.find('.input-message').remove()
     @$el.find('.has-error').toggleClass('has-error')
+
+
+  _showDocuments: (type = 'journalist')->
+    if docsDOM = @$('#js-journalist-document')
+
+      if type is 'journalist'
+        docsDOM.find('input[name=document_type]').removeAttr 'checked'
+        docsDOM.find('input[value=cpf]').prop('checked', true)
+        docsDOM.find('.form-group:first-child').show()
+        docsDOM.find('input[name=cpf]').removeClass 'hide'
+        docsDOM.find('input[name=cnpj]').addClass 'hide'
+
+      else if type is 'vehicle'
+        docsDOM.find('input[name=document_type]').removeAttr 'checked'
+        docsDOM.find('input[value=cnpj]').prop('checked', true)
+        docsDOM.find('.form-group:first-child').hide()
+        docsDOM.find('input[name=cpf]').addClass 'hide'
+        docsDOM.find('input[name=cnpj]').removeClass 'hide'
 
