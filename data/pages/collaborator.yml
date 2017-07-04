@@ -223,17 +223,17 @@ form:
               container_style: form-group col-md-6 col-sm-12
 
             card_document:
-              label: Documento
+              label: CPF
               name: card_document
               type: text
               value:
               required: true
               disabled: false
               styles: form-control
-              help: CPF relacionado ao cartão (somente números)
+              help: Documento relacionado ao cartão
               container_style: form-group col-md-6 col-sm-12
               data:
-                mask: number
+                mask: cpf
 
 
             card_number:

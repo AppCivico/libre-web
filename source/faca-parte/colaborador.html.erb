@@ -5,296 +5,243 @@ controller: join_us/collaborator
 
 <% page = data.pages.collaborator %>
 
-    <section id="main-content">
-      <div class="container">
-        <div class="row">
-
-          <!-- page title -->
-          <div class="col-md-12">
-						<h1><%= page.title %></h1>
-          </div>
-
-          <div class="col-md-12 section-content">
-
-            <br>
-            <br>
-            <br>
-
-            <div class="row 3col-content">
-              <% page.contents.each do |c| %>
-                <div class="col-md-4">
-                  <h3 class="text-muted"><%= c[:title] %></h3>
-                  <p><%= c[:content] %></p>
+<section id="main-content">
+  <div class="container">
+  <div class="row">
+    <!-- page title -->
+    <div class="col-md-12">
+      <h1><%= page.title %></h1>
+    </div>
+    <div class="col-md-12 section-content">
+      <br>
+      <br>
+      <br>
+      <div class="row 3col-content">
+        <% page.contents.each do |c| %>
+        <div class="col-md-4">
+          <h3 class="text-muted"><%= c[:title] %></h3>
+          <p><%= c[:content] %></p>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="how-works-section">
+  <div class="container">
+  <div class="row">
+    <!-- page title -->
+    <div class="col-md-12">
+      <h2><%= page.how_to_works.title %></h2>
+    </div>
+    <div class="col-md-12 section-content">
+      <div class="row 3col-features">
+        <% page.how_to_works.features.each do |f| %>
+        <div class="col-md-4 text-center">
+          <p><%= image_tag f[:image], alt: '' %></p>
+          <h4><strong><%= f[:title] %></strong></h4>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="collaborator-section">
+  <div class="section-header">
+    <div class="container">
+      <h2><%= page.form.title %></h2>
+    </div>
+  </div>
+  <% tabs = page.form.tabs %>
+  <div class="section-tabs">
+    <div class="container">
+      <!-- nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="js-navtab <%= tabs.activated == 'personal' ? 'active' : ''%>">
+          <a href="#personal-pane" role="tab" data-toggle="tab"><%= tabs.personal.title %></a>
+        </li>
+        <li role="presentation" class="js-navtab <%= tabs.activated == 'plan' ? 'active' : ''%>">
+          <a href="#plan-pane" role="tab" data-toggle="tab"><%= tabs.plan.title %></a>
+        </li>
+        <li role="presentation" class="js-navtab <%= tabs.activated == 'billing' ? 'active' : ''%>">
+          <a href="#billing-pane" role="tab" data-toggle="tab"><%= tabs.billing.title %></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="form-container">
+    <div class="container">
+      <!-- form section -->
+      <div class="js-tabcontainer tab-content">
+        <!-- personal data tab -->
+        <% tab = tabs.personal %>
+        <div id="personal-pane" role="tabpanel" class="js-tabpanes tab-pane <%= tabs.activated == 'personal' ? 'active' : ''%>" id="personal">
+          <form name="personal_form" id="personal-form" novalidate>
+            <div class="row">
+              <!-- personal tab form -->
+              <div class="col-md-8">
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="text-spaced"><%= tab.subtitle %></p>
+                    <h4 class="text-green"><%= tab.section.access_data.title %></h4>
+                  </div>
+                  <% fields = tab.section.access_data.fields %>
+                  <div class="form-group col-md-6">
+                    <%= custom_input fields[:email] %>
+                    <%= custom_helpblock fields[:email] %>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <%= custom_input fields[:password] %>
+                    <%= custom_helpblock fields[:password] %>
+                  </div>
+                  <div class="col-md-12">
+                    <br>
+                    <h4 class="text-green"><%= tab.section.general_data.title %></h4>
+                  </div>
+                  <% fields = tab.section.general_data.fields %>
+                  <div class="form-group col-md-6">
+                    <%= custom_input fields[:name] %>
+                    <%= custom_helpblock fields[:name] %>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <%= custom_input fields[:surname] %>
+                    <%= custom_helpblock fields[:surname] %>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <%= custom_input fields[:phone] %>
+                    <%= custom_helpblock fields[:phone] %>
+                  </div>
+                  <div class="col-md-12"></div>
+                  <div class="form-group col-md-12">
+                    <p><%= btn = tab.buttons.next; input_tag :submit, value: btn.label, class: btn.classes %></p>
+                    <br>
+                  </div>
                 </div>
-              <% end %>
+              </div>
+              <!-- personal tab help -->
+              <div class="col-md-offset-1 col-md-3">
+                <% if tab.help %>
+                <h4 class="text-spaced text-green">Ajuda</h4>
+                <p><%= tab.help %></p>
+                <% end %>
+              </div>
             </div>
-
-          </div>
+          </form>
         </div>
-    </section>
-
-    <section id="how-works-section">
-      <div class="container">
-        <div class="row">
-
-          <!-- page title -->
-          <div class="col-md-12">
-            <h2><%= page.how_to_works.title %></h2>
-          </div>
-
-          <div class="col-md-12 section-content">
-
-            <div class="row 3col-features">
-              <% page.how_to_works.features.each do |f| %>
-                <div class="col-md-4 text-center">
-                  <p><%= image_tag f[:image], alt: '' %></p>
-                  <h4><strong><%= f[:title] %></strong></h4>
+        <!-- plan data tab -->
+        <% tab = tabs.plan %>
+        <div id="plan-pane" role="tabpanel" class="js-tabpanes tab-pane <%= tabs.activated == 'plan' ? 'active' : ''%>" id="plan">
+          <form name="plan_form" id="plan-form" novalidate>
+            <%= input_tag :hidden, name: 'amount', id: 'amount', value: '2000', placeholder: 'Valor do plano'  %>
+            <div class="row">
+              <!-- personal tab form -->
+              <div class="col-md-8">
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="text-spaced"><%= tabs.plan.subtitle %></p>
+                  </div>
+                  <div class="col-md-12"></div>
+                  <!-- plan  list -->
+                  <div class="col-md-12">
+                    <% fields = tab.fields; fields.each_with_index do |f, index| %>
+                    <%= '<div class="row">' if index % 2 == 0 %>
+                    <% if ['radio', 'checkbox'].include? f.type %>
+                    <div class="form-group col-md-6">
+                      <label><%= custom_input f %>&nbsp;<%= f[:label] %></label>
+                      <%= custom_helpblock f %>
+                    </div>
+                    <% else %>
+                    <div class="form-group col-md-6">
+                      <label class="sr-only"><%= f.label %></label>
+                      <%= custom_input f %>
+                      <%= custom_helpblock f %>
+                    </div>
+                    <% end %>
+                    <%= '</div>' if index % 2 == 1 %>
+                    <% end %>
+                  </div>
+                  <div class="col-md-12">
+                    <br>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <%= btn = tab.buttons.next; input_tag :submit, value: btn.label, class: btn.classes %>
+                    <br>
+                  </div>
+                  <br>
                 </div>
-              <% end %>
+              </div>
+              <!-- plan tab help -->
+              <div class="col-md-offset-1 col-md-3">
+                <% if tab.help %>
+                <h4 class="text-spaced text-green">Ajuda</h4>
+                <p><%= tab.help %></p>
+                <% end %>
+              </div>
             </div>
-
-          </div>
+          </form>
         </div>
-    </section>
-
-
-    <section id="collaborator-section">
-      <div class="section-header">
-        <div class="container">
-          <h2><%= page.form.title %></h2>
-        </div>
-      </div>
-
-      <% tabs = page.form.tabs %>
-
-      <div class="section-tabs">
-        <div class="container">
-          <!-- nav tabs -->
-          <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="js-navtab <%= tabs.activated == 'personal' ? 'active' : ''%>">
-              <a href="#personal-pane" role="tab" data-toggle="tab"><%= tabs.personal.title %></a>
-            </li>
-            <li role="presentation" class="js-navtab <%= tabs.activated == 'plan' ? 'active' : ''%>">
-              <a href="#plan-pane" role="tab" data-toggle="tab"><%= tabs.plan.title %></a>
-            </li>
-            <li role="presentation" class="js-navtab <%= tabs.activated == 'billing' ? 'active' : ''%>">
-              <a href="#billing-pane" role="tab" data-toggle="tab"><%= tabs.billing.title %></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-
-      <div class="form-container">
-        <div class="container">
-
-          <!-- form section -->
-          <div class="js-tabcontainer tab-content">
-
-						<!-- personal data tab -->
-						<% tab = tabs.personal %>
-						<div id="personal-pane" role="tabpanel" class="js-tabpanes tab-pane <%= tabs.activated == 'personal' ? 'active' : ''%>" id="personal">
-							<form name="personal_form" id="personal-form" novalidate>
-								<div class="row">
-									<!-- personal tab form -->
-									<div class="col-md-8">
-										<div class="row">
-											<div class="col-md-12">
-												<p class="text-spaced"><%= tab.subtitle %></p>
-												<h4 class="text-green"><%= tab.section.access_data.title %></h4>
-											</div>
-
-											<% fields = tab.section.access_data.fields %>
-											<div class="form-group col-md-6">
-												<%= custom_input fields[:email] %>
-												<%= custom_helpblock fields[:email] %>
-											</div>
-											<div class="form-group col-md-6">
-												<%= custom_input fields[:password] %>
-												<%= custom_helpblock fields[:password] %>
-											</div>
-
-
-											<div class="col-md-12">
-												<br>
-												<h4 class="text-green"><%= tab.section.general_data.title %></h4>
-											</div>
-
-											<% fields = tab.section.general_data.fields %>
-											<div class="form-group col-md-6">
-												<%= custom_input fields[:name] %>
-												<%= custom_helpblock fields[:name] %>
-											</div>
-											<div class="form-group col-md-6">
-												<%= custom_input fields[:surname] %>
-												<%= custom_helpblock fields[:surname] %>
-											</div>
-
-											<div class="form-group col-md-6">
-												<%= custom_input fields[:phone] %>
-												<%= custom_helpblock fields[:phone] %>
-											</div>
-
-											<div class="col-md-12"></div>
-
-											<div class="form-group col-md-12">
-												<p><%= btn = tab.buttons.next; input_tag :submit, value: btn.label, class: btn.classes %></p>
-												<br>
-
-											</div>
-
-										</div>
-									</div>
-
-									<!-- personal tab help -->
-									<div class="col-md-offset-1 col-md-3">
-										<% if tab.help %>
-											<h4 class="text-spaced text-green">Ajuda</h4>
-											<p><%= tab.help %></p>
-										<% end %>
-									</div>
-								</div>
-							</form>
-						</div>
-
-
-
-            <!-- plan data tab -->
-						<% tab = tabs.plan %>
-						<div id="plan-pane" role="tabpanel" class="js-tabpanes tab-pane <%= tabs.activated == 'plan' ? 'active' : ''%>" id="plan">
-							<form name="plan_form" id="plan-form" novalidate>
-								<%= input_tag :hidden, name: 'amount', id: 'amount', value: '2000', placeholder: 'Valor do plano'  %>
-								<div class="row">
-									<!-- personal tab form -->
-									<div class="col-md-8">
-										<div class="row">
-											<div class="col-md-12">
-												<p class="text-spaced"><%= tabs.plan.subtitle %></p>
-											</div>
-
-											<div class="col-md-12"></div>
-
-											<!-- plan  list -->
-												<div class="col-md-12">
-													<% fields = tab.fields; fields.each_with_index do |f, index| %>
-														<%= '<div class="row">' if index % 2 == 0 %>
-														<% if ['radio', 'checkbox'].include? f.type %>
-															<div class="form-group col-md-6">
-																<label><%= custom_input f %>&nbsp;<%= f[:label] %></label>
-																<%= custom_helpblock f %>
-															</div>
-														<% else %>
-															<div class="form-group col-md-6">
-																<label class="sr-only"><%= f.label %></label>
-																<%= custom_input f %>
-																<%= custom_helpblock f %>
-															</div>
-														<% end %>
-														<%= '</div>' if index % 2 == 1 %>
-													<% end %>
-												</div>
-
-												<div class="col-md-12">
-													<br>
-												</div>
-
-												<div class="form-group col-md-12">
-													<%= btn = tab.buttons.next; input_tag :submit, value: btn.label, class: btn.classes %>
-													<br>
-												</div>
-
-												<br>
-										</div>
-									</div>
-
-									<!-- plan tab help -->
-									<div class="col-md-offset-1 col-md-3">
-										<% if tab.help %>
-											<h4 class="text-spaced text-green">Ajuda</h4>
-											<p><%= tab.help %></p>
-										<% end %>
-									</div>
-								</div>
-							</form>
-						</div>
-
-
-
-            <!-- billing data tab -->
-						<% tab = tabs.billing %>
-            <div id="billing-pane" role="tabpanel" class="js-tabpanes tab-pane <%= tabs.activated == 'billing' ? 'active' : ''%>" id="billing">
-							<form name="billing_form" id="billing-form" novalidate>
-								<div class="row">
-									<!-- billing tab form -->
-									<div class="col-md-8">
-										<div class="row">
-											<div class="col-md-12">
-												<p class="text-spaced"><%= tab.subtitle || '' %></p>
-												<h4 class="text-green"><%= tab.section.card_data.title || '' %></h4>
-											</div>
-
-											<% fields = tab.section.card_data.fields %>
-											<% f = fields[:card_name]; content_tag :div, class: f.container_style do %>
-												<label class="sr-only"><%= f.label %></label>
-												<%= custom_input f, { maxlength: 26 } %>
-												<%= custom_helpblock f %>
-											<% end %>
-
-											<% f = fields[:card_document]; content_tag :div, class: f.container_style do %>
-												<label class="sr-only"><%= f.label %></label>
-												<%= custom_input f, { maxlength: 11 }%>
-												<%= custom_helpblock f %>
-											<% end %>
-
-											<% f = fields[:card_number]; content_tag :div, class: f.container_style do %>
-												<label class="sr-only"><%= f.label %></label>
-												<%= custom_input f %>
-												<%= custom_helpblock f %>
-											<% end %>
-
-											<div class="col-md-1 text-right">
-												<i id="card-brand-icon" class="fa fa-2x fadein fa-credit-card-alt text-muted" title="Cartão não identificado"></i>
-											</div>
-
-											<% f = fields[:card_validity]; content_tag :div, class: f.container_style do %>
-												<label class="sr-only"><%= f.label %></label>
-												<%= custom_input f, { maxlength: 7 }%>
-												<%= custom_helpblock f %>
-											<% end %>
-
-											<% f = fields[:card_csc]; content_tag :div, class: f.container_style do %>
-												<label class="sr-only"><%= f.label %></label>
-												<%= custom_input f, { maxlength: 6 }%>
-												<%= custom_helpblock f %>
-											<% end %>
-
-
-											<div class="col-md-12">
-												<br>
-											</div>
-
-											<div class="form-group col-md-12">
-												<%= btn = tab.buttons.next; input_tag :submit, value: btn.label, class: btn.classes %>
-												<br>
-											</div>
-
-										</div>
-									</div>
-
-									<!-- personal tab help -->
-									<div class="col-md-offset-1 col-md-3">
-										<% if tab.help %>
-											<h4 class="text-spaced text-green">Ajuda</h4>
-											<p><%= tab.help %></p>
-										<% end %>
-									</div>
-								</div>
-							</form>
+        <!-- billing data tab -->
+        <% tab = tabs.billing %>
+        <div id="billing-pane" role="tabpanel" class="js-tabpanes tab-pane <%= tabs.activated == 'billing' ? 'active' : ''%>" id="billing">
+          <form name="billing_form" id="billing-form" novalidate>
+            <div class="row">
+              <!-- billing tab form -->
+              <div class="col-md-8">
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="text-spaced"><%= tab.subtitle || '' %></p>
+                    <h4 class="text-green"><%= tab.section.card_data.title || '' %></h4>
+                  </div>
+                  <% fields = tab.section.card_data.fields %>
+                  <% f = fields[:card_name]; content_tag :div, class: f.container_style do %>
+                  <label class="sr-only"><%= f.label %></label>
+                  <%= custom_input f, { maxlength: 26 } %>
+                  <%= custom_helpblock f %>
+                  <% end %>
+                  <% f = fields[:card_document]; content_tag :div, class: f.container_style do %>
+                  <label class="sr-only"><%= f.label %></label>
+                  <%= custom_input f, { maxlength: 14 }%>
+                  <%= custom_helpblock f %>
+                  <% end %>
+                  <% f = fields[:card_number]; content_tag :div, class: f.container_style do %>
+                  <label class="sr-only"><%= f.label %></label>
+                  <%= custom_input f %>
+                  <%= custom_helpblock f %>
+                  <% end %>
+                  <div class="col-md-1 text-right">
+                    <i id="card-brand-icon" class="fa fa-2x fadein fa-credit-card-alt text-muted" title="Cartão não identificado"></i>
+                  </div>
+                  <% f = fields[:card_validity]; content_tag :div, class: f.container_style do %>
+                  <label class="sr-only"><%= f.label %></label>
+                  <%= custom_input f, { maxlength: 7 }%>
+                  <%= custom_helpblock f %>
+                  <% end %>
+                  <% f = fields[:card_csc]; content_tag :div, class: f.container_style do %>
+                  <label class="sr-only"><%= f.label %></label>
+                  <%= custom_input f, { maxlength: 6 }%>
+                  <%= custom_helpblock f %>
+                  <% end %>
+                  <div class="col-md-12">
+                    <br>
+                  </div>
+                  <div class="form-group col-md-12">
+                    <%= btn = tab.buttons.next; input_tag :submit, value: btn.label, class: btn.classes %>
+                    <br>
+                  </div>
+                </div>
+              </div>
+              <!-- personal tab help -->
+              <div class="col-md-offset-1 col-md-3">
+                <% if tab.help %>
+                <h4 class="text-spaced text-green">Ajuda</h4>
+                <p><%= tab.help %></p>
+                <% end %>
+              </div>
             </div>
-
-          </div>
-
+          </form>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 

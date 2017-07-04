@@ -55,7 +55,7 @@ module.exports = class CollaboratorPage extends PageBase
   # constructor
   initialize: ->
     masks = new Masks
-    masks.register ['phone', 'number', 'month_year', 'money']
+    masks.register ['cpf', 'phone', 'number', 'month_year', 'money']
 
     # change brand icon when model brand is changed
     @listenTo @models.billing, 'change:card_brand', @changeBrandIcon
