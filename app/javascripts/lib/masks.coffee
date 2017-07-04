@@ -11,6 +11,8 @@ module.exports = class Mask
 
   # available mask list
   masks:
+    cpf:        [/\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '-', /\d/, /\d/]
+    cnpj:       [/\d/,/\d/,'.',/\d/,/\d/,/\d/,'.',/\d/,/\d/,/\d/,'/',/\d/,/\d/,/\d/,'-',/\d/,/\d/]
     zipcode:    [/\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/]
     phone:      ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d?/]
     date:       [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
@@ -31,6 +33,16 @@ module.exports = class Mask
 
   # register masks
   register: (masks = [], options = {}) ->
+    # cpf mask
+    if _.contains masks, 'cpf'
+      for el in $('[data-mask="cpf"]')
+        TextMask.maskInput inputElement: el, guide: false, mask: @masks['cpf']
+
+    # cnpj mask
+    if _.contains masks, 'cnpj'
+      for el in $('[data-mask="cnpj"]')
+        TextMask.maskInput inputElement: el, guide: false, mask: @masks['cnpj']
+
     # zipcode mask
     if _.contains masks, 'zipcode'
       for el in $('[data-mask="zipcode"]')
