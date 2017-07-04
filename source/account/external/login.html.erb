@@ -69,7 +69,7 @@ controller: account/signin
               <% links = page.section[:register].list %>
 							<p>
                 <% collaborator = links[:collaborator] %>
-								<% link_to "#{collaborator.button.path}?act=support", class: 'btn btn-success btn-block', target: '_blank' do %>
+								<% link_to "#{collaborator.button.path}?act=support#personal-pane#personal-pane", class: 'btn btn-success btn-block', target: '_blank' do %>
                   Criar minha conta no Libre
 								<% end %>
 							</p>
