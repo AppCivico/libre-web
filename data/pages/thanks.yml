@@ -14,8 +14,8 @@ buttons:
     styles: btn btn-success
 
   home:
-    label: Voltar ao início
-    path: /
+    label: Meu Painel
+    path: /app
     styles: btn btn-success
 
 help: |
