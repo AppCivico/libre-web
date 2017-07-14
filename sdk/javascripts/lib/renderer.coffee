@@ -1,17 +1,13 @@
 
-JSON.Utils = class
-  @serialize = (json = {}) ->
-    data = []
-    for key, value of json
-      data.push "#{encodeURIComponent(key)}=#{encodeURIComponent(value)}"
-    data.join '&'
-
+Utils = require "lib/utils.coffee"
 
 ###
 # Renderer class
 # author: dvinciguerra
 ###
 module.exports = class
+
+  webAddr: "//midialibre.com.br" #||  "//devlibre.eokoe.com"
 
   constructor: (args = {}) ->
     @_config = args.config || {}
@@ -25,7 +21,7 @@ module.exports = class
     data = @getDataAttributes()
     return """
       <iframe class="lbr-sdk-iframe-button"
-        src="//midialibre.com.br/sdk/v1/button?#{JSON.Utils.serialize(data)}"
+        src="#{@webAddr}/sdk/v1/button?#{Utils.serialize data}"
         frameborder="0"
         scrolling="no"
         style="height:30px;width:140px;overflow:hidden">
