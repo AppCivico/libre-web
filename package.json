@@ -6,6 +6,7 @@
     "clean": "rm -rf node_modules/; rm -rf .tmp/; rm -rf build/"
   },
   "dependencies": {
+    "JSON": "^1.0.0",
     "babel-brunch": "^6.1.1",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.5.1",
@@ -16,6 +17,7 @@
     "fetch-ie8": "^1.5.0",
     "jquery": "2",
     "jquery-ujs": "^1.2.2",
+    "json3": "^3.3.2",
     "lib": "3.0.0",
     "promise-polyfill": "^6.0.2",
     "store": "^2.0.4",
