@@ -34,7 +34,7 @@
 					<div class="number-pane number-bordered number-box">
 						<h5>Seu Plano</h5>
 						<h3 class="number-title">
-							<span><%= (@user_plan_amount/100).toFixed(2).toString().replace('.', ',') %></span>
+							<span><%= (@user_plan_amount/100 || 0).toFixed(2).toString().replace('.', ',') %></span>
 							<small class="number-icon">R$</small>
 						</h3>
 						<p class="number-description hide">
