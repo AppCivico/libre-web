@@ -1,11 +1,24 @@
 ###
 # Utils class
-# This is a simple class that has some common methods
 # author: @dvinciguerra
 ###
-module.exports = class Utils
+module.exports = class
 
   # helpers
+  @encode: (data) ->
+    encodeURIComponent data
+
+
+  @decode: (data) ->
+    decodeURIComponent data
+
+
+  @serialize: (json = {}) ->
+    data = []
+    data.push "#{@encode key}=#{@encode value}" for key, value of json
+    return data.join '&'
+
+
   @merge: (obj = null, src = null) ->
     return null unless obj? or src?
 
