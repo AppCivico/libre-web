@@ -11,28 +11,44 @@ module.exports =
     javascripts:
       joinTo:
         'sdk/libre.js': [
-          /^sdk(\/|\\)javascripts(\/|\\)/
-          /^node_modules/
+          /^sdk(\/|\\)javascripts(\/||\\)libre.coffee/
+          /^sdk(\/|\\)javascripts(\/||\\)config.coffee/
+          /^sdk(\/|\\)javascripts(\/||\\)lib(\/||\\)renderer.coffee/
+        ]
+        'sdk/v1/button.js': [
+          /fetch-ie8/
+          /promise-polyfill/
+          /url-search-params/
+          /^sdk(\/|\\)javascripts(\/||\\)v1(\/||\\)button.coffee/
+          /^sdk(\/|\\)javascripts(\/||\\)lib(\/||\\)data(\/||\\)guid.coffee/
+          /^sdk(\/|\\)javascripts(\/||\\)lib(\/||\\)utils.coffee/
+          /^sdk(\/|\\)javascripts(\/||\\)lib(\/||\\)view.coffee/
+          /^sdk(\/|\\)javascripts(\/||\\)lib(\/||\\)session.coffee/
         ]
 
   npm:
     enabled: true
     whitelist: [
       'fetch-ie8'
+      'promise-polyfill'
+      'url-search-params'
     ]
+
 
   # modules configurations
   modules:
     nameCleaner: (path) ->
       path.replace(/^sdk(\/|\\)javascripts(\/|\\)/, '')
+
     autoRequire:
-      'sdk/libre.js': ['libre.js']
+      'sdk/libre.js': ['libre.coffee']
+      'sdk/v1/button.js': ['v1/button.coffee']
 
 
   # plugins configurations
   plugins:
     babel:
-      presets: ['latest']
+      presets: ['babel-polyfill','latest']
 
     eslint:
       pattern: /^sdk\/.*\.js?$/
@@ -43,7 +59,7 @@ module.exports =
   paths:
     public: ".tmp/dist"
     watched: [
-      "sdk/javascripts"
+      "sdk/"
     ]
 
   watcher:
