@@ -11,8 +11,10 @@ module.exports =
     javascripts:
       joinTo:
         'sdk/libre.js': [
+          /json3/
           /^sdk(\/|\\)javascripts(\/||\\)libre.coffee/
           /^sdk(\/|\\)javascripts(\/||\\)config.coffee/
+          /^sdk(\/|\\)javascripts(\/||\\)lib(\/||\\)utils.coffee/
           /^sdk(\/|\\)javascripts(\/||\\)lib(\/||\\)renderer.coffee/
         ]
         'sdk/v1/button.js': [
@@ -29,6 +31,7 @@ module.exports =
   npm:
     enabled: true
     whitelist: [
+      'json3'
       'fetch-ie8'
       'promise-polyfill'
       'url-search-params'
