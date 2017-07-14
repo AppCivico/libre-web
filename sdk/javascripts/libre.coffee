@@ -1,4 +1,5 @@
 # requires
+require "json3"
 Config = require "config.coffee"
 Renderer = require "lib/renderer.coffee"
 
@@ -28,14 +29,34 @@ class LibreSDK
       element.innerHTML = renderer.render()
 
 
-  @doneDonationSuccess: ->
+  @doneDonationSuccess: (event, data = {}) ->
     alert 'DONE DONATION SUCCESS'
+    console.log event.data
 
 
-  @doneDonationError: ->
+  @doneDonationError: (event, data = {}) ->
     alert 'DONE DONATION ERROR'
+    console.log data
 
 
+class MessageDispatcher
+  @resolve: (event) ->
+    origin = event.origin or ''
+    data = @getDataFromEvent event
+
+    if origin.match 'midialibre.com.br'
+      switch data.message
+        when 'success'
+          LibreSDK.doneDonationSuccess event, data
+        when 'error'
+          LibreSDK.doneDonationError event, data
+
+
+  @getDataFromEvent: (event) ->
+    return try
+      JSON.parse event.data
+    catch
+      {}
 
 ###
 # Single point entry
@@ -45,8 +66,7 @@ try
   sdk.render()
 
   window.addEventListener "message", (event) ->
-    if event.origin.match 'midialibre.com.br'
-      console.log event
+    MessageDispatcher.resolve event
   , false
 
 catch e
