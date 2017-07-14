@@ -1,8 +1,8 @@
 # requires
 require "fetch-ie8"
-Promise = require "promise-polyfill"
-
+Utils = require 'lib/utils.coffee'
 ViewBase = require 'lib/view.coffee'
+Promise = require "promise-polyfill"
 URLSearchParams = require 'url-search-params'
 
 
@@ -32,11 +32,38 @@ class I18n
     journalistNotAllowed: 'Você não pode doar logado como jornalista'
     supportSuccess: 'Muito obrigado! Sua colaboração foi computada'
     supportConfirm: 'Confirma a contribuição de 1 Libre para este conteúdo?'
+    supportError: 'Não foi possível concluir sua contribuição no momento'
+    supportGenericError: """
+      Um erro foi encontrado no sistema e
+      por isso não conseguimos concluir a contribuição
+    """
 
   # return property by key name
   @t: (key = null) ->
     @_properties[key] or ''
 
+###
+# Resource class
+###
+class Resource
+  @requestError: (res) ->
+    return if res.status >= 400 then true else false
+
+  @isServerError: (res) ->
+    return if res.status >= 500 then true else false
+
+  @isRequestError: (res) ->
+    return if res.status >= 400 and res.status < 500 then true else false
+
+
+class Support
+  @apiAddr: "//hapilibre.eokoe.com/api"
+
+  @alreadyDonated: (data = {}) ->
+    serialized = Utils.serialize data
+
+    endpoint = "#{@apiAddr}/donor/#{data.user_id}/support?#{serialized}"
+    return fetch endpoint, method: 'GET'
 
 ###
 # Support Button View Component
@@ -48,10 +75,34 @@ class SupportButtonView extends ViewBase
 
   constructor: (el) ->
     super el: el
-    @getDataAttributes()
+    params = @getDataAttributes()
 
     # binding events
     @listenTo el, 'click', @supportButtonClick
+
+    # is donated?
+    if @isAuth() and not @isJournalist()
+      articleSupported = Support.alreadyDonated @supportedParams()
+      articleSupported.then (res) =>
+        console.log res
+        @supportedStatus true
+
+      articleSupported.catch (res) =>
+        @supportedStatus false
+    else
+      @supportedStatus false
+
+
+  supportedStatus: (isSupported = false) ->
+    button = doc.querySelector '.lbr-sdk-btn-support'
+    thanks = doc.querySelector '.lbr-sdk-btn-thanks'
+
+    if isSupported
+      button.style.display = 'none'
+      thanks.style.display = 'block'
+    else
+      button.style.display = 'block'
+      thanks.style.display = 'none'
 
 
   isJournalist: ->
@@ -80,12 +131,12 @@ class SupportButtonView extends ViewBase
       @session().setItem 'donation', params
 
       signinAddr = "#{@webAddr}/account/external/login"
-      signinAddr += "?act=support&referer=#{encodeURIComponent params.location}"
+      signinAddr += "?act=support&referer=#{encodeURIComponent params.referer}"
 
       # open signin window
-      signinWindow = @windowOpen signinAddr, '_blank'
+      @signinWindow = @windowOpen signinAddr, '_blank'
 
-      signinWindow.addEventListener 'beforeunload', (event) ->
+      @signinWindow.addEventListener 'message', (event) ->
         #@successButtonsStatus()
         console.log 'unload signin window'
       return false
@@ -107,22 +158,28 @@ class SupportButtonView extends ViewBase
 
       supportResource = fetch endpoint, method: 'POST', body: formData
 
-        .then (res) =>
-          return res if res.status >= 300
+      # success
+      supportResource.then (res) =>
+        console.log res
+        return res if Resource.requestError(res)
 
-          console.log res.json()
-          Message.show(text: I18n.t 'supportSuccess')
-          @successButtonStatus()
+        Message.show(text: I18n.t 'supportSuccess')
+        @supportedStatus true
+        @postMessage action: 'support', message: 'success', data: params || {}
+        return false
+        #@successButtonStatus()
 
-        .then (res) =>
-          if res.status >= 400 and res.status < 500
-            throw new Error "Error: #{res}"
-          console.log res.json()
+      # error
+      supportResource.then (res) =>
+        if Resource.requestError(res)
+          Message.show(text: I18n.t 'supportError')
+          @supportedStatus false
+          @postMessage action: 'support', message: 'error', data: res
 
-        .catch (error) ->
-          console.error "Button#supportSubmit event: #{error}"
-
-      @postMessage firstname: 'Foo', lastname: 'Bar'
+      # handle exceptions
+      supportResource.catch (error) ->
+        Message.show(text: I18n.t 'supportGenericError')
+        console.error "Button#supportSubmit event: #{error}"
 
 
   windowOpen: (location, target = '_blank', options = null) ->
@@ -154,6 +211,18 @@ class SupportButtonView extends ViewBase
       api_key: (@session().getAttr 'api_key') or ''
       referer: @data.referer
     return params
+
+  supportedParams: ->
+    s = @session()
+    params = @data
+
+    return {
+      user_id: s.getAttr 'user_id'
+      api_key: s.getAttr 'api_key'
+      page_title: params.title
+      page_referer: params.referer
+    }
+
 
 
 
