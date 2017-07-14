@@ -71,7 +71,8 @@ class Support
 class SupportButtonView extends ViewBase
 
   apiAddr: "//hapilibre.eokoe.com/api"
-  webAddr: "//midialibre.com.br" #||  "//devlibre.eokoe.com"
+  #webAddr: "//midialibre.com.br"
+  webAddr: "//devlibre.eokoe.com"
 
   constructor: (el) ->
     super el: el

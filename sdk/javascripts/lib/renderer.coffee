@@ -7,7 +7,8 @@ Utils = require "lib/utils.coffee"
 ###
 module.exports = class
 
-  webAddr: "//midialibre.com.br" #||  "//devlibre.eokoe.com"
+  #webAddr: "//midialibre.com.br"
+  webAddr: "//devlibre.eokoe.com"
 
   constructor: (args = {}) ->
     @_config = args.config || {}
