@@ -136,7 +136,7 @@ croix prism hot chicken quinoa unicorn williamsburg 3 wolf moon.</p>
                 <input type="text" name="rg" class="form-control" placeholder="CEP* (12345-678)" />
               </div>
               <div class="col-md-6 form-group">
-<a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" target="_blank" title="Busca CEP - Sistema correios">                  <strong>Clique aqui</strong> para persquisar seu CEP caso não saiba.
+<a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" target="_blank" title="Busca CEP - Sistema correios">                  <strong>Clique aqui</strong> para pesquisar seu CEP caso não saiba.
 </a>              </div>
               <div class="col-md-12 form-group">
                 <label for="address_street" class="sr-only">Endereço</label>

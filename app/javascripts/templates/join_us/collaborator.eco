@@ -217,7 +217,7 @@ Continuar
                                 </div>
                                 <div> <input type="string" id="address_cep" name="address_cep" class="form-control" required="required" placeholder="CEP" />
                                 </div>
-                                <div><a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" id="" class="btn btn-link" target="_blank"> Clique aqui para persquisar seu CEP caso não saiba.
+                                <div><a href="http://www.buscacep.correios.com.br/sistemas/buscacep/" id="" class="btn btn-link" target="_blank"> Clique aqui para pesquisar seu CEP caso não saiba.
 </a></div>
                                 <div> <input type="string" id="address_street" name="address_street" class="form-control" required="required" placeholder="Endereço" />
                                 </div>
