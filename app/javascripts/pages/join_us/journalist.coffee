@@ -100,10 +100,6 @@ module.exports = class JournalistPage extends PageBase
 
 
   clickJournalistType: (event) ->
-    # change button styles
-    $list = @getUI('journalist-type')
-      .toggleClass 'active btn-success-bordered'
-
     # setting vehicle flag
     if type = event.currentTarget.getAttribute 'data-register-type'
       if type is 'journalist'
@@ -112,6 +108,13 @@ module.exports = class JournalistPage extends PageBase
       else if type is 'vehicle'
         @getUI('vehicle-input').val '1' if type is 'vehicle'
         @getUI('type_note').text '(sou um veículo)'
+
+      # change button styles
+      @getUI('journalist-type').each (i) ->
+        if (this.getAttribute 'data-register-type') is type
+          $(this).addClass 'active btn-success-bordered'
+        else
+          $(this).removeClass 'active btn-success-bordered'
 
       @_showDocuments(type)
 
