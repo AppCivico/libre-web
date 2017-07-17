@@ -102,6 +102,9 @@ module.exports = class JournalistPage extends PageBase
   clickJournalistType: (event) ->
     # setting vehicle flag
     if type = event.currentTarget.getAttribute 'data-register-type'
+      if $(event.currentTarget).hasClass 'active'
+        return
+
       if type is 'journalist'
         @getUI('vehicle-input').val '0' if type is 'journalist'
         @getUI('type_note').text '(sou um jornalista)'
