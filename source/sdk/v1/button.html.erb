@@ -1,0 +1,44 @@
+<style>
+  html, body {padding: 0px; margin: 0px}
+</style>
+
+<form class="lbr-sdk-button" href="#" style="">
+	<input class="lbr-sdk-btn-thanks"
+		type="image"
+		src="<%= data.config[:host] %>/assets/sdk/v1.0/img/lbr-button-image.thanks.svg"
+		height="30px"
+		title="Obrigado por colaborar!"
+    value="Obrigado!"
+		style="display:none"
+		onclick="return false;" />
+
+	<input class="lbr-sdk-btn-support"
+		type="image"
+		src="<%= data.config[:host] %>/assets/sdk/v1.0/img/lbr-button-image.svg"
+		height="30px"
+    value="Dar um libre"
+		style="display:none"
+		title="Gostou? Valorize, dê um Libre"/>
+</form>
+
+<script src="/sdk/v1/button.js"></script>
+
+<!-- script>
+  var Button = (function(){
+    return {
+      _element: null,
+
+      donationButtonClick: function(element) {
+        let parent = window.parent;
+        parent.postMessage(JSON.stringify({firstname: 'Foo', lastname:'Bar'}), "*");
+        alert('Doandooooo');
+      }
+
+    };
+  })();
+
+document.addEventListener('DOMContentLoaded', function(){
+  //Button.initialize('.lbr-sdk-button');
+});
+
+</script -->
