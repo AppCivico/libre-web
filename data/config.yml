@@ -2,6 +2,7 @@
 routes:
   # api base path
   root: https://hapilibre.eokoe.com/api
+  host: //devlibre.eokoe.com/
 
   # api contact path
   contact: /contact
