@@ -95,6 +95,18 @@ form:
               styles: form-control
               help: Preencha apenas seu sobrenome
 
+            cpf:
+              label: CPF
+              name: cpf
+              type: text
+              value:
+              required: true
+              disabled: false
+              styles: form-control
+              help:
+              data:
+                mask: cpf
+
             phone:
               label: Telefone
               name: phone
