@@ -117,7 +117,7 @@ controller: join_us/journalist
 										<div class="col-md-6 form-group">
 											<label for="phone" class="sr-only">Celular</label>
 											<%= f = fields[:cellphone_number]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
-											<small class="help-block">Digíte somente números seguindo o formato: <code>11 12345678</code></small>
+											<small class="help-block">Digite somente números seguindo o formato: <code>11 12345678</code></small>
 										</div>
 									</div>
 
@@ -139,7 +139,7 @@ controller: join_us/journalist
 											<label for="cpf" class="sr-only">Documento (CPF/CNPJ)</label>
 											<%= f = fields[:cpf]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
 											<%= f = fields[:cnpj]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
-											<small class="help-block">Digíte somente números do documento</small>
+											<small class="help-block">Digite somente números do documento</small>
 										</div>
 									</div>
 

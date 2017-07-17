@@ -106,22 +106,22 @@ croix prism hot chicken quinoa unicorn williamsburg 3 wolf moon.</p>
               <div class="col-md-6 form-group">
                 <label for="phone" class="sr-only">Telefone</label>
                 <input type="text" name="phone" class="form-control" placeholder="Telefone*" />
-                <small class="help-block">Digíte somente números seguindo o formato: <code>11 12345678</code></small>
+                <small class="help-block">Digite somente números seguindo o formato: <code>11 12345678</code></small>
               </div>
               <div class="col-md-6 form-group">
                 <label for="mobilephone" class="sr-only">Celular</label>
                 <input type="text" name="mobilephone" class="form-control" placeholder="Celular" />
-                <small class="help-block">Digíte somente números seguindo o formato: <code>11 12345678</code></small>
+                <small class="help-block">Digite somente números seguindo o formato: <code>11 12345678</code></small>
               </div>
               <div class="col-md-6 form-group">
                 <label for="rg" class="sr-only">RG</label>
                 <input type="text" name="rg" class="form-control" placeholder="RG*" />
-                <small class="help-block">Digíte somente números do documento</small>
+                <small class="help-block">Digite somente números do documento</small>
               </div>
               <div class="col-md-6 form-group">
                 <label for="cpf" class="sr-only">CPF</label>
                 <input type="text" name="cpf" class="form-control" placeholder="CPF*" />
-                <small class="help-block">Digíte somente números do documento</small>
+                <small class="help-block">Digite somente números do documento</small>
               </div>
 
               <!-- space -->
