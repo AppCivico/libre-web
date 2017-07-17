@@ -137,10 +137,9 @@ class SupportButtonView extends ViewBase
       # open signin window
       @signinWindow = @windowOpen signinAddr, '_blank'
 
-      @signinWindow.addEventListener 'message', (event) ->
-        #@successButtonsStatus()
-        console.log 'unload signin window'
-      return false
+      @signinWindow.addEventListener 'message', (event) =>
+        data = JSON.parse event.data
+        @signinWindow.close()
 
     # journalist role is not allowed
     if @isAuth() and @isJournalist()
