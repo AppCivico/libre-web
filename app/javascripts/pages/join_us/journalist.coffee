@@ -110,7 +110,7 @@ module.exports = class JournalistPage extends PageBase
         @getUI('type_note').text '(sou um jornalista)'
       else if type is 'vehicle'
         @getUI('vehicle-input').val '1' if type is 'vehicle'
-        @getUI('type_note').text '(sou um veículo)'
+        @getUI('type_note').text '(represento um veículo)'
 
       # change button styles
       @getUI('journalist-type').each (i) ->
