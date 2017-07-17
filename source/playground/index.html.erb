@@ -3,6 +3,8 @@ title: Exemplo de botão
 controller: home
 ---
 
+<link rel="stylesheet" href="//codemirror.net/lib/codemirror.css">
+<link rel="stylesheet" href="//codemirror.net/theme/monokai.css">
 
 
 <section id="main-content">
@@ -10,10 +12,48 @@ controller: home
       <div class="row">
 
         <div class="col-md-8">
-            <h2>Libre - Área do Desenvolvedor</h2>
-            <br>
-            <p>Esta área é destinada aos desenvolvedores que pretendem utilizar
-            o SDK da plataforma Libre em seus sites.</p>
+					<h2>Libre - Área do Desenvolvedor</h2>
+					<br>
+					<p>Esta área é destinada aos desenvolvedores que pretendem utilizar
+					o SDK da plataforma Libre em seus sites.</p>
+
+					<hr class="space-top">
+
+					<h3 class="text-green">Visualização do botão de doação</h3>
+					<p>
+						Cole o código de doação gerado no editor abaixo para carregar ele e ver como o mesmo ficará em sua pagina!
+					</p>
+
+					<form><textarea id="code" name="code">
+<!-- adiciona o botão do libre -->
+<div class="lbr-button"
+	data-id="4"
+	data-theme="default"
+	data-size="md">
+</div>
+					</textarea></form>
+
+
+
+					<div class="form-group text-right">
+						<p>
+							<button id="btn-button-preview" type="button" class="btn btn-default">Carregar botão</button>
+						</p>
+					</div>
+
+					<hr>
+
+					<div class="form-group">
+						<h3 class="text-green">Preview do botão</h3>
+						<div id="vw-button-preview" style="min-height:100px">
+<!-- adiciona o botão do libre -->
+<div class="lbr-button"
+	data-id="4"
+	data-theme="default"
+	data-size="md">
+</div>
+						</div>
+					</div>
 
 
 
@@ -31,26 +71,48 @@ controller: home
     </div>
 </section>
 
-<% unless build? %>
-    <script>
-        (function(d, s, id) {
-            var js, ljs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = "//midialibre.com.br/sdk/libre.js#v1.0";
-            ljs.parentNode.insertBefore(js, ljs);
-        }(document, 'script', 'libre-sdk'));
-    </script>
-    <% else %>
-        <script>
-            (function(d, s, id) {
-                var js, ljs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = "//devlibre.eokoe.com/sdk/libre.js#v1.0";
-                ljs.parentNode.insertBefore(js, ljs);
-            }(document, 'script', 'libre-sdk'));
-        </script>
-        <% end %>
+<script src="//codemirror.net/lib/codemirror.js"></script>
+<script src="//codemirror.net/mode/htmlmixed/htmlmixed.js"></script>
+<script src="//codemirror.net/mode/css/css.js"></script>
+<script src="//codemirror.net/mode/xml/xml.js"></script>
+
+
+
+<script>
+	document.addEventListener('DOMContentLoaded', function(){
+		var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+			lineNumbers: true,
+			mode: "text/html",
+			styleActiveLine: true,
+			matchBrackets: true,
+			theme: 'monokai'
+		});
+
+		var button = document.getElementById("btn-button-preview");
+		if(button != null){
+			button.addEventListener('click', function(event){
+				event.preventDefault();
+				var preview = document.getElementById("vw-button-preview");
+				console.log(preview);
+				if(preview != null){
+				 preview.innerHTML = editor.getValue();
+				 require("libre.js");
+				}
+			}, false);
+		}
+
+		return false;
+	}, false);
+</script>
+
+<!-- carrega o libre sdk -->
+<div id="lbr-root"></div>
+<script>(function(d, s, id) {
+	var js, ljs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//devlibre.eokoe.com/sdk/libre.js#v1.0;";
+	ljs.parentNode.insertBefore(js, ljs);
+}(document, 'script', 'libre-sdk'));
+</script>
+
