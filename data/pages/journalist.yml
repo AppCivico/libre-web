@@ -96,7 +96,7 @@ form:
         mask: none
 
     cellphone_number:
-      label: Telefone
+      label: Celular
       name: cellphone_number
       type: text
       value:
