@@ -28,6 +28,7 @@ subtitle:
   access_data:  Dados de acesso
   general_data: Dados gerais
   banking_data: Dados bancários
+  address_data:     Dados de localização
 
 form:
   fields:
