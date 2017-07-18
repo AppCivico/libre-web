@@ -70,7 +70,7 @@ form:
       value:
       required: true
       disabled: false
-      styles: form-control
+      styles: form-control jornalist-only
       help:
 
     cnpj:
@@ -92,7 +92,7 @@ form:
       value:
       required: true
       disabled: false
-      styles: form-control
+      styles: form-control jornalist-only
       help:
       data:
         mask: none

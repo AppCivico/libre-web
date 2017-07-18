@@ -107,16 +107,16 @@ controller: join_us/journalist
 											<label for="name" class="sr-only">Nome</label>
 											<%= f = fields[:name]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
 										</div>
-										<div class="col-md-6 form-group">
+										<div class="col-md-6 form-group jornalist-only">
 											<label for="surname" class="sr-only">Sobrenome</label>
 											<%= f = fields[:surname]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
 										</div>
 									</div>
 
 									<div class="row">
-										<div class="col-md-6 form-group">
+										<div class="col-md-6 form-group jornalist-only">
 											<label for="phone" class="sr-only">Celular</label>
-											<%= f = fields[:cellphone_number]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
+											<%= f = fields[:cellphone_number]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles + ' jornalist-only', placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
 											<small class="help-block">Digite somente números seguindo o formato: <code>11 12345678</code></small>
 										</div>
 									</div>
@@ -124,7 +124,7 @@ controller: join_us/journalist
 										<div class="col-md-12 form-group"></div>
 
 									<div id="js-journalist-document" class="row">
-										<div class="col-md-6 form-group">
+										<div class="col-md-6 form-group jornalist-only">
 											<label class="radio-inline">
 												Documento:
 											</label>
