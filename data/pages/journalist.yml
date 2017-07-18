@@ -83,7 +83,7 @@ form:
       styles: form-control hide
       help:
       data:
-        mask: none
+        mask: cnpj
 
     cpf:
       label: CPF
@@ -95,7 +95,7 @@ form:
       styles: form-control jornalist-only
       help:
       data:
-        mask: none
+        mask: cpf
 
     cellphone_number:
       label: Celular

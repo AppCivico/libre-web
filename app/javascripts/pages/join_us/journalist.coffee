@@ -47,7 +47,7 @@ module.exports = class JournalistPage extends PageBase
   # constructor
   initialize: ->
     masks = new Masks
-    masks.register ['number', 'phone', 'zipcode']
+    masks.register ['number', 'phone', 'zipcode', 'cpf', 'cnpj']
 
 
   renderBefore: (event, xhr, settings) ->
