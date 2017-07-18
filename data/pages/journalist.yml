@@ -25,9 +25,10 @@ buttons:
 
 # form subtitle
 subtitle:
-  access_data:  Dados de acesso
-  general_data: Dados gerais
-  banking_data: Dados bancários
+  access_data:      Dados de acesso
+  general_data:     Dados gerais
+  responsible_data: Dados do representante
+  banking_data:     Dados bancários
   address_data:     Dados de localização
 
 form:
@@ -171,6 +172,38 @@ form:
       disabled: true
       styles: form-control disabled
       help:
+
+    responsible_name:
+      label: Nome do representante
+      name: responsible_name
+      type: text
+      value: 0
+      required: true
+      disabled: false
+      styles: form-control vehicle-only
+      help:
+
+    responsible_surname:
+      label: Sobrenome do representante
+      name: responsible_surname
+      type: text
+      value: 0
+      required: true
+      disabled: false
+      styles: form-control vehicle-only
+      help:
+
+    responsible_cpf:
+      label: CPF do representante
+      name: responsible_cpf
+      type: text
+      value: 0
+      required: true
+      disabled: false
+      styles: form-control vehicle-only
+      help:
+      data:
+        mask: cpf
 
     vehicle:
       label: Veículo

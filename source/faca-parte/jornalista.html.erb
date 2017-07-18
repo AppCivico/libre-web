@@ -196,6 +196,37 @@ controller: join_us/journalist
 
 								<br>
 
+								<div class="vehicle-only hide">
+									<!-- responsible data -->
+									<h3 class="text-green">
+										<%= page.subtitle[:responsible_data] %>
+									</h3>
+
+									<div class="row">
+										<div class="col-md-6 form-group">
+											<label for="responsible_name" class="sr-only">Nome</label>
+											<%= f = fields[:responsible_name]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, disabled: 'disabled', readonly: f.disabled, data: f.data || {} %>
+										</div>
+										<div class="col-md-6 form-group">
+											<label for="responsible_surname" class="sr-only">Sobrenome</label>
+											<%= f = fields[:responsible_surname]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, disabled: 'disabled', readonly: f.disabled, data: f.data || {} %>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-md-6 form-group">
+											<label for="responsible_cpf" class="sr-only">CPF</label>
+											<%= f = fields[:responsible_cpf]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles, placeholder: f.label, required: f.required, disabled: 'disabled', readonly: f.disabled, data: f.data || {} %>
+											<small class="help-block">Digite somente números do documento</small>
+										</div>
+										<div class="col-md-6 form-group">
+											<label for="phone" class="sr-only">Celular</label>
+											<%= f = fields[:cellphone_number]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles + ' vehicle-only', placeholder: f.label, required: f.required, disabled: 'disabled', data: f.data || {} %>
+											<small class="help-block">Digite somente números seguindo o formato: <code>11 12345678</code></small>
+										</div>
+									</div>
+								</div>
+
+									<br>
 
 								<!-- banking data -->
 								<!-- h3 class="text-green">
