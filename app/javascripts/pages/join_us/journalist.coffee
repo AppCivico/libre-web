@@ -60,7 +60,10 @@ module.exports = class JournalistPage extends PageBase
     $input.data 'value', $input.val()
     $input.val(phone)
 
-
+    if @getUI('document-type').val() == 'cpf'
+      $('#cnpj').val ''
+    else if @getUI('document-type').val() == 'cnpj'
+      $('#cpf').val ''
 
   # getting zipcode
   getAddressByZipcode: (event) ->
