@@ -127,7 +127,6 @@ module.exports = class JournalistPage extends PageBase
 
       # toogle fields
       @getUI('jornalist-only').each (i) ->
-        console.log this.tagName.toLowerCase()
         jThis = $(this)
         if (formFields.indexOf this.tagName.toLowerCase()) >= 0
           if type is 'journalist'
@@ -138,7 +137,6 @@ module.exports = class JournalistPage extends PageBase
           jThis.toggleClass 'hide'
 
       @getUI('vehicle-only').each (i) ->
-        console.log this.tagName.toLowerCase()
         jThis = $(this)
         if (formFields.indexOf this.tagName.toLowerCase()) >= 0
           if type is 'vehicle'
