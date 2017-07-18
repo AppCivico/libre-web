@@ -31,6 +31,8 @@ module.exports = class JournalistPage extends PageBase
     'vehicle-input': 'input#vehicle'
     'zipcode-input': 'input#address_zipcode'
     'type_note': '#register-type'
+    'vehicle-only': '.vehicle-only'
+    'jornalist-only': '.jornalist-only'
 
   # view events
   events:
@@ -100,6 +102,7 @@ module.exports = class JournalistPage extends PageBase
 
 
   clickJournalistType: (event) ->
+    formFields = ['form', 'input', 'select']
     # setting vehicle flag
     if type = event.currentTarget.getAttribute 'data-register-type'
       if $(event.currentTarget).hasClass 'active'
@@ -118,6 +121,29 @@ module.exports = class JournalistPage extends PageBase
           $(this).addClass 'active btn-success-bordered'
         else
           $(this).removeClass 'active btn-success-bordered'
+
+      # toogle fields
+      @getUI('jornalist-only').each (i) ->
+        console.log this.tagName.toLowerCase()
+        jThis = $(this)
+        if (formFields.indexOf this.tagName.toLowerCase()) >= 0
+          if type is 'journalist'
+            jThis.removeAttr 'disabled'
+          else
+            jThis.attr 'disabled', 'disabled'
+        else
+          jThis.toggleClass 'hide'
+
+      @getUI('vehicle-only').each (i) ->
+        console.log this.tagName.toLowerCase()
+        jThis = $(this)
+        if (formFields.indexOf this.tagName.toLowerCase()) >= 0
+          if type is 'vehicle'
+            jThis.removeAttr 'disabled'
+          else
+            jThis.attr 'disabled', 'disabled'
+        else
+          jThis.toggleClass 'hide'
 
       @_showDocuments(type)
 
