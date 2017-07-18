@@ -19,6 +19,7 @@ module.exports = class RegisterDonorModel extends ModelBase
     password: null
     name: null
     surname: null
+    cpf: null
 
 
   # validate attributes
@@ -49,7 +50,7 @@ module.exports = class RegisterDonorModel extends ModelBase
     else
       @setError 'surname', 'required'
 
-    # cpf validation (matchs: /^(99) 999999999?$/)
+    # cpf validation
     if p.cpf?
       @setError 'cpf', 'invalid' unless p.cpf.match /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/
     else
@@ -74,6 +75,9 @@ module.exports = class RegisterDonorModel extends ModelBase
     if @get('phone')?
       phone = @get('phone').replace /[\(\)\s]/g, ''
       data.phone = "+55#{phone}"
+
+    if @get('cpf')?
+      cpf = @get('cpf').replace /[\.\-\s]/g, ''
 
     return data
 
