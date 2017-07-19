@@ -28,6 +28,8 @@ module.exports = class I18n
       'brand_required': "não compatível com nenhuma bandeira"
 
     error:
+      default_title: 'Erro!'
+
       header_message: 'Nao foi possível carregar sa informações do dashboard do usuário'
 
       signin_title: 'Erro!'
@@ -39,6 +41,9 @@ module.exports = class I18n
       reset_title: 'Ops!'
       reset_message: 'Encontramos um erro ao enviar seus dados para o servidor'
 
+      picpay_title: 'Ops!'
+      picpay_message: 'Não foi possível obter os dados para completar sua integração com PicPay'
+
     success:
       signin_title: 'Bem vindo!'
       signin_message: 'Usuário autênticado...'
@@ -48,6 +53,12 @@ module.exports = class I18n
 
       reset_title: 'Processo concluído!'
       reset_message: 'Sua senha foi alterada co sucesso'
+
+      picpay_title: 'Redirecionando...'
+      picpay_message: """
+        Vamos tentar redirecionar você para o site do PicPay para fazer a autorização. Certifique-se
+        de que a janela não foi bloqueada pelo seu bloqueador de pop-ups.
+      """
 
 
   # Run recusively json nodes using array nodes or string selector path
