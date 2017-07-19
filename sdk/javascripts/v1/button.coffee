@@ -86,7 +86,8 @@ class SupportButtonView extends ViewBase
       articleSupported = Support.alreadyDonated @supportedParams()
       articleSupported.then (res) =>
         console.log res
-        @supportedStatus true
+        list = res ? []
+        @supportedStatus if list.length > 0 then true else false
 
       articleSupported.catch (res) =>
         @supportedStatus false
