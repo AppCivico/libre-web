@@ -11,25 +11,32 @@ module.exports = class Mask
 
   # available mask list
   masks:
-    cpf:        [/\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '-', /\d/, /\d/]
-    zipcode:    [/\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/]
-    phone:      ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d?/]
-    date:       [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
-    month_year: [/\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
-    number:     TextMaskAddons.createNumberMask {
-      allowDecimal: false, decimalSymbol: '', thousandsSeparatorSymbol: '', prefix: '', suffix: ''
-    }
-    money:      TextMaskAddons.createNumberMask {
-      allowDecimal: true
-      decimalSymbol: ','
-      thousandsSeparatorSymbol: '.'
-      decimalLimit: 2
-      requireDecimal: false
-      prefix: ''
-      suffix: ''
-    }
+    cpf:
+      [/\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '-', /\d/, /\d/]
     cnpj:
       [/\d/,/\d/,'.',/\d/,/\d/,/\d/,'.',/\d/,/\d/,/\d/,'/',/\d/,/\d/,/\d/,/\d/,'-',/\d/,/\d/]
+    zipcode:
+      [/\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/]
+    phone:
+      ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d?/]
+    date:
+      [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
+    month_year:
+      [/\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
+    number:
+      TextMaskAddons.createNumberMask {
+        allowDecimal: false, decimalSymbol: '', thousandsSeparatorSymbol: '', prefix: '', suffix: ''
+      }
+    money:
+      TextMaskAddons.createNumberMask {
+        allowDecimal: true
+        decimalSymbol: ','
+        thousandsSeparatorSymbol: '.'
+        decimalLimit: 2
+        requireDecimal: false
+        prefix: ''
+        suffix: ''
+      }
 
 
   # register masks
