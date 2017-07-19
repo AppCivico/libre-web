@@ -33,6 +33,8 @@ module.exports = class JournalistPage extends PageBase
     'type_note': '#register-type'
     'vehicle-only': '.vehicle-only'
     'jornalist-only': '.jornalist-only'
+    'cnpj' : '#cnpj'
+    'cpf' : '#cpf'
 
   # view events
   events:
@@ -60,13 +62,24 @@ module.exports = class JournalistPage extends PageBase
     $input.data 'value', $input.val()
     $input.val(phone)
 
-    # not using @getUI becasue we need live values
+    cpf_value = @getUI('cpf').val() or ''
+    cpf_value = cpf_value.replace /[\.\-]/g, ''
+    cnpj_value = @getUI('cnpj').val() or ''
+    cnpj_value = cnpj_value.replace /[\.\/\-]/g, ''
+
+    # save changed
+    @getUI('cpf').data 'value', @getUI('cpf').val()
+    @getUI('cpf').val cpf_value
+    @getUI('cnpj').data 'value', @getUI('cnpj').val()
+    @getUI('cnpj').val cnpj_value
+
+    # not using @getUI because we need live values
     doc_type = $('input[name=document_type]:checked').val()
 
     if doc_type == 'cpf'
-      $('#cnpj').val ''
+      @getUI('cnpj').attr 'disabled', 'disabled'
     else if doc_type == 'cnpj'
-      $('#cpf').val ''
+      @getUI('cpf').attr 'disabled', 'disabled'
 
   # getting zipcode
   getAddressByZipcode: (event) ->
@@ -157,11 +170,13 @@ module.exports = class JournalistPage extends PageBase
 
     if type is 'cpf'
       @$('input#cpf').removeClass 'hide'
+        .removeAttr 'disabled'
       @$('input#cnpj').addClass 'hide'
 
     if type is 'cnpj'
       @$('input#cpf').addClass 'hide'
       @$('input#cnpj').removeClass 'hide'
+        .removeAttr 'disabled'
 
 
 
@@ -190,6 +205,11 @@ module.exports = class JournalistPage extends PageBase
 
     $input = @$el.find 'input#cellphone_number'
     $input.val $input.data('value')
+
+    @getUI('cnpj').removeAttr 'disabled'
+      .val @getUI('cnpj').data('value')
+    @getUI('cpf').removeAttr 'disabled'
+      .val @getUI('cpf').data('value')
 
     # input validation messages
     if response? and _.has(response, 'form_error')
