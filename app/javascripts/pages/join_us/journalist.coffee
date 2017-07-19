@@ -137,9 +137,11 @@ module.exports = class JournalistPage extends PageBase
       # change button styles
       @getUI('journalist-type').each (i) ->
         if (this.getAttribute 'data-register-type') is type
-          $(this).addClass 'active btn-success-bordered'
+          $(this).addClass 'active'
+            .removeClass 'btn-success-bordered'
         else
-          $(this).removeClass 'active btn-success-bordered'
+          $(this).removeClass 'active'
+            .addClass 'btn-success-bordered'
 
       # toogle fields
       @getUI('jornalist-only').each (i) ->
