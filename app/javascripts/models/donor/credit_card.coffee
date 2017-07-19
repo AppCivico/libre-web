@@ -50,7 +50,8 @@ module.exports = class CreditCardModel extends ModelBase
 
     # card document validation
     if p.card_document?
-      @setError 'card_document', 'invalid' unless p.card_document.match  /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/
+      unless p.card_document.match  /^\d{3}\.\d{3}\.\d{3}\-\d{2}$/
+        @setError 'card_document', 'invalid'
     else
       @setError 'card_document', 'required'
 
