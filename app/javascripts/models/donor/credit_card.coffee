@@ -115,7 +115,7 @@ module.exports = class CreditCardModel extends ModelBase
     else if _.has(options, 'isCallback') and options.isCallback is false
       return {
         api_key: @get('api_key')
-        cpf: @get('card_document')
+        cpf: @get('card_document').replace /[\.\-]/g, ''
       }
     else
       return super options
