@@ -4,7 +4,6 @@ IndexView = require 'views/dash/index.coffee'
 DashboardView = require 'views/dash/header.coffee'
 UserFormView = require 'views/dash/user/form.coffee'
 UserPlanView = require 'views/dash/user/plan.coffee'
-UserPaymentView = require 'views/dash/user/payment.coffee'
 SDKButtonView = require 'views/dash/journalist/sdk_button.coffee'
 
 
@@ -47,9 +46,17 @@ module.exports = class DashRouter extends Marionette.AppRouter
 
 
   userPayment: ->
+    View = null
+
     current = @getUserRole()
-    view = new UserPaymentView
-    view.render()
+    if current is 'donor'
+      View = require 'views/dash/user/payment.coffee'
+    else if current is 'journalist'
+      View = require 'views/dash/journalist/payment.coffee'
+
+    if View?
+      view = new View
+      view.render()
 
   sdkButton: ->
     current = @getUserRole()
