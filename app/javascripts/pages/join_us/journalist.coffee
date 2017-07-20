@@ -192,6 +192,11 @@ module.exports = class JournalistPage extends PageBase
         $input = $(this)
         $input.val $input.data('value')
 
+    @getUI('cnpj').removeAttr 'disabled'
+      .val @getUI('cnpj').data('value')
+    @getUI('cpf').removeAttr 'disabled'
+      .val @getUI('cpf').data('value')
+
     @getRegion('form').$el.append @templates.message {
       type: 'success', message: 'Usuário cadastrado!'
     }
