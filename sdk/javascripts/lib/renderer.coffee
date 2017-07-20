@@ -12,7 +12,7 @@ module.exports = class
   webAddr: '//midialibre.org'
 
   constructor: (args = {}) ->
-    @_config = args.config || Config.all()
+    @_config = Config.all()
     @webAddr = @_config['base']
 
 

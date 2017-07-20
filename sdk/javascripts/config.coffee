@@ -1,6 +1,6 @@
 # configurations
 window.Libre = window.Libre || {}
-window.Libre._configs =
+window.Libre._configs = _config =
   development:
     base: "//dev.midialibre.org"
     assets:
@@ -18,14 +18,14 @@ window.Libre._configs =
 ###
 # Configuration class
 ###
-module.exports = class Config
+module.exports = class
 
-  @all: (name = 'production')->
-    (window.Libre._configs[name]) ? {}
+  @all: (environment = 'production') ->
+    _config[environment] || {}
 
   @getEntry: (key, env = 'production') ->
-    window.Libre._configs[env][key] || {}
+    _config[env][key] || {}
 
-  @env: (name = 'production') ->
-    @getEntry(name)
+  @env: (environment) ->
+    @all environment
 
