@@ -17,6 +17,7 @@ module.exports = Backbone.Config = class Config
     development:
       name:     "Libre-App"
       api_base: "//hapilibre.eokoe.com/api"
+      url_base: "//dev.midialibre.org"
       debug:    true
 
 
@@ -24,6 +25,7 @@ module.exports = Backbone.Config = class Config
     production:
       name:     "Libre-App"
       api_base: "//hapilibre.eokoe.com/api"
+      url_base: "//dev.midialibre.org"
       debug:    false
 
 

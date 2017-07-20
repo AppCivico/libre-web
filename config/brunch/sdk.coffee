@@ -21,6 +21,7 @@ module.exports =
           /fetch-ie8/
           /promise-polyfill/
           /url-search-params/
+          /^sdk(\/|\\)javascripts(\/||\\)config.coffee/
           /^sdk(\/|\\)javascripts(\/||\\)v1(\/||\\)button.coffee/
           /^sdk(\/|\\)javascripts(\/||\\)lib(\/||\\)data(\/||\\)guid.coffee/
           /^sdk(\/|\\)javascripts(\/||\\)lib(\/||\\)utils.coffee/
