@@ -1,4 +1,5 @@
 # requires
+Config = require 'config.coffee'
 Session = require "lib/session.coffee"
 
 ###
@@ -7,12 +8,13 @@ Session = require "lib/session.coffee"
 module.exports = class
   el: null
 
+  apiAddr: "//hapilibre.eokoe.com/api"
+
+  webAddr: "//midialibre.org"
+
   constructor: (args = {}) ->
     @el = args.el || document.createElement('div')
-    @config = args.config || {}
-
-  config: ->
-    @config
+    @settingConfig()
 
   session: ->
     Session.load()
@@ -26,5 +28,11 @@ module.exports = class
 
   @windowParent: ->
     window.parent
+
+  settingConfig: () ->
+    @config = Config.all()
+    @apiAddr =  @config.api
+    @webAddr = @config.base
+
 
 

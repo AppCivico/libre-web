@@ -70,10 +70,6 @@ class Support
 ###
 class SupportButtonView extends ViewBase
 
-  apiAddr: "//hapilibre.eokoe.com/api"
-  #webAddr: "//midialibre.com.br"
-  webAddr: "//devlibre.eokoe.com"
-
   constructor: (el) ->
     super el: el
     params = @getDataAttributes()

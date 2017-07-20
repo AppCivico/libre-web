@@ -3,7 +3,7 @@
 module.exports =
   overrides:
     production:
-      optimize: true
+      optimize: false
       sourceMaps: true
 
   # add assets configurations
