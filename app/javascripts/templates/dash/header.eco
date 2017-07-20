@@ -2,17 +2,6 @@
 
 	<div class="container">
 		<div class="row">
-			<!-- div class="col-md-4 text-center">
-				<div class="number-pane">
-					<h3 class="number-title">
-						<span>0</span>
-						<small class="number-icon text-green">LBR</small>
-					</h3>
-					<p class="text-center">
-						<span class="number-description">Saldo atual</span>
-					</p>
-				</div>
-			</div -->
 
 			<% if type is 'donor': %>
 				<div class="col-md-6 text-center">
@@ -41,12 +30,21 @@
 							<small>Próxima data de débito:</small><br>
 							<small>02.02.2017</small>
 						</p>
-						<div class="number-buttons hide">
-							<a class="text-green pull-left" href="#usuario/plano">VER PLANO</a>
-							<a class="text-green pull-right" href="#usuario/pagamento">PAGAMENTO</a>
+						<div class="number-buttons">
+							<!-- a class="text-green pull-left" href="#usuario/plano">VER PLANO</a -->
+							<a class="text-green pull-right" href="/usuario/pagamento">Meu plano</a>
 						</div>
 					</div>
 				</div>
+
+				<% unless @user_plan_amount? : %>
+					<div class="col-md-12">
+							<div class="alert alert-warning">
+								<strong>Atenção!</strong> Você ainda não possui um plano selecionado.
+							</div>
+					</div>
+				<% end %>
+
 
 			<% else if type is 'journalist': %>
 				<div class="col-md-offset-3 col-md-6 text-center">
@@ -69,13 +67,18 @@
 
 		<% if type?: %>
 			<div class="row space-top">
-				<div style="background-color: #33cc66; padding: 10px 0px;text-align: center; color: white;border-radius: 10px;">
+				<div class="dash-topmenu">
 					<% if type is 'donor': %>
-						<a href="/" style="color: white">Meu painel</a>
+						<a href="/">Meu painel</a> |
+						<a href="/usuario/pagamento">Meu plano</a> |
+
 					<% else if type is 'journalist': %>
-						<a href="/" style="color: white">Meu painel</a> |
-						<a href="/sdk/gerar-botao" style="color: white">Gerar botão</a>
+						<a href="/">Meu painel</a> |
+						<a href="/sdk/gerar-botao">Gerar botão</a> |
+						<a href="/usuario/pagamento">Integração PicPay&reg;</a> |
+
 					<% end %>
+						<a href="/usuario/editar">Editar perfil</a>
 				</div>
 			</div>
 		<% end %>

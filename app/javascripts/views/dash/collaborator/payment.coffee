@@ -10,13 +10,10 @@ RequestError = require 'lib/exception/request.coffee'
 
 
 module.exports = class extends ViewBase
-  # adding mixins
-  #_.extend @prototype, FormMessage.prototype
-
   el: 'section#dash-main'
 
   # setting template
-  template: 'templates/dash/journalist/payment.eco'
+  template: 'templates/dash/collaborator/payment.eco'
 
   # loading
   loading: new LoadingView

@@ -2,9 +2,6 @@
 Session = require 'lib/session.coffee'
 IndexView = require 'views/dash/index.coffee'
 DashboardView = require 'views/dash/header.coffee'
-UserFormView = require 'views/dash/user/form.coffee'
-UserPlanView = require 'views/dash/user/plan.coffee'
-SDKButtonView = require 'views/dash/journalist/sdk_button.coffee'
 
 
 ###
@@ -35,34 +32,58 @@ module.exports = class DashRouter extends Marionette.AppRouter
 
 
   userEdit: ->
-    view = new UserFormView
-    view.render()
-
-
-  userPlan: ->
+    View = null
     current = @getUserRole()
-    view = new UserPlanView
-    view.render()
+
+    if current is 'donor'
+      View = require 'views/dash/collaborator/form.coffee'
+    else if current is 'journalist'
+      View = require 'views/dash/journalist/form.coffee'
+
+    if View?
+      view = new View
+      view.render()
+    else
+      document.location = '/not-found?ref=user-form'
 
 
+  # route /usuario/plano
+  userPlan: ->
+    View = null
+    current = @getUserRole()
+
+    if current is 'donor'
+      View = require 'views/dash/collaborator/plan.coffee'
+
+    if View?
+      view = new View
+      view.render()
+    else
+      document.location = '/not-found?ref=user-plan'
+
+
+  # route /usuario/pagamento
   userPayment: ->
     View = null
-
     current = @getUserRole()
+
     if current is 'donor'
-      View = require 'views/dash/user/payment.coffee'
+      View = require 'views/dash/collaborator/payment.coffee'
     else if current is 'journalist'
       View = require 'views/dash/journalist/payment.coffee'
 
     if View?
       view = new View
       view.render()
+    else
+      document.location = '/not-found?ref=user-payment'
 
   sdkButton: ->
     current = @getUserRole()
-    document.location = '/notfound' if current isnt 'journalist'
+    document.location = '/not-found' if current isnt 'journalist'
 
-    view = new SDKButtonView
+    View = require 'views/dash/journalist/sdk_button.coffee'
+    view = new View
     view.render()
 
 

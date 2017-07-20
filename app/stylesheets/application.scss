@@ -667,3 +667,22 @@ header.header-internal {
 	background-position: left center;
 	background-size: unset;
 }
+
+
+.dash-topmenu {
+	background-color: #33cc66;
+	padding: 10px 0px;
+	text-align: center;
+	color: white;
+	border-radius: 10px;
+
+	a {
+		color: #fff;
+		font-weight: bold;
+
+		&:hover, &:active {
+			color: #26440b;
+			text-decoration: none;
+		}
+	}
+}

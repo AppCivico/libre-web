@@ -1,0 +1,54 @@
+
+<div class="container">
+
+	<div class="col-md-8">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="text-green">Meu plano</h2>
+				<p>Veja abaixo as informações do seu plano em andamento. Você também pode substituir seu plano atual selecionando um novo.</p>
+				<br>
+				<br>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form-group col-md-12">
+				<h3 class="text-green">Seu plano atual</h3>
+				<p>Plano de <strong>R$ 20</strong> contratado em <strong>22/01/2017</strong></p>
+				<br>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="form-group col-md-12">
+				<h3 class="text-green">Alterar seu plano</h3>
+				<p>Selecione um novo plano para alterar o atual. Você pode selecionar um plano de valor
+				maior ou menor que o seu plano atual conforme sua necessidade.</p>
+			</div>
+
+			<% for p in ['20', '30', '40', '50', '100', '500']: %>
+				<div class="form-group col-md-6">
+					<label>
+						<input name="plan" id="plan" required="required" value="<%= p %>00" class="" placeholder="R$ <%= p %> por mês" type="radio">&nbsp;R$ <%= p %> por mês</label>
+				</div>
+			<% end %>
+
+		</div>
+
+		<div class="row">
+			<div class="col-md-12 form-group">
+				<p>
+					<button class="btn btn-success" type="submit">Salvar</button>
+					<a class="btn btn-default" href="/">Voltar</a>
+				</p>
+				<br>
+				<div id="message" class="message"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-offset-1 col-md-3">
+	</div>
+
+
+</div>

@@ -1,16 +1,11 @@
-"use strict"
-
 # requires
 Config = require 'config.coffee'
 ViewBase = require 'views/base.coffee'
 ButtonView = require 'views/button.coffee'
 LoadingView = require 'views/loading.coffee'
 
-###
-#  View class
-#  @author dvinciguerra
-###
-module.exports = class SDKButtonView extends ViewBase
+
+module.exports = class extends ViewBase
   el: 'section#dash-main'
 
   # setting template
