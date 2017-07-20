@@ -55,23 +55,6 @@
 						<p class="help-block">Coloque acima o endereço da pagina que receberá o Libre. Não se esqueça do <code>http</code> ou <code>https</code> na frente do endedreço</p>
 					</div>
 
-					<div class="col-md-6">
-						<div class="form-group">
-							<label for="tamanho" class="sr-only">Tamanho do botão</label>
-							<select id="tamanho" name="tamanho" class="form-control" readonly>
-								<option value="md" selected>Temanho do botão (médio)</option>
-							</select>
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="form-group">
-							<label for="website" class="sr-only">Endereço da página</label>
-							<select id="aparencia" name="aparencia" class="form-control" readonly="">
-								<option value="default" selected>Aparência do Botão (padrão)</option>
-							</select>
-						</div>
-					</div>
-
 					<div class="form-group col-md-12 text-right">
 						<input type="button" id="btn-code-gen" class="btn btn-success" value="Gerar código" />
 					</div>
