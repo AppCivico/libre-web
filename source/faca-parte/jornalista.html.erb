@@ -116,7 +116,7 @@ controller: join_us/journalist
 									<div class="row">
 										<div class="col-md-6 form-group jornalist-only">
 											<label for="phone" class="sr-only">Celular</label>
-											<%= f = fields[:cellphone_number]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles + ' jornalist-only', placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
+											<%= f = fields[:cellphone_number]; tag :input, type: f.type, name: f.name, class: f.styles + ' jornalist-only ' + (f.id || f.name), placeholder: f.label, required: f.required, readonly: f.disabled, data: f.data || {} %>
 											<small class="help-block">Digite somente números seguindo o formato: <code>11 12345678</code></small>
 										</div>
 									</div>
@@ -220,7 +220,7 @@ controller: join_us/journalist
 										</div>
 										<div class="col-md-6 form-group">
 											<label for="phone" class="sr-only">Celular</label>
-											<%= f = fields[:cellphone_number]; tag :input, type: f.type, name: f.name, id: f.id || f.name, class: f.styles + ' vehicle-only', placeholder: f.label, required: f.required, disabled: 'disabled', data: f.data || {} %>
+											<%= f = fields[:cellphone_number]; tag :input, type: f.type, name: f.name, class: f.styles + ' vehicle-only ' + (f.id || f.name), placeholder: f.label, required: f.required, disabled: 'disabled', data: f.data || {} %>
 											<small class="help-block">Digite somente números seguindo o formato: <code>11 12345678</code></small>
 										</div>
 									</div>
