@@ -111,7 +111,7 @@ module.exports = class CreditCardModel extends ModelBase
         number: @get('card_number')
         validity: "#{dt[1] + dt[0]}"
         brand: (@get 'card_brand' or '')
-        legal_document: @get('card_document')
+        legal_document: @get('card_document').replace /[\.\-]/g, ''
       }
     else if _.has(options, 'isCallback') and options.isCallback is false
       return {
