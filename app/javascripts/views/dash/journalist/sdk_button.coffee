@@ -1,6 +1,7 @@
 "use strict"
 
 # requires
+Config = require 'config.coffee'
 ViewBase = require 'views/base.coffee'
 ButtonView = require 'views/button.coffee'
 LoadingView = require 'views/loading.coffee'
@@ -60,42 +61,24 @@ module.exports = class SDKButtonView extends ViewBase
     @model.set 'user_id', s.user_id || 0
 
     code = """
-      <html>
-        <head>
-          <title>Titulo do seu website</title>
-          <!--
-            Você pode utilizar as open graph tags para customizar as informações coletadas
-            Learn more: https://developers.facebook.com/docs/sharing/webmasters
-          -->
-          <meta property="og:url"           content="http://www.your-domain.com/your-page.html" />
-          <meta property="og:type"          content="website" />
-          <meta property="og:title"         content="Your Website Title" />
-          <meta property="og:description"   content="Your description" />
-          <meta property="og:image"         content="http://www.your-domain.com/path/image.jpg" />
-        </head>
-        <body>
+      <!-- carrega o libre sdk -->
+      <div id="lbr-root"></div>
+      <script>(function(d, s, id) {
+        var js, ljs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//dev.midialibre.org/sdk/libre.js#v1.0;";
+        ljs.parentNode.insertBefore(js, ljs);
+      }(document, 'script', 'libre-sdk'));
+      </script>
 
-          <!-- carrega o libre sdk -->
-          <div id="lbr-root"></div>
-          <script>(function(d, s, id) {
-            var js, ljs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//devlibre.eokoe.com/sdk/libre.js#v1.0;";
-            ljs.parentNode.insertBefore(js, ljs);
-          }(document, 'script', 'libre-sdk'));
-          </script>
-
-          <!-- adiciona o botão do libre -->
-          <div class="lbr-button"
-            data-id="#{@model.get('user_id')}"
-            data-location="#{@model.get('website')}"
-            data-theme="#{@model.get('aparencia')}"
-            data-size="#{@model.get('tamanho')}">
-          </div>
-
-        </body>
-      </html>
+      <!-- adiciona o botão do libre -->
+      <div class="lbr-button"
+        data-id="#{@model.get('user_id')}"
+        data-location="#{@model.get('website')}"
+        data-theme="#{@model.get('aparencia')}"
+        data-size="#{@model.get('tamanho')}">
+      </div>
     """
 
     $el.removeClass 'hide'

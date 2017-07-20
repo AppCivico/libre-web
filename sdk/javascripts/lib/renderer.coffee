@@ -1,5 +1,6 @@
 
-Utils = require "lib/utils.coffee"
+Config = require 'config.coffee'
+Utils = require 'lib/utils.coffee'
 
 ###
 # Renderer class
@@ -8,10 +9,11 @@ Utils = require "lib/utils.coffee"
 module.exports = class
 
   #webAddr: "//midialibre.com.br"
-  webAddr: "//devlibre.eokoe.com"
+  webAddr: '//midialibre.org'
 
   constructor: (args = {}) ->
-    @_config = args.config || {}
+    @_config = args.config || Config.all()
+    @webAddr = @_config['base']
 
 
   getConfig: ->
@@ -20,6 +22,8 @@ module.exports = class
 
   render: ->
     data = @getDataAttributes()
+    config = @getConfig()
+
     return """
       <iframe class="lbr-sdk-iframe-button"
         src="#{@webAddr}/sdk/v1/button?#{Utils.serialize data}"
