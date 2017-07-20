@@ -51,16 +51,17 @@ module.exports = class JournalistPage extends PageBase
     masks = new Masks
     masks.register ['number', 'phone', 'zipcode', 'cpf', 'cnpj']
 
-
   renderBefore: (event, xhr, settings) ->
-    $input = $(event.target).find 'input#cellphone_number'
-    phone = $input.val() or ''
-    phone = "+55" + phone.replace /[\(\)]/g, ''
-      .replace /\s+/g, ''
+    $(event.target).find 'input.cellphone_number'
+      .each (i) ->
+        $input = $(this)
+        phone = $input.val() or ''
+        phone = "+55" + phone.replace /[\(\)]/g, ''
+          .replace /\s+/g, ''
 
-    # save changed
-    $input.data 'value', $input.val()
-    $input.val(phone)
+        # save changed
+        $input.data 'value', $input.val()
+        $input.val(phone)
 
     cpf_value = @getUI('cpf').val() or ''
     cpf_value = cpf_value.replace /[\.\-]/g, ''
@@ -186,8 +187,10 @@ module.exports = class JournalistPage extends PageBase
   renderSuccess: (event, xhr) ->
     @_reset_messages()
 
-    $input = @$el.find 'input#cellphone_number'
-    $input.val $input.data('value')
+    @$el.find 'input.cellphone_number'
+      .each (i) ->
+        $input = $(this)
+        $input.val $input.data('value')
 
     @getRegion('form').$el.append @templates.message {
       type: 'success', message: 'Usuário cadastrado!'
@@ -205,8 +208,10 @@ module.exports = class JournalistPage extends PageBase
     response = xhr.responseJSON || {}
     @_reset_messages()
 
-    $input = @$el.find 'input#cellphone_number'
-    $input.val $input.data('value')
+    @$el.find 'input.cellphone_number'
+      .each (i) ->
+        $input = $(this)
+        $input.val $input.data('value')
 
     @getUI('cnpj').removeAttr 'disabled'
       .val @getUI('cnpj').data('value')
