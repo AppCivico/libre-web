@@ -83,7 +83,7 @@ croix prism hot chicken quinoa unicorn williamsburg 3 wolf moon.</p>
               <div class="col-md-6 form-group">
                 <label for="password" class="sr-only">Senha</label>
                 <input type="password" name="password" class="form-control" placeholder="Senha*" />
-                <small class="help-block">Escolha uma senha de no mínimo 6 caractéres</small>
+                <small class="help-block">Escolha uma senha de no mínimo 6 caracteres</small>
               </div>
             </div>
 
