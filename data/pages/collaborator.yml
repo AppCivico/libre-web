@@ -256,7 +256,7 @@ form:
               required: true
               disabled: false
               styles: form-control
-              help: Cartões permitidos <code>Visa</code> e <code>MasterCard</code>
+              help: "Cartões permitidos: <code>Visa</code> e <code>MasterCard</code>"
               container_style: form-group col-md-11 col-sm-12
               data:
                 mask: number
