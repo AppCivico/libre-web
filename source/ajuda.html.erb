@@ -13,13 +13,19 @@ controller: help
 				</div>
 
 				<div class="col-md-8 section-content">
+					<ul id="faq-indice">
+						<% topics = page.topics; topics.each_with_index do |item, index| %>
+							<li><a href="#faq-<%= item.id %>"><%= item.title %></a></li>
+						<% end %>
+					</ul>
+
 					<% topics = page.topics; topics.each_with_index do |item, index| %>
 						<div class="help-topic">
-							<h3 class="text-green"><%= item.title %></h3>
+							<h3 id="faq-<%= item.id %>" class="text-green"><%= item.title %></h3>
 
 							<%= item.content %>
 
-							<br>
+							<p class="text-right"><small><a href="#faq-indice">índice &uarr;</a></small></p>
 						</div>
 					<% end %>
 				</div>
