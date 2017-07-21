@@ -11,6 +11,7 @@ content: |
 # help topics
 topics:
   - title: O que é o LIBRE?
+    id: o-que-e-o-libre
     content: |
       <p>Libre é uma ferramenta, uma moeda e uma plataforma para facilitar a
       contribuição financeira do público à imprensa e incentivar uma relação
@@ -37,6 +38,7 @@ topics:
 
 
   - title: Quem pode utilizar a plataforma LIBRE?
+    id: quem-pode-utilizar-a-plataforma-libre
     content: |
       <p>Como usuário, qualquer pessoa interessada em valorizar o jornalismo de
       interesse de qualidade e participar da criação de um novo modelo de
@@ -45,6 +47,7 @@ topics:
 
 
   - title: Por que devo aderir ao Libre? O que ganho com isso?
+    id: por-que-devo-aderir-ao-libre-o-que-ganho-com-isso
     content: |
       <p>A imprensa brasileira vive um de seus momentos mais delicados. Uma
       crise financeira e de credibilidade sem precedentes. Ao mesmo tempo, nunca
@@ -63,6 +66,7 @@ topics:
 
 
   - title: Eu sou jornalista. Como posso fazer para financiar meu trabalho?
+    id: eu-sou-jornalista-como-posso-fazer-para-financiar-meu-trabalho
     content: |
       <p>Para veículos ou jornalistas, o Libre ainda está em sua fase
       experimental. Nos primeiros meses nossa rede ainda está restrita a alguns
@@ -73,6 +77,7 @@ topics:
       e jornalistas interessados. </p>
 
   - title: Quanto vale um Libre?
+    id: quanto-vale-um-libre
     content: |
       <p>Um Libre não é apenas um Real.</p>
       <p>Quando você assina um plano mensal, seus Reais são convertidos em Libres
