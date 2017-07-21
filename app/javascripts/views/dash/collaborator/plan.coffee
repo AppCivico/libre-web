@@ -27,9 +27,8 @@ module.exports = class extends ViewBase
     event.preventDefault()
 
     oldValue = @model.get 'amount'
-    @model.get 'amount', ($ 'input[name=amount]:checked').val()
+    @model.set 'amount', ($ 'input[name=amount]:checked').val()
 
-    #@model.update @planParams()
     @model.save()
       .done (res) ->
         Message.show
@@ -38,8 +37,7 @@ module.exports = class extends ViewBase
           message: 'Seu plano acaba de ser atualizado!'
 
         setTimeout ->
-          document.location = '/app'
-          #Backbone.history.navigate '/', true
+          Backbone.history.navigate '/', true
         , 500
 
 
