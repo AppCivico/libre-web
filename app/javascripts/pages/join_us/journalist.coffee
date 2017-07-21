@@ -92,7 +92,7 @@ module.exports = class JournalistPage extends PageBase
         field.value = 'Carregando CEP...'
 
         # FIXME: export all this scope to an lib/plugin/service
-        response = $.ajax url: "http://api.postmon.com.br/cep/#{postalcode}"
+        response = $.ajax url: "https://api.postmon.com.br/cep/#{postalcode}"
           .done (response) ->
             data =
               address_state: response.estado_info.nome || null
