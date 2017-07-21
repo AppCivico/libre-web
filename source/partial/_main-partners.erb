@@ -1,0 +1,26 @@
+    <section id="main-partners">
+      <div class="container">
+        <div class="row text-center">
+          <h2 class="section-title text-green">QUEM FAZ PARTE</h2>
+        </div>
+
+        <div class="row">
+          <% page.who_using.each do |p| %>
+            <div class="col-md-3 text-center">
+              <p class="space-top">
+                <% link_to p.path, target: '_blank' do %>
+                  <br>
+                  <%= image_tag p.image, title: p.label, alt: p.title, width: '90%' %>
+                <% end %>
+              </p>
+            </div>
+          <% end %>
+            <div class="col-md-3 text-center">
+              <div class="space-top" style="width:100px;height:100px;padding:20px;border:2px dotted #33cc66; border-radius: 50px;margin-left:auto;margin-right:auto;position:relative;display:inline-block;margin-top: 70px;">
+                <a href="#"><small class="text-green">seja o<br> próximo</small></a>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </section>
