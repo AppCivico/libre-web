@@ -1,20 +1,13 @@
-"use strict"
 
-# requires
-ViewBase = require 'views/base.coffee'
-
-###
-#  View class
-#  @author dvinciguerra
-###
-module.exports = class LoadingView extends ViewBase
+module.exports = class
   el: '#loading'
 
-  # show user menu
-  hide: ->
-    @$el.addClass 'hide'
+  constructor: ->
+    @$el = ($ @el)
 
-  # show user menu
+  hide: ->
+    @$el.fadeOut 2000, =>
+      @$el.addClass 'hide'
+
   show: ->
     @$el.removeClass 'hide'
-    @$el.addClass 'fade-in'

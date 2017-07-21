@@ -1,18 +1,12 @@
-'use strict'
-
 
 # requires
 ModelBase = require 'models/base.coffee'
 
 
-###
-#  Model class
-#  @author dvinciguerra
-###
-module.exports = class PlanModel extends ModelBase
+module.exports = class extends ModelBase
   url: "/donor/:user_id/plan"
 
-  # default attributes
+  # defaults
   defaults:
     user_id: 0
     amount: 2000
@@ -24,23 +18,17 @@ module.exports = class PlanModel extends ModelBase
     'change:amount': 'onChangeAmount'
 
 
-  # constructor
-  initialize: ->
-    #@set 'id', 1 # force PUT setting a fake id
-
-
-  # set url when user_id is changed
   onChangeUserId: (model, user_id) ->
     @url = "#{@urlRoot}/donor/#{user_id}/plan"
 
 
-  # clean amount when amount changes
   onChangeAmount: (model, amount) ->
-    amount = amount.replace(',', '').replace('.', '')
+    if typeof amount is 'string'
+      amount = (amount.replace ',', '').replace '.', ''
     @set 'amount', amount
 
 
-  # validate attributes
+  # methods
   validate: (p = {}, settings = {}) ->
     @errors = {form_error: {}}
 
@@ -53,9 +41,16 @@ module.exports = class PlanModel extends ModelBase
     return @errors unless _.isEmpty(@errors.form_error)
 
 
-  # save plan using always PUT method
   save: ->
     @url = "#{@urlRoot}/donor/#{@get('user_id')}/plan"
+    @url += "/#{@get 'id'}" if (@get 'id')?
     super arguments
 
+
+  fetch: (params = {amount: 0}) ->
+    @set params
+    return $.ajax
+      url: @url
+      data: @attributes
+      dataType: 'json'
 

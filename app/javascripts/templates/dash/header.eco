@@ -70,7 +70,7 @@
 				<div class="dash-topmenu">
 					<% if type is 'donor': %>
 						<a href="/">Meu painel</a> |
-						<a href="/usuario/pagamento">Meu plano</a> |
+						<a href="/usuario/plano">Meu plano</a> |
 
 					<% else if type is 'journalist': %>
 						<a href="/">Meu painel</a> |
