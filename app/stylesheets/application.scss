@@ -119,9 +119,12 @@ section {
   margin: 100px 0px;
 
 	&#whats-this,
-	&#howitworks,
-	&#maindivider {
+	&#howitworks {
 		margin: 200px 0px;
+	}
+
+	&#maindivider {
+		margin: 200px 0px 0px;
 	}
 }
 
@@ -150,7 +153,6 @@ section#dash-main {
 }
 
 footer {
-  margin-top: 100px;
   padding: 100px 0px;
   background-color: $green;
   min-height: 200px;
@@ -632,7 +634,6 @@ section#maindivider {
 
 
 footer {
-	margin-top: 300px;
 	color: $fg_invert;
 	background-color: $bg_green;
 
