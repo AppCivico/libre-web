@@ -1,19 +1,87 @@
-# requires
+#@model.update @planParams  requires
 ViewBase = require 'views/base.coffee'
-LoadingView = require 'views/loading.coffee'
+Loading = require 'views/loading.coffee'
+PlanModel = require 'models/donor/plan.coffee'
+Message = require 'lib/message.coffee'
 
 
 module.exports = class extends ViewBase
   el: "section#dash-main"
 
-  # setting template
   template: 'templates/dash/collaborator/plan.eco'
 
-  # loading component
-  loading: new LoadingView
+  model: new PlanModel
 
-  # event on render
+  ui:
+    form: '#form-plan'
+
+  events:
+    'submit @ui.form': 'submitForm'
+
+  initialize: ->
+    @loading = new Loading
+    @loading.show()
+
+
+  submitForm: (event) ->
+    event.preventDefault()
+
+    oldValue = @model.get 'amount'
+    @model.get 'amount', ($ 'input[name=amount]:checked').val()
+
+    #@model.update @planParams()
+    @model.save()
+      .done (res) ->
+        Message.show
+          type: 'success'
+          title: 'Sucesso'
+          message: 'Seu plano acaba de ser atualizado!'
+
+        setTimeout ->
+          document.location = '/app'
+          #Backbone.history.navigate '/', true
+        , 500
+
+
+
+      .fail (res) ->
+        Message.show
+          type: 'danger'
+          title: 'Ops!'
+          message: 'Não foi possível atualizar seu plano!'
+
+
+  render: ->
+    @model.set @planParams()
+    @model.fetch()
+      .done (res) =>
+        plan = (_.first res.user_plan ? []) ? {}
+        @model.set plan
+        super plan
+
+      .fail (res) ->
+        super {}
+
+
   onRender: ->
-    # FIXME: fadein()
-    @loading.hide()
+    setTimeout =>
+      @loading.hide()
+    , 500
+
+
+  planParams: (params = {}) ->
+    data =
+      user_id: @session.get 'user_id'
+      api_key: @session.get 'api_key'
+      amount:  params.amount ? 0
+    return data
+
+
+  amountParams: (params = {}) ->
+    data =
+      user_id: @session.get 'user_id'
+      api_key: @session.get 'api_key'
+      amount:  ($ 'input[name=amount]').val()
+    return data
+
 
