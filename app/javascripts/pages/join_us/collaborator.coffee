@@ -241,6 +241,7 @@ module.exports = class CollaboratorPage extends PageBase
               }
               console.error xhr
 
+            btn.state 'loaded'
 
       .fail (xhr, message, other) =>
         @renderMessage btn.$el.parent(), {
@@ -256,9 +257,7 @@ module.exports = class CollaboratorPage extends PageBase
 
           console.log response
 
-      .always ->
         btn.state 'loaded'
-
 
 
   enableTab: (tabname) ->
