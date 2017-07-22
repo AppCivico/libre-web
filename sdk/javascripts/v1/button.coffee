@@ -121,7 +121,6 @@ class SupportButtonView extends ViewBase
   #   /t/donor/004-support.t#L21 at AppCivico/libre-api
   supportButtonClick: (event) =>
     event.preventDefault()
-
     params = @supportParams()
 
     # not authenticated
@@ -139,44 +138,44 @@ class SupportButtonView extends ViewBase
         @signinWindow.close()
 
     # journalist role is not allowed
-    if @isAuth() and @isJournalist()
+    else if @isAuth() and @isJournalist()
       Message.show(text: I18n.t 'journalistNotAllowed')
       return false
 
     # user support (with confirmation)
-    isSupportConfirmed = Message.confirmable(text: I18n.t 'supportConfirm')
-    if isSupportConfirmed
-      formData = new FormData()
-      formData.append(key, value) for key, value of params
+    else
+      if (Message.confirmable text: I18n.t 'supportConfirm')
+        formData = new FormData
+        formData.append(key, value) for key, value of params
 
-      # send support data
-      endpoint = "#{@apiAddr}/journalist/#{params.uid}/support"
-      endpoint += "?api_key=#{params.api_key}"
+        # send support data
+        endpoint = "#{@apiAddr}/journalist/#{params.uid}/support"
+        endpoint += "?api_key=#{params.api_key}"
 
-      supportResource = fetch endpoint, method: 'POST', body: formData
+        supportResource = fetch endpoint, method: 'POST', body: formData
 
-      # success
-      supportResource.then (res) =>
-        console.log res
-        return res if Resource.requestError(res)
+        # success
+        supportResource.then (res) =>
+          console.log res
+          return res if Resource.requestError(res)
 
-        Message.show(text: I18n.t 'supportSuccess')
-        @supportedStatus true
-        @postMessage action: 'support', message: 'success', data: params || {}
-        return false
-        #@successButtonStatus()
+          Message.show(text: I18n.t 'supportSuccess')
+          @supportedStatus true
+          @postMessage action: 'support', message: 'success', data: params || {}
+          return false
+          #@successButtonStatus()
 
-      # error
-      supportResource.then (res) =>
-        if Resource.requestError(res)
-          Message.show(text: I18n.t 'supportError')
-          @supportedStatus false
-          @postMessage action: 'support', message: 'error', data: res
+        # error
+        supportResource.then (res) =>
+          if Resource.requestError(res)
+            Message.show(text: I18n.t 'supportError')
+            @supportedStatus false
+            @postMessage action: 'support', message: 'error', data: res
 
-      # handle exceptions
-      supportResource.catch (error) ->
-        Message.show(text: I18n.t 'supportGenericError')
-        console.error "Button#supportSubmit event: #{error}"
+        # handle exceptions
+        supportResource.catch (error) ->
+          Message.show(text: I18n.t 'supportGenericError')
+          console.error "Button#supportSubmit event: #{error}"
 
 
   windowOpen: (location, target = '_blank', options = null) ->
