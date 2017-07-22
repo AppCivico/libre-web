@@ -62,7 +62,7 @@ module.exports = class Session
 
   isAuth: (session = null) ->
     session = session || this
-    if (session.getAttributes()).api_key then true else false
+    return if (session.getAttr 'api_key')? then true else false
 
   # get params from storage
   getItem: (key = null) ->
