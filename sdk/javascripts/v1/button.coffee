@@ -190,7 +190,7 @@ class SupportButtonView extends ViewBase
     params = (new URLSearchParams url.search.substring(1))
 
     @data =
-      uid: params.get "uid"
+      uid: params.get "id"
       theme: params.get "theme"
       title: params.get "title"
       api_key: params.get "api_key"
@@ -203,7 +203,7 @@ class SupportButtonView extends ViewBase
     params =
       page_title: @data.title
       page_referer: @data.referer
-      uid: @data.uid
+      uid: @data.id
       api_key: (@session().getAttr 'api_key') or ''
       referer: @data.referer
     return params
