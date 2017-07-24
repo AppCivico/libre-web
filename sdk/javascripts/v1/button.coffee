@@ -80,10 +80,13 @@ class SupportButtonView extends ViewBase
     # is donated?
     if @isAuth() and not @isJournalist()
       articleSupported = Support.alreadyDonated @supportedParams()
-      articleSupported.then (res) =>
-        console.log res
-        list = res ? []
-        @supportedStatus if list.length > 0 then true else false
+      articleSupported
+        .then (res) ->
+          return res.json() if res.status >= 200 and res.status < 300
+
+        .then (json) =>
+          list = json ? []
+          @supportedStatus if list.length > 0 then true else false
 
       articleSupported.catch (res) =>
         @supportedStatus false
@@ -149,7 +152,7 @@ class SupportButtonView extends ViewBase
         formData.append(key, value) for key, value of params
 
         # send support data
-        endpoint = "#{@apiAddr}/journalist/#{params.uid}/support"
+        endpoint = "#{@apiAddr}/journalist/#{params.id}/support"
         endpoint += "?api_key=#{params.api_key}"
 
         supportResource = fetch endpoint, method: 'POST', body: formData
@@ -190,7 +193,7 @@ class SupportButtonView extends ViewBase
     params = (new URLSearchParams url.search.substring(1))
 
     @data =
-      uid: params.get "id"
+      id: params.get "id"
       theme: params.get "theme"
       title: params.get "title"
       api_key: params.get "api_key"
@@ -203,7 +206,7 @@ class SupportButtonView extends ViewBase
     params =
       page_title: @data.title
       page_referer: @data.referer
-      uid: @data.id
+      id: @data.id
       api_key: (@session().getAttr 'api_key') or ''
       referer: @data.referer
     return params
