@@ -103,4 +103,5 @@ module.exports = class extends ViewBase
 
   buttonParams: ->
     form = @getUI('form')
-    return @params(form).permit 'website', 'tamanho', 'aparencia'
+    #return @params(form).permit 'website', 'tamanho', 'aparencia'
+    return @params(form).permit()
