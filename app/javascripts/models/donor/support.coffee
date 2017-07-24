@@ -44,7 +44,7 @@ module.exports = class SupportModel extends ModelBase
           alert 'Muito obrigado! Sua colaboração foi computada com sucesso.'
           @postMessage action: 'support', message: 'success', data: {}
 
-      .fail (res) ->
+      .fail (res) =>
         alert "Desculpe! Ocorreu algum erro ao processar a sua colaboração."
         @postMessage action: 'support', message: 'error', data: res
 
@@ -68,3 +68,9 @@ module.exports = class SupportModel extends ModelBase
       data: @toJSON()
       type: 'json'
     }
+
+
+  postMessage: (data = {}, origin = "*") ->
+    json = JSON.stringify data
+    (window.parent || window).postMessage json, origin
+
