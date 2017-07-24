@@ -24,7 +24,7 @@ module.exports = Backbone.Config = class Config
     # config for production
     production:
       name:     "Libre-App"
-      api_base: "//hapilibre.eokoe.com/api"
+      api_base: "//api.midialibre.org/api"
       url_base: "//dev.midialibre.org"
       debug:    false
 
@@ -38,7 +38,5 @@ module.exports = Backbone.Config = class Config
       return @routes[token]
 
     return conf
-
-
 
 

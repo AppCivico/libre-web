@@ -1,5 +1,6 @@
 # requires
 require "fetch-ie8"
+Config = require 'config.coffee'
 Utils = require 'lib/utils.coffee'
 ViewBase = require 'lib/view.coffee'
 Promise = require "promise-polyfill"
@@ -57,7 +58,7 @@ class Resource
 
 
 class Support
-  @apiAddr: "//hapilibre.eokoe.com/api"
+  @apiAddr: ("#{Config.all().api}/api") ? "//api.midialibre.org/api"
 
   @alreadyDonated: (data = {}) ->
     serialized = Utils.serialize data

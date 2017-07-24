@@ -8,9 +8,8 @@ Session = require "lib/session.coffee"
 module.exports = class
   el: null
 
-  apiAddr: "//hapilibre.eokoe.com/api"
-
-  webAddr: "//midialibre.org"
+  apiAddr: ""
+  webAddr: ""
 
   constructor: (args = {}) ->
     @el = args.el || document.createElement('div')
