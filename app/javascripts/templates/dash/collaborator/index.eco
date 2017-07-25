@@ -32,7 +32,7 @@
 							<% if @supports and @supports.length > 0: %>
 								<div class="list-group">
 									<% for item in @supports: %>
-										<a href="<%= item.page_referer %>" class="list-group-item" title="Acessar: <%= item.page_referer %>" data-bypass="true" target="_blank" style="padding: 25px 20px;">
+										<!-- a href="<%= item.page_referer %>" class="list-group-item" title="Acessar: <%= item.page_referer %>" data-bypass="true" target="_blank" style="padding: 25px 20px;">
 											<span class="badge" style="padding: 5px 5px;border-radius: 2px;background-color: #3cb878">
 												<i class="fa fa-globe"></i>
 												acessar
@@ -43,21 +43,34 @@
 											<p class="list-group-item-text">
 												<strong>Link:</strong> <span><%= item.page_referer %></span>
 											</p>
-										</a>
+										</a -->
 
-										<!-- div class="col-md-3 support-item" data-id="<%= item.id %>" data-journalist="<%= item.journalist_id %>">
+										<div class="col-md-3 support-item" data-id="<%= item.id %>" data-journalist="<%= item.journalist_id %>" style="min-height:300px">
 											<div class="support-image">
 												<img src="/assets/images/image_holder.png" class="img-responsive" alt="Image não encontrada">
 											</div>
 											<div class="support-title">
 												<h4 title="<%= item.page_title %>"><%= if item.page_title.length > 40 then "#{item.page_title.substr(0, 40)}..." else item.page_title or 'Artigo sem titulo' %></h4>
 											</div>
-											<div class="support-title">
-												<a href="<%= item.page_referer %>" title="Acessar: <%= item.page_referer %>" class="text-green" data-bypass="true" target="_blank">
-													acessar site
+											<div class="support-">
+												<small class="text-muted">Compartilhe:</small>&nbsp;
+												<a href="https://www.facebook.com/sharer/sharer.php?u=Colaborei%20com%20um%20Libre%20para%20o%20artigo%20<%= item.page_referer %>" data-bypass="true" target="_blank" title="Compartilhar no Facebook">
+													<i class="fa fa-facebook-official"></i>
+												</a>
+												<a href="https://plus.google.com/share?url=Colaborei%20com%20um%20Libre%20para%20o%20artigo%20<%= item.page_referer %>" data-bypass="true" target="_blank" title="Compartilhar no Google+">
+													<i class="fa fa-google-plus"></i>
+												</a>
+												<a href="https://twitter.com/home?status=Colaborei%20com%20um%20Libre%20para%20o%20artigo%20<%= item.page_referer %>" data-bypass="true" target="_blank" title="Compartilhar no Twitter">
+													<i class="fa fa-twitter"></i>
 												</a>
 											</div>
-										</div -->
+											<div class="support-title">
+												<a href="<%= item.page_referer %>" title="Acessar: <%= item.page_referer %>" class="text-green" data-bypass="true" target="_blank">
+													acessar artigo
+												</a>
+											</div>
+										</div>
+
 									<% end %>
 								</div>
 							<% else: %>

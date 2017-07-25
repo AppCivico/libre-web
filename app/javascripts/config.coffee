@@ -4,7 +4,7 @@
 ###
 module.exports = Backbone.Config = class Config
   # default env
-  @environment = 'development'
+  @environment = 'production'
 
   @config =
     # route table
