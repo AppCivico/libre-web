@@ -226,10 +226,10 @@ module.exports = class JournalistPage extends PageBase
     console.log 'event', event if @options.config['debug']
     console.log 'xhr', xhr if @options.config['debug']
     console.log 'error', error if @options.config['debug']
+    console.log 'response', response if @options.config['debug'] and response?
 
     # input validation messages
     if response? and _.has(response, 'form_error')
-      console.log 'response', response if @options.config['debug']
       for key, value of response.form_error
         if el = @getRegion('form').$el.find "[name=#{key}]"
           el.parent().addClass 'has-error'
