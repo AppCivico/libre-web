@@ -223,8 +223,13 @@ module.exports = class JournalistPage extends PageBase
     @getUI('cpf').removeAttr 'disabled'
       .val @getUI('cpf').data('value')
 
+    console.log 'event', event if @options.config['debug']
+    console.log 'xhr', xhr if @options.config['debug']
+    console.log 'error', error if @options.config['debug']
+
     # input validation messages
     if response? and _.has(response, 'form_error')
+      console.log 'response', response if @options.config['debug']
       for key, value of response.form_error
         if el = @getRegion('form').$el.find "[name=#{key}]"
           el.parent().addClass 'has-error'
