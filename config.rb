@@ -50,7 +50,7 @@ module Brunch
 
   def self.command(opts = {})
     opts = prepare_params(opts)
-    "export BrunchApp=#{opts[:project]}; LOGGY_STACKS=#{opts[:loggy]} #{opts[:brunch_path]} #{opts[:command]} --env #{opts[:env]}"
+    "export BrunchApp=#{opts[:project]}; export NODE_ENV=#{opts[:env]}; LOGGY_STACKS=#{opts[:loggy]} #{opts[:brunch_path]} #{opts[:command]} --env #{opts[:env]}"
   end
 
   def self.build(opts = {})
@@ -68,13 +68,12 @@ module Brunch
   def self.prepare_params(opts = {})
     opts[:command] ||=  'build'
     opts[:project] ||=  'default'
-    opts[:loggy] ||= 1
-    opts[:env] ||= 'development'
+    opts[:loggy] ||= 0
+    opts[:env] = opts[:env] || 'production'
     opts[:brunch_path] ||= './node_modules/brunch/bin/brunch'
     opts
   end
 end
-
 
 # external asset pipeline
 activate :external_pipeline,

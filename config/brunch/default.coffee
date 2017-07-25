@@ -1,4 +1,6 @@
 # See http://brunch.io for documentation.
+env = (process.env.NODE_ENV) || 'production'
+console.log "### Running in #{env} MODE"
 
 module.exports =
   overrides:
@@ -18,7 +20,16 @@ module.exports =
         ]
         'assets/js/application.bundle.js': [
           /^node_modules/
-          /^app(\/|\\)javascripts(\/|\\)/
+          /^app(\/|\\)javascripts(\/|\\)pages/
+          /^app(\/|\\)javascripts(\/|\\)lib/
+          /^app(\/|\\)javascripts(\/|\\)templates/
+          /^app(\/|\\)javascripts(\/|\\)modules/
+          /^app(\/|\\)javascripts(\/|\\)routes/
+          /^app(\/|\\)javascripts(\/|\\)views/
+          /^app(\/|\\)javascripts(\/|\\)models/
+          (new RegExp "^app/javascripts/config/#{env}\.coffee")
+          /^app(\/|\\)javascripts(\/|\\)config.coffee/
+          /^app(\/|\\)javascripts(\/|\\)application.coffee/
         ]
         'assets/js/test.bundle.js': [
           /^app(\/||\\)tests(\/|\\)spec_helpers.coffee/
