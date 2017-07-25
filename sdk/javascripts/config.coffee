@@ -9,9 +9,8 @@ window.Libre._configs = _config =
       button_thanks: "/assets/sdk/v1.0/img/lbr-button-image.thanks.svg"
 
   production:
-    base: "//midialibre.com.br"
-    #base: "//dev.midialibre.org"
-    api: "//hapilibre.eokoe.com/api"
+    base: "//midialibre.org"
+    api: "//api.midialibre.org/api"
     assets:
       button: "/assets/sdk/v1.0/img/lbr-button-image.svg"
       button_thanks: "/assets/sdk/v1.0/img/lbr-button-image.thanks.svg"
