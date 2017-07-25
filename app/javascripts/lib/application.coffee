@@ -2,8 +2,6 @@
 
 # configuration
 Config = require 'config.coffee'
-Backbone.Config.environment = 'development' # 'production'
-
 UserMenuView = require 'views/user_menu.coffee'
 
 
