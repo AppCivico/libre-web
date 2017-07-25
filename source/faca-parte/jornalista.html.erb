@@ -68,7 +68,7 @@ controller: join_us/journalist
 						<!-- form section -->
 						<div class="col-md-12 section-content">
 
-							<% form_tag "#{data.config.routes['root']}/register/journalist", name: "journalist_form",  id: "journalist-form", class: "journalist-form", novalidate: true, data: { remote: true, type: 'json' } do %>
+							<% form_tag "#{data.config[config[:environment]].routes['root']}/register/journalist", name: "journalist_form",  id: "journalist-form", class: "journalist-form", novalidate: true, data: {remote: true} do %>
 								<% fields = page.form.fields %>
 
 								<%= f = fields[:vehicle]; tag :input, type: f.type, name: f.name, id: f.id || f.name, required: f.required, value: f.value || 0 %>
