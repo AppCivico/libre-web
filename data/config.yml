@@ -1,8 +1,18 @@
 
-routes:
-  # api base path
-  root: https://api.midialibre.org/api
-  host: https://dev.midialibre.org/
+development:
+  routes:
+    # api base path
+    root: https://hapilibre.eokoe.com/api
+    host: https://dev.midialibre.org/
 
-  # api contact path
-  contact: /contact
+    # api contact path
+    contact: /contact
+
+production:
+  routes:
+    # api base path
+    root: https://api.midialibre.org/api
+    host: https://dev.midialibre.org/
+
+    # api contact path
+    contact: /contact
