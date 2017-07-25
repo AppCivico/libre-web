@@ -1,4 +1,6 @@
 # See http://brunch.io for documentation.
+env = (process.env.NODE_ENV) || 'production'
+console.log "### Running in #{env} MODE"
 
 module.exports =
   overrides:
@@ -12,16 +14,18 @@ module.exports =
       joinTo:
         'sdk/libre.js': [
           /json3/
-          /^sdk(\/|\\)javascripts(\/||\\)libre.coffee/
-          /^sdk(\/|\\)javascripts(\/||\\)config.coffee/
+          (new RegExp "^sdk/javascripts/config/#{env}\.coffee")
+          /^sdk(\/|\\)javascripts(\/|\\)config.coffee/
           /^sdk(\/|\\)javascripts(\/||\\)lib(\/||\\)utils.coffee/
           /^sdk(\/|\\)javascripts(\/||\\)lib(\/||\\)renderer.coffee/
+          /^sdk(\/|\\)javascripts(\/||\\)libre.coffee/
         ]
         'sdk/v1/button.js': [
           /fetch-ie8/
           /promise-polyfill/
           /url-search-params/
-          /^sdk(\/|\\)javascripts(\/||\\)config.coffee/
+          (new RegExp "^sdk/javascripts/config/#{env}\.coffee")
+          /^sdk(\/|\\)javascripts(\/|\\)config.coffee/
           /^sdk(\/|\\)javascripts(\/||\\)v1(\/||\\)button.coffee/
           /^sdk(\/|\\)javascripts(\/||\\)lib(\/||\\)data(\/||\\)guid.coffee/
           /^sdk(\/|\\)javascripts(\/||\\)lib(\/||\\)utils.coffee/
