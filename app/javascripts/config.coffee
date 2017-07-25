@@ -4,7 +4,7 @@
 ###
 module.exports = Backbone.Config = class Config
   # default env
-  @environment = 'production'
+  @environment = 'development'
 
   @config =
     # route table
@@ -25,7 +25,7 @@ module.exports = Backbone.Config = class Config
     production:
       name:     "Libre-App"
       api_base: "//api.midialibre.org/api"
-      url_base: "//dev.midialibre.org"
+      url_base: "//midialibre.org"
       debug:    false
 
 

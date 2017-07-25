@@ -55,6 +55,6 @@ yarn install
 echo "=== RUN MIDDLEMAN BUILD TASK"
 echo "    - middleman version: $(bundle exec middleman version)"
 LOGGY_STACKS=1
-bundle exec middleman build --environment production --verbose
+bundle exec middleman build --environment development --verbose
 
 

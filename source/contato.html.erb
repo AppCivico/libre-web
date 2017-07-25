@@ -15,7 +15,7 @@ controller: contact
           <div class="col-md-8 section-content">
             <p><%= page.description %></p>
 
-            <% form_tag "#{data.config.routes['root']}/contact", name: "cotact_form",  id: "contact-form", class: "contact-form", novalidate: true, data: { remote: true, type: 'json' } do %>
+            <% form_tag "#{data.config[config[:environment]].routes['contact']}", name: "cotact_form",  id: "contact-form", class: "contact-form", novalidate: true, data: { remote: true, type: 'json' } do %>
               <% page.fields.each do |f| %>
 
                 <div class="form-group">
