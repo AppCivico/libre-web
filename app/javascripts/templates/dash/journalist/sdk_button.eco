@@ -70,7 +70,7 @@
 			<div id="code-preview" class="form-group col-md-12 hide">
 				<h4 class="text-green">Código do botão</h4>
 				<p>Copie e cole este código em seu site para habilitar o botão de captação.</p>
-				<pre id="codigo" class="prettyprint lang-html"></pre>
+				<textarea id="codigo" class="codigo"></textarea>
 			</div>
 		</div>
 
