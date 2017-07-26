@@ -17,6 +17,7 @@ module.exports = class extends ViewBase
 
   events:
     'submit @ui.form': 'submitForm'
+    'click #btn-plan-cancel': 'clickCancelPlan'
 
   initialize: ->
     @loading = new Loading
@@ -41,13 +42,22 @@ module.exports = class extends ViewBase
         , 500
 
 
-
       .fail (res) ->
         Message.show
           type: 'danger'
           title: 'Ops!'
           message: 'Não foi possível atualizar seu plano!'
 
+    return false
+
+
+  clickCancelPlan: (event) ->
+    event.preventDefault()
+
+    if confirm 'Tem ceteza que deseja cancelar seu plano?'
+      alert 'Plano cancelado!'
+
+    return false
 
   render: ->
     @model.set @planParams()
