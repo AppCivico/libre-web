@@ -73,7 +73,7 @@ module.exports = class RegisterDonorModel extends ModelBase
 
     # format phone
     if @get('phone')?
-      phone = @get('phone').replace /[\(\)\s]/g, ''
+      phone = @get('phone').replace /[\(\)\s\-]/g, ''
       data.phone = "+55#{phone}"
 
     if @get('cpf')?
