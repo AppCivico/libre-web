@@ -1,14 +1,3 @@
-GIT
-  remote: https://github.com/plasticine/middleman-imageoptim
-  revision: 2957b855017d1d5a46c51e6e02c38f7a015eb357
-  branch: master
-  specs:
-    middleman-imageoptim (0.2.1)
-      image_optim (~> 0.20.2)
-      image_optim_pack (~> 0.2.1)
-      middleman-cli
-      middleman-core (>= 3.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -35,11 +24,9 @@ GEM
     erubis (2.7.0)
     eventmachine (1.2.3)
     execjs (2.7.0)
-    exifr (1.2.5)
     fast_blank (1.0.0)
     fastimage (2.1.0)
     ffi (1.9.18)
-    fspath (2.1.1)
     haml (4.0.7)
       tilt
     hamster (3.0.0)
@@ -47,17 +34,6 @@ GEM
     hashie (3.5.5)
     http_parser.rb (0.6.0)
     i18n (0.7.0)
-    image_optim (0.20.2)
-      exifr (~> 1.1, >= 1.1.3)
-      fspath (~> 2.1)
-      image_size (~> 1.3)
-      in_threads (~> 1.3)
-      progress (~> 3.0, >= 3.0.1)
-    image_optim_pack (0.2.3)
-      fspath (>= 2.1, < 4)
-      image_optim (~> 0.19)
-    image_size (1.5.0)
-    in_threads (1.4.0)
     kramdown (1.13.2)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -108,7 +84,6 @@ GEM
     padrino-support (0.13.3.3)
       activesupport (>= 3.1)
     parallel (1.11.1)
-    progress (3.3.1)
     public_suffix (2.0.5)
     rack (2.0.1)
     rack-livereload (0.3.16)
@@ -131,8 +106,7 @@ PLATFORMS
 
 DEPENDENCIES
   middleman (~> 4.2)
-  middleman-imageoptim!
   middleman-livereload (~> 3.4)
 
 BUNDLED WITH
-   1.15.1
+   1.15.3

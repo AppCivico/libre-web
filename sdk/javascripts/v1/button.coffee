@@ -58,7 +58,7 @@ class Resource
 
 
 class Support
-  @apiAddr: ("#{Config.all().api}/api") ? "//api.midialibre.org/api"
+  @apiAddr: ("#{Config.all().api}") ? "//api.midialibre.org/api"
 
   @alreadyDonated: (data = {}) ->
     serialized = Utils.serialize data

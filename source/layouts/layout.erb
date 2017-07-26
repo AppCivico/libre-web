@@ -49,7 +49,12 @@
 		<% end %>
 
 
-
+    <% if build? %>
+      <script src="https://cdn.ravenjs.com/3.14.2/raven.min.js" crossorigin="anonymous" assync></script>
+      <script id="sentry-config" type="text/javascript">
+				Raven.config('https://a02921e72dec4d0ab6069dea79ceceba@sentry.io/162166').install()
+      </script>
+    <% end %>
 
     <%= partial 'partial/_ga.erb' %>
     <%= partial 'partial/_browser-update.erb' %>

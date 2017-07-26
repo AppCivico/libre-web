@@ -8,6 +8,15 @@ TextMaskAddons  = require 'text-mask-addons'
 #  Mask class
 ###
 module.exports = class Mask
+  brazilianPhoneMask = (userInput) ->
+    numbers = userInput.match(/\d/g)
+    numberLength = 0
+    if numbers
+      numberLength = numbers.join('').length
+    if numberLength > 10
+      ['(', /[1-9]/, /[1-9]/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]
+    else
+      ['(', /[1-9]/, /[1-9]/, ')', ' ', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]
 
   # available mask list
   masks:
@@ -18,7 +27,7 @@ module.exports = class Mask
     zipcode:
       [/\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/]
     phone:
-      ['(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d/, /\d?/]
+      brazilianPhoneMask
     date:
       [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/]
     month_year:

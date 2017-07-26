@@ -45,7 +45,7 @@ module.exports = class extends ModelBase
       .done (res) =>
         # only for popup signin
         unless document.location.href.match /faca-parte\/colaborador/
-          alert 'Muito obrigado! Sua colaboração foi computada com sucesso.'
+          alert 'Obrigado por colaborar com o jornalismo livre.'
           @postMessage action: 'support', message: 'success', data: {}
 
       .fail (res) =>

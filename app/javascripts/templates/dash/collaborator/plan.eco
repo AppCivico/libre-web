@@ -16,8 +16,10 @@
 				<div class="form-group col-md-12">
 					<% if @amount? and @amount > 0: %>
 						<h3 class="text-green">Seu plano atual</h3>
-						<p>Plano de <strong>R$ <%= (@amount/100 || 0).toFixed(2).toString().replace('.', ',') %></strong> contratado em <strong>
-							<%= (m = (/^(\d{4})-(\d{2})-(\d{2})/.exec @created_at).reverse(); "#{m[0]}/#{m[1]}/#{m[2]}") %></strong></p>
+						<p style="line-height: 30px;">Plano de <strong>R$ <%= (@amount/100 || 0).toFixed(2).toString().replace('.', ',') %></strong> contratado em <strong>
+							<%= (m = (/^(\d{4})-(\d{2})-(\d{2})/.exec @created_at).reverse(); "#{m[0]}/#{m[1]}/#{m[2]}") %></strong>
+						</p>
+						<a href="#" id="btn-plan-cancel" class="text-muted"><small>Cancelar Plano</small></a>
 					<% else: %>
 						<div class="alert alert-warning">
 							<h4>Você não possui um plano atualmente!</h4>

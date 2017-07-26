@@ -294,6 +294,10 @@ div.radio {
 	border-radius: 0px;
 	border: solid 0px transparent !important;
 	box-shadow: none;
+
+	&:empty {
+		display: none;
+	}
 }
 
 /* custom dropdown */
