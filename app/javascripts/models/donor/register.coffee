@@ -58,7 +58,7 @@ module.exports = class RegisterDonorModel extends ModelBase
 
     # phone validation (matchs: /^(99) 999999999?$/)
     if p.phone?
-      @setError 'phone', 'invalid' unless p.phone.match /^\(\d{2}\) \d{8,9}$/
+      @setError 'phone', 'invalid' unless p.phone.match /^\(\d{2}\) \d{4,5}\-\d{4}$/
 
     return @errors unless _.isEmpty(@errors.form_error)
 
