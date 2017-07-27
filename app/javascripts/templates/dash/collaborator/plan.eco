@@ -14,7 +14,7 @@
 		<form name="form-plan" id="form-plan" novalidate>
 			<div class="row">
 				<div class="form-group col-md-12">
-					<% if @amount? and @amount > 0: %>
+					<% if (@canceled? and @canceled is 0) and (@amount? and @amount > 0): %>
 						<h3 class="text-green">Seu plano atual</h3>
 						<p style="line-height: 30px;">Plano de <strong>R$ <%= (@amount/100 || 0).toFixed(2).toString().replace('.', ',') %></strong> contratado em <strong>
 							<%= (m = (/^(\d{4})-(\d{2})-(\d{2})/.exec @created_at).reverse(); "#{m[0]}/#{m[1]}/#{m[2]}") %></strong>
