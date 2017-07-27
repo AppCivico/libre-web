@@ -141,6 +141,10 @@ class SupportButtonView extends ViewBase
         data = JSON.parse event.data
         @signinWindow.close()
 
+      # reload button iframe page
+      @signinWindow.addEventListener 'beforeunload', (event) =>
+        @pageReload()
+
     # journalist role is not allowed
     else if @isAuth() and @isJournalist()
       Message.show(text: I18n.t 'journalistNotAllowed')
@@ -160,7 +164,6 @@ class SupportButtonView extends ViewBase
 
         # success
         supportResource.then (res) =>
-          console.log res
           return res if Resource.requestError(res)
 
           Message.show(text: I18n.t 'supportSuccess')
@@ -179,12 +182,15 @@ class SupportButtonView extends ViewBase
         # handle exceptions
         supportResource.catch (error) ->
           Message.show(text: I18n.t 'supportGenericError')
-          console.error "Button#supportSubmit event: #{error}"
 
 
   windowOpen: (location, target = '_blank', options = null) ->
     options or= 'width=530,height=550,scrollbars=no,centerscreen=yes'
     window.open location, target, options
+
+
+  pageReload: ->
+    document.location = document.location.href
 
 
   # getting data from query_string
