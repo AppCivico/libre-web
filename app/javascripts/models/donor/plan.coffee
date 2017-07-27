@@ -11,7 +11,6 @@ module.exports = class extends ModelBase
     user_id: 0
     amount: 2000
 
-
   # events
   events:
     'change:user_id': 'onChangeUserId'
@@ -19,13 +18,21 @@ module.exports = class extends ModelBase
 
 
   onChangeUserId: (model, user_id) ->
-    @url = "#{@urlRoot}/donor/#{user_id}/plan"
+    @url = @urlFor 'plan', user_id: user_id
 
 
   onChangeAmount: (model, amount) ->
     if typeof amount is 'string'
       amount = (amount.replace ',', '').replace '.', ''
     @set 'amount', amount
+
+
+  urlFor: (name, params = {}) ->
+    if name is 'plan'
+      return "#{@urlRoot}/donor/#{params.user_id}/plan"
+
+    if name is 'plan_cancel'
+      return "#{@urlRoot}/donor/#{params.user_id}/plan/#{params.id}/cancel"
 
 
   # methods
@@ -42,7 +49,7 @@ module.exports = class extends ModelBase
 
 
   save: ->
-    @url = "#{@urlRoot}/donor/#{@get('user_id')}/plan"
+    @url = @urlFor 'plan', user_id: (@get 'user_id')
     @url += "/#{@get 'id'}" if (@get 'id')?
     super arguments
 
@@ -53,4 +60,16 @@ module.exports = class extends ModelBase
       url: @url
       data: @attributes
       dataType: 'json'
+
+
+  cancelPlan: (params = {}) ->
+    @url = @urlFor 'plan_cancel', user_id: (@get 'user_id'), id: (@get 'id')
+    console.log @url
+    return $.ajax
+      url: @url
+      method: 'POST'
+      data: @attributes
+      dataType: 'json'
+
+
 

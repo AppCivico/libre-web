@@ -38,7 +38,7 @@ module.exports = class extends ViewBase
           message: 'Seu plano acaba de ser atualizado!'
 
         setTimeout ->
-          Backbone.history.navigate '/', true
+          document.location = '/app'
         , 500
 
 
@@ -55,7 +55,16 @@ module.exports = class extends ViewBase
     event.preventDefault()
 
     if confirm 'Tem ceteza que deseja cancelar seu plano?'
-      alert 'Plano cancelado!'
+      @model.cancelPlan()
+        .done (res) ->
+          alert 'Plano cancelado!'
+          @loading.show()
+          @model.unset 'id'
+          document.location = '/app'
+          #@render()
+
+        .fail (res) ->
+          alert 'Erro -Não foi possível cancelar seu plano no momento!'
 
     return false
 
