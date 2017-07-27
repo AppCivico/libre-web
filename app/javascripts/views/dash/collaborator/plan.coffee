@@ -56,10 +56,10 @@ module.exports = class extends ViewBase
 
     if confirm 'Tem ceteza que deseja cancelar seu plano?'
       @model.cancelPlan()
-        .done (res) ->
+        .done (res) =>
           alert 'Plano cancelado!'
           @loading.show()
-          @model.unset 'id'
+          @model = new PlanModel
           document.location = '/app'
           #@render()
 
@@ -72,9 +72,10 @@ module.exports = class extends ViewBase
     @model.set @planParams()
     @model.fetch()
       .done (res) =>
-        plan = (_.first res.user_plan ? []) ? {}
-        @model.set plan
-        super plan
+        plan = _.first (plan for plan in (res.user_plan ? []) when plan.canceled is 0)
+        if plan? and plan.canceled is 0
+          @model.set plan
+        super()
 
       .fail (res) ->
         super {}
