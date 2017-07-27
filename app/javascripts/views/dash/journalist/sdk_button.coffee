@@ -49,7 +49,7 @@ module.exports = class extends ViewBase
   # show button code
   showCode: (data = {}) ->
     $el = @getUI('code')
-    $codeContainer = $el.find('pre#codigo')
+    $codeContainer = $el.find('#codigo')
 
     # setting session info for model
     s = @session.get() or {}
@@ -86,10 +86,10 @@ module.exports = class extends ViewBase
     # add code and reload pretty print
     if $codeContainer?
       $codeContainer.html('')
-        .removeClass('prettyprinted')
-
       $codeContainer.append code
-      PR.prettyPrint()
+
+      $codeContainer.on 'focus', ->
+        this.select()
 
     # reset button state
     @btn.state 'loaded'
