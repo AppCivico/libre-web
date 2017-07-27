@@ -51,7 +51,8 @@ module.exports = class extends ModelBase
   save: ->
     @url = @urlFor 'plan', user_id: (@get 'user_id')
     @url += "/#{@get 'id'}" if (@get 'id')?
-    super arguments
+    @unset 'id' if @get 'canceled' is 1
+    super @toJSON()
 
 
   fetch: (params = {amount: 0}) ->
@@ -64,12 +65,19 @@ module.exports = class extends ModelBase
 
   cancelPlan: (params = {}) ->
     @url = @urlFor 'plan_cancel', user_id: (@get 'user_id'), id: (@get 'id')
-    console.log @url
     return $.ajax
       url: @url
       method: 'POST'
       data: @attributes
       dataType: 'json'
 
+
+  toJSON: ->
+    return {
+      id: @get 'id'
+      user_id: @get 'user_id'
+      amount: @get 'amount'
+      api_key: @get 'api_key'
+    }
 
 
