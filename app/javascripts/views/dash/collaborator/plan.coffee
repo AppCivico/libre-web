@@ -3,6 +3,7 @@ ViewBase = require 'views/base.coffee'
 Loading = require 'views/loading.coffee'
 PlanModel = require 'models/donor/plan.coffee'
 Message = require 'lib/message.coffee'
+Alert = require 'views/message.coffee'
 
 
 module.exports = class extends ViewBase
@@ -54,17 +55,22 @@ module.exports = class extends ViewBase
   clickCancelPlan: (event) ->
     event.preventDefault()
 
-    if confirm 'Tem ceteza que deseja cancelar seu plano?'
-      @model.cancelPlan()
-        .done (res) =>
-          alert 'Plano cancelado!'
-          @loading.show()
-          @model = new PlanModel
-          document.location = '/app'
-          #@render()
+    Alert.confirm
+      content: 'Tem ceteza que deseja cancelar seu plano?'
+      confirm: (event) =>
+        event.preventDefault()
+        @model.cancelPlan()
+          .done (res) =>
+            @loading.show()
+            @model = new PlanModel
+            Alert.success content: 'Plano cancelado!'
+            setTimeout ->
+              document.location = '/app'
+            , 1000
 
-        .fail (res) ->
-          alert 'Erro -Não foi possível cancelar seu plano no momento!'
+          .fail (res) ->
+            Alert.show content: 'Erro - Não foi possível cancelar seu plano no momento!'
+        return false
 
     return false
 
