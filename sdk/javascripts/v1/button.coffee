@@ -139,6 +139,7 @@ class SupportButtonView extends ViewBase
 
       @signinWindow.addEventListener 'message', (event) =>
         data = JSON.parse event.data
+        @pageReload()
         @signinWindow.close()
 
       # reload button iframe page
