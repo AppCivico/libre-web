@@ -144,6 +144,7 @@ class SupportButtonView extends ViewBase
 
       # reload button iframe page
       @signinWindow.addEventListener 'beforeunload', (event) =>
+        window.parent.location = window.parent.location.href
         @pageReload()
 
     # journalist role is not allowed
