@@ -38,15 +38,13 @@ class LibreSDK
 
 class MessageDispatcher
   @resolve: (event) ->
-    origin = event.origin or ''
     data = @getDataFromEvent event
 
-    if origin.match 'midialibre.org'
-      switch data.message
-        when 'success'
-          LibreSDK.doneDonationSuccess event, data
-        when 'error'
-          LibreSDK.doneDonationError event, data
+    switch data.message
+      when 'success'
+        LibreSDK.doneDonationSuccess event, data
+      when 'error'
+        LibreSDK.doneDonationError event, data
 
 
   @getDataFromEvent: (event) ->
