@@ -7,6 +7,7 @@
   },
   "dependencies": {
     "JSON": "^1.0.0",
+    "alertify.js": "^1.0.12",
     "babel-brunch": "^6.1.1",
     "babel-polyfill": "^6.23.0",
     "babel-preset-env": "^1.5.1",
