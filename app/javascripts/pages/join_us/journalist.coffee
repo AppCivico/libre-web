@@ -237,6 +237,12 @@ module.exports = class JournalistPage extends PageBase
               content: "#{el.attr('placeholder')} #{@errorList(value)}"
             }
 
+      if els = @getRegion('form').$el.find "input,select,textarea"
+        for el in els
+          if response.form_error[el.name]?
+            el.focus()
+            break
+
     # form error message
     @getRegion('form').$el.append @templates.message {
       type: 'danger', message: 'Não foi possível salvar suas informações!'

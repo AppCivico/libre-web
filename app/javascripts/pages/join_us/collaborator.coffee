@@ -326,6 +326,11 @@ module.exports = class CollaboratorPage extends PageBase
             content: "#{el.attr('placeholder')} #{@errorList(value)}"
           })
 
+    if els = $root.find "input,select,textarea"
+      for el in els
+        if stash[el.name]?
+          el.focus()
+          break
 
   clearMessages: ->
     @$el.find('.message').remove()
