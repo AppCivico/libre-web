@@ -2,53 +2,65 @@
 <div class="container">
 
 	<div class="col-md-8">
-		<div class="row">
-			<div class="col-md-12">
-				<h2 class="text-green">Editar minha informações</h2>
-				<p>Utilize o formulário abaixo para atualizar suar informações de usuário.</p>
-				<br>
-				<br>
+
+		<form id="user-form" name="user-form" novalidate>
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="text-green">Editar minha informações</h2>
+					<p>Utilize o formulário abaixo para atualizar suar informações.</p>
+					<br>
+					<br>
+				</div>
+
+				<div class="col-md-6 form-group">
+					<label class="sr-only">Nome</label>
+					<input type="text" name="name" id="name" placeholder="Nome" class="form-control" required />
+					<small class="help-block">Entre apenas com seu primeiro nome</small>
+				</div>
+				<div class="col-md-6 form-group">
+					<label class="sr-only">Sobrenome</label>
+					<input type="text" name="surname" id="surname" placeholder="Sobrenome" class="form-control" required />
+					<small class="help-block">Entre apenas com seu sobrenome</small>
+				</div>
+
+				<div class="col-md-6 form-group">
+					<label class="sr-only">CPF</label>
+					<input type="text" name="cpf" id="cpf" placeholder="CPF" class="form-control" data-mask="cpf" required />
+				</div>
+
+				<div class="col-md-6 form-group">
+					<label class="sr-only">Telefone</label>
+					<input type="text" name="phone" id="phone" placeholder="Telefone (11) 987654321" class="form-control" data-mask="phone" required />
+					<small class="help-block">Digite um telefone no formato <code>(11) 987654321</code></small>
+				</div>
+
 			</div>
 
-			<div class="col-md-6 form-group">
-				<label class="sr-only">Nome</label>
-				<input type="text" name="name" id="name" placeholder="Nome" class="form-control" required />
-				<small class="help-block">Entre apenas com seu primeiro nome</small>
-			</div>
-			<div class="col-md-6 form-group">
-				<label class="sr-only">Sobrenome</label>
-				<input type="text" name="name" id="name" placeholder="Sobrenome" class="form-control" required />
-				<small class="help-block">Entre apenas com seu sobrenome</small>
-			</div>
-
-			<div class="col-md-6 form-group">
-				<label class="sr-only">Telefone</label>
-				<input type="text" name="phone" id="phone" placeholder="Telefone (11) 987654321" class="form-control" data-mask="phone" required />
-				<small class="help-block">Digite um telefone no formato <code>(11) 987654321</code></small>
+			<div class="row">
+				<div class="col-md-12 form-group">
+					<p>
+						<button class="btn btn-success" type="submit">Salvar</button>
+						<a class="btn btn-default" href="/">Voltar</a>
+					</p>
+					<div id="message" class="message"></div>
+				</div>
 			</div>
 
-		</div>
+		</form>
 
-		<div class="row">
-			<div class="col-md-12 form-group">
-				<button class="btn btn-success" type="submit">Salvar</button>
-				<a class="btn btn-default" href="/">Voltar</a>
-			</div>
-
-		</div>
 	</div>
 
 	<div class="col-md-offset-1 col-md-3">
 
 		<div class="row">
-			<div class="col-md-12 form-group">
+			<!-- div class="col-md-12 form-group">
 				<h3 class="text-green">Mais ações</h3>
 			</div>
 
 			<div class="col-md-12 form-group">
 				<a class="text-green" href="/account/recuperar-senha" data-bypass="true" >Redefinir minha senha</a>
 				<small class="help-block">Altere ou recupere sua senha.</small>
-			</div>
+			</div -->
 
 			<!-- div class="col-md-12 form-group">
 				<a class="text-green" href="/plano">Detalhes do plano</a>
