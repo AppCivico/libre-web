@@ -70,7 +70,7 @@ form:
               required: true
               disabled: false
               styles: form-control
-              help: Digite uma senha de no mínimo 4 dígitos.
+              help: Digite uma senha de no mínimo 6 dígitos.
 
         general_data:
           title: Dados gerais
