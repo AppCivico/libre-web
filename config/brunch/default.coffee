@@ -19,7 +19,20 @@ module.exports =
           /^node_modules/
         ]
         'assets/js/application.bundle.js': [
-          /^node_modules/
+          #/^node_modules/
+          /jquery/
+          /underscore/
+          /backbone/
+          /backbone.marionette/
+          /jquery-ujs/
+          /bootstrap-sass/
+          /backbone.radio/
+          /vanilla-text-mask/
+          /text-mask-addons/
+          /store/
+          /mocha/
+          /chai/
+          /alertify.js/
           /^app(\/|\\)javascripts(\/|\\)pages/
           /^app(\/|\\)javascripts(\/|\\)lib/
           /^app(\/|\\)javascripts(\/|\\)templates/
@@ -40,6 +53,7 @@ module.exports =
       joinTo:
         'assets/css/application.bundle.css': [
           /^app(\/|\\)stylesheets(\/|\\)/
+          /alertify/
         ]
 
     templates:
@@ -75,6 +89,7 @@ module.exports =
       'store'
       'mocha'
       'chai'
+      'alertify.js'
     ]
 
   # modules configurations
