@@ -56,7 +56,7 @@ module.exports = class JournalistPage extends PageBase
       .each (i) ->
         $input = $(this)
         phone = $input.val() or ''
-        phone = "+55" + phone.replace /[\(\)]/g, ''
+        phone = "+55" + phone.replace /[\(\)\-]/g, ''
           .replace /\s+/g, ''
 
         # save changed
