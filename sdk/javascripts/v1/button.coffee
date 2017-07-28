@@ -139,10 +139,12 @@ class SupportButtonView extends ViewBase
 
       @signinWindow.addEventListener 'message', (event) =>
         data = JSON.parse event.data
+        @pageReload()
         @signinWindow.close()
 
       # reload button iframe page
       @signinWindow.addEventListener 'beforeunload', (event) =>
+        window.parent.location = window.parent.location.href
         @pageReload()
 
     # journalist role is not allowed
