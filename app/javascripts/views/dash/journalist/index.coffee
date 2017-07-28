@@ -1,22 +1,19 @@
-"use strict"
 
 # requires
 ViewBase = require 'views/base.coffee'
-LoadingView = require 'views/loading.coffee'
+Loading = require 'views/loading.coffee'
 DashboardModel = require 'models/journalist/dashboard.coffee'
 
-###
-#  View class
-#  @author dvinciguerra
-###
-module.exports = class JournalistView extends ViewBase
+module.exports = class extends ViewBase
   el: 'section#dash-main'
 
   template: 'templates/dash/journalist/index.eco'
 
-  loading: new LoadingView
-
   model: new DashboardModel
+
+  initialize: ->
+    @loading = new Loading
+    @loading.show()
 
 
   render: ->
@@ -24,20 +21,16 @@ module.exports = class JournalistView extends ViewBase
     @model.fetch()
       .done (res) =>
         @stash 'supports', res || []
-
-      .fail (res) ->
-        console.log res
+        super
 
       .always (res) =>
-        super()
+        super
 
     @stash 'supports', []
-    super()
+    super
 
 
-  # event on render
   onRender: ->
-    # FIXME: fadein()
     @loading.hide()
 
 

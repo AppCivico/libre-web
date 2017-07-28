@@ -1,7 +1,5 @@
 # requires
 Session = require 'lib/session.coffee'
-IndexView = require 'views/dash/index.coffee'
-DashboardView = require 'views/dash/header.coffee'
 
 
 ###
@@ -28,7 +26,8 @@ module.exports = class DashRouter extends Marionette.AppRouter
   # actions
   default: ->
     current = @getUserRole()
-    view = new IndexView
+    View = require 'views/dash/index.coffee'
+    view = new View
 
 
   userEdit: ->
@@ -91,7 +90,8 @@ module.exports = class DashRouter extends Marionette.AppRouter
     current = @getUserRole()
     $container =  @qs 'section#dash-header'
 
-    header = new DashboardView
+    Header = require 'views/dash/header.coffee'
+    header = new Header
     header.stash 'dashboard', current
     header.render()
 
