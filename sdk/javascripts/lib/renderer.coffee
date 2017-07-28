@@ -8,7 +8,6 @@ Utils = require 'lib/utils.coffee'
 ###
 module.exports = class
 
-  #webAddr: "//midialibre.com.br"
   webAddr: '//midialibre.org'
 
   constructor: (args = {}) ->

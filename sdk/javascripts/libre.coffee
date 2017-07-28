@@ -44,7 +44,7 @@ class MessageDispatcher
     origin = event.origin or ''
     data = @getDataFromEvent event
 
-    if origin.match 'midialibre.com.br'
+    if origin.match 'midialibre.org'
       switch data.message
         when 'success'
           LibreSDK.doneDonationSuccess event, data
