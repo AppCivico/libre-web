@@ -71,13 +71,13 @@ module.exports = class extends ViewBase
     ($ 'input[name=surname]').val @model.get 'surname'
 
     phone = @model.get 'phone'
-    if phone?
-      groups = phone.match /^\+55(\d{2})(\d{4,5})(\d{4})$/
+    groups = phone.match /^\+55(\d{2})(\d{4,5})(\d{4})$/
+    if phone? and (groups? and groups.length is 4)
       ($ 'input[name=phone]').val "(#{groups[1]}) #{groups[2]}-#{groups[3]}"
 
-    cpf = @model.get 'cpf'
-    if cpf?
-      groups = cpf.match /^(\d{3})(\d{3})(\d{3})(\d{2})$/
+    cpf = (@model.get 'cpf')
+    groups = cpf.match /^(\d{3})(\d{3})(\d{3})(\d{2})$/
+    if cpf? and (groups? and groups.length is 5)
       ($ 'input[name=cpf]').val "#{groups[1]}.#{groups[2]}.#{groups[3]}-#{groups[4]}"
 
   userParams: (params = {}) ->
