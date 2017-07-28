@@ -25,6 +25,8 @@ module.exports = class extends ViewBase
       .always (res) =>
         super()
 
+    super()
+
 
   onRender: ->
     @loading.hide()
