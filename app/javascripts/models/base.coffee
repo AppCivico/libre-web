@@ -27,8 +27,10 @@ module.exports = class ModelBase extends Backbone.Model
 
 
   # generic abstraction of ajax request
-  request: (options = {}) ->
-    $.ajax(options)
+  request: (opts = {}) ->
+    opts.url ?= @url
+    opts.dataType ?= opts.dataType
+    return $.ajax opts
 
 
   # save model method
