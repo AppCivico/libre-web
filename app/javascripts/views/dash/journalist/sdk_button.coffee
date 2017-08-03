@@ -62,7 +62,7 @@ module.exports = class extends ViewBase
         var js, ljs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
-        js.src = "//dev.midialibre.org/sdk/libre.js#v1.0;";
+        js.src = "#{Backbone.Config.env().url_base}/sdk/libre.js#v1.0;";
         ljs.parentNode.insertBefore(js, ljs);
       }(document, 'script', 'libre-sdk'));
       </script>
