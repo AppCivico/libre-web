@@ -68,12 +68,7 @@ module.exports = class extends ViewBase
       </script>
 
       <!-- adiciona o botão do libre -->
-      <div class="lbr-button"
-        data-id="#{@model.get('user_id')}"
-        data-location="#{@model.get('website')}"
-        data-theme="#{@model.get('aparencia')}"
-        data-size="#{@model.get('tamanho')}">
-      </div>
+      <div class="lbr-button" data-id="#{@model.get('user_id')}"></div>
     """
 
     $el.removeClass 'hide'
