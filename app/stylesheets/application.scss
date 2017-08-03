@@ -732,14 +732,15 @@ header.header-internal {
 	background-color: #33cc66;
 	padding: 10px 0px;
 	text-align: center;
-	color: white;
+	color: white !important;
 	border-radius: 10px;
 
 	a {
+		color: $white;
 		font-weight: bold;
 
 		&:hover, &:active {
-			color: #26440b;
+			color: #26440b !important;
 			text-decoration: none;
 		}
 	}
