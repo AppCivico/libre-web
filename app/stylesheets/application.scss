@@ -597,14 +597,14 @@ section#whats-this {
 		width: 600px;
 		position: absolute;
 		top: 95px;
-		right: calc(100% - 1170px);
+		right: calc(100% - 992px);
 	}
 	.text-background {
 		color: $fg_grayc;
 		filter: opacity(0.4);
 		text-align: center;
 		position: absolute;
-		right: calc((100% - 1170px) - 75px);
+		right: calc((100% - 992px) - 75px);
 	}
 	.text-background:first-child {
 		font-size: 150px;
