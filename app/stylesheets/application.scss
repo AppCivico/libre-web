@@ -507,7 +507,7 @@ div.radio {
 	a {
 		font-family: Montserrat, Arial;
 		font-weight: 300 !important;
-		color: $fg_invert !important;
+		color: #999 !important;
 		text-transform: uppercase;
 
 		&:hover {
@@ -624,6 +624,17 @@ section#whats-this {
 
 section#howitworks {
 	margin-top: 300px;
+
+	@media($phone) {
+		.image-panel {
+			margin-top: 50px;
+		}
+	}
+	@media($tablet) {
+		.image-panel {
+			margin-top: 50px;
+		}
+	}
 }
 
 .side-green {
@@ -725,7 +736,6 @@ header.header-internal {
 	border-radius: 10px;
 
 	a {
-		color: #fff;
 		font-weight: bold;
 
 		&:hover, &:active {
