@@ -26,7 +26,49 @@ input.form-control {
 
 nav {
   padding: 15px 0px 20px 0px;
+
+	.collapsed {
+		.btn-close {
+			color: #999999 !important;
+			display: inline-block;
+			font-size: 52pt;
+			font-weight: 300;
+			line-height: 30px;
+			padding: 5px 10px;
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			z-index: 9999;
+			border: none;
+		}
+
+		.nav {
+			color: #dddddd !important;
+			position: fixed;
+			z-index: 999;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background-color: rgba(70, 70, 70, 0.95);
+			margin: 0px;
+			min-height: 800px;
+			padding: 75px 0px;
+			transition: 0.5s;
+
+			a {
+				text-align: center;
+				color: $white !important;
+				font-size: 22px;
+				padding: 10px 0px;
+
+				&:hover {
+					background-color: lightgreen !important;
+				}
+			}
+		}
+	}
 }
+
 .navbar-libre {
 	.navbar-toggle {
 		background-color: transparent !important;
@@ -36,6 +78,7 @@ nav {
 	.icon-bar {
 		background-color: #70b370 !important;
 	}
+
 }
 
 ul.clean-list {
@@ -504,7 +547,7 @@ header {
 
 	.intro-lead-in {
 		font-size: 22px;
-		min-height: 50px;
+		min-height: 150px;
 	}
 }
 
@@ -660,7 +703,7 @@ section#navbar {
 		margin-top: 6px;
 	}
 	a {
-		color: $fg_default !important;
+		color: $fg_default;
 	}
 }
 
