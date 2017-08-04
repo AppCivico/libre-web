@@ -11,18 +11,10 @@ jornalistas. E estreitar a relação entre imprensa e público.
 ![Plataforma Libre Screenshot](https://raw.githubusercontent.com/AppCivico/libre-web/master/screenshot.jpg)
 
 
-## Guias e Documentação
 
-**Dependencias**
+## Repositórios do Projeto
 
-- Instalação do rbenv
-
-- Instalação do nvm
-
-
-**Instalação**
-
-- Fazendo o build da plataforma Libre
+- [Repositório do Backend da Plataforma Libre](https://github.com/AppCivico/libre-api)
 
 
 
