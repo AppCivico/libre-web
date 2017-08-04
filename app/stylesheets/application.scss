@@ -26,7 +26,49 @@ input.form-control {
 
 nav {
   padding: 15px 0px 20px 0px;
+
+	.collapsed {
+		.btn-close {
+			color: #999999 !important;
+			display: inline-block;
+			font-size: 52pt;
+			font-weight: 300;
+			line-height: 30px;
+			padding: 5px 10px;
+			position: fixed;
+			top: 20px;
+			right: 10px;
+			z-index: 9999;
+			border: none;
+		}
+
+		.nav {
+			color: #dddddd !important;
+			position: fixed;
+			z-index: 999;
+			top: 0;
+			left: 0;
+			width: 100%;
+			background-color: rgba(70, 70, 70, 0.95);
+			margin: 0px;
+			min-height: 800px;
+			padding: 40px 0px;
+
+			a {
+				text-align: center;
+				color: $white !important;
+				font-size: 20px;
+				padding: 10px 0px;
+
+				&:hover {
+					transition: .5s;
+					background-color: lightgreen !important;
+				}
+			}
+		}
+	}
 }
+
 .navbar-libre {
 	.navbar-toggle {
 		background-color: transparent !important;
@@ -36,6 +78,7 @@ nav {
 	.icon-bar {
 		background-color: #70b370 !important;
 	}
+
 }
 
 ul.clean-list {
@@ -411,8 +454,9 @@ div.radio {
 	img {
 		z-index: 1204;
 		position: fixed;
-		margin-top: -60%;
-		margin-left: -150px;
+		top: 200px;
+		left: calc(50% - 150px);
+		right: calc(50% - 150px);
 		width: 300px;
 		height: 300px;
 	}
@@ -423,7 +467,8 @@ div.radio {
 		background-color: rgba(255, 255, 255, 0.95);
 		top: 0;
 		width: 100%;
-		height: 100%;
+		height: 2024px;
+		overflow: hidden;
 	}
 }
 
@@ -464,7 +509,7 @@ div.radio {
 	a {
 		font-family: Montserrat, Arial;
 		font-weight: 300 !important;
-		color: $fg_invert !important;
+		color: #999 !important;
 		text-transform: uppercase;
 
 		&:hover {
@@ -504,7 +549,7 @@ header {
 
 	.intro-lead-in {
 		font-size: 22px;
-		min-height: 50px;
+		min-height: 150px;
 	}
 }
 
@@ -554,14 +599,14 @@ section#whats-this {
 		width: 600px;
 		position: absolute;
 		top: 95px;
-		right: calc(100% - 1170px);
+		right: calc(100% - 992px);
 	}
 	.text-background {
 		color: $fg_grayc;
 		filter: opacity(0.4);
 		text-align: center;
 		position: absolute;
-		right: calc((100% - 1170px) - 75px);
+		right: calc((100% - 992px) - 75px);
 	}
 	.text-background:first-child {
 		font-size: 150px;
@@ -581,6 +626,17 @@ section#whats-this {
 
 section#howitworks {
 	margin-top: 300px;
+
+	@media($phone) {
+		.image-panel {
+			margin-top: 50px;
+		}
+	}
+	@media($tablet) {
+		.image-panel {
+			margin-top: 50px;
+		}
+	}
 }
 
 .side-green {
@@ -660,7 +716,7 @@ section#navbar {
 		margin-top: 6px;
 	}
 	a {
-		color: $fg_default !important;
+		color: $fg_default;
 	}
 }
 
@@ -678,15 +734,15 @@ header.header-internal {
 	background-color: #33cc66;
 	padding: 10px 0px;
 	text-align: center;
-	color: white;
+	color: white !important;
 	border-radius: 10px;
 
 	a {
-		color: #fff;
+		color: $white;
 		font-weight: bold;
 
 		&:hover, &:active {
-			color: #26440b;
+			color: #26440b !important;
 			text-decoration: none;
 		}
 	}

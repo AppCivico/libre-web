@@ -62,18 +62,13 @@ module.exports = class extends ViewBase
         var js, ljs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
         js = d.createElement(s); js.id = id;
-        js.src = "//dev.midialibre.org/sdk/libre.js#v1.0;";
+        js.src = "#{Backbone.Config.env().url_base}/sdk/libre.js#v1.0;";
         ljs.parentNode.insertBefore(js, ljs);
       }(document, 'script', 'libre-sdk'));
       </script>
 
       <!-- adiciona o botão do libre -->
-      <div class="lbr-button"
-        data-id="#{@model.get('user_id')}"
-        data-location="#{@model.get('website')}"
-        data-theme="#{@model.get('aparencia')}"
-        data-size="#{@model.get('tamanho')}">
-      </div>
+      <div class="lbr-button" data-id="#{@model.get('user_id')}"></div>
     """
 
     $el.removeClass 'hide'

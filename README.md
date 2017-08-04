@@ -8,6 +8,8 @@
 Libre é uma ferramenta, uma moeda e uma plataforma para facilitar o apoio financeiro a veículos e
 jornalistas. E estreitar a relação entre imprensa e público.
 
+![Plataforma Libre Screenshot](https://raw.githubusercontent.com/AppCivico/libre-web/master/screenshot.jpg)
+
 
 ## Guias e Documentação
 

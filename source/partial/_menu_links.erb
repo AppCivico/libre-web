@@ -2,6 +2,8 @@
 					<img id="placeholder-usermenu" src="/assets/images/default/placeholder/usermenu.svg" style="float:right; padding:10px;" class="placeholder placeholder-usermenu">
 
 					<% content_tag :ul, id: 'dash-usermenu', class: 'nav navbar-nav navbar-right hide' do %>
+            <li><% link_to '/', title: 'Início do site', class: 'hidden-lg hidden-md hidden-sm', data: { bypass: true } do %>Início<% end %></li>
+
             <!-- top navbar menu -->
             <% data.shared.menu.each do |l| %>
               <% if l.label == 'Login' %>
