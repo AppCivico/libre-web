@@ -1,0 +1,1899 @@
+
+# page title
+title: Termos e condições de uso
+
+# page content
+content: |
+  <style type="text/css">
+    .lst-kix_list_14-1>li:before {
+        content: "" counter(lst-ctn-kix_list_14-0, decimal) "." counter(lst-ctn-kix_list_14-1, decimal) ". "
+    }
+    .lst-kix_list_14-3>li:before {
+        content: "" counter(lst-ctn-kix_list_14-0, decimal) "." counter(lst-ctn-kix_list_14-1, decimal) "." counter(lst-ctn-kix_list_14-2, decimal) "." counter(lst-ctn-kix_list_14-3, decimal) ". "
+    }
+    .lst-kix_list_2-1>li {
+        counter-increment: lst-ctn-kix_list_2-1
+    }
+    ol.lst-kix_list_9-0.start {
+        counter-reset: lst-ctn-kix_list_9-0 0
+    }
+    .lst-kix_list_14-0>li:before {
+        content: "" counter(lst-ctn-kix_list_14-0, decimal) ". "
+    }
+    .lst-kix_list_14-4>li:before {
+        content: "" counter(lst-ctn-kix_list_14-0, decimal) "." counter(lst-ctn-kix_list_14-1, decimal) "." counter(lst-ctn-kix_list_14-2, decimal) "." counter(lst-ctn-kix_list_14-3, decimal) "." counter(lst-ctn-kix_list_14-4, decimal) ". "
+    }
+    .lst-kix_list_14-5>li:before {
+        content: "" counter(lst-ctn-kix_list_14-0, decimal) "." counter(lst-ctn-kix_list_14-1, decimal) "." counter(lst-ctn-kix_list_14-2, decimal) "." counter(lst-ctn-kix_list_14-3, decimal) "." counter(lst-ctn-kix_list_14-4, decimal) "." counter(lst-ctn-kix_list_14-5, decimal) ". "
+    }
+    .lst-kix_list_14-7>li:before {
+        content: "" counter(lst-ctn-kix_list_14-0, decimal) "." counter(lst-ctn-kix_list_14-1, decimal) "." counter(lst-ctn-kix_list_14-2, decimal) "." counter(lst-ctn-kix_list_14-3, decimal) "." counter(lst-ctn-kix_list_14-4, decimal) "." counter(lst-ctn-kix_list_14-5, decimal) "." counter(lst-ctn-kix_list_14-6, decimal) "." counter(lst-ctn-kix_list_14-7, decimal) ". "
+    }
+    ol.lst-kix_list_13-4.start {
+        counter-reset: lst-ctn-kix_list_13-4 0
+    }
+    .lst-kix_list_14-6>li:before {
+        content: "" counter(lst-ctn-kix_list_14-0, decimal) "." counter(lst-ctn-kix_list_14-1, decimal) "." counter(lst-ctn-kix_list_14-2, decimal) "." counter(lst-ctn-kix_list_14-3, decimal) "." counter(lst-ctn-kix_list_14-4, decimal) "." counter(lst-ctn-kix_list_14-5, decimal) "." counter(lst-ctn-kix_list_14-6, decimal) ". "
+    }
+    .lst-kix_list_13-0>li {
+        counter-increment: lst-ctn-kix_list_13-0
+    }
+    .lst-kix_list_5-0>li {
+        counter-increment: lst-ctn-kix_list_5-0
+    }
+    .lst-kix_list_9-0>li {
+        counter-increment: lst-ctn-kix_list_9-0
+    }
+    ol.lst-kix_list_2-3.start {
+        counter-reset: lst-ctn-kix_list_2-3 0
+    }
+    ol.lst-kix_list_11-8.start {
+        counter-reset: lst-ctn-kix_list_11-8 0
+    }
+    .lst-kix_list_14-2>li:before {
+        content: "" counter(lst-ctn-kix_list_14-0, decimal) "." counter(lst-ctn-kix_list_14-1, decimal) "." counter(lst-ctn-kix_list_14-2, decimal) ". "
+    }
+    ol.lst-kix_list_5-3.start {
+        counter-reset: lst-ctn-kix_list_5-3 0
+    }
+    ol.lst-kix_list_12-0.start {
+        counter-reset: lst-ctn-kix_list_12-0 0
+    }
+    .lst-kix_list_4-3>li {
+        counter-increment: lst-ctn-kix_list_4-3
+    }
+    ol.lst-kix_list_3-7.start {
+        counter-reset: lst-ctn-kix_list_3-7 0
+    }
+    .lst-kix_list_14-8>li:before {
+        content: "" counter(lst-ctn-kix_list_14-0, decimal) "." counter(lst-ctn-kix_list_14-1, decimal) "." counter(lst-ctn-kix_list_14-2, decimal) "." counter(lst-ctn-kix_list_14-3, decimal) "." counter(lst-ctn-kix_list_14-4, decimal) "." counter(lst-ctn-kix_list_14-5, decimal) "." counter(lst-ctn-kix_list_14-6, decimal) "." counter(lst-ctn-kix_list_14-7, decimal) "." counter(lst-ctn-kix_list_14-8, decimal) ". "
+    }
+    .lst-kix_list_3-2>li {
+        counter-increment: lst-ctn-kix_list_3-2
+    }
+    ol.lst-kix_list_10-4.start {
+        counter-reset: lst-ctn-kix_list_10-4 0
+    }
+    .lst-kix_list_5-0>li:before {
+        content: "" counter(lst-ctn-kix_list_5-0, decimal) ". "
+    }
+    .lst-kix_list_14-8>li {
+        counter-increment: lst-ctn-kix_list_14-8
+    }
+    .lst-kix_list_5-4>li {
+        counter-increment: lst-ctn-kix_list_5-4
+    }
+    .lst-kix_list_1-4>li {
+        counter-increment: lst-ctn-kix_list_1-4
+    }
+    ol.lst-kix_list_1-6.start {
+        counter-reset: lst-ctn-kix_list_1-6 0
+    }
+    .lst-kix_list_5-3>li:before {
+        content: "" counter(lst-ctn-kix_list_5-0, decimal) "." counter(lst-ctn-kix_list_5-1, decimal) "." counter(lst-ctn-kix_list_5-2, decimal) "." counter(lst-ctn-kix_list_5-3, decimal) ". "
+    }
+    ol.lst-kix_list_9-5.start {
+        counter-reset: lst-ctn-kix_list_9-5 0
+    }
+    .lst-kix_list_5-2>li:before {
+        content: "" counter(lst-ctn-kix_list_5-0, decimal) "." counter(lst-ctn-kix_list_5-1, decimal) "." counter(lst-ctn-kix_list_5-2, decimal) ". "
+    }
+    .lst-kix_list_5-1>li:before {
+        content: "" counter(lst-ctn-kix_list_5-0, decimal) "." counter(lst-ctn-kix_list_5-1, decimal) ". "
+    }
+    .lst-kix_list_5-7>li:before {
+        content: "" counter(lst-ctn-kix_list_5-7, lower-latin) ". "
+    }
+    ul.lst-kix_list_8-4 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_8-5 {
+        list-style-type: none
+    }
+    .lst-kix_list_5-6>li:before {
+        content: "" counter(lst-ctn-kix_list_5-6, decimal) ". "
+    }
+    .lst-kix_list_5-8>li:before {
+        content: "" counter(lst-ctn-kix_list_5-8, lower-roman) ". "
+    }
+    ul.lst-kix_list_8-2 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_8-3 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_8-8 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_8-6 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_8-7 {
+        list-style-type: none
+    }
+    .lst-kix_list_9-4>li {
+        counter-increment: lst-ctn-kix_list_9-4
+    }
+    .lst-kix_list_5-4>li:before {
+        content: "" counter(lst-ctn-kix_list_5-0, decimal) "." counter(lst-ctn-kix_list_5-1, decimal) "." counter(lst-ctn-kix_list_5-2, decimal) "." counter(lst-ctn-kix_list_5-3, decimal) "." counter(lst-ctn-kix_list_5-4, decimal) ". "
+    }
+    .lst-kix_list_5-5>li:before {
+        content: "(" counter(lst-ctn-kix_list_5-5, lower-roman) ") "
+    }
+    ul.lst-kix_list_8-0 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_8-1 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_14-1.start {
+        counter-reset: lst-ctn-kix_list_14-1 0
+    }
+    ol.lst-kix_list_12-5.start {
+        counter-reset: lst-ctn-kix_list_12-5 0
+    }
+    .lst-kix_list_6-1>li:before {
+        content: "\0025cf  "
+    }
+    .lst-kix_list_6-3>li:before {
+        content: "\0025cf  "
+    }
+    .lst-kix_list_6-0>li:before {
+        content: "\0025cf  "
+    }
+    .lst-kix_list_6-4>li:before {
+        content: "\0025cf  "
+    }
+    ol.lst-kix_list_14-8.start {
+        counter-reset: lst-ctn-kix_list_14-8 0
+    }
+    .lst-kix_list_3-6>li {
+        counter-increment: lst-ctn-kix_list_3-6
+    }
+    .lst-kix_list_6-2>li:before {
+        content: "\0025cf  "
+    }
+    .lst-kix_list_2-5>li {
+        counter-increment: lst-ctn-kix_list_2-5
+    }
+    .lst-kix_list_2-8>li {
+        counter-increment: lst-ctn-kix_list_2-8
+    }
+    ol.lst-kix_list_3-2.start {
+        counter-reset: lst-ctn-kix_list_3-2 0
+    }
+    .lst-kix_list_6-8>li:before {
+        content: "\0025cf  "
+    }
+    .lst-kix_list_6-5>li:before {
+        content: "\0025cf  "
+    }
+    .lst-kix_list_6-7>li:before {
+        content: "\0025cf  "
+    }
+    .lst-kix_list_6-6>li:before {
+        content: "\0025cf  "
+    }
+    ol.lst-kix_list_10-6.start {
+        counter-reset: lst-ctn-kix_list_10-6 0
+    }
+    .lst-kix_list_7-4>li:before {
+        content: "o  "
+    }
+    .lst-kix_list_7-6>li:before {
+        content: "\0025cf  "
+    }
+    .lst-kix_list_7-2>li:before {
+        content: "\0025aa  "
+    }
+    .lst-kix_list_12-6>li {
+        counter-increment: lst-ctn-kix_list_12-6
+    }
+    ol.lst-kix_list_4-6.start {
+        counter-reset: lst-ctn-kix_list_4-6 0
+    }
+    ol.lst-kix_list_9-7 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_9-8 {
+        list-style-type: none
+    }
+    .lst-kix_list_13-7>li:before {
+        content: "" counter(lst-ctn-kix_list_13-0, decimal) "." counter(lst-ctn-kix_list_13-1, decimal) "." counter(lst-ctn-kix_list_13-2, decimal) "." counter(lst-ctn-kix_list_13-3, decimal) "." counter(lst-ctn-kix_list_13-4, decimal) "." counter(lst-ctn-kix_list_13-5, decimal) "." counter(lst-ctn-kix_list_13-6, decimal) "." counter(lst-ctn-kix_list_13-7, decimal) ". "
+    }
+    ol.lst-kix_list_3-0.start {
+        counter-reset: lst-ctn-kix_list_3-0 0
+    }
+    ol.lst-kix_list_9-3 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_9-4 {
+        list-style-type: none
+    }
+    .lst-kix_list_5-7>li {
+        counter-increment: lst-ctn-kix_list_5-7
+    }
+    ol.lst-kix_list_9-5 {
+        list-style-type: none
+    }
+    .lst-kix_list_7-8>li:before {
+        content: "\0025aa  "
+    }
+    ol.lst-kix_list_9-6 {
+        list-style-type: none
+    }
+    .lst-kix_list_4-7>li {
+        counter-increment: lst-ctn-kix_list_4-7
+    }
+    ol.lst-kix_list_9-0 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_9-1 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_9-2 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_2-5.start {
+        counter-reset: lst-ctn-kix_list_2-5 0
+    }
+    .lst-kix_list_15-5>li:before {
+        content: "\0025aa  "
+    }
+    .lst-kix_list_9-8>li {
+        counter-increment: lst-ctn-kix_list_9-8
+    }
+    .lst-kix_list_13-4>li {
+        counter-increment: lst-ctn-kix_list_13-4
+    }
+    .lst-kix_list_4-1>li:before {
+        content: "" counter(lst-ctn-kix_list_4-0, decimal) "." counter(lst-ctn-kix_list_4-1, decimal) ". "
+    }
+    .lst-kix_list_15-7>li:before {
+        content: "\0025aa  "
+    }
+    .lst-kix_list_4-3>li:before {
+        content: "" counter(lst-ctn-kix_list_4-0, decimal) "." counter(lst-ctn-kix_list_4-1, decimal) "." counter(lst-ctn-kix_list_4-2, decimal) "." counter(lst-ctn-kix_list_4-3, decimal) ". "
+    }
+    .lst-kix_list_4-5>li:before {
+        content: "(" counter(lst-ctn-kix_list_4-5, lower-roman) ") "
+    }
+    .lst-kix_list_1-8>li {
+        counter-increment: lst-ctn-kix_list_1-8
+    }
+    .lst-kix_list_10-5>li {
+        counter-increment: lst-ctn-kix_list_10-5
+    }
+    .lst-kix_list_15-1>li:before {
+        content: "o  "
+    }
+    ol.lst-kix_list_1-4.start {
+        counter-reset: lst-ctn-kix_list_1-4 0
+    }
+    .lst-kix_list_3-5>li {
+        counter-increment: lst-ctn-kix_list_3-5
+    }
+    ol.lst-kix_list_1-1.start {
+        counter-reset: lst-ctn-kix_list_1-1 0
+    }
+    .lst-kix_list_15-3>li:before {
+        content: "\0025aa  "
+    }
+    ol.lst-kix_list_4-4.start {
+        counter-reset: lst-ctn-kix_list_4-4 0
+    }
+    ol.lst-kix_list_9-2.start {
+        counter-reset: lst-ctn-kix_list_9-2 0
+    }
+    .lst-kix_list_9-3>li {
+        counter-increment: lst-ctn-kix_list_9-3
+    }
+    .lst-kix_list_11-2>li {
+        counter-increment: lst-ctn-kix_list_11-2
+    }
+    ol.lst-kix_list_2-8.start {
+        counter-reset: lst-ctn-kix_list_2-8 0
+    }
+    .lst-kix_list_12-3>li:before {
+        content: "" counter(lst-ctn-kix_list_12-0, decimal) "." counter(lst-ctn-kix_list_12-1, decimal) "." counter(lst-ctn-kix_list_12-2, decimal) "." counter(lst-ctn-kix_list_12-3, decimal) ". "
+    }
+    .lst-kix_list_12-1>li:before {
+        content: "" counter(lst-ctn-kix_list_12-0, decimal) "." counter(lst-ctn-kix_list_12-1, decimal) ". "
+    }
+    .lst-kix_list_13-3>li {
+        counter-increment: lst-ctn-kix_list_13-3
+    }
+    ol.lst-kix_list_13-6.start {
+        counter-reset: lst-ctn-kix_list_13-6 0
+    }
+    .lst-kix_list_10-4>li {
+        counter-increment: lst-ctn-kix_list_10-4
+    }
+    .lst-kix_list_14-1>li {
+        counter-increment: lst-ctn-kix_list_14-1
+    }
+    .lst-kix_list_13-3>li:before {
+        content: "" counter(lst-ctn-kix_list_13-0, decimal) "." counter(lst-ctn-kix_list_13-1, decimal) "." counter(lst-ctn-kix_list_13-2, decimal) "." counter(lst-ctn-kix_list_13-3, decimal) ". "
+    }
+    ol.lst-kix_list_5-8.start {
+        counter-reset: lst-ctn-kix_list_5-8 0
+    }
+    .lst-kix_list_1-3>li {
+        counter-increment: lst-ctn-kix_list_1-3
+    }
+    .lst-kix_list_13-5>li:before {
+        content: "" counter(lst-ctn-kix_list_13-0, decimal) "." counter(lst-ctn-kix_list_13-1, decimal) "." counter(lst-ctn-kix_list_13-2, decimal) "." counter(lst-ctn-kix_list_13-3, decimal) "." counter(lst-ctn-kix_list_13-4, decimal) "." counter(lst-ctn-kix_list_13-5, decimal) ". "
+    }
+    .lst-kix_list_12-5>li:before {
+        content: "" counter(lst-ctn-kix_list_12-0, decimal) "." counter(lst-ctn-kix_list_12-1, decimal) "." counter(lst-ctn-kix_list_12-2, decimal) "." counter(lst-ctn-kix_list_12-3, decimal) "." counter(lst-ctn-kix_list_12-4, decimal) "." counter(lst-ctn-kix_list_12-5, decimal) ". "
+    }
+    ol.lst-kix_list_13-7.start {
+        counter-reset: lst-ctn-kix_list_13-7 0
+    }
+    ol.lst-kix_list_12-2.start {
+        counter-reset: lst-ctn-kix_list_12-2 0
+    }
+    .lst-kix_list_12-7>li:before {
+        content: "" counter(lst-ctn-kix_list_12-0, decimal) "." counter(lst-ctn-kix_list_12-1, decimal) "." counter(lst-ctn-kix_list_12-2, decimal) "." counter(lst-ctn-kix_list_12-3, decimal) "." counter(lst-ctn-kix_list_12-4, decimal) "." counter(lst-ctn-kix_list_12-5, decimal) "." counter(lst-ctn-kix_list_12-6, decimal) "." counter(lst-ctn-kix_list_12-7, decimal) ". "
+    }
+    .lst-kix_list_4-2>li {
+        counter-increment: lst-ctn-kix_list_4-2
+    }
+    .lst-kix_list_13-1>li:before {
+        content: "" counter(lst-ctn-kix_list_13-0, decimal) "." counter(lst-ctn-kix_list_13-1, decimal) ". "
+    }
+    ol.lst-kix_list_3-1 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_3-2 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_3-3 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_3-4.start {
+        counter-reset: lst-ctn-kix_list_3-4 0
+    }
+    .lst-kix_list_5-1>li {
+        counter-increment: lst-ctn-kix_list_5-1
+    }
+    ol.lst-kix_list_3-4 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_3-0 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_11-6 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_11-7 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_11-8 {
+        list-style-type: none
+    }
+    .lst-kix_list_1-1>li {
+        counter-increment: lst-ctn-kix_list_1-1
+    }
+    ol.lst-kix_list_11-2 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_11-3 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_2-6.start {
+        counter-reset: lst-ctn-kix_list_2-6 0
+    }
+    .lst-kix_list_3-0>li:before {
+        content: "" counter(lst-ctn-kix_list_3-0, decimal) ". "
+    }
+    ol.lst-kix_list_11-4 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_11-5 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_13-1.start {
+        counter-reset: lst-ctn-kix_list_13-1 0
+    }
+    ol.lst-kix_list_11-0 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_11-1 {
+        list-style-type: none
+    }
+    .lst-kix_list_4-0>li {
+        counter-increment: lst-ctn-kix_list_4-0
+    }
+    .lst-kix_list_10-0>li {
+        counter-increment: lst-ctn-kix_list_10-0
+    }
+    .lst-kix_list_3-4>li:before {
+        content: "" counter(lst-ctn-kix_list_3-0, decimal) "." counter(lst-ctn-kix_list_3-1, decimal) "." counter(lst-ctn-kix_list_3-2, decimal) "." counter(lst-ctn-kix_list_3-3, decimal) "." counter(lst-ctn-kix_list_3-4, decimal) ". "
+    }
+    .lst-kix_list_3-3>li:before {
+        content: "" counter(lst-ctn-kix_list_3-0, decimal) "." counter(lst-ctn-kix_list_3-1, decimal) "." counter(lst-ctn-kix_list_3-2, decimal) "." counter(lst-ctn-kix_list_3-3, decimal) ". "
+    }
+    ol.lst-kix_list_3-5 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_3-6 {
+        list-style-type: none
+    }
+    .lst-kix_list_8-0>li:before {
+        content: "\0025cf  "
+    }
+    ol.lst-kix_list_3-7 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_3-8 {
+        list-style-type: none
+    }
+    .lst-kix_list_8-7>li:before {
+        content: " "
+    }
+    .lst-kix_list_3-8>li:before {
+        content: "" counter(lst-ctn-kix_list_3-0, decimal) "." counter(lst-ctn-kix_list_3-1, decimal) "." counter(lst-ctn-kix_list_3-2, decimal) "." counter(lst-ctn-kix_list_3-3, decimal) "." counter(lst-ctn-kix_list_3-4, decimal) "." counter(lst-ctn-kix_list_3-5, decimal) "." counter(lst-ctn-kix_list_3-6, decimal) "." counter(lst-ctn-kix_list_3-7, decimal) "." counter(lst-ctn-kix_list_3-8, decimal) ". "
+    }
+    ol.lst-kix_list_10-7.start {
+        counter-reset: lst-ctn-kix_list_10-7 0
+    }
+    .lst-kix_list_13-1>li {
+        counter-increment: lst-ctn-kix_list_13-1
+    }
+    .lst-kix_list_8-3>li:before {
+        content: " "
+    }
+    .lst-kix_list_3-7>li:before {
+        content: "" counter(lst-ctn-kix_list_3-0, decimal) "." counter(lst-ctn-kix_list_3-1, decimal) "." counter(lst-ctn-kix_list_3-2, decimal) "." counter(lst-ctn-kix_list_3-3, decimal) "." counter(lst-ctn-kix_list_3-4, decimal) "." counter(lst-ctn-kix_list_3-5, decimal) "." counter(lst-ctn-kix_list_3-6, decimal) "." counter(lst-ctn-kix_list_3-7, decimal) ". "
+    }
+    .lst-kix_list_8-4>li:before {
+        content: " "
+    }
+    .lst-kix_list_10-2>li {
+        counter-increment: lst-ctn-kix_list_10-2
+    }
+    .lst-kix_list_11-1>li:before {
+        content: "" counter(lst-ctn-kix_list_11-0, decimal) "." counter(lst-ctn-kix_list_11-1, decimal) ". "
+    }
+    .lst-kix_list_11-0>li:before {
+        content: "" counter(lst-ctn-kix_list_11-0, decimal) ". "
+    }
+    ol.lst-kix_list_9-3.start {
+        counter-reset: lst-ctn-kix_list_9-3 0
+    }
+    .lst-kix_list_8-8>li:before {
+        content: " "
+    }
+    ol.lst-kix_list_2-2 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_2-3 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_2-4 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_2-5 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_2-0 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_2-1 {
+        list-style-type: none
+    }
+    .lst-kix_list_4-8>li:before {
+        content: "" counter(lst-ctn-kix_list_4-8, lower-roman) ". "
+    }
+    ol.lst-kix_list_12-5 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_12-6 {
+        list-style-type: none
+    }
+    .lst-kix_list_4-7>li:before {
+        content: "" counter(lst-ctn-kix_list_4-7, lower-latin) ". "
+    }
+    ol.lst-kix_list_12-7 {
+        list-style-type: none
+    }
+    .lst-kix_list_14-2>li {
+        counter-increment: lst-ctn-kix_list_14-2
+    }
+    ol.lst-kix_list_12-8 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_12-1 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_12-2 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_12-3 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_12-4 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_12-0 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_4-8.start {
+        counter-reset: lst-ctn-kix_list_4-8 0
+    }
+    ol.lst-kix_list_3-3.start {
+        counter-reset: lst-ctn-kix_list_3-3 0
+    }
+    ol.lst-kix_list_10-8.start {
+        counter-reset: lst-ctn-kix_list_10-8 0
+    }
+    ol.lst-kix_list_2-6 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_2-7 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_2-8 {
+        list-style-type: none
+    }
+    .lst-kix_list_11-3>li {
+        counter-increment: lst-ctn-kix_list_11-3
+    }
+    .lst-kix_list_7-0>li:before {
+        content: "\0025cf  "
+    }
+    .lst-kix_list_13-8>li {
+        counter-increment: lst-ctn-kix_list_13-8
+    }
+    .lst-kix_list_2-2>li {
+        counter-increment: lst-ctn-kix_list_2-2
+    }
+    ol.lst-kix_list_4-7.start {
+        counter-reset: lst-ctn-kix_list_4-7 0
+    }
+    ol.lst-kix_list_5-0 {
+        list-style-type: none
+    }
+    .lst-kix_list_3-7>li {
+        counter-increment: lst-ctn-kix_list_3-7
+    }
+    ol.lst-kix_list_5-1 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_9-7.start {
+        counter-reset: lst-ctn-kix_list_9-7 0
+    }
+    ol.lst-kix_list_5-2 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_13-8 {
+        list-style-type: none
+    }
+    .lst-kix_list_2-4>li:before {
+        content: "" counter(lst-ctn-kix_list_2-0, decimal) "." counter(lst-ctn-kix_list_2-1, decimal) "." counter(lst-ctn-kix_list_2-2, decimal) "." counter(lst-ctn-kix_list_2-3, decimal) "." counter(lst-ctn-kix_list_2-4, decimal) ". "
+    }
+    .lst-kix_list_2-8>li:before {
+        content: "" counter(lst-ctn-kix_list_2-8, lower-roman) ". "
+    }
+    ol.lst-kix_list_13-4 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_13-5 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_13-6 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_13-7 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_13-0 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_13-1 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_13-2 {
+        list-style-type: none
+    }
+    .lst-kix_list_7-3>li:before {
+        content: "\0025cf  "
+    }
+    ol.lst-kix_list_13-3 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_7-5 {
+        list-style-type: none
+    }
+    .lst-kix_list_10-0>li:before {
+        content: "" counter(lst-ctn-kix_list_10-0, decimal) ". "
+    }
+    ul.lst-kix_list_7-6 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_7-3 {
+        list-style-type: none
+    }
+    .lst-kix_list_9-7>li {
+        counter-increment: lst-ctn-kix_list_9-7
+    }
+    ul.lst-kix_list_7-4 {
+        list-style-type: none
+    }
+    .lst-kix_list_13-6>li {
+        counter-increment: lst-ctn-kix_list_13-6
+    }
+    .lst-kix_list_13-8>li:before {
+        content: "" counter(lst-ctn-kix_list_13-0, decimal) "." counter(lst-ctn-kix_list_13-1, decimal) "." counter(lst-ctn-kix_list_13-2, decimal) "." counter(lst-ctn-kix_list_13-3, decimal) "." counter(lst-ctn-kix_list_13-4, decimal) "." counter(lst-ctn-kix_list_13-5, decimal) "." counter(lst-ctn-kix_list_13-6, decimal) "." counter(lst-ctn-kix_list_13-7, decimal) "." counter(lst-ctn-kix_list_13-8, decimal) ". "
+    }
+    ol.lst-kix_list_14-6.start {
+        counter-reset: lst-ctn-kix_list_14-6 0
+    }
+    ul.lst-kix_list_7-7 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_7-8 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_5-7 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_5-8 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_5-3 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_7-1 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_5-4 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_7-2 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_3-8.start {
+        counter-reset: lst-ctn-kix_list_3-8 0
+    }
+    ol.lst-kix_list_5-5 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_5-6 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_7-0 {
+        list-style-type: none
+    }
+    .lst-kix_list_7-7>li:before {
+        content: "o  "
+    }
+    .lst-kix_list_15-4>li:before {
+        content: "\0025aa  "
+    }
+    .lst-kix_list_9-5>li {
+        counter-increment: lst-ctn-kix_list_9-5
+    }
+    .lst-kix_list_5-8>li {
+        counter-increment: lst-ctn-kix_list_5-8
+    }
+    .lst-kix_list_10-4>li:before {
+        content: "" counter(lst-ctn-kix_list_10-0, decimal) "." counter(lst-ctn-kix_list_10-1, decimal) "." counter(lst-ctn-kix_list_10-2, decimal) "." counter(lst-ctn-kix_list_10-3, decimal) "." counter(lst-ctn-kix_list_10-4, decimal) ". "
+    }
+    .lst-kix_list_10-8>li:before {
+        content: "" counter(lst-ctn-kix_list_10-0, decimal) "." counter(lst-ctn-kix_list_10-1, decimal) "." counter(lst-ctn-kix_list_10-2, decimal) "." counter(lst-ctn-kix_list_10-3, decimal) "." counter(lst-ctn-kix_list_10-4, decimal) "." counter(lst-ctn-kix_list_10-5, decimal) "." counter(lst-ctn-kix_list_10-6, decimal) "." counter(lst-ctn-kix_list_10-7, decimal) "." counter(lst-ctn-kix_list_10-8, decimal) ". "
+    }
+    .lst-kix_list_4-0>li:before {
+        content: "" counter(lst-ctn-kix_list_4-0, decimal) ". "
+    }
+    ul.lst-kix_list_15-3 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_15-2 {
+        list-style-type: none
+    }
+    .lst-kix_list_15-0>li:before {
+        content: "\0025cf  "
+    }
+    ul.lst-kix_list_15-1 {
+        list-style-type: none
+    }
+    .lst-kix_list_15-8>li:before {
+        content: "\0025aa  "
+    }
+    ul.lst-kix_list_15-0 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_14-3.start {
+        counter-reset: lst-ctn-kix_list_14-3 0
+    }
+    .lst-kix_list_4-4>li:before {
+        content: "" counter(lst-ctn-kix_list_4-0, decimal) "." counter(lst-ctn-kix_list_4-1, decimal) "." counter(lst-ctn-kix_list_4-2, decimal) "." counter(lst-ctn-kix_list_4-3, decimal) "." counter(lst-ctn-kix_list_4-4, decimal) ". "
+    }
+    ol.lst-kix_list_2-2.start {
+        counter-reset: lst-ctn-kix_list_2-2 0
+    }
+    ul.lst-kix_list_15-8 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_15-7 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_15-6 {
+        list-style-type: none
+    }
+    .lst-kix_list_9-3>li:before {
+        content: "" counter(lst-ctn-kix_list_9-0, decimal) "." counter(lst-ctn-kix_list_9-1, decimal) "." counter(lst-ctn-kix_list_9-2, decimal) "." counter(lst-ctn-kix_list_9-3, decimal) ". "
+    }
+    ul.lst-kix_list_15-5 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_15-4 {
+        list-style-type: none
+    }
+    .lst-kix_list_12-8>li {
+        counter-increment: lst-ctn-kix_list_12-8
+    }
+    ol.lst-kix_list_13-2.start {
+        counter-reset: lst-ctn-kix_list_13-2 0
+    }
+    ol.lst-kix_list_4-0 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_4-1 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_4-2 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_4-3 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_14-7 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_14-4.start {
+        counter-reset: lst-ctn-kix_list_14-4 0
+    }
+    ol.lst-kix_list_14-8 {
+        list-style-type: none
+    }
+    .lst-kix_list_9-7>li:before {
+        content: "" counter(lst-ctn-kix_list_9-0, decimal) "." counter(lst-ctn-kix_list_9-1, decimal) "." counter(lst-ctn-kix_list_9-2, decimal) "." counter(lst-ctn-kix_list_9-3, decimal) "." counter(lst-ctn-kix_list_9-4, decimal) "." counter(lst-ctn-kix_list_9-5, decimal) "." counter(lst-ctn-kix_list_9-6, decimal) "." counter(lst-ctn-kix_list_9-7, decimal) ". "
+    }
+    .lst-kix_list_2-4>li {
+        counter-increment: lst-ctn-kix_list_2-4
+    }
+    ol.lst-kix_list_14-3 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_3-6.start {
+        counter-reset: lst-ctn-kix_list_3-6 0
+    }
+    ol.lst-kix_list_14-4 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_14-5 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_14-6 {
+        list-style-type: none
+    }
+    .lst-kix_list_11-4>li:before {
+        content: "" counter(lst-ctn-kix_list_11-0, decimal) "." counter(lst-ctn-kix_list_11-1, decimal) "." counter(lst-ctn-kix_list_11-2, decimal) "." counter(lst-ctn-kix_list_11-3, decimal) "." counter(lst-ctn-kix_list_11-4, decimal) ". "
+    }
+    ol.lst-kix_list_14-0 {
+        list-style-type: none
+    }
+    .lst-kix_list_12-4>li:before {
+        content: "" counter(lst-ctn-kix_list_12-0, decimal) "." counter(lst-ctn-kix_list_12-1, decimal) "." counter(lst-ctn-kix_list_12-2, decimal) "." counter(lst-ctn-kix_list_12-3, decimal) "." counter(lst-ctn-kix_list_12-4, decimal) ". "
+    }
+    ol.lst-kix_list_14-1 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_14-2 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_6-6 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_6-7 {
+        list-style-type: none
+    }
+    .lst-kix_list_5-3>li {
+        counter-increment: lst-ctn-kix_list_5-3
+    }
+    ul.lst-kix_list_6-4 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_6-5 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_6-8 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_4-8 {
+        list-style-type: none
+    }
+    .lst-kix_list_1-0>li:before {
+        content: "" counter(lst-ctn-kix_list_1-0, decimal) ". "
+    }
+    ol.lst-kix_list_4-4 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_6-2 {
+        list-style-type: none
+    }
+    .lst-kix_list_11-8>li:before {
+        content: "" counter(lst-ctn-kix_list_11-0, decimal) "." counter(lst-ctn-kix_list_11-1, decimal) "." counter(lst-ctn-kix_list_11-2, decimal) "." counter(lst-ctn-kix_list_11-3, decimal) "." counter(lst-ctn-kix_list_11-4, decimal) "." counter(lst-ctn-kix_list_11-5, decimal) "." counter(lst-ctn-kix_list_11-6, decimal) "." counter(lst-ctn-kix_list_11-7, decimal) "." counter(lst-ctn-kix_list_11-8, decimal) ". "
+    }
+    .lst-kix_list_12-3>li {
+        counter-increment: lst-ctn-kix_list_12-3
+    }
+    ol.lst-kix_list_4-5 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_6-3 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_2-0.start {
+        counter-reset: lst-ctn-kix_list_2-0 0
+    }
+    ol.lst-kix_list_4-6 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_6-0 {
+        list-style-type: none
+    }
+    .lst-kix_list_12-0>li:before {
+        content: "" counter(lst-ctn-kix_list_12-0, decimal) ". "
+    }
+    ol.lst-kix_list_4-7 {
+        list-style-type: none
+    }
+    ul.lst-kix_list_6-1 {
+        list-style-type: none
+    }
+    .lst-kix_list_1-4>li:before {
+        content: "" counter(lst-ctn-kix_list_1-0, decimal) "." counter(lst-ctn-kix_list_1-1, decimal) "." counter(lst-ctn-kix_list_1-2, decimal) "." counter(lst-ctn-kix_list_1-3, decimal) "." counter(lst-ctn-kix_list_1-4, decimal) ". "
+    }
+    .lst-kix_list_13-0>li:before {
+        content: "" counter(lst-ctn-kix_list_13-0, decimal) ". "
+    }
+    ol.lst-kix_list_3-5.start {
+        counter-reset: lst-ctn-kix_list_3-5 0
+    }
+    .lst-kix_list_1-6>li {
+        counter-increment: lst-ctn-kix_list_1-6
+    }
+    ol.lst-kix_list_13-0.start {
+        counter-reset: lst-ctn-kix_list_13-0 0
+    }
+    .lst-kix_list_14-4>li {
+        counter-increment: lst-ctn-kix_list_14-4
+    }
+    .lst-kix_list_13-4>li:before {
+        content: "" counter(lst-ctn-kix_list_13-0, decimal) "." counter(lst-ctn-kix_list_13-1, decimal) "." counter(lst-ctn-kix_list_13-2, decimal) "." counter(lst-ctn-kix_list_13-3, decimal) "." counter(lst-ctn-kix_list_13-4, decimal) ". "
+    }
+    .lst-kix_list_10-7>li {
+        counter-increment: lst-ctn-kix_list_10-7
+    }
+    .lst-kix_list_2-0>li:before {
+        content: "" counter(lst-ctn-kix_list_2-0, decimal) ". "
+    }
+    ol.lst-kix_list_2-1.start {
+        counter-reset: lst-ctn-kix_list_2-1 0
+    }
+    .lst-kix_list_11-5>li {
+        counter-increment: lst-ctn-kix_list_11-5
+    }
+    .lst-kix_list_4-5>li {
+        counter-increment: lst-ctn-kix_list_4-5
+    }
+    ol.lst-kix_list_14-5.start {
+        counter-reset: lst-ctn-kix_list_14-5 0
+    }
+    ol.lst-kix_list_9-8.start {
+        counter-reset: lst-ctn-kix_list_9-8 0
+    }
+    .lst-kix_list_1-8>li:before {
+        content: "" counter(lst-ctn-kix_list_1-8, lower-roman) ". "
+    }
+    .lst-kix_list_12-8>li:before {
+        content: "" counter(lst-ctn-kix_list_12-0, decimal) "." counter(lst-ctn-kix_list_12-1, decimal) "." counter(lst-ctn-kix_list_12-2, decimal) "." counter(lst-ctn-kix_list_12-3, decimal) "." counter(lst-ctn-kix_list_12-4, decimal) "." counter(lst-ctn-kix_list_12-5, decimal) "." counter(lst-ctn-kix_list_12-6, decimal) "." counter(lst-ctn-kix_list_12-7, decimal) "." counter(lst-ctn-kix_list_12-8, decimal) ". "
+    }
+    .lst-kix_list_4-1>li {
+        counter-increment: lst-ctn-kix_list_4-1
+    }
+    ol.lst-kix_list_12-6.start {
+        counter-reset: lst-ctn-kix_list_12-6 0
+    }
+    ol.lst-kix_list_3-1.start {
+        counter-reset: lst-ctn-kix_list_3-1 0
+    }
+    .lst-kix_list_11-0>li {
+        counter-increment: lst-ctn-kix_list_11-0
+    }
+    ol.lst-kix_list_1-5.start {
+        counter-reset: lst-ctn-kix_list_1-5 0
+    }
+    ol.lst-kix_list_9-6.start {
+        counter-reset: lst-ctn-kix_list_9-6 0
+    }
+    .lst-kix_list_2-3>li {
+        counter-increment: lst-ctn-kix_list_2-3
+    }
+    ol.lst-kix_list_4-5.start {
+        counter-reset: lst-ctn-kix_list_4-5 0
+    }
+    .lst-kix_list_1-2>li {
+        counter-increment: lst-ctn-kix_list_1-2
+    }
+    ol.lst-kix_list_14-7.start {
+        counter-reset: lst-ctn-kix_list_14-7 0
+    }
+    ol.lst-kix_list_11-2.start {
+        counter-reset: lst-ctn-kix_list_11-2 0
+    }
+    .lst-kix_list_5-2>li {
+        counter-increment: lst-ctn-kix_list_5-2
+    }
+    .lst-kix_list_9-2>li {
+        counter-increment: lst-ctn-kix_list_9-2
+    }
+    .lst-kix_list_13-2>li {
+        counter-increment: lst-ctn-kix_list_13-2
+    }
+    .lst-kix_list_14-3>li {
+        counter-increment: lst-ctn-kix_list_14-3
+    }
+    .lst-kix_list_10-3>li {
+        counter-increment: lst-ctn-kix_list_10-3
+    }
+    .lst-kix_list_12-1>li {
+        counter-increment: lst-ctn-kix_list_12-1
+    }
+    ol.lst-kix_list_1-0.start {
+        counter-reset: lst-ctn-kix_list_1-0 0
+    }
+    ol.lst-kix_list_13-3.start {
+        counter-reset: lst-ctn-kix_list_13-3 0
+    }
+    .lst-kix_list_3-0>li {
+        counter-increment: lst-ctn-kix_list_3-0
+    }
+    ol.lst-kix_list_4-0.start {
+        counter-reset: lst-ctn-kix_list_4-0 0
+    }
+    ol.lst-kix_list_11-7.start {
+        counter-reset: lst-ctn-kix_list_11-7 0
+    }
+    ol.lst-kix_list_14-2.start {
+        counter-reset: lst-ctn-kix_list_14-2 0
+    }
+    ol.lst-kix_list_2-4.start {
+        counter-reset: lst-ctn-kix_list_2-4 0
+    }
+    ol.lst-kix_list_1-3 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_1-4 {
+        list-style-type: none
+    }
+    .lst-kix_list_2-7>li:before {
+        content: "" counter(lst-ctn-kix_list_2-7, lower-latin) ". "
+    }
+    .lst-kix_list_2-7>li {
+        counter-increment: lst-ctn-kix_list_2-7
+    }
+    ol.lst-kix_list_1-5 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_1-6 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_1-0 {
+        list-style-type: none
+    }
+    .lst-kix_list_2-5>li:before {
+        content: "(" counter(lst-ctn-kix_list_2-5, lower-roman) ") "
+    }
+    ol.lst-kix_list_1-1 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_1-2 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_10-3.start {
+        counter-reset: lst-ctn-kix_list_10-3 0
+    }
+    ol.lst-kix_list_9-4.start {
+        counter-reset: lst-ctn-kix_list_9-4 0
+    }
+    .lst-kix_list_14-6>li {
+        counter-increment: lst-ctn-kix_list_14-6
+    }
+    .lst-kix_list_10-1>li:before {
+        content: "" counter(lst-ctn-kix_list_10-0, decimal) "." counter(lst-ctn-kix_list_10-1, decimal) ". "
+    }
+    ol.lst-kix_list_4-3.start {
+        counter-reset: lst-ctn-kix_list_4-3 0
+    }
+    ol.lst-kix_list_1-7 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_1-8 {
+        list-style-type: none
+    }
+    .lst-kix_list_10-7>li:before {
+        content: "" counter(lst-ctn-kix_list_10-0, decimal) "." counter(lst-ctn-kix_list_10-1, decimal) "." counter(lst-ctn-kix_list_10-2, decimal) "." counter(lst-ctn-kix_list_10-3, decimal) "." counter(lst-ctn-kix_list_10-4, decimal) "." counter(lst-ctn-kix_list_10-5, decimal) "." counter(lst-ctn-kix_list_10-6, decimal) "." counter(lst-ctn-kix_list_10-7, decimal) ". "
+    }
+    .lst-kix_list_10-5>li:before {
+        content: "" counter(lst-ctn-kix_list_10-0, decimal) "." counter(lst-ctn-kix_list_10-1, decimal) "." counter(lst-ctn-kix_list_10-2, decimal) "." counter(lst-ctn-kix_list_10-3, decimal) "." counter(lst-ctn-kix_list_10-4, decimal) "." counter(lst-ctn-kix_list_10-5, decimal) ". "
+    }
+    ol.lst-kix_list_13-5.start {
+        counter-reset: lst-ctn-kix_list_13-5 0
+    }
+    .lst-kix_list_10-3>li:before {
+        content: "" counter(lst-ctn-kix_list_10-0, decimal) "." counter(lst-ctn-kix_list_10-1, decimal) "." counter(lst-ctn-kix_list_10-2, decimal) "." counter(lst-ctn-kix_list_10-3, decimal) ". "
+    }
+    .lst-kix_list_2-6>li {
+        counter-increment: lst-ctn-kix_list_2-6
+    }
+    ol.lst-kix_list_13-8.start {
+        counter-reset: lst-ctn-kix_list_13-8 0
+    }
+    .lst-kix_list_11-7>li {
+        counter-increment: lst-ctn-kix_list_11-7
+    }
+    .lst-kix_list_9-2>li:before {
+        content: "" counter(lst-ctn-kix_list_9-0, decimal) "." counter(lst-ctn-kix_list_9-1, decimal) "." counter(lst-ctn-kix_list_9-2, decimal) ". "
+    }
+    ol.lst-kix_list_5-7.start {
+        counter-reset: lst-ctn-kix_list_5-7 0
+    }
+    ol.lst-kix_list_14-0.start {
+        counter-reset: lst-ctn-kix_list_14-0 0
+    }
+    .lst-kix_list_12-5>li {
+        counter-increment: lst-ctn-kix_list_12-5
+    }
+    .lst-kix_list_5-5>li {
+        counter-increment: lst-ctn-kix_list_5-5
+    }
+    .lst-kix_list_9-0>li:before {
+        content: "" counter(lst-ctn-kix_list_9-0, decimal) ". "
+    }
+    .lst-kix_list_3-4>li {
+        counter-increment: lst-ctn-kix_list_3-4
+    }
+    ol.lst-kix_list_10-7 {
+        list-style-type: none
+    }
+    .lst-kix_list_9-6>li:before {
+        content: "" counter(lst-ctn-kix_list_9-0, decimal) "." counter(lst-ctn-kix_list_9-1, decimal) "." counter(lst-ctn-kix_list_9-2, decimal) "." counter(lst-ctn-kix_list_9-3, decimal) "." counter(lst-ctn-kix_list_9-4, decimal) "." counter(lst-ctn-kix_list_9-5, decimal) "." counter(lst-ctn-kix_list_9-6, decimal) ". "
+    }
+    ol.lst-kix_list_10-8 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_10-3 {
+        list-style-type: none
+    }
+    .lst-kix_list_9-4>li:before {
+        content: "" counter(lst-ctn-kix_list_9-0, decimal) "." counter(lst-ctn-kix_list_9-1, decimal) "." counter(lst-ctn-kix_list_9-2, decimal) "." counter(lst-ctn-kix_list_9-3, decimal) "." counter(lst-ctn-kix_list_9-4, decimal) ". "
+    }
+    ol.lst-kix_list_10-4 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_10-5 {
+        list-style-type: none
+    }
+    .lst-kix_list_11-3>li:before {
+        content: "" counter(lst-ctn-kix_list_11-0, decimal) "." counter(lst-ctn-kix_list_11-1, decimal) "." counter(lst-ctn-kix_list_11-2, decimal) "." counter(lst-ctn-kix_list_11-3, decimal) ". "
+    }
+    ol.lst-kix_list_10-6 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_10-0 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_10-1 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_1-3.start {
+        counter-reset: lst-ctn-kix_list_1-3 0
+    }
+    ol.lst-kix_list_10-2 {
+        list-style-type: none
+    }
+    ol.lst-kix_list_12-1.start {
+        counter-reset: lst-ctn-kix_list_12-1 0
+    }
+    ol.lst-kix_list_1-2.start {
+        counter-reset: lst-ctn-kix_list_1-2 0
+    }
+    .lst-kix_list_11-5>li:before {
+        content: "" counter(lst-ctn-kix_list_11-0, decimal) "." counter(lst-ctn-kix_list_11-1, decimal) "." counter(lst-ctn-kix_list_11-2, decimal) "." counter(lst-ctn-kix_list_11-3, decimal) "." counter(lst-ctn-kix_list_11-4, decimal) "." counter(lst-ctn-kix_list_11-5, decimal) ". "
+    }
+    .lst-kix_list_9-8>li:before {
+        content: "" counter(lst-ctn-kix_list_9-0, decimal) "." counter(lst-ctn-kix_list_9-1, decimal) "." counter(lst-ctn-kix_list_9-2, decimal) "." counter(lst-ctn-kix_list_9-3, decimal) "." counter(lst-ctn-kix_list_9-4, decimal) "." counter(lst-ctn-kix_list_9-5, decimal) "." counter(lst-ctn-kix_list_9-6, decimal) "." counter(lst-ctn-kix_list_9-7, decimal) "." counter(lst-ctn-kix_list_9-8, decimal) ". "
+    }
+    .lst-kix_list_1-1>li:before {
+        content: "" counter(lst-ctn-kix_list_1-0, decimal) "." counter(lst-ctn-kix_list_1-1, decimal) ". "
+    }
+    .lst-kix_list_11-7>li:before {
+        content: "" counter(lst-ctn-kix_list_11-0, decimal) "." counter(lst-ctn-kix_list_11-1, decimal) "." counter(lst-ctn-kix_list_11-2, decimal) "." counter(lst-ctn-kix_list_11-3, decimal) "." counter(lst-ctn-kix_list_11-4, decimal) "." counter(lst-ctn-kix_list_11-5, decimal) "." counter(lst-ctn-kix_list_11-6, decimal) "." counter(lst-ctn-kix_list_11-7, decimal) ". "
+    }
+    .lst-kix_list_1-3>li:before {
+        content: "" counter(lst-ctn-kix_list_1-0, decimal) "." counter(lst-ctn-kix_list_1-1, decimal) "." counter(lst-ctn-kix_list_1-2, decimal) "." counter(lst-ctn-kix_list_1-3, decimal) ". "
+    }
+    ol.lst-kix_list_10-5.start {
+        counter-reset: lst-ctn-kix_list_10-5 0
+    }
+    .lst-kix_list_4-8>li {
+        counter-increment: lst-ctn-kix_list_4-8
+    }
+    .lst-kix_list_1-7>li:before {
+        content: "" counter(lst-ctn-kix_list_1-7, lower-latin) ". "
+    }
+    ol.lst-kix_list_2-7.start {
+        counter-reset: lst-ctn-kix_list_2-7 0
+    }
+    .lst-kix_list_1-5>li:before {
+        content: "(" counter(lst-ctn-kix_list_1-5, lower-roman) ") "
+    }
+    ol.lst-kix_list_9-1.start {
+        counter-reset: lst-ctn-kix_list_9-1 0
+    }
+    .lst-kix_list_14-7>li {
+        counter-increment: lst-ctn-kix_list_14-7
+    }
+    .lst-kix_list_5-6>li {
+        counter-increment: lst-ctn-kix_list_5-6
+    }
+    .lst-kix_list_2-1>li:before {
+        content: "" counter(lst-ctn-kix_list_2-0, decimal) "." counter(lst-ctn-kix_list_2-1, decimal) ". "
+    }
+    .lst-kix_list_2-3>li:before {
+        content: "" counter(lst-ctn-kix_list_2-0, decimal) "." counter(lst-ctn-kix_list_2-1, decimal) "." counter(lst-ctn-kix_list_2-2, decimal) "." counter(lst-ctn-kix_list_2-3, decimal) ". "
+    }
+    .lst-kix_list_11-8>li {
+        counter-increment: lst-ctn-kix_list_11-8
+    }
+    .lst-kix_list_3-1>li {
+        counter-increment: lst-ctn-kix_list_3-1
+    }
+    .lst-kix_list_9-1>li {
+        counter-increment: lst-ctn-kix_list_9-1
+    }
+    .lst-kix_list_3-1>li:before {
+        content: "" counter(lst-ctn-kix_list_3-0, decimal) "." counter(lst-ctn-kix_list_3-1, decimal) ". "
+    }
+    .lst-kix_list_3-2>li:before {
+        content: "" counter(lst-ctn-kix_list_3-0, decimal) "." counter(lst-ctn-kix_list_3-1, decimal) "." counter(lst-ctn-kix_list_3-2, decimal) ". "
+    }
+    .lst-kix_list_14-0>li {
+        counter-increment: lst-ctn-kix_list_14-0
+    }
+    .lst-kix_list_8-1>li:before {
+        content: " "
+    }
+    ol.lst-kix_list_1-8.start {
+        counter-reset: lst-ctn-kix_list_1-8 0
+    }
+    .lst-kix_list_8-2>li:before {
+        content: " "
+    }
+    .lst-kix_list_3-5>li:before {
+        content: "" counter(lst-ctn-kix_list_3-0, decimal) "." counter(lst-ctn-kix_list_3-1, decimal) "." counter(lst-ctn-kix_list_3-2, decimal) "." counter(lst-ctn-kix_list_3-3, decimal) "." counter(lst-ctn-kix_list_3-4, decimal) "." counter(lst-ctn-kix_list_3-5, decimal) ". "
+    }
+    .lst-kix_list_12-0>li {
+        counter-increment: lst-ctn-kix_list_12-0
+    }
+    ol.lst-kix_list_12-3.start {
+        counter-reset: lst-ctn-kix_list_12-3 0
+    }
+    ol.lst-kix_list_11-5.start {
+        counter-reset: lst-ctn-kix_list_11-5 0
+    }
+    .lst-kix_list_8-5>li:before {
+        content: " "
+    }
+    .lst-kix_list_11-1>li {
+        counter-increment: lst-ctn-kix_list_11-1
+    }
+    .lst-kix_list_8-6>li:before {
+        content: " "
+    }
+    .lst-kix_list_2-0>li {
+        counter-increment: lst-ctn-kix_list_2-0
+    }
+    .lst-kix_list_3-6>li:before {
+        content: "" counter(lst-ctn-kix_list_3-0, decimal) "." counter(lst-ctn-kix_list_3-1, decimal) "." counter(lst-ctn-kix_list_3-2, decimal) "." counter(lst-ctn-kix_list_3-3, decimal) "." counter(lst-ctn-kix_list_3-4, decimal) "." counter(lst-ctn-kix_list_3-5, decimal) "." counter(lst-ctn-kix_list_3-6, decimal) ". "
+    }
+    ol.lst-kix_list_5-0.start {
+        counter-reset: lst-ctn-kix_list_5-0 0
+    }
+    .lst-kix_list_11-2>li:before {
+        content: "" counter(lst-ctn-kix_list_11-0, decimal) "." counter(lst-ctn-kix_list_11-1, decimal) "." counter(lst-ctn-kix_list_11-2, decimal) ". "
+    }
+    ol.lst-kix_list_4-2.start {
+        counter-reset: lst-ctn-kix_list_4-2 0
+    }
+    ol.lst-kix_list_11-6.start {
+        counter-reset: lst-ctn-kix_list_11-6 0
+    }
+    ol.lst-kix_list_12-4.start {
+        counter-reset: lst-ctn-kix_list_12-4 0
+    }
+    ol.lst-kix_list_10-1.start {
+        counter-reset: lst-ctn-kix_list_10-1 0
+    }
+    .lst-kix_list_4-4>li {
+        counter-increment: lst-ctn-kix_list_4-4
+    }
+    ol.lst-kix_list_5-6.start {
+        counter-reset: lst-ctn-kix_list_5-6 0
+    }
+    ol.lst-kix_list_4-1.start {
+        counter-reset: lst-ctn-kix_list_4-1 0
+    }
+    .lst-kix_list_12-4>li {
+        counter-increment: lst-ctn-kix_list_12-4
+    }
+    ol.lst-kix_list_11-0.start {
+        counter-reset: lst-ctn-kix_list_11-0 0
+    }
+    .lst-kix_list_3-3>li {
+        counter-increment: lst-ctn-kix_list_3-3
+    }
+    ol.lst-kix_list_10-2.start {
+        counter-reset: lst-ctn-kix_list_10-2 0
+    }
+    .lst-kix_list_12-7>li {
+        counter-increment: lst-ctn-kix_list_12-7
+    }
+    ol.lst-kix_list_5-5.start {
+        counter-reset: lst-ctn-kix_list_5-5 0
+    }
+    .lst-kix_list_2-6>li:before {
+        content: "" counter(lst-ctn-kix_list_2-6, decimal) ". "
+    }
+    .lst-kix_list_14-5>li {
+        counter-increment: lst-ctn-kix_list_14-5
+    }
+    .lst-kix_list_7-1>li:before {
+        content: "o  "
+    }
+    .lst-kix_list_7-5>li:before {
+        content: "\0025aa  "
+    }
+    .lst-kix_list_13-5>li {
+        counter-increment: lst-ctn-kix_list_13-5
+    }
+    .lst-kix_list_9-6>li {
+        counter-increment: lst-ctn-kix_list_9-6
+    }
+    ol.lst-kix_list_5-4.start {
+        counter-reset: lst-ctn-kix_list_5-4 0
+    }
+    ol.lst-kix_list_11-1.start {
+        counter-reset: lst-ctn-kix_list_11-1 0
+    }
+    .lst-kix_list_13-6>li:before {
+        content: "" counter(lst-ctn-kix_list_13-0, decimal) "." counter(lst-ctn-kix_list_13-1, decimal) "." counter(lst-ctn-kix_list_13-2, decimal) "." counter(lst-ctn-kix_list_13-3, decimal) "." counter(lst-ctn-kix_list_13-4, decimal) "." counter(lst-ctn-kix_list_13-5, decimal) "." counter(lst-ctn-kix_list_13-6, decimal) ". "
+    }
+    ol.lst-kix_list_5-1.start {
+        counter-reset: lst-ctn-kix_list_5-1 0
+    }
+    .lst-kix_list_10-6>li {
+        counter-increment: lst-ctn-kix_list_10-6
+    }
+    .lst-kix_list_11-6>li {
+        counter-increment: lst-ctn-kix_list_11-6
+    }
+    .lst-kix_list_1-7>li {
+        counter-increment: lst-ctn-kix_list_1-7
+    }
+    ol.lst-kix_list_10-0.start {
+        counter-reset: lst-ctn-kix_list_10-0 0
+    }
+    .lst-kix_list_15-6>li:before {
+        content: "\0025aa  "
+    }
+    .lst-kix_list_11-4>li {
+        counter-increment: lst-ctn-kix_list_11-4
+    }
+    .lst-kix_list_3-8>li {
+        counter-increment: lst-ctn-kix_list_3-8
+    }
+    .lst-kix_list_10-2>li:before {
+        content: "" counter(lst-ctn-kix_list_10-0, decimal) "." counter(lst-ctn-kix_list_10-1, decimal) "." counter(lst-ctn-kix_list_10-2, decimal) ". "
+    }
+    .lst-kix_list_4-6>li {
+        counter-increment: lst-ctn-kix_list_4-6
+    }
+    .lst-kix_list_13-7>li {
+        counter-increment: lst-ctn-kix_list_13-7
+    }
+    ol.lst-kix_list_1-7.start {
+        counter-reset: lst-ctn-kix_list_1-7 0
+    }
+    .lst-kix_list_1-5>li {
+        counter-increment: lst-ctn-kix_list_1-5
+    }
+    .lst-kix_list_4-2>li:before {
+        content: "" counter(lst-ctn-kix_list_4-0, decimal) "." counter(lst-ctn-kix_list_4-1, decimal) "." counter(lst-ctn-kix_list_4-2, decimal) ". "
+    }
+    .lst-kix_list_4-6>li:before {
+        content: "" counter(lst-ctn-kix_list_4-6, decimal) ". "
+    }
+    .lst-kix_list_15-2>li:before {
+        content: "\0025aa  "
+    }
+    .lst-kix_list_10-8>li {
+        counter-increment: lst-ctn-kix_list_10-8
+    }
+    .lst-kix_list_10-6>li:before {
+        content: "" counter(lst-ctn-kix_list_10-0, decimal) "." counter(lst-ctn-kix_list_10-1, decimal) "." counter(lst-ctn-kix_list_10-2, decimal) "." counter(lst-ctn-kix_list_10-3, decimal) "." counter(lst-ctn-kix_list_10-4, decimal) "." counter(lst-ctn-kix_list_10-5, decimal) "." counter(lst-ctn-kix_list_10-6, decimal) ". "
+    }
+    .lst-kix_list_9-1>li:before {
+        content: "" counter(lst-ctn-kix_list_9-0, decimal) "." counter(lst-ctn-kix_list_9-1, decimal) ". "
+    }
+    ol.lst-kix_list_12-7.start {
+        counter-reset: lst-ctn-kix_list_12-7 0
+    }
+    .lst-kix_list_12-2>li {
+        counter-increment: lst-ctn-kix_list_12-2
+    }
+    .lst-kix_list_9-5>li:before {
+        content: "" counter(lst-ctn-kix_list_9-0, decimal) "." counter(lst-ctn-kix_list_9-1, decimal) "." counter(lst-ctn-kix_list_9-2, decimal) "." counter(lst-ctn-kix_list_9-3, decimal) "." counter(lst-ctn-kix_list_9-4, decimal) "." counter(lst-ctn-kix_list_9-5, decimal) ". "
+    }
+    .lst-kix_list_12-2>li:before {
+        content: "" counter(lst-ctn-kix_list_12-0, decimal) "." counter(lst-ctn-kix_list_12-1, decimal) "." counter(lst-ctn-kix_list_12-2, decimal) ". "
+    }
+    ol.lst-kix_list_12-8.start {
+        counter-reset: lst-ctn-kix_list_12-8 0
+    }
+    .lst-kix_list_11-6>li:before {
+        content: "" counter(lst-ctn-kix_list_11-0, decimal) "." counter(lst-ctn-kix_list_11-1, decimal) "." counter(lst-ctn-kix_list_11-2, decimal) "." counter(lst-ctn-kix_list_11-3, decimal) "." counter(lst-ctn-kix_list_11-4, decimal) "." counter(lst-ctn-kix_list_11-5, decimal) "." counter(lst-ctn-kix_list_11-6, decimal) ". "
+    }
+    ol.lst-kix_list_11-3.start {
+        counter-reset: lst-ctn-kix_list_11-3 0
+    }
+    .lst-kix_list_1-2>li:before {
+        content: "" counter(lst-ctn-kix_list_1-0, decimal) "." counter(lst-ctn-kix_list_1-1, decimal) "." counter(lst-ctn-kix_list_1-2, decimal) ". "
+    }
+    .lst-kix_list_10-1>li {
+        counter-increment: lst-ctn-kix_list_10-1
+    }
+    .lst-kix_list_1-0>li {
+        counter-increment: lst-ctn-kix_list_1-0
+    }
+    .lst-kix_list_1-6>li:before {
+        content: "" counter(lst-ctn-kix_list_1-6, decimal) ". "
+    }
+    .lst-kix_list_12-6>li:before {
+        content: "" counter(lst-ctn-kix_list_12-0, decimal) "." counter(lst-ctn-kix_list_12-1, decimal) "." counter(lst-ctn-kix_list_12-2, decimal) "." counter(lst-ctn-kix_list_12-3, decimal) "." counter(lst-ctn-kix_list_12-4, decimal) "." counter(lst-ctn-kix_list_12-5, decimal) "." counter(lst-ctn-kix_list_12-6, decimal) ". "
+    }
+    ol.lst-kix_list_11-4.start {
+        counter-reset: lst-ctn-kix_list_11-4 0
+    }
+    .lst-kix_list_2-2>li:before {
+        content: "" counter(lst-ctn-kix_list_2-0, decimal) "." counter(lst-ctn-kix_list_2-1, decimal) "." counter(lst-ctn-kix_list_2-2, decimal) ". "
+    }
+    .lst-kix_list_13-2>li:before {
+        content: "" counter(lst-ctn-kix_list_13-0, decimal) "." counter(lst-ctn-kix_list_13-1, decimal) "." counter(lst-ctn-kix_list_13-2, decimal) ". "
+    }
+    ol.lst-kix_list_5-2.start {
+        counter-reset: lst-ctn-kix_list_5-2 0
+    }
+    ol {
+        margin: 0;
+        padding: 0
+    }
+    table td,
+    table th {
+        padding: 0
+    }
+    .c3 {
+        margin-left: 36pt;
+        padding-top: 12pt;
+        padding-left: 3.6pt;
+        padding-bottom: 12pt;
+        orphans: 2;
+        widows: 2;
+        text-align: justify
+    }
+    .c5 {
+        margin-left: 18pt;
+        padding-top: 12pt;
+        padding-left: 0pt;
+        padding-bottom: 12pt;
+        orphans: 2;
+        widows: 2;
+        text-align: justify
+    }
+    .c0 {
+        margin-left: 54pt;
+        padding-top: 12pt;
+        padding-left: 7.2pt;
+        padding-bottom: 12pt;
+        orphans: 2;
+        widows: 2;
+        text-align: justify
+    }
+    .c9 {
+        margin-left: 18pt;
+        padding-top: 12pt;
+        padding-bottom: 12pt;
+        orphans: 2;
+        widows: 2;
+        text-align: justify;
+        height: 12pt
+    }
+    .c12 {
+        margin-left: 72pt;
+        padding-top: 12pt;
+        padding-left: 20.2pt;
+        padding-bottom: 12pt;
+        orphans: 2;
+        widows: 2;
+        text-align: justify
+    }
+    .c17 {
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-style: normal
+    }
+    .c11 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        orphans: 2;
+        widows: 2;
+        text-align: right;
+        height: 12pt
+    }
+    .c7 {
+        margin-left: 39.6pt;
+        padding-top: 12pt;
+        padding-bottom: 12pt;
+        orphans: 2;
+        widows: 2;
+        text-align: justify
+    }
+    .c1 {
+        font-weight: 700;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-style: normal
+    }
+    .c13 {
+        font-weight: 400;
+        text-decoration: underline;
+        vertical-align: baseline;
+        font-style: normal
+    }
+    .c6 {
+        margin-left: 42.5pt;
+        padding-top: 12pt;
+        padding-bottom: 12pt;
+        orphans: 2;
+        widows: 2;
+        text-align: justify
+    }
+    .c15 {
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-style: normal
+    }
+    .c18 {
+        padding-top: 12pt;
+        padding-bottom: 12pt;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        height: 12pt
+    }
+    .c21 {
+        padding-top: 0pt;
+        padding-bottom: 35.4pt;
+        orphans: 2;
+        widows: 2;
+        text-align: left;
+        height: 12pt
+    }
+    .c4 {
+        font-weight: 400;
+        text-decoration: none;
+        vertical-align: baseline;
+        font-style: normal
+    }
+    .c19 {
+        padding-top: 12pt;
+        padding-bottom: 12pt;
+        orphans: 2;
+        widows: 2;
+        text-align: justify
+    }
+    .c22 {
+        padding-top: 12pt;
+        padding-bottom: 12pt;
+        orphans: 2;
+        widows: 2;
+        text-align: center
+    }
+    .c14 {
+        text-decoration: underline;
+        vertical-align: baseline;
+        font-style: normal
+    }
+    .c16 {
+        font-weight: 400
+    }
+    .c20 {
+        padding: 70.8pt 85pt 70.8pt 85pt
+    }
+    .c2 {
+        padding: 0;
+        margin: 0
+    }
+    .c10 {
+        font-weight: 700;
+    }
+    .c8 {
+    }
+    .title {
+        padding-top: 24pt;
+        font-weight: 700;
+        padding-bottom: 6pt;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+    .subtitle {
+        padding-top: 18pt;
+        padding-bottom: 4pt;
+        page-break-after: avoid;
+        font-style: italic;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+    li {
+    }
+    p {
+        margin: 0;
+    }
+    h1 {
+        padding-top: 12pt;
+        padding-bottom: 0pt;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+    h2 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+    h3 {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+    h4 {
+        padding-top: 12pt;
+        font-weight: 700;
+        padding-bottom: 2pt;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+    h5 {
+        padding-top: 11pt;
+        font-weight: 700;
+        padding-bottom: 2pt;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+    h6 {
+        padding-top: 10pt;
+        font-weight: 700;
+        padding-bottom: 2pt;
+        page-break-after: avoid;
+        orphans: 2;
+        widows: 2;
+        text-align: left
+    }
+  </style>
+  <p class="c18"><span class="c4"></span></p>
+  <p class="c19"><span class="c4">Bem-vindo ao Libre,</span></p>
+  <p class="c19"><span class="c4">A seguir apresentamos a voc&ecirc; (Usu&aacute;rio) os Termos e Condi&ccedil;&otilde;es de Uso, documento que relaciona as principais regras a serem observadas por todos que acessam e utilizam as funcionalidades do Libre.</span></p>
+  <p class="c19"><span class="c4">Como condi&ccedil;&atilde;o para acesso e uso do Libre os Usu&aacute;rios declaram ter lido este documento, conferindo sua livre e expressa concord&acirc;ncia &agrave;s condi&ccedil;&otilde;es destes Termos e Condi&ccedil;&otilde;es de Uso.</span></p>
+  <ol class="c2 lst-kix_list_3-0 start" start="1">
+    <li class="c5"><span class="c1">Sobre o Libre</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1 start" start="1">
+    <li class="c3"><span class="c4">O Libre &eacute; uma Plataforma que permite ao Usu&aacute;rio realizar doa&ccedil;&otilde;es contemplativas aos Jornalistas/Ve&iacute;culos da imprensa brasileira.</span></li>
+    <li class="c3"><span class="c4">As funcionalidades do Libre consistem em realizar a capta&ccedil;&atilde;o, gest&atilde;o e transfer&ecirc;ncia de doa&ccedil;&otilde;es contemplativas realizadas por mera liberalidade dos Usu&aacute;rios, sem qualquer direcionamento ou interfer&ecirc;ncia da OKFN Brasil;</span></li>
+    <li class="c3"><span class="c4">A OKFN Brasil, portanto, n&atilde;o &eacute; recebedora de quaisquer doa&ccedil;&otilde;es realizadas por meio do Libre, sendo apenas a fornecedora de recursos tecnol&oacute;gicos para capta&ccedil;&atilde;o de recursos financeiros, gest&atilde;o e direcionamento dos valores aos donat&aacute;rios.</span></li>
+    <li class="c3"><span class="c4">Ao se cadastrar, os Usu&aacute;rios poder&atilde;o utilizar todas as funcionalidades disponibilizadas no Libre, declarando, para tanto, terem lido, compreendido e aceitado os Termos e Condi&ccedil;&otilde;es de Uso.</span></li>
+    <li class="c3"><span class="c4">O Libre e suas funcionalidades dispon&iacute;veis aos&nbsp;Usu&aacute;rios podem passar por constantes aprimoramentos e atualiza&ccedil;&otilde;es, obrigando-se a&nbsp;Plataforma&nbsp;a:</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-2 start" start="1">
+    <li class="c0"><span class="c4">Preservar a sua funcionalidade, com links n&atilde;o quebrados e utilizando layout que respeita a usabilidade e navegabilidade, sempre que poss&iacute;vel;</span></li>
+    <li class="c0"><span class="c4">Exibir as funcionalidades de maneira clara, completa, precisa e suficiente de modo que exista a exata percep&ccedil;&atilde;o das opera&ccedil;&otilde;es realizadas;</span></li>
+    <li class="c0"><span class="c4">Garantir o sigilo dos dados, somente sendo acess&iacute;veis pelo&nbsp;Libre&nbsp;e por quem o&nbsp;Usu&aacute;rio&nbsp;consentir, al&eacute;m de si pr&oacute;prio.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1" start="6">
+    <li class="c3"><span class="c4">O&nbsp;Libre&nbsp;se esfor&ccedil;a para manter a disponibilidade da Plataforma, no entanto, pode ocorrer alguma indisponibilidade tempor&aacute;ria decorrente de manuten&ccedil;&atilde;o necess&aacute;ria ou por motivo de for&ccedil;a maior, como desastres naturais, falhas nos sistemas ou fatos de terceiros que fogem de sua esfera de vigil&acirc;ncia e responsabilidade.</span></li>
+    <li class="c3"><span class="c4">&nbsp;Se isso ocorrer, o&nbsp;Libre&nbsp;far&aacute; o que estiver ao seu alcance para restabelecer o acesso o mais breve poss&iacute;vel, dentro das limita&ccedil;&otilde;es t&eacute;cnicas de seus servi&ccedil;os e servi&ccedil;os de terceiros, dos quais o&nbsp;Libre&nbsp;depende para ficar on-line.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-2 start" start="1">
+    <li class="c0"><span class="c4">Eventuais procedimentos de manuten&ccedil;&atilde;o que acarretem a indisponibilidade do&nbsp;Libre&nbsp;por longos per&iacute;odos ser&atilde;o informados por meio dos seus canais oficiais de comunica&ccedil;&atilde;o.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-0" start="2">
+    <li class="c5"><span class="c1">Servi&ccedil;os e funcionalidades do Libre</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1 start" start="1">
+    <li class="c3"><span class="c4">O Libre foi desenvolvido para facilitar o microfinanciamento a posts, autores ou ve&iacute;culos. Por meio de nossa Plataforma o Usu&aacute;rio pode adquirir cr&eacute;ditos para do&aacute;-los livremente, de acordo com os conte&uacute;dos jornal&iacute;sticos que mais valorizar durante sua navega&ccedil;&atilde;o na Internet.</span></li>
+    <li class="c3"><span class="c4">Os cr&eacute;ditos donativos dentro da Plataforma tamb&eacute;m levam o nome de Libre (LBR), esp&eacute;cie de moeda digital, que ser&aacute; convertido em reais para os donat&aacute;rios. Os Usu&aacute;rios podem adquirir LBRs na Plataforma por meio de planos mensais.</span></li>
+    <li class="c3" id="h.gjdgxs"><span class="c4">Ao assinar um plano mensal de aquisi&ccedil;&atilde;o de LBRs, o pagamento realizado em moeda nacional (reais) &eacute; convertido em LBRs na propor&ccedil;&atilde;o de R$ 1,00 (um real) = 1 LBR (um Libre).</span></li>
+    <li class="c3"><span class="c4">O Usu&aacute;rio pode doar seus LBRs ao longo de 30 (trinta) dias ao Jornalista/Ve&iacute;culo de sua livre escolha, sendo mantida a convers&atilde;o definida na cl&aacute;usula 2.3.</span></li>
+    <li class="c3"><span class="c4">Os LBRs adquiridos pelo Usu&aacute;rio construir&atilde;o a chamada &ldquo;bolsa mensal&rdquo;, que &eacute; composta pela quantidade de LBRs mensais dispon&iacute;veis em cada um dos planos mensais dispon&iacute;veis para aquisi&ccedil;&atilde;o na Plataforma.</span></li>
+    <li class="c3"><span class="c4">Caso o Usu&aacute;rio n&atilde;o distribua todos os LBRs de sua &ldquo;bolsa mensal&rdquo; de cr&eacute;ditos donativos ao final dos 30 (trinta) dias, cada LBR ter&aacute; seu valor em reais acrescido, proporcionalmente &agrave; quantidade LBRs n&atilde;o distribu&iacute;dos, como exemplo:</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-2 start" start="1">
+    <li class="c0"><span class="c4">Se o plano adquirido for de R$ 30,00 (trinta reais) com doa&ccedil;&atilde;o de 30 LBRs (trinta LibreS), cada Libre valer&aacute; R$ 1,00; caso a doa&ccedil;&atilde;o seja de apenas 10 LBRs (dez LibreS), cada Libre passara a valer R$ 3,00 (tr&ecirc;s reais) por doa&ccedil;&atilde;o realizada.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1" start="7">
+    <li class="c3"><span class="c4">Os LBRs n&atilde;o s&atilde;o cumulativos, caso o Usu&aacute;rio n&atilde;o realize nenhuma doa&ccedil;&atilde;o dentro de 30 (trinta) dias seus, LBRs ser&atilde;o distribu&iacute;dos de forma aleat&oacute;ria para os Jornalistas/Ve&iacute;culos cadastrados e n&atilde;o ser&atilde;o devolvidos.</span></li>
+    <li class="c3"><span class="c4">Os LBRs constituem forma pura e simples de doa&ccedil;&atilde;o contemplativa, sem qualquer condi&ccedil;&atilde;o ou encargo e realizadas por mera liberalidade e consensualidade dos Usu&aacute;rios do Libre como incentivo aos profissionais e ve&iacute;culos do jornalismo brasileiro por sua contribui&ccedil;&atilde;o s&oacute;cio-cultural ao pa&iacute;s, os valores doados s&atilde;o transferidos na &iacute;ntegra ao Jornalista/Ve&iacute;culo, sendo descontados apenas os impostos e taxas referentes &agrave;s transa&ccedil;&otilde;es financeiras operacionalizadas pelos cart&otilde;es de cr&eacute;dito.</span></li>
+    <li class="c3"><span class="c4">&Eacute; de responsabilidade integral dos Usu&aacute;rios declarar as doa&ccedil;&otilde;es realizadas &agrave; Receita Federal, n&atilde;o impondo &agrave; OKFN Brasil qualquer tipo de encargo, condi&ccedil;&atilde;o ou termo.</span></li>
+    <li class="c3"><span class="c4">Os servi&ccedil;os e funcionalidades do&nbsp;Libre&nbsp;s&atilde;o destinados a pessoas f&iacute;sicas maiores de 18 (dezoito) anos e plenamente capazes, bem como a pessoas jur&iacute;dicas regularmente inscritas nos cadastros de contribuintes federal e estaduais.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-2 start" start="1">
+    <li class="c0"><span class="c4">Caso o&nbsp;Usu&aacute;rio&nbsp;n&atilde;o esteja de acordo com o exigido, n&atilde;o dever&aacute; prosseguir com a cria&ccedil;&atilde;o de sua&nbsp;Conta de Acesso&nbsp;ou&nbsp;utilizar seus servi&ccedil;os sem a presen&ccedil;a de um respons&aacute;vel legal, sob pena de ser caracterizada m&aacute;-f&eacute; e demais san&ccedil;&otilde;es legais cominadas no C&oacute;digo Civil.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1" start="11">
+    <li class="c3"><span class="c4">O Libre&nbsp;se reserva ao direito de incluir e retirar novas (ou j&aacute; existentes) funcionalidades e ferramentas da&nbsp;Plataforma&nbsp;segundo sua conveni&ecirc;ncia, sempre que entender necess&aacute;rio para oferecer os melhores servi&ccedil;os ao&nbsp;Usu&aacute;rio.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-0" start="3">
+    <li class="c5"><span class="c1">Conta de Acesso</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1 start" start="1">
+    <li class="c3" id="h.30j0zll"><span class="c4">Para utilizar os servi&ccedil;os e funcionalidades dispon&iacute;veis no Libre, o&nbsp;Usu&aacute;rio&nbsp;dever&aacute; possuir uma&nbsp;Conta de Acesso, a qual pode ser criada mediante o preenchimento de formul&aacute;rio pelo pr&oacute;prio&nbsp;Usu&aacute;rio.</span></li>
+    <li class="c3" id="h.1fob9te"><span class="c4">O Usu&aacute;rio &eacute; respons&aacute;vel e se obriga a:</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-2 start" start="1">
+    <li class="c0" id="h.3znysh7"><span class="c4">Fornecer informa&ccedil;&otilde;es e dados cadastrais corretos, ver&iacute;dicos, completos e atualizados;</span></li>
+    <li class="c0"><span class="c4">Acessar sua Conta de Acesso por meio de apelido (login) e senha, comprometendo-se a n&atilde;o informar a terceiros esses dados, responsabilizando-se integralmente pelo uso que deles seja feito;</span></li>
+    <li class="c0"><span class="c4">Notificar imediatamente o Libre&nbsp;a respeito de qualquer uso n&atilde;o autorizado de sua Conta de Acesso por meio dos canais de contato da Plataforma;</span></li>
+    <li class="c0"><span class="c4">Preservar a utiliza&ccedil;&atilde;o individual e intransfer&iacute;vel de seu login, senha de acesso e eventuais outras formas de verifica&ccedil;&atilde;o de autenticidade da Conta de Acesso, adotando medidas tecnol&oacute;gicas protetivas para evitar a utiliza&ccedil;&atilde;o por terceiros n&atilde;o autorizados;</span></li>
+    <li class="c0"><span class="c4">Adotar senha forte com o intuito de dificultar a a&ccedil;&atilde;o de experts em computa&ccedil;&atilde;o de adivinh&aacute;-la ou quebr&aacute;-la por mecanismos de for&ccedil;a bruta. Entende-se por senha forte aquela que:</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-3 start" start="1">
+    <li class="c12"><span class="c4">Possui, ao menos, 8 caracteres, sendo 1 letra mai&uacute;scula, 1 letra min&uacute;scula (ambas sem acento) e 1 n&uacute;mero;</span></li>
+    <li class="c12"><span class="c4">N&atilde;o representa sequ&ecirc;ncias num&eacute;ricas relacionadas a informa&ccedil;&otilde;es pessoais ou de f&aacute;cil dedu&ccedil;&atilde;o, tais como elementos do pr&oacute;prio nome, datas comemorativas ou repeti&ccedil;&atilde;o de caracteres iguais, a exemplo, mas n&atilde;o se limitando a: 1234, 0000, 01012011;</span></li>
+    <li class="c12"><span class="c4">N&atilde;o &eacute; reutilizada em aplicativos, portais e plataformas de terceiros.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1" start="3">
+    <li class="c3"><span class="c4">Em nenhuma hip&oacute;tese ser&aacute; permitido compartilhamento e a transfer&ecirc;ncia da Conta de Acesso. N&atilde;o se permitir&aacute;, ainda, a cria&ccedil;&atilde;o de novas Contas de Acesso de Acesso por pessoas cujos acessos originais tenham sido cancelados por infra&ccedil;&otilde;es aos Termos e Condi&ccedil;&otilde;es de Uso e demais pol&iacute;ticas da&nbsp;OKFN Brasil.</span></li>
+    <li class="c3"><span class="c4">O apelido que o Usu&aacute;rio utiliza na Plataforma&nbsp;n&atilde;o poder&aacute; guardar semelhan&ccedil;a com os nomes Libre e&nbsp;OKFN Brasil, bem como ser&atilde;o eliminados apelidos considerados ofensivos ou que infrinjam a legisla&ccedil;&atilde;o em vigor.</span></li>
+    <li class="c3"><span class="c4">O Libre&nbsp;poder&aacute; alterar os seus crit&eacute;rios de elegibilidade de acesso e utiliza&ccedil;&atilde;o a qualquer momento, sem que para isso tenha de comunicar ou avisar previamente aos&nbsp;Usu&aacute;rios.&nbsp;</span></li>
+    <li class="c3" id="h.2et92p0"><span class="c4">O&nbsp;Libre&nbsp;pode se recusar a conceder ou cancelar a&nbsp;Conta de Acesso de qualquer pessoa a qualquer tempo de forma unilateral, principalmente aquela que o utilizar de forma fraudulenta, violar ou tentar violar os presentes Termos e Condi&ccedil;&otilde;es de Uso e/ou qualquer documento legal da&nbsp;OKFN Brasil, sem preju&iacute;zo de adotar as medidas que entender cab&iacute;veis.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-0" start="4">
+    <li class="c5"><span class="c1">Responsabilidades do Usu&aacute;rio</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1 start" start="1">
+    <li class="c3"><span class="c4">O Usu&aacute;rio &eacute; respons&aacute;vel e se obriga a:</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-2 start" start="1">
+    <li class="c0"><span class="c4">Reconhecer que todos os acessos realizados por meio de sua Conta de Acesso no Libre s&atilde;o interpretados como tendo sido feitos por ele pr&oacute;prio de forma incontest&aacute;vel, sendo respons&aacute;vel por todos os acessos e opera&ccedil;&otilde;es realizadas, inclusive aquelas derivadas de uso ou divulga&ccedil;&atilde;o indevidos desta Conta de Acesso para terceiros;</span></li>
+    <li class="c0"><span class="c4">Dispor de dispositivos e equipamentos tecnol&oacute;gicos, servi&ccedil;os de conex&atilde;o &agrave; Internet, com antiv&iacute;rus e firewall habilitados, softwares devidamente atualizados, al&eacute;m da ado&ccedil;&atilde;o de medidas de seguran&ccedil;a m&iacute;nimas para acesso ao Libre;</span></li>
+    <li class="c0"><span class="c4">Deixar seus sistemas de antispam, filtros similares ou configura&ccedil;&otilde;es de redirecionamento de mensagens ajustados de modo que n&atilde;o interfiram no recebimento dos comunicados e materiais do Libre, n&atilde;o sendo aceit&aacute;vel nenhuma escusa caso n&atilde;o tenha tido acesso a algum e-mail ou mensagem eletr&ocirc;nica em virtude dos recursos mencionados;</span></li>
+    <li class="c0"><span class="c4">Respeitar todos os direitos de propriedade intelectual de titularidade da&nbsp;OKFN Brasil, tais quais todos os direitos referentes a terceiros que porventura estejam ou estiveram, de alguma forma, dispon&iacute;veis no&nbsp;Libre. Da mesma forma, os&nbsp;Usu&aacute;rios&nbsp;somente poder&atilde;o reproduzir os conte&uacute;dos dispon&iacute;veis no&nbsp;Libre, em especial suas marcas e layout do ambiente, desde que devidamente autorizados pela&nbsp;OKFN Brasil;</span></li>
+    <li class="c0"><span class="c4">Na incid&ecirc;ncia de danos &agrave; OKFN Brasil ou a terceiros, arcar com todas as obriga&ccedil;&otilde;es de indenizar o sujeito lesado, inclusive danos decorrentes de atos praticados por meio da Conta de Acesso, assumindo o polo passivo de a&ccedil;&atilde;o judicial ou procedimento administrativo e requerendo a exclus&atilde;o da&nbsp;OKFN Brasil, devendo arcar totalmente com as despesas e custas processuais atinentes, deixando-a livre de preju&iacute;zos e &ocirc;nus, indenizando</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1" start="2">
+    <li class="c3"><span class="c4">As funcionalidades do&nbsp;Libre s&atilde;o oferecidas na forma de presta&ccedil;&atilde;o de servi&ccedil;o, n&atilde;o conferindo ao&nbsp;Usu&aacute;rio&nbsp;nenhum direito sobre o software utilizado pela&nbsp;OKFN Brasil ou sobre suas estruturas de inform&aacute;tica que o sustentam.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-0" start="5">
+    <li class="c5"><span class="c1">Intera&ccedil;&atilde;o e Coment&aacute;rios</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1 start" start="1">
+    <li class="c3"><span class="c4">Os Usu&aacute;rios aceitam que as doa&ccedil;&otilde;es realizadas estejam associadas ao seu perfil no Libre e vis&iacute;veis para conhecimento de outros Usu&aacute;rios.</span></li>
+    <li class="c3"><span class="c4">Os&nbsp;Usu&aacute;rios&nbsp;poder&atilde;o avaliar posts e publicar coment&aacute;rios no&nbsp;Libre.</span></li>
+    <li class="c3"><span class="c4">A&nbsp;OKFN Brasil&nbsp;se reserva ao direito de n&atilde;o publicar ou excluir coment&aacute;rios enviados pelos&nbsp;Usu&aacute;rios&nbsp;a qualquer tempo, sem pr&eacute;vio aviso e nenhum direito de indeniza&ccedil;&atilde;o a quem quer que seja, que contiverem:</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-2 start" start="1">
+    <li class="c0"><span class="c4">Ofensa &agrave; honra, imagem, reputa&ccedil;&atilde;o e dignidade de terceiros; pornografia, pedofilia e outras modalidades de satisfa&ccedil;&atilde;o sexual; racismo, discrimina&ccedil;&atilde;o, bullying ou qualquer outra esp&eacute;cie de constrangimento ilegal ou ass&eacute;dio; viola&ccedil;&atilde;o a direito autoral, direito de imagem, marcas, s&iacute;mbolos, logotipos ou emblemas de terceiros; instiga&ccedil;&atilde;o de ato contr&aacute;rio &agrave; lei e &agrave; ordem p&uacute;blica ou apologia &agrave; pr&aacute;tica de crimes; uso da viol&ecirc;ncia, dissemina&ccedil;&atilde;o de &oacute;dio ou qualquer outra forma de agress&atilde;o ao bem-estar f&iacute;sico de algu&eacute;m; atividade similar a do&nbsp;Libre&nbsp;ou que a utilize para angariar recursos por publicidade de terceiros ao inv&eacute;s de praticar a intera&ccedil;&atilde;o regular do ambiente; &nbsp;erros ou suspeita de equ&iacute;vocos.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1" start="4">
+    <li class="c3"><span class="c4">Os&nbsp;Usu&aacute;rios&nbsp;s&atilde;o inteiramente respons&aacute;veis pelos coment&aacute;rios que submeterem ao&nbsp;Libre.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-2 start" start="1">
+    <li class="c0"><span class="c4">Os coment&aacute;rios dos&nbsp;Usu&aacute;rios&nbsp;do Libre n&atilde;o expressam a opini&atilde;o do&nbsp;Libre, tampouco declara&ccedil;&atilde;o de concord&acirc;ncia com o teor dos coment&aacute;rios.</span></li>
+  </ol>
+  <p class="c9" id="h.tyjcwt"><span class="c1"></span></p>
+  <ol class="c2 lst-kix_list_3-0" start="6">
+    <li class="c5"><span class="c1">Jornalista/Ve&iacute;culo</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1 start" start="1">
+    <li class="c3" id="h.3dy6vkm"><span class="c4">&Eacute; de inteira responsabilidade e obriga&ccedil;&atilde;o do Jornalista/Ve&iacute;culo atender &agrave;s regras impostas pelas cl&aacute;usulas 3.1 a 3.6.</span></li>
+    <li class="c3"><span class="c4">O</span> <span class="c1">Jornalista/Ve&iacute;culo</span><span class="c4">&nbsp;declara o aceite de todas as doa&ccedil;&otilde;es que lhe vierem a ser transferidas pelo Libre na forma estipulada nos presentes</span> <span class="c1">Termos e Condi&ccedil;&otilde;es de Uso</span><span class="c4">, para que lhe passe a pertencer os valores doados, sem qualquer condi&ccedil;&atilde;o.</span></li>
+    <li class="c3"><span class="c4">&nbsp;O Libre utiliza a</span> <span class="c1">Plataforma PicPay</span><span class="c4">&nbsp;para distribui&ccedil;&atilde;o dos valores de doa&ccedil;&atilde;o aos donat&aacute;rios cadastrados no Libre, &eacute; de responsabilidade do</span> <span class="c1">Jornalista/Ve&iacute;culo</span><span class="c4">&nbsp;informar com precis&atilde;o os dados banc&aacute;rios para recebimento das doa&ccedil;&otilde;es e cumprir com os Termos de Uso e Pol&iacute;tica de Privacidade da</span> <span class="c1">Plataforma PicPay</span><span class="c4">.</span></li>
+    <li class="c3"><span class="c4">O Libre</span><span class="c1">&nbsp;</span><span class="c4">n&atilde;o possui qualquer responsabilidade pelos dados de</span> <span class="c1">Jornalistas/Ve&iacute;culos</span><span class="c4">&nbsp;coletados pela</span> <span class="c1">Plataforma PicPay</span><span class="c4">.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-0" start="7">
+    <li class="c5"><span class="c1">Isen&ccedil;&otilde;es e limita&ccedil;&otilde;es de responsabilidade da OKFN Brasil</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1 start" start="1">
+    <li class="c3"><span class="c4">OKFN Brasil n&atilde;o se responsabiliza por/pela:</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-2 start" start="1">
+    <li class="c0"><span class="c4">Efetivo cumprimento das obriga&ccedil;&otilde;es assumidas pelos Usu&aacute;rios;</span></li>
+    <li class="c0"><span class="c4">Quaisquer v&iacute;cios, defeitos t&eacute;cnicos e/ou operacionais (problemas, bugs e glitches) ou funcionamentos indevidos que ocorrerem nos dispositivos e equipamentos dos&nbsp;Usu&aacute;rios&nbsp;ou de terceiros e sejam resultantes do uso regular da&nbsp;Libre;</span></li>
+    <li class="c0"><span class="c4">Qualquer dano direto ou indireto ocasionado por eventos de terceiros, como ataque de hackers, falhas no sistema, no servidor ou na conex&atilde;o &agrave; Internet, inclusive por a&ccedil;&otilde;es de softwares maliciosos, como v&iacute;rus, cavalos de Tr&oacute;ia e outros que possam, de algum modo, danificar o equipamento ou a conex&atilde;o dos&nbsp;Usu&aacute;rios&nbsp;em decorr&ecirc;ncia do acesso, utiliza&ccedil;&atilde;o ou navega&ccedil;&atilde;o no&nbsp;Libre, bem como a transfer&ecirc;ncia de dados, arquivos, imagens, textos contidos neste;</span></li>
+    <li class="c0"><span class="c4">Navega&ccedil;&atilde;o dos&nbsp;Usu&aacute;rios&nbsp;em links externos contidos no&nbsp;Libre, sendo seus deveres a leitura de eventuais Termos de Uso e Pol&iacute;tica de Privacidade do portal acessado e agir conforme o determinado;</span></li>
+    <li class="c0"><span class="c4">Verificar, controlar, aprovar ou garantir a adequa&ccedil;&atilde;o ou exatid&atilde;o das informa&ccedil;&otilde;es ou dados disponibilizados em tais links, n&atilde;o sendo, portanto, respons&aacute;vel por preju&iacute;zos, perdas ou danos ocorridos pela visita a tais sites, cabendo ao interessado verificar a confiabilidade das informa&ccedil;&otilde;es e dados ali exibidos antes de tomar alguma decis&atilde;o ou praticar algum ato;</span></li>
+    <li class="c0"><span class="c4">Disponibilidade integral e ininterrupta da Plataforma, cujo correto funcionamento depende do acesso e tr&aacute;fego de dados entre terminais de computador dos&nbsp;Usu&aacute;rios&nbsp;e os servidores pertencentes ou contratados pela OKFN Brasil, n&atilde;o possuindo&nbsp;nenhuma inger&ecirc;ncia e n&atilde;o sendo respons&aacute;vel por eventuais falhas no tr&aacute;fego desses dados e no acesso ao&nbsp;Libre&nbsp;decorrentes de falhas na rede mundial de computadores ou da pr&oacute;pria rede e servi&ccedil;os de telecomunica&ccedil;&atilde;o prestados por provedores de acesso &agrave; Internet;</span></li>
+    <li class="c0"><span class="c4">Erros de sistemas que alterem dados ou informa&ccedil;&otilde;es dos servi&ccedil;os disponibilizados no Libre, inclusive valores dos planos mensais ou por transa&ccedil;&otilde;es financeiras reprovadas pelas institui&ccedil;&otilde;es financeiras;</span></li>
+    <li class="c0"><span class="c4">Ressarcir seus Usu&aacute;rios por quaisquer gastos com liga&ccedil;&otilde;es telef&ocirc;nicas, pacotes de dados, SMS, mensagens, e-mails, correspond&ecirc;ncia ou qualquer outro valor despendido pelo Usu&aacute;rio em raz&atilde;o de contato com o Libre ou quaisquer outros Usu&aacute;rios, por qualquer motivo que seja.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1" start="2">
+    <li class="c3"><span class="c4">Os&nbsp;Usu&aacute;rios&nbsp;n&atilde;o possuem qualquer direito para exigir a disponibilidade do&nbsp;Libre&nbsp;conforme melhor lhes conv&ecirc;m, tampouco poder&atilde;o pleitear indeniza&ccedil;&atilde;o ou repara&ccedil;&atilde;o de danos em caso do&nbsp;Libre&nbsp;permanecer fora do ar, independentemente da motiva&ccedil;&atilde;o.</span></li>
+    <li class="c3"><span class="c4">Caso um ou mais Usu&aacute;rios ou algum terceiro inicie qualquer tipo de reclama&ccedil;&atilde;o ou a&ccedil;&atilde;o legal contra outro ou outros Usu&aacute;rios, todos e cada um dos Usu&aacute;rios envolvidos nas reclama&ccedil;&otilde;es ou a&ccedil;&otilde;es eximem de toda responsabilidade&nbsp;OKFN Brasil&nbsp;e seus diretores, gerentes, empregados, agentes, oper&aacute;rios, representantes e procuradores.</span></li>
+    <li class="c3"><span class="c4">A eventual remo&ccedil;&atilde;o, bloqueio ou suspens&atilde;o de qualquer conte&uacute;do ou funcionalidade do&nbsp;Libre&nbsp;em decorr&ecirc;ncia de alguma reclama&ccedil;&atilde;o, dever&aacute; ser sempre compreendida como demonstra&ccedil;&atilde;o de boa-f&eacute; e inten&ccedil;&atilde;o de solu&ccedil;&atilde;o amig&aacute;vel de conflitos, jamais como reconhecimento de culpa ou de qualquer infra&ccedil;&atilde;o pela&nbsp;OKFN Brasil&nbsp;a direito de terceiro.</span></li>
+    <li class="c3"><span class="c4">OKFN Brasil se reserva o direito de auxiliar e cooperar com qualquer autoridade judicial ou &oacute;rg&atilde;o governamental, podendo enviar informa&ccedil;&otilde;es cadastrais de seus Usu&aacute;rios, quando considerar que seu aux&iacute;lio ou coopera&ccedil;&atilde;o sejam necess&aacute;rios para proteger seus Usu&aacute;rios, funcion&aacute;rios, colaboradores, administradores, s&oacute;cios ou qualquer pessoa que possa ser prejudicada pela a&ccedil;&atilde;o ou omiss&atilde;o combatida.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-0" start="8">
+    <li class="c5"><span class="c1">Privacidade de Dados Pessoais e Informa&ccedil;&atilde;o</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1 start" start="1">
+    <li class="c3"><span class="c4">Os dados pessoais e informa&ccedil;&otilde;es dos Usu&aacute;rios s&atilde;o coletados quando inseridos ou submetidos voluntariamente pelos&nbsp;Usu&aacute;rios&nbsp;ao utilizar o Libre, plataforma disponibilizada pela&nbsp;OKFN Brasil.</span></li>
+    <li class="c3"><span class="c4">A OKFN Brasil coleta e armazena as informa&ccedil;&otilde;es e dados pessoais de seus Usu&aacute;rios, tais como, mas n&atilde;o se limitando a, nome, telefone, CPF, CNPJ, e-mail, grava&ccedil;&otilde;es de contato telef&ocirc;nico com o Libre, informa&ccedil;&otilde;es de pagamento, informa&ccedil;&otilde;es sobre o navegador e sistema operacional do dispositivo, endere&ccedil;o de IP, p&aacute;ginas da web visitadas, links e bot&otilde;es clicados.</span></li>
+    <li class="c3"><span class="c4">Os dados coletados ser&atilde;o utilizados pela OKFN Brasil para melhorar seus processos de identifica&ccedil;&atilde;o no Libre, apresenta&ccedil;&atilde;o de Servi&ccedil;os e contato com os Usu&aacute;rios.</span></li>
+    <li class="c3"><span class="c4">Dados de contato dos Usu&aacute;rios poder&atilde;o ser utilizados para o envio de notifica&ccedil;&otilde;es, informa&ccedil;&otilde;es sobre a Conta de Acesso ou Servi&ccedil;os prestados, avisos sobre viola&ccedil;&otilde;es ao Termo e outras comunica&ccedil;&otilde;es que OKFN Brasil considerar necess&aacute;rias. Os Usu&aacute;rios podem requisitar a OKFN Brasil a sua exclus&atilde;o de sua lista de envio de mensagens (mailing) a qualquer tempo.</span></li>
+    <li class="c3"><span class="c4">O Libre realiza o registro atividades de seus Usu&aacute;rios durante a utiliza&ccedil;&atilde;o da Plataforma, criando, quando poss&iacute;vel e aplic&aacute;vel, logs que conter&atilde;o:</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-2 start" start="1">
+    <li class="c0"><span class="c4">Endere&ccedil;o IP do&nbsp;Usu&aacute;rio;</span></li>
+    <li class="c0"><span class="c4">Acesso e a&ccedil;&otilde;es realizadas pelo&nbsp;Usu&aacute;rio;</span></li>
+    <li class="c0"><span class="c4">P&aacute;ginas e telas acessadas pelo&nbsp;Usu&aacute;rio;</span></li>
+    <li class="c0"><span class="c4">Datas e hor&aacute;rios de cada a&ccedil;&atilde;o do&nbsp;Usu&aacute;rio, al&eacute;m do acesso que fizer &agrave;s p&aacute;ginas, telas das ferramentas e funcionalidades;</span></li>
+    <li class="c0"><span class="c4">Informa&ccedil;&otilde;es sobre o dispositivo utilizado pelo&nbsp;Usu&aacute;rio, como: vers&atilde;o de sistema operacional, localiza&ccedil;&atilde;o do dispositivo, navegador, dentre outros aplicativos e softwares instalados;</span></li>
+    <li class="c0"><span class="c4">&nbsp;Session e User ID, quando dispon&iacute;vel.</span></li>
+    <li class="c0"><span class="c4">Dados de navega&ccedil;&atilde;o de nossos&nbsp;Usu&aacute;rios, o que inclui, mas n&atilde;o se limita a, cookies, Web beacons e recursos em JavaScript.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1" start="6">
+    <li class="c3"><span class="c4">Todas as informa&ccedil;&otilde;es, dados pessoais e de navega&ccedil;&atilde;o dos Usu&aacute;rio no Libre s&atilde;o armazenados em servidores ou meios magn&eacute;ticos de alta seguran&ccedil;a, disponibilizados por empresas especializadas em Seguran&ccedil;a da Informa&ccedil;&atilde;o.&nbsp;</span></li>
+    <li class="c3"><span class="c4">A OKFN Brasil segue os padr&otilde;es de seguran&ccedil;a comumente utilizados pelas empresas que trabalham com transmiss&atilde;o e reten&ccedil;&atilde;o de dados para garantir a seguran&ccedil;a de seus Usu&aacute;rios. &nbsp;No entanto, nenhum m&eacute;todo de transmiss&atilde;o ou reten&ccedil;&atilde;o de dados eletr&ocirc;nicos &eacute; plenamente seguro e pode estar sujeito a ataques externos. Assim, apesar de utilizar todos os meios poss&iacute;veis e adequados, a OKFN Brasil n&atilde;o pode garantir a absoluta seguran&ccedil;a das informa&ccedil;&otilde;es prestadas.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-2 start" start="1">
+    <li class="c0"><span class="c4">A OKFN Brasil&nbsp;n&atilde;o ser&aacute; respons&aacute;vel por preju&iacute;zo que possa ser derivado da viola&ccedil;&atilde;o dessas medidas por parte de terceiros que se utilizem de meios indevidos, fraudulentos ou ilegais para acessar as informa&ccedil;&otilde;es armazenadas nos servidores ou nos bancos de dados da OKFN Brasil.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1" start="8">
+    <li class="c3"><span class="c4">OKFN Brasil utiliza cookies e softwares de monitoramento de seus Usu&aacute;rios para prover a seus Usu&aacute;rios a melhor navega&ccedil;&atilde;o poss&iacute;vel, baseado em suas necessidades, e para pesquisas internas. Esses cookies n&atilde;o coletam informa&ccedil;&otilde;es pessoais, apenas informam prefer&ecirc;ncias de uso e de navega&ccedil;&atilde;o de cada Usu&aacute;rio, al&eacute;m de prover a OKFN Brasil estat&iacute;sticas e dados para aprimorar seus servi&ccedil;os.</span></li>
+    <li class="c3" id="h.1t3h5sf"><span class="c4">Os dados de Usu&aacute;rios coletados no Libre s&atilde;o de propriedade e responsabilidade da OKFN Brasil, sendo que seu uso, acesso e compartilhamento, quando necess&aacute;rios, ser&atilde;o feitos dentro dos limites e prop&oacute;sitos das atividades da Organiza&ccedil;&atilde;o, podendo, neste sentido, ser disponibilizada para consulta e cedidas aos nossos parceiros, fornecedores e autoridades p&uacute;blicas.</span></li>
+    <li class="c3"><span class="c4">&nbsp;Temos o compromisso de resguardar o sigilo financeiro, banc&aacute;rio, bem como de documentos pessoais de nossos Usu&aacute;rios, n&atilde;o compartilhando estes dados com empresas que n&atilde;o sejam nossas intermediadoras do pagamento de doa&ccedil;&otilde;es.</span></li>
+    <li class="c3"><span class="c4">A OKFN Brasil possui parceiros que podem oferecer servi&ccedil;os por meio do Libre, sendo que os dados fornecidos pelo&nbsp;Usu&aacute;rio&nbsp;a estes parceiros ser&atilde;o de responsabilidade destes, estando assim sujeitos &agrave;s suas pr&oacute;prias pr&aacute;ticas de coleta e uso de dados, sem que caiba qualquer &ocirc;nus &agrave; OKFN Brasil pelo tratamento de tais informa&ccedil;&otilde;es.</span></li>
+    <li class="c3"><span class="c4">Desde j&aacute; o&nbsp;Usu&aacute;rio&nbsp;est&aacute; ciente que podemos realizar o enriquecimento da nossa base de dados, adicionando informa&ccedil;&otilde;es oriundas de outras fontes leg&iacute;timas &ndash; inclusive decorrentes de bases de dados de outras organiza&ccedil;&otilde;es ou empresas que se relacionam com a&nbsp;OKFN Brasil, o qual manifesta consentimento expresso ao concordar com os presentes Termos e Condi&ccedil;&otilde;es de Uso.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-0" start="9">
+    <li class="c5"><span class="c1">Pol&iacute;tica de cancelamento</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1 start" start="1">
+    <li class="c3"><span class="c4">O Usu&aacute;rio que desejar cancelar o seu plano dever&aacute; acessar o Libre, na se&ccedil;&atilde;o &quot;Meu Painel&quot;, clicando na op&ccedil;&atilde;o &quot;Meu Plano&quot; e ent&atilde;o escolher a op&ccedil;&atilde;o &quot;Cancelar Plano&quot; para confirmar a opera&ccedil;&atilde;o. O cancelamento ocorre no ato da confirma&ccedil;&atilde;o da opera&ccedil;&atilde;o.</span></li>
+    <li class="c3"><span class="c4">Em caso de cancelamento de assinatura do Plano Mensal de Libres, os LBRs adquiridos pelo Usu&aacute;rio</span> <span class="c13">n&atilde;o</span><span class="c4">&nbsp;ser&atilde;o devolvidos ou convertidos em moeda corrente, os valores previamente capturados do cart&atilde;o de cr&eacute;dito do Usu&aacute;rio ficar&atilde;o dispon&iacute;veis na plataforma para uso convencional at&eacute; o fim do ciclo mensal de doa&ccedil;&otilde;es.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-2 start" start="1">
+    <li class="c0"><span class="c4">Se o Usu&aacute;rio n&atilde;o realizar a distribui&ccedil;&atilde;o dos LBRs ap&oacute;s esse per&iacute;odo, &nbsp;estes ser&atilde;o distribu&iacute;dos de forma aleat&oacute;ria aos donat&aacute;rios cadastrados na Plataforma, sendo que o Usu&aacute;rio n&atilde;o poder&aacute; reclamar nenhum direito sobre eles.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1" start="3">
+    <li class="c3"><span class="c4">O Usu&aacute;rios que n&atilde;o desejarem renovar automaticamente o Plano Mensal de Libres dever&atilde;o informar &agrave; OKFN Brasil que n&atilde;o desejam efetuar a renova&ccedil;&atilde;o, em at&eacute; 7 (sete) dias ap&oacute;s a renova&ccedil;&atilde;o autom&aacute;tica e caso n&atilde;o tenham doado os LBRs adquiridos em raz&atilde;o da renova&ccedil;&atilde;o autom&aacute;tica. Ap&oacute;s esse per&iacute;odo, n&atilde;o ser&aacute; poss&iacute;vel realizar o cancelamento da opera&ccedil;&atilde;o contratada.</span></li>
+    <li class="c3"><span class="c4">O Libre cobrar&aacute; automaticamente do cart&atilde;o de cr&eacute;dito cadastrado o valor do plano escolhido pelo Usu&aacute;rio, caso ocorram 3 (tr&ecirc;s) falhas consecutivas na cobran&ccedil;a, o plano ser&aacute; automaticamente cancelado.</span></li>
+    <li class="c3"><span class="c4">O Libre poder&aacute; cancelar imediatamente a assinatura do Usu&aacute;rio nas hip&oacute;teses em que constate infra&ccedil;&atilde;o legal ou dos termos de uso, pol&iacute;tica de privacidade ou qualquer outro termo adicional.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-0" start="10">
+    <li class="c5"><span class="c1">Veda&ccedil;&otilde;es</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1 start" start="1">
+    <li class="c3"><span class="c4">Os Usu&aacute;rios n&atilde;o poder&atilde;o: (i) Obter, guardar, divulgar, comercializar e/ou utilizar dados pessoais sobre outros Usu&aacute;rios para fins comerciais ou il&iacute;citos; (ii) Usar meios autom&aacute;ticos, incluindo spiders, rob&ocirc;s, crawlers, ferramentas de capta&ccedil;&atilde;o de dados ou similares para baixar dados do site (exceto ferramentas de busca na Internet e arquivos p&uacute;blicos n&atilde;o comerciais); (iii) Burlar, ou tentar burlar, de qualquer forma que seja, o sistema, mecanismo e/ou a plataforma do site; e (iv) incluir meios de contato como telefone, e-mail, endere&ccedil;o e outras formas de comunica&ccedil;&atilde;o nas ofertas.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-0" start="11">
+    <li class="c5"><span class="c1">Viola&ccedil;&atilde;o ou Tentativa de Burla</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1 start" start="1">
+    <li class="c3"><span class="c4">Qualquer intromiss&atilde;o, tentativa de burla, ou atividade que viole ou contrarie as leis de direito de propriedade intelectual e as proibi&ccedil;&otilde;es estipuladas nestes&nbsp;Termos tornar&aacute; o respons&aacute;vel pass&iacute;vel de sofrer os efeitos das a&ccedil;&otilde;es legais pertinentes, bem como das san&ccedil;&otilde;es aqui previstas, sendo ainda respons&aacute;vel por indenizar OKFN Brasil ou seus Usu&aacute;rios por eventuais danos causados.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-0" start="12">
+    <li class="c5"><span class="c1">San&ccedil;&otilde;es</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1 start" start="1">
+    <li class="c3"><span class="c4">Sem preju&iacute;zo de outras medidas, OKFN Brasil&nbsp;poder&aacute;, a seu exclusivo crit&eacute;rio e sem necessidade de pr&eacute;via anu&ecirc;ncia dos ou comunica&ccedil;&atilde;o aos Usu&aacute;rios, advertir, suspender ou cancelar, tempor&aacute;ria ou permanentemente, a Conta de Acesso ou o cadastro do Jornalista/Ve&iacute;culo, podendo aplicar san&ccedil;&atilde;o que impacte negativamente em sua reputa&ccedil;&atilde;o, a qualquer tempo, iniciando as a&ccedil;&otilde;es legais cab&iacute;veis e suspendendo a presta&ccedil;&atilde;o de seus servi&ccedil;os, se: (i) o Usu&aacute;rio ou Jornalista/Ve&iacute;culo n&atilde;o cumprir qualquer dispositivo destes Termos&nbsp;e as demais pol&iacute;ticas de&nbsp;OKFN Brasil; (ii) praticar atos delituosos ou criminais; (iii) n&atilde;o puder ser verificada a autenticidade, veracidade e propriedade dos dados cadastrados; (iv) qualquer atitude do Usu&aacute;rio ou Jornalista/Ve&iacute;culo dentro da Plataforma tenham causado algum dano a terceiros ou &agrave;&nbsp;OKFN Brasil&nbsp;ou tenham a potencialidade de assim o fazer.</span></li>
+    <li class="c3"><span class="c4">OKFN Brasil&nbsp;se reserva o direito de, a qualquer momento e a seu exclusivo crit&eacute;rio, solicitar o envio de documenta&ccedil;&atilde;o pessoal ou de qualquer documento que comprove a veracidade das informa&ccedil;&otilde;es cadastrais.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-0" start="13">
+    <li class="c5"><span class="c1">Legisla&ccedil;&atilde;o Aplic&aacute;vel e Foro de elei&ccedil;&atilde;o</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1 start" start="1">
+    <li class="c3"><span class="c4">Todos os itens destes&nbsp;Termos s&atilde;o regidos pelas leis vigentes na Rep&uacute;blica Federativa do Brasil. Para todos os assuntos referentes &agrave; interpreta&ccedil;&atilde;o, ao cumprimento ou a qualquer outro questionamento relacionado a estes&nbsp;Termos, as partes concordam em se submeter ao Foro da Comarca de S&atilde;o Paulo.</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-0" start="14">
+    <li class="c5"><span class="c1">Defini&ccedil;&otilde;es</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1 start" start="1">
+    <li class="c3"><span class="c4">Para os fins deste documento, devem se considerar as seguintes defini&ccedil;&otilde;es e descri&ccedil;&otilde;es para seu melhor entendimento:</span></li>
+  </ol>
+  <p class="c6"><span class="c4">Doa&ccedil;&otilde;es contemplativas: doa&ccedil;&atilde;o realizada em face do donat&aacute;rio de forma liberal em contempla&ccedil;&atilde;o do merecimento deste advindo de sua atividade profissional exercida.</span></p>
+  <p class="c6"><span class="c4">Anti-Spam: Sistema que evita correspond&ecirc;ncias n&atilde;o desejadas, como publicidade em massa, pelo bloqueio de mensagens ou movendo-as para pasta espec&iacute;fica.</span></p>
+  <p class="c6"><span class="c4">Conta de Acesso: Credencial de um&nbsp;Usu&aacute;rio&nbsp;que permite acesso &agrave; &aacute;rea restrita e &agrave;s funcionalidades exclusivas da&nbsp;Libre, definida pela combina&ccedil;&atilde;o de e-mail e senha, e consistente nas informa&ccedil;&otilde;es pessoais fornecidas pelo&nbsp;Usu&aacute;rio.</span></p>
+  <p class="c6"><span class="c4">Jornalista: pessoa f&iacute;sica que exer&ccedil;a de forma habitual e remunerada de as seguintes atividades: reda&ccedil;&atilde;o, coment&aacute;rio, cr&ocirc;nica, condensa&ccedil;&atilde;o, titula&ccedil;&atilde;o, interpreta&ccedil;&atilde;o, corre&ccedil;&atilde;o ou coordena&ccedil;&atilde;o de mat&eacute;ria a ser divulgada, contenha ou n&atilde;o coment&aacute;rio; entrevista, inqu&eacute;rito ou reportagem, escrita ou falada; execu&ccedil;&atilde;o de desenhos art&iacute;sticos ou t&eacute;cnicos de car&aacute;ter jornal&iacute;stico.</span></p>
+  <p class="c6"><span class="c4">Layout: Conjunto compreendido entre apar&ecirc;ncia, design e fluxos do Libre.</span></p>
+  <p class="c6"><span class="c4">Link: Terminologia para endere&ccedil;o de Internet.</span></p>
+  <p class="c6"><span class="c4">Libre: Designa a Plataforma dispon&iacute;vel nas lojas virtuais de aplicativos e no endere&ccedil;o eletr&ocirc;nico www.midialibre.org e seus subdom&iacute;nios.</span></p>
+  <p class="c6"><span class="c4">OKFN Brasil: OPEN KNOWLEDGE FOUNDATION BRASIL (&ldquo;OKFN Brasil&rdquo;), tamb&eacute;m designada por REDE PELO CONHECIMENTO LIVRE, inscrita no CNPJ/MF sob o n&ordm; 19.131.243/0001-97, pessoa jur&iacute;dica de direito privado, da modalidade Associa&ccedil;&atilde;o, sem fins lucrativos ou de fins n&atilde;o econ&ocirc;micos, pol&iacute;tico-partid&aacute;rios ou religiosos, com sede na Rua Scipi&atilde;o, n&ordm; 506, Vila Romana, na Cidade de S&atilde;o Paulo, Estado de S&atilde;o Paulo.</span></p>
+  <p class="c6"><span class="c4">Usu&aacute;rios: Pessoas que acessam ou interagem com as atividades oferecidas pela&nbsp;Libre.</span></p>
+  <p class="c6"><span class="c4">Ve&iacute;culo: pessoa jur&iacute;dica que tenha como atividade a edi&ccedil;&atilde;o de jornal ou revista, ou a distribui&ccedil;&atilde;o de notici&aacute;rio, com funcionamento efetivo idoneidade financeira e registro legal.</span></p>
+  <ol class="c2 lst-kix_list_3-0" start="15">
+    <li class="c5"><span class="c10">Registro P&uacute;blico</span></li>
+  </ol>
+  <ol class="c2 lst-kix_list_3-1 start" start="1">
+    <li class="c3"><span class="c4">Estes Termos de Uso e Condi&ccedil;&otilde;es de Navega&ccedil;&atilde;o est&atilde;o registrados no</span> <span class="c4 c8">[XX]</span><span class="c4">&ordm; Registro de T&iacute;tulos e Documentos da Capital de S&atilde;o Paulo sob o n&uacute;mero</span> <span class="c4 c8">[XXX]</span><span class="c4">&nbsp;em</span> <span class="c4 c8">[INFORMAR DATA].</span></li>
+  </ol>
+  <p class="c7"><span class="c16">Atualiza&ccedil;&atilde;o: 10 de agosto de 2017.</span></p>
+# page images
+images:
+  coin:
+    path: /assets/images/libre-coin.png
+    height: 100px
+    title: Libre Coin
+
+  coins:
+    path: /assets/images/libre-coins.png
+    height: 120px
+    title: Libre Coins
+
+
+# page buttons
+links:
+  faca_parte:
+    label: Faça Parte
+    path: /account/login
+    class: btn btn-success btn-lg
+
