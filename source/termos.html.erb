@@ -1,0 +1,42 @@
+---
+title:      Termos e condições de uso
+controller: terms
+---
+
+<% page = data.pages.terms %>
+
+	<section id="main-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h1><%= page.title %></h1>
+				</div>
+
+				<div class="col-md-8 section-content">
+					<%= page.content %>
+				</div>
+				<div class="col-md-4 text-center">
+					<% images = page.images %>
+					<p>
+						<%= img = images[:coin]; image_tag img.path, img %>
+					</p>
+					<br>
+					<br>
+					<br>
+					<br>
+					<p>
+						<%= img = images[:coins]; image_tag img.path, img %>
+					</p>
+
+				</div>
+
+				<div class="col-md-12 section-content">
+					<p>
+						<%= btn = page.links[:faca_parte]; link_to btn.label, btn.path, btn %>
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
