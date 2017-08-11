@@ -5,7 +5,7 @@ title: Faça parte
 
 section:
   register:
-    title: Efetue seu cadastro para ter acesso á plataforma
+    title: Efetue seu cadastro para ter acesso à plataforma
     subtitle:
 
     list:
@@ -28,7 +28,7 @@ section:
 
   login:
     title: Acesse sua conta
-    subtitle: Preencha os campos abaixo para ter acesso á plataforma.
+    subtitle: Preencha os campos abaixo para ter acesso à plataforma.
 
     # page form
     form:
