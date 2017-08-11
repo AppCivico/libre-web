@@ -30,7 +30,7 @@ module.exports = class I18n
     error:
       default_title: 'Erro!'
 
-      header_message: 'Nao foi possível carregar sa informações do dashboard do usuário'
+      header_message: 'Não foi possível carregar as informações do usuário'
 
       signin_title: 'Erro!'
       signin_message: 'Usuário ou senha inválidos...'
