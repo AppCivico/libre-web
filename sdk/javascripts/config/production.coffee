@@ -2,8 +2,8 @@
 window.Libre = window.Libre || {}
 window.Libre._configs = _config =
   properties:
-    base: "//midialibre.org"
-    api: "//api.midialibre.org/api"
+    base: "//midialibre.org.br"
+    api: "//api.midialibre.org.br/api"
     assets:
       button: "/assets/sdk/v1.0/img/lbr-button-image.svg"
       button_thanks: "/assets/sdk/v1.0/img/lbr-button-image.thanks.svg"

@@ -13,8 +13,8 @@ module.exports = Backbone.Config = class Config
     # config for production
     properties:
       name:     "Libre-App"
-      api_base: "https://api.midialibre.org/api"
-      url_base: "https://midialibre.org"
+      api_base: "https://api.midialibre.org.br/api"
+      url_base: "https://midialibre.org.br"
       debug:    false
 
 
