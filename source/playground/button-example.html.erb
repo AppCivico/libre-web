@@ -56,7 +56,16 @@ controller: home
 	</div>
 </section>
 
-<% unless build? %>
+<% if !build? %>
+	<script>(function(d, s, id) {
+		var js, ljs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//localhost:<%= config[:port]%>/sdk/libre.js#v1.0";
+		ljs.parentNode.insertBefore(js, ljs);
+	}(document, 'script', 'libre-sdk'));
+	</script>
+<% elsif ENV['environment'] == 'development' %>
 	<script>(function(d, s, id) {
 		var js, ljs = d.getElementsByTagName(s)[0];
 		if (d.getElementById(id)) return;
