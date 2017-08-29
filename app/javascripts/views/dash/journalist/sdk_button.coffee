@@ -25,6 +25,7 @@ module.exports = class extends ViewBase
 
   # events
   events:
+    'submit form#button-form': 'generateCode'
     'click input#btn-code-gen': 'generateCode'
 
   # event for change input data using
