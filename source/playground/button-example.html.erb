@@ -65,7 +65,7 @@ controller: home
 		ljs.parentNode.insertBefore(js, ljs);
 	}(document, 'script', 'libre-sdk'));
 	</script>
-<% elsif ENV['environment'] == 'development' %>
+<% elsif development? %>
 	<script>(function(d, s, id) {
 		var js, ljs = d.getElementsByTagName(s)[0];
 		if (d.getElementById(id)) return;
