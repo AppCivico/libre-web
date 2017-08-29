@@ -29,6 +29,7 @@ module.exports = class
         frameborder="0"
         scrolling="no"
         style="height:30px;width:140px;overflow:hidden">
+        allowTransparency="true"
       </iframe>
     """
 
