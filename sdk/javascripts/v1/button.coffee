@@ -75,6 +75,10 @@ class SupportButtonView extends ViewBase
     super el: el
     params = @getDataAttributes()
 
+    @stylize el, params
+    thanks = doc.querySelector '.lbr-sdk-btn-thanks'
+    @stylize thanks, params
+
     # binding events
     @listenTo el, 'click', @supportButtonClick
 
@@ -94,6 +98,13 @@ class SupportButtonView extends ViewBase
     else
       @supportedStatus false
 
+  stylize: (el, params = {}) ->
+    el.setAttribute 'height', (params.height || 30)
+
+    if params.style == 'black-fg'
+      el.setAttribute 'src', el.getAttribute 'data-src-'+params.style
+    else if params.style == 'white-fg'
+      el.setAttribute 'src', el.getAttribute 'data-src-'+params.style
 
   supportedStatus: (isSupported = false) ->
     button = doc.querySelector '.lbr-sdk-btn-support'
@@ -203,7 +214,8 @@ class SupportButtonView extends ViewBase
 
     @data =
       id: params.get "id"
-      theme: params.get "theme"
+      height: params.get "height"
+      style: params.get "style"
       title: params.get "title"
       api_key: params.get "api_key"
       location: decodeURIComponent params.get("location")
@@ -216,6 +228,8 @@ class SupportButtonView extends ViewBase
       page_title: @data.title
       page_referer: @data.referer
       id: @data.id
+      height: @data.height
+      style: @data.style
       api_key: (@session().getAttr 'api_key') or ''
       referer: @data.referer
     return params
@@ -226,6 +240,8 @@ class SupportButtonView extends ViewBase
 
     return {
       user_id: s.getAttr 'user_id'
+      height: s.getAttr 'height'
+      style: s.getAttr 'style'
       api_key: s.getAttr 'api_key'
       page_title: params.title
       page_referer: params.referer

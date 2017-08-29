@@ -23,12 +23,14 @@ module.exports = class
     data = @getDataAttributes()
     config = @getConfig()
 
+    data.height = 30 unless data.height?
+
     return """
       <iframe class="lbr-sdk-iframe-button"
         src="#{@webAddr}/sdk/v1/button?#{Utils.serialize data}"
         frameborder="0"
         scrolling="no"
-        style="height:30px;width:140px;overflow:hidden">
+        style="height:#{data.height}px;width:140px;overflow:hidden">
         allowTransparency="true"
       </iframe>
     """
