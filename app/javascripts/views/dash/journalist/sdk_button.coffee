@@ -22,16 +22,34 @@ module.exports = class extends ViewBase
     'code': 'div#code-preview'
     'button': 'input#btn-code-gen'
 
+    'buttonSize': 'select#btn-height'
+    'buttonTheme': 'select#btn-style'
+    'btnPreview': '#btn-preview'
 
   # events
   events:
+    'submit form#button-form': 'generateCode'
     'click input#btn-code-gen': 'generateCode'
+    'change input#btn-height' : 'onChangeInputForm'
+    'change select#btn-style' : 'onChangeInputForm'
 
   # event for change input data using
   onChangeInputForm: (event) ->
     event.preventDefault()
     field = event.currentTarget
     @model.set field.id, field.value
+
+    btnPreview = @getUI('btnPreview')
+    if field.id == 'btn-height'
+      if field.value <= field.max and field.value >= field.min
+        btnPreview.attr 'height', field.value
+    else if field.id == 'btn-style'
+      if field.value == 'black-fg'
+        btnPreview.attr 'src', btnPreview.data 'src-'+field.value
+      else if field.value == 'white-fg'
+        btnPreview.attr 'src', btnPreview.data 'src-'+field.value
+      else
+        btnPreview.attr 'src', btnPreview.data 'src-default'
 
 
   # generate code event
@@ -68,7 +86,11 @@ module.exports = class extends ViewBase
       </script>
 
       <!-- adiciona o botão do libre -->
-      <div class="lbr-button" data-id="#{@model.get('user_id')}"></div>
+      <div class="lbr-button"
+        data-id="#{@model.get('user_id')}"
+        data-style="#{@model.get('style')}"
+        data-height="#{@model.get('height')}"
+      ></div>
     """
 
     $el.removeClass 'hide'
@@ -98,5 +120,4 @@ module.exports = class extends ViewBase
 
   buttonParams: ->
     form = @getUI('form')
-    #return @params(form).permit 'website', 'tamanho', 'aparencia'
-    return @params(form).permit()
+    return @params(form).permit 'height', 'style'

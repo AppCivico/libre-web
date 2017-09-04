@@ -1,22 +1,31 @@
 <style>
-  html, body {padding: 0px; margin: 0px}
+	html,
+	body {
+		margin: 0px;
+		padding: 0px;
+		background: transparent;
+	}
 </style>
 
 <form class="lbr-sdk-button" href="#" style="">
 	<input class="lbr-sdk-btn-thanks"
 		type="image"
+		data-src-black-fg="<%= data.config[:host] %>/assets/sdk/v1.0/img/lbr-button-image.thanks--black-fg.svg"
+		data-src-white-fg="<%= data.config[:host] %>/assets/sdk/v1.0/img/lbr-button-image.thanks--white-fg.svg"
 		src="<%= data.config[:host] %>/assets/sdk/v1.0/img/lbr-button-image.thanks.svg"
 		height="30px"
 		title="Obrigado por colaborar!"
-    value="Obrigado!"
+		value="Obrigado!"
 		style="display:none"
 		onclick="return false;" />
 
 	<input class="lbr-sdk-btn-support"
 		type="image"
+		data-src-black-fg="<%= data.config[:host] %>/assets/sdk/v1.0/img/lbr-button-image--black-fg.svg"
+		data-src-white-fg="<%= data.config[:host] %>/assets/sdk/v1.0/img/lbr-button-image--white-fg.svg"
 		src="<%= data.config[:host] %>/assets/sdk/v1.0/img/lbr-button-image.svg"
 		height="30px"
-    value="Dar um libre"
+		value="Dar um libre"
 		style="display:none"
 		title="Gostou? Valorize, dê um Libre"/>
 </form>

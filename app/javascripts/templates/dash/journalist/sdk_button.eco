@@ -39,9 +39,14 @@
 		</div>
 
 		<div class="col-md-5">
-			<div class="button-preview text-center" style="border:solid 1px #eaeaea;">
-				<h4 class="text-muted">Pré-visualização do botão</h4>
-				<img src="/assets/images/lbr-button-image.svg" alt="" height="50px" style="margin: 25px 0px">
+			<div class="button-preview text-center" style="border:solid 1px #eaeaea; background-color: #33cc66; color: #fff;">
+				<h4>Pré-visualização do botão</h4>
+				<img id="btn-preview"
+				data-src-default="/assets/sdk/v1.0/img/lbr-button-image.svg"
+				data-src-black-fg="/assets/sdk/v1.0/img/lbr-button-image--black-fg.svg"
+				data-src-white-fg="/assets/sdk/v1.0/img/lbr-button-image--white-fg.svg"
+				src="/assets/sdk/v1.0/img/lbr-button-image.svg"
+				alt="" height="30" style="margin: 25px auto">
 				<p><small>O botão deverá aparecer no seu site conforme a imagem acima</small></p>
 			</div>
 		</div>
@@ -50,10 +55,28 @@
 			<div class="row">
 				<form id="button-form" name="button_form" action="#">
 					<div class="form-group">
-						<p>Click no botão abaixo para gerar o código que você terá que
+						<p>Clique no botão abaixo para gerar o código que você terá que
 						adicionar no seu site para começar a receber seus libres.</p>
 						<br>
 
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="btn-height">Altura do botão <small>(em pixels)</small></label>
+									<input id="btn-height" name="height" class="form-control" type="number" step="1" min="24" max="48" value="30" />
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="btn-style">Aparência do botão</label>
+									<select id="btn-style" name="style" class="form-control">
+										<option value="default" selected>padrão</option>
+										<option value="black-fg">preto sobre fundo transparente</option>
+										<option value="white-fg">branco sobre fundo transparente</option>
+									</select>
+								</div>
+							</div>
+						</div>
 					</div>
 					<div class="form-group">
 						<input type="button" id="btn-code-gen" class="btn btn-success btn-lg" value="</> Gerar código" />
