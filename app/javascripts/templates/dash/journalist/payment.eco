@@ -12,16 +12,23 @@
 		</div>
 
 		<!-- button preview + config form -->
+		<% @account = @stash.account or [] %>
 		<div class="col-md-12">
-			<div class="alert alert-info">
-				<h4>Importante</h4>
-				Sem esta integração, os valores colaborados através da plataforma não poderão ser repassados.
-			</div>
+			<% if @account and @account.is_authlinked > 0: %>
+				<div class="alert alert-success">
+					Contas já integradas.
+				</div>
+			<% else: %>
+				<div class="alert alert-info">
+					<h4>Importante</h4>
+					Sem esta integração, os valores colaborados através da plataforma não poderão ser repassados.
+				</div>
 
-			<div class="form-group">
-				<a id="js-btn-picpay" class="btn btn-success btn-lg" data-bypass="true" href="#">Integrar conta do PicPay</a>
-			</div>
-			<div id="message" class="message alert alert-warning"></div>
+				<div class="form-group">
+					<a id="js-btn-picpay" class="btn btn-success btn-lg" data-bypass="true" href="#">Integrar conta do PicPay</a>
+				</div>
+				<div id="message" class="message alert alert-warning"></div>
+			<% end %>
 		</div>
 
 	</div>

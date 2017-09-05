@@ -3,6 +3,7 @@ ViewBase = require 'views/base.coffee'
 ButtonView = require 'views/button.coffee'
 LoadingView = require 'views/loading.coffee'
 PaymentModel = require 'models/journalist/payment.coffee'
+AccountModel = require 'models/journalist/account.coffee'
 
 I18n = require 'lib/i18n.coffee'
 Message = require 'lib/message.coffee'
@@ -22,6 +23,8 @@ module.exports = class extends ViewBase
   loading: new LoadingView
 
   model: new Backbone.Model()
+
+  account: new AccountModel
 
   # ui elements
   ui:
@@ -51,13 +54,24 @@ module.exports = class extends ViewBase
 
     try
       PaymentModel.load @picpayParams()
-        .done (res) ->
+        .done (res) =>
           if (res.picpayconnect.authurl)?
             Message.show
               type: 'success'
               title: I18n.t 'success/picpay_title'
               message: I18n.t 'success/picpay_message'
             window.open res.picpayconnect.authurl, '_blank', ''
+            btn.el.textContent = 'Aguardando autorização'
+            btn.el.className = btn.el.className.replace 'btn-success', 'btn-warning'
+            btn.el.setAttribute 'aria-busy', 'true'
+            checkAuth = setInterval( (
+              ()=>
+                @account.fetch()
+                  .done (res) ->
+                    if res.is_authlinked? and res.is_authlinked > 0
+                      window.location.reload(false)
+            ), 30000)
+
           false
 
         .fail (res) ->
@@ -84,6 +98,19 @@ module.exports = class extends ViewBase
 
     return false
 
+  render: ->
+    @account.set @accountParams()
+    @account.fetch()
+      .done (res) =>
+        @stash 'account', res || []
+        super
+
+      .always (res) =>
+        super
+
+    @stash 'account', []
+    super
+
 
   # event on render
   onRender: ->
@@ -102,4 +129,11 @@ module.exports = class extends ViewBase
     @$el.find('.message').remove()
     false
 
+
+  accountParams: ->
+    session = @session.get()
+    return {
+      api_key: session.api_key
+      user_id: session.user_id
+    }
 
