@@ -758,3 +758,17 @@ header.header-internal {
 	padding: 9px 14px;
 	width: 100%;
 }
+
+@keyframes blink-animation {
+	50% {
+		color: transparent;
+	}
+}
+
+
+.btn[aria-busy='true'] {
+	&:after {
+		animation: 1s ease-in 0s infinite blink-animation;
+		content: '...';
+	}
+}

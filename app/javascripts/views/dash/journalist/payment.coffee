@@ -54,13 +54,16 @@ module.exports = class extends ViewBase
 
     try
       PaymentModel.load @picpayParams()
-        .done (res) ->
+        .done (res) =>
           if (res.picpayconnect.authurl)?
             Message.show
               type: 'success'
               title: I18n.t 'success/picpay_title'
               message: I18n.t 'success/picpay_message'
             window.open res.picpayconnect.authurl, '_blank', ''
+            btn.el.textContent = 'Aguardando autorização'
+            btn.el.className = btn.el.className.replace 'btn-success', 'btn-warning'
+            btn.el.setAttribute 'aria-busy', 'true'
             checkAuth = setInterval( (
               ()=>
                 @account.fetch()
