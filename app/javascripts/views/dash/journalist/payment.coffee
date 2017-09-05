@@ -61,6 +61,14 @@ module.exports = class extends ViewBase
               title: I18n.t 'success/picpay_title'
               message: I18n.t 'success/picpay_message'
             window.open res.picpayconnect.authurl, '_blank', ''
+            checkAuth = setInterval( (
+              ()=>
+                @account.fetch()
+                  .done (res) ->
+                    if res.is_authlinked? and res.is_authlinked > 0
+                      window.location.reload(false)
+            ), 30000)
+
           false
 
         .fail (res) ->
