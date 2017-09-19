@@ -54,7 +54,7 @@
 											</div>
 											<div class="support-">
 												<small class="text-muted">Compartilhe:</small>&nbsp;
-												<a href="https://www.facebook.com/sharer/sharer.php?u=Colaborei%20com%20um%20Libre%20para%20o%20artigo%20<%= item.page_referer %>" data-bypass="true" target="_blank" title="Compartilhar no Facebook">
+												<a href="https://www.facebook.com/sharer.php?u=<%= item.page_referer %>" data-bypass="true" target="_blank" title="Compartilhar no Facebook">
 													<i class="fa fa-facebook-official"></i>
 												</a>
 												<a href="https://plus.google.com/share?url=Colaborei%20com%20um%20Libre%20para%20o%20artigo%20<%= item.page_referer %>" data-bypass="true" target="_blank" title="Compartilhar no Google+">
