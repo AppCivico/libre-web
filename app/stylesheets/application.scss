@@ -773,31 +773,42 @@ header.header-internal {
 	}
 }
 
+
+.text-long {
+  @media (max-width: 400px) {
+    font-size: 37px;
+  }
+}
+
 .ul-partners {
   font-size: 0;
-  letter-spacing: -.31em;
-  /* reset IE < 8 */
   letter-spacing: normal\9;
-  /* IE < 8: collapse white-space between units */
-  word-spacing: -.43em\9;
-  /* Webkit: fixes text-rendering: optimizeLegibility */
-
+	margin-bottom: 0px;
+	margin-top: -50px;
+	padding: 0;
+  letter-spacing: -.20em;
   text-rendering: optimizespeed;
+  word-spacing: -.30em\9;
+
 }
 
 .ul-partners li {
-  display: inline-block;
 
-  padding: 30px;
+  padding: 0;
 
-  vertical-align: middle;
-  letter-spacing: normal;
-  word-spacing: normal;
+  padding-bottom: 20px;
 
   text-rendering: auto;
 
-  &::before
-  {
-      content: none;
+  vertical-align: middle;
+
+  @media (min-width: 400px) {
+    display: inline-block;
+    padding: 30px;
+    word-spacing: normal;
+  }
+
+  &::before {
+    content: none;
   }
 }
