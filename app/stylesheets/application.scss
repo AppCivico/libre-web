@@ -772,3 +772,32 @@ header.header-internal {
 		content: '...';
 	}
 }
+
+.ul-partners {
+  font-size: 0;
+  letter-spacing: -.31em;
+  /* reset IE < 8 */
+  letter-spacing: normal\9;
+  /* IE < 8: collapse white-space between units */
+  word-spacing: -.43em\9;
+  /* Webkit: fixes text-rendering: optimizeLegibility */
+
+  text-rendering: optimizespeed;
+}
+
+.ul-partners li {
+  display: inline-block;
+
+  padding: 30px;
+
+  vertical-align: middle;
+  letter-spacing: normal;
+  word-spacing: normal;
+
+  text-rendering: auto;
+
+  &::before
+  {
+      content: none;
+  }
+}
