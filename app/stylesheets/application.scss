@@ -772,3 +772,43 @@ header.header-internal {
 		content: '...';
 	}
 }
+
+
+.text-long {
+  @media (max-width: 400px) {
+    font-size: 37px;
+  }
+}
+
+.ul-partners {
+  font-size: 0;
+  letter-spacing: normal\9;
+	margin-bottom: 0px;
+	margin-top: -50px;
+	padding: 0;
+  letter-spacing: -.20em;
+  text-rendering: optimizespeed;
+  word-spacing: -.30em\9;
+
+}
+
+.ul-partners li {
+
+  padding: 0;
+
+  padding-bottom: 20px;
+
+  text-rendering: auto;
+
+  vertical-align: middle;
+
+  @media (min-width: 400px) {
+    display: inline-block;
+    padding: 30px;
+    word-spacing: normal;
+  }
+
+  &::before {
+    content: none;
+  }
+}

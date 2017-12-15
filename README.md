@@ -48,6 +48,12 @@ Veja abaixo uma lista de ferramentas e linguagens utilizadas para a criação do
 	- Codacy
 	- Karma using Mocha + Chaijs + Sinonjs
 
+### Run
+	- npm install
+	- bundle install
+	- bundle exec middleman build
+	- bundle exec middleman server
+	- npm run start
 
 ## Problemas ou Suporte
 
